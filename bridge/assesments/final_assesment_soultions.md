@@ -46,14 +46,23 @@ function upperOrLowerCase(string) {
 
 5. 
 ```javascript
-function exclaim(str) {
-  return str += '!'
+function triangleArea(base, height){
+  return (base * height) / 2
 }
 
-function doTwice(var, callback) {
-  return callback(var)
+function squareArea(base){
+  return base * base
 }
 
-apply("I am going to DisneyWorld", exclaim)
-// returns "I! am! going! to! DisneyWorld!"
+function calcArea(shape){
+  if (shape.type === "triangle"){
+    return triangleArea(shape.base, shape.height)
+  } else if (shape.type === "square") {
+    return squareArea(base)
+  } else {
+    return -1
+  }
+}
 ```
+
+6.

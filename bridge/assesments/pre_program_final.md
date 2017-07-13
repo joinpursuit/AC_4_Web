@@ -38,19 +38,21 @@ __________ D. creates new folder <br>
 __________ E. prints the contents of the current folder <br>
 __________ F. navigates upwards <br>
 
-5. Callbacks question
-Complete the code below.
+5. You are writing a program that calculates the areas of two geometric shapes: triangles and squares. A triangle object has a `type` property that is set to `"triangle"`, and also `height` and `base` properties (both of which are numbers). A square object has a `type` property that is set to `"square"` and also a `base` property (number). You are given the functions `triangleArea` and `squareArea`. Create a function `shapeArea` that takes a shape object as an argument and returns the object's area. If the `type` is neither `"square"` nor `"triangle"`, return `-1`.
+Topics: functions, objects
+
 ```js
-function exclaim(str) {
-  return str += '!'
+function triangleArea(base, height){
+  return (base * height) / 2
 }
 
-function apply(string, callback) {
-  // ADD YOUR CODE HERE
+function squareArea(base){
+  return base * base
 }
 
-apply("I am going to DisneyWorld", exclaim)
-// returns "I! am! going! to! DisneyWorld!"
+function calcArea(shape){
+
+}
 ```
 
 
