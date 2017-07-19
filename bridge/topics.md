@@ -2,21 +2,21 @@
 
 * Comments: single line and multiline
 
-## Number
+## 1. Number
 * Declaring a Number
 * Assigning a value to a Number 
-* Conditional Statement
-* Comparing Two Numbers: Equality Operators
+* Conditional Statement: if - else if - else
+* Comparing Two Numbers: Equality Operator
 
 
-## String
+## 2. String
 * Declaring a string
 * Assigning value to a string
 * Comparing two strings
 * Accessing string index
 * String Length
 
-## Undefined
+## 3. Undefined
 * Undefined [optional: null]
 * When declaring a variable without a value 
 * Checking for undefined: if (!var)
@@ -44,7 +44,7 @@
 * Operators: Use: ===, !==   Don't use: ==, !=
 * Ordering Operators: >, >=, <, <=
 * Truthy values: number, string
-* Falsy values: undefined [null]
+* Falsy values: undefined [null], 0, NaN, ''
 
 ## Numeric Operators
 * Addition (+)

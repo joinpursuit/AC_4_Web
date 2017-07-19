@@ -19,15 +19,6 @@ console.clear = function () {
   return process.stdout.write('\x1B[2J\x1B[0f')
 }
 
-// implementation of array.includes
-// function includes (array, number) {
-//   for (var i = 0; i < array.length; i++) {
-//     if (array[i] === number) {
-//       return true
-//     }
-//   }
-//   return false
-// }
 /*
  *  the following will be given to the students,
  *  and it is recommended that they understand it
@@ -56,7 +47,7 @@ function Game (min, max, tries) {
 
 function testGuess (game, guess) {
   // typecheck:
-  if (!Number.isSafeInteger(Number(guess))) {
+  if (!Number.isInteger(Number(guess))) {
     console.log('Insert whole numbers only')
     return false
   }
@@ -88,7 +79,7 @@ function playAgain () {
       var game = new Game(MIN, MAX, TRIES)
       play(game)
     } else {
-     // exit the program
+      // exit the program
       process.exit()
     }
   })

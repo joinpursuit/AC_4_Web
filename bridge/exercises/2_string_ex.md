@@ -1,0 +1,5 @@
+# String Exercises
+1. Create a variable called `name` with the value `Jane`. Use the assignment operator to change the value of `name` to `Sam`.
+2. Define a variable `myFaveColor` and another variable `yourFaveColor`. compare the two names: if both are equal print "we have the same favorite color", if not print "that's an okay color".
+3. Write `if - else if - else` statements that check the length of variable `name`. If the value is `1` - print "what kind of name has just one letter?", if it is `2`- print "that's a very short name". If it is 3, print "short and sweet".
+4. Create a variable `myName` and another variable `yourName`. compare both names. If they are equal, print "we have the same name". If not, check if the two names start with the same letter - If they do, print "our names start with the same letter". If not, print "I like your name".
