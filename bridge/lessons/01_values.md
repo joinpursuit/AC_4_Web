@@ -6,7 +6,7 @@
 
 * Types: number, string, boolean and undefined. Sources: [microsoft](https://docs.microsoft.com/en-us/scripting/javascript/data-types-javascript)
 * Operators. Sources: [WhatIs](http://whatis.techtarget.com/definition/operator)
-* Arithmetic operators, string concatenation, comparison operators,  the negation operator, the typeof operator. 
+* Arithmetic operators, string concatenation, comparison operators,  the negation operator, the typeof operator.
 * Logical Operators: [IBM](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_20.0.0/com.ibm.spss.statistics.help/syn_transformation_expressions_and_or_logical_operators.htm)
 * Literals: [wikipedia](https://en.wikipedia.org/wiki/Literal_%28computer_programming%29)
 * Expressions: [wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))
@@ -170,7 +170,7 @@ true
 
 ### Logical Operators
 
-The three logical operators are AND (`&&`) OR (`||`) and NOT (`!`). Logical operators can be applied to boolean values. 
+The three logical operators are AND (`&&`) OR (`||`) and NOT (`!`). Logical operators can be applied to boolean values.
 
 #### The AND  (&&) Operator
 
