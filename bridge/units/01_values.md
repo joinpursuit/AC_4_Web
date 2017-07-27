@@ -1,0 +1,257 @@
+# Values, Types, and Operators
+
+# Objectives
+
+
+
+# Vocabulary
+* Types: number, string, boolean and undefined. Sources: [microsoft](https://docs.microsoft.com/en-us/scripting/javascript/data-types-javascript)
+* Operators. Sources: [WhatIs](http://whatis.techtarget.com/definition/operator) 
+* Arithmetic operators, string concatenation, comparison operators,  the negation operator, the typeof operator. 
+* Logical Operators: [IBM](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_20.0.0/com.ibm.spss.statistics.help/syn_transformation_expressions_and_or_logical_operators.htm)
+* Literals: [wikipedia](https://en.wikipedia.org/wiki/Literal_%28computer_programming%29)
+* Expressions: [wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))
+* Truth tables: [medium](https://medium.com/i-math/intro-to-truth-tables-boolean-algebra-73b331dd9b94)
+
+# Resources:
+* Eloquent Javascript: [Chapter 1](http://eloquentjavascript.net/01_values.html)
+* Microsoft: [JavaScript Fundamentals](https://docs.microsoft.com/en-us/scripting/javascript/javascript-fundamentals)
+  * Data Types
+  * Operators
+  * Operator Presedence
+
+# Lesson
+In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In javascript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in javascript are: number, string, boolean, object, function, and undefined. The easiest way to create a value is to <b>literally</b> write its name. 
+
+## Numbers
+To create a number, we just type the value:
+```js
+> 42
+42
+```
+### Arithmetic  
+We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We may also use parentheses `()` to affect the order of operations. Javascript will evaluate <b>expressions</b> and produce a single number
+```js
+> 2 + 2 * 4
+10
+```
+Another useful operator is `modulo`, the remainer operator. 
+```js
+> 24 % 12
+0
+```
+### Special Numbers
+Occasionaly we will come across special values that are of the number type, but do not look like numbers. Two of these are `Infinity` and `NaN` - <i> Not a Number</i>. For example, division of zero by zero has not defined value, and results in `NaN`:
+```js
+> 0 / 0
+NaN
+```
+Division of a non-zero number by zero will result in `Infinity` (there is a mathematical basis for this but it's not crucial for our purpose)
+```js
+> 2 / 0
+Infinity
+```
+## Strings
+Strings are used to represent text. To create a string, write any text enclosed by either double quotes or single quotes (as long as the starting and ending ones match).
+```js
+> 'Hello there'
+'Hello there'
+```
+The `+` Operator can be used to join two   strings together. 
+```js
+> 'My name is Jo' + 'hn'
+'My Name is John' 
+```
+The is called string concatenation (verb: concatenate).
+
+## The `typeof` Operator
+The `typeof` operator produces a string with the type of the value that follows it.
+```js
+> typeof 2
+'number'
+> typeof 'John'
+'string'
+```
+The earlier operators required two values - one to the left and one to the right.
+In contrast, `typeof` only takes one value. The `-` (minus) operator can also take a single value, when placed to the left of a mathematical expression:
+```js
+> - (2 * 4)
+-8
+```
+
+> note:  the left hand and right hand sides of an operator are called <b>operands</b>. We can say that the `-` and `typeof` operator take a single operand.
+
+## Booleans
+Boolean is a type that can only have one of two possible values: `true` or `false`. Boolean values are produced when using certain operators.
+
+### Comparison Operators
+Comparison operators inlcude `===`, `>`, `<`. These do not make a statement about values, but rather test the relationship between them. The test produces one of the two boolean values.
+```js
+> 2 === 2
+true
+> 2 === 3
+false
+> 2 > 1
+true
+```
+String can also be compared:
+```js
+> 'Tom' === 'Jerry'
+false
+> 'cat' !== 'dog'
+true
+> 'cat' === 'cat'
+true
+```
+
+## Creating and Comparing Booleans
+A boolean type can be created by simply typing one of the values:
+```js
+> true
+true
+> false
+false
+```
+Javascript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `brroom`:
+```js
+> brroom
+ReferenceError: brroom is not defined
+```
+We can also use `typeof` with boolean values:
+```js
+> typeof true
+'boolean'
+```
+Boolean values can be compared, in the same way that we compare numbers and strings:
+```js
+> false === false
+true
+> true === false
+false
+> false !== true
+true
+```
+
+### Logical Operators
+The three logical operators are AND (`&&`) OR (`||`) and NOT (`!`). Logical operators can be applied to boolean values. 
+#### The AND  (&&) Operator
+We use the `&&` operator to test if two statements are <b>both</b> true. For example, 
+
+> A: It will rain tomorrow.
+
+> B: It did not rain today.
+
+Each statment is either true or false, which corresponds to the boolean values in javascript. To check whether both are true, we would use `&&`.
+```js
+> 1 === 1 && 2 === 2
+true
+```
+In the statement above, both right hand side and left hand side of the `&&` operator evaluate to `true`. So the above is equivalent to writing:
+```js
+> true && true
+true
+```
+The `&&` operator will produce `true` only if both left-hand and right-hand sides are true. Otherwise it will produce `false`:
+```js
+> 1 === 1 && 2 === 3
+false
+```
+The following table summarizes all the options (this is called a <b>truth-table</b>):
+
+| A       | B             | A && B  |
+|:-------:|:-------------:| -----:  |
+| `false` | `false `      | `false` |
+| `false` | `true `       | `false` |
+| `true`  | `false`       | `false` |
+| `true`  | `true`        | `true`  |
+
+#### The OR  (||) Operator
+We use the `||` operator to check if one of two statements is true:
+```js
+> 1 === 2 || 'cat' === 'cat'
+true
+> false || true
+true
+```
+This will produce `false` only if both left-hand side and right hand side are false:
+```js
+> 2 === 3 || 4 === 5
+false
+> false || false
+false
+```
+
+> Exercise: create a truth-table for the `||` operator
+
+#### The NOT (`!`) Operators
+The `!` operator, like `typeof` takes a single boolean value to its right. It produces the opposite value - given `true`, it produces `false`; given `false`, it produces `true`
+
+```js
+> !true
+false
+> !(1 === 2)
+true
+```
+
+### Expressions
+All the code we've written so far has consisted of <b>expressions</b>. An expression is anything that produces a value. So `1 + 2` is an expression - it produces the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which produces the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This can be simple, as in the case of `1 + 2` (simply add the two numbers). But in the case of `1 + 2 + 3 + 4`, the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In this case, one and two will be added first, then their result will be added to `3`, etc.
+
+1. `1 + 2 + 3 + 4` 
+2. `3 + 3 + 4`
+3. `6 + 4`
+4. `10`
+
+In the case of `1 === 2 || 3 === 3` the same process will happen. The computer will scan the expression and identify the OR operator. To evaluate this operator, we need to check if either the left hand or right hand side are the value `true`. We typically start by examining the left hand side. In this case, it is an expression, so we evaluate it. Since it produces the value `false`, we continue examine the right operand of the `||` operator. This is again an expression, which produces the value `true`. Now we can finally say that the entire expression, `1 === 2 || 3 === 3` produces `true`.
+1. `1 === 2 || 3 === 3`
+2. `false || 3 === 3`
+3. `false || true`
+4. `true`
+
+The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages. 
+When evaluation expressions, logical operators come first, followed by the comparison operators, followed by the arithmetic operators.
+
+## Type Conversion
+Type conversions may occur in expressions that feature variables of different types. A common situation is when the `+` operator is used with a string and a number. In this case, the number will be converted to a string:
+```js
+> 'The number is ' + 42
+'The number is 42'
+```
+This automatic conversion can lead to unexpected results:
+```js
+> '2' + 4
+'24'
+```
+Since the number is converted to a string, the above was the same as writing `'2' + '4'` - like concatenating any two strings.
+
+Another case of automatic conversion occurs when a non-boolean value appears instead of a boolean. In that case, most values will be converted to `true`. Exceptions include the number `0`, the empty string `''`, and a few others which we will discuss later. These evaluate to `false`. In those cases the `||` operator behaves in an unusual way: if the left-hand side evaluates to true, the original left-hand value will be produced (instead of `true`). 
+```js
+> false || 1
+1
+> 'cat' || false
+'cat'
+> 0 || true
+true
+> false || ''
+false
+
+```
+If the left-hand expression evaluates to false, the value in the right-hand side is produced:
+```js
+> 0 || 2
+2
+> '' || 'cat'
+'cat'
+```
+
+
+
+# Exercises
+
+1. Create truth tables for the following expressions:
+  * `!A && !B`
+  * `!A || !B`
+2. Write the step by step evaluation (mind the order of operations):
+  * `2 + 3 * 2 + 1`
+  * `4 / 2 + 8 / 4`
+  * `'ca' + 'ter' + 'pi' + 'llar'`
+  * `2 * 4 === 8 && 'car' + 'pool' === 'carpool'`

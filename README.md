@@ -4,8 +4,11 @@
 ## <b><u>Bridge</u></b>
 
 
+## Lessons:
+1. [Values, Types, Operators](bridge/lessons/01_values.md)
 
 
+## Goals:
 
 #### <u>Enduring Understanding</u>
 
@@ -21,6 +24,7 @@
 * Students will understand the fundamentals of objects and functions, and be able to use both in their code.
 
 #### <u>Knowledge and Skills</u>
+
 
 ### <u>Performance Tasks</u>
 * Final Assessment
