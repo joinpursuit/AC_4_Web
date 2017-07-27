@@ -5,6 +5,7 @@
 ---
 
 ## Numbers
+
 * Integers
 * Decimals: precise and imprecise (e.g. 1/3)
 * Arithmetic Operators: `+`, `-`, `*`, `/`
@@ -19,12 +20,15 @@
 * string concatenation
 
 ## Booleans
+
 * two possible values
 * comparison operators: `>=`, `<=`, `==`, `!==`
 * comparing strings and numbers
 * `NaN` is not equal to any other value, including `NaN`
   * Checking for `NaN` with `isNaN`
+
 ## Logical Operators
+
 * Logical AND: `&&` :
   * `true && false` -> `false`
   * `true && true` -> `true`
@@ -38,12 +42,14 @@
 * Truth Tables
 
 * Order of operators: `||` has the lowest precedence, then comes `&&`, then the comparison operators (`>`, `===`, and so on), and then the rest.
- * e.g.: `1 + 1 == 2 && 10 * 10 > 50` 
+* e.g.: `1 + 1 == 2 && 10 * 10 > 50` 
 
-## Undefined:
+## Undefined
+
 * Declaring a variable without assigning it a value
 
 ## Type Coercion
+
 * Trouble in JS-Land
 * String + Number -> String
 * String - Number -> Number
@@ -52,9 +58,11 @@
 * Converting to number with `Number`
 
 ## Typeof operators
+
 * number, string, boolean Types
 
 ### Leftovers
+
 * Truthy Values
 * Falsy Values
 * Short-Circuiting Logical Operators
