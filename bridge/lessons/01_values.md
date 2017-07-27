@@ -5,14 +5,15 @@
 ## Vocabulary
 
 * Types: number, string, boolean and undefined. Sources: [microsoft](https://docs.microsoft.com/en-us/scripting/javascript/data-types-javascript)
-* Operators. Sources: [WhatIs](http://whatis.techtarget.com/definition/operator) 
+* Operators. Sources: [WhatIs](http://whatis.techtarget.com/definition/operator)
 * Arithmetic operators, string concatenation, comparison operators,  the negation operator, the typeof operator. 
 * Logical Operators: [IBM](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_20.0.0/com.ibm.spss.statistics.help/syn_transformation_expressions_and_or_logical_operators.htm)
 * Literals: [wikipedia](https://en.wikipedia.org/wiki/Literal_%28computer_programming%29)
 * Expressions: [wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))
 * Truth tables: [medium](https://medium.com/i-math/intro-to-truth-tables-boolean-algebra-73b331dd9b94)
 
-## Resources:
+## Resources
+
 * Eloquent Javascript: [Chapter 1](http://eloquentjavascript.net/01_values.html)
 * Microsoft: [JavaScript Fundamentals](https://docs.microsoft.com/en-us/scripting/javascript/javascript-fundamentals)
   * Data Types
@@ -21,9 +22,9 @@
 
 ## Lesson
 
-In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In javascript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in javascript are: number, string, boolean, object, function, and undefined. The easiest way to create a value is to <b>literally</b> write its name. 
+In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In javascript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in javascript are: number, string, boolean, object, function, and undefined. The easiest way to create a value is to <b>literally</b> write its name.
 
-## Numbers
+### <b> Numbers </b>
 
 To create a number, we just type the value:
 
@@ -103,7 +104,7 @@ In contrast, `typeof` only takes one value. The `-` (minus) operator can also ta
 
 > note:  the left hand and right hand sides of an operator are called <b>operands</b>. We can say that the `-` and `typeof` operator take a single operand.
 
-## Booleans
+## <b>Booleans</b>
 
 Boolean is a type that can only have one of two possible values: `true` or `false`. Boolean values are produced when using certain operators.
 
@@ -131,7 +132,7 @@ true
 true
 ```
 
-## Creating and Comparing Booleans
+### Creating and Comparing Booleans
 
 A boolean type can be created by simply typing one of the values:
 
@@ -243,19 +244,19 @@ true
 
 ### Expressions
 
-All the code we've written so far has consisted of <b>expressions</b>. An expression is anything that produces a value. So `1 + 2` is an expression - it produces the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which produces the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This can be simple, as in the case of `1 + 2` (simply add the two numbers). But in the case of `1 + 2 + 3 + 4`, the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In this case, one and two will be added first, then their result will be added to `3`, etc.
+All the code we've written in this lesson has consisted of <b>expressions</b>. An expression is anything that produces a value. `1 + 2` is an expression - it produces the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which produces the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This process can be simple, as in the case of `1 + 2` (simply add the two numbers). But in some cases the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In the case of `1 + 2 + 3 + 4`, one and two will be added first, then their result will be added to `3`, etc. We will use the arrow  `->` as a symbol for <i>evaluates to</i>.
 
-1. `1 + 2 + 3 + 4`
-2. `3 + 3 + 4`
-3. `6 + 4`
-4. `10`
+* `1 + 2 + 3 + 4`
+* -> `3 + 3 + 4`
+* -> `6 + 4`
+* -> `10`
 
 In the case of `1 === 2 || 3 === 3` the same process will happen. The computer will scan the expression and identify the OR operator. To evaluate this operator, we need to check if either the left hand or right hand side are the value `true`. We typically start by examining the left hand side. In this case, it is an expression, so we evaluate it. Since it produces the value `false`, we continue examine the right operand of the `||` operator. This is again an expression, which produces the value `true`. Now we can finally say that the entire expression, `1 === 2 || 3 === 3` produces `true`.
 
-1. `1 === 2 || 3 === 3`
-2. `false || 3 === 3`
-3. `false || true`
-4. `true`
+* `1 === 2 || 3 === 3`
+* -> `false || 3 === 3`
+* -> `false || true`
+* -> `true`
 
 The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages. 
 When evaluation expressions, logical operators come first, followed by the comparison operators, followed by the arithmetic operators.

@@ -16,7 +16,6 @@ e.g. `'con' + 'cat' -> 'concat'`
 
 * Need statements to <i>do</i> something with the produced values
 
-
 # Variables
 * Variable definition statement: `var myVariable` 
 * Assigment statment: the `=` operator.
