@@ -8,7 +8,7 @@
 
 0. [Terminal 101](bridge/lessons/00_terminal.md)
 1. [Values, Types, Operators](bridge/lessons/01_values.md)
-2. [Variables and Control Flow](bridge/lessons/02_variables_and_control_flow.md)
+2. [Variables](bridge/lessons/02_variables.md)
 
 
 ## Goals

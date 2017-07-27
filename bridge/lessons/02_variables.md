@@ -1,4 +1,4 @@
-# Variables and Control Flow
+# Variables
 
 ## Vocabulary
 
