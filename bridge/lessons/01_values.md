@@ -258,7 +258,7 @@ In the case of `1 === 2 || 3 === 3` the same process will happen. The computer w
 * -> `false || true`
 * -> `true`
 
-The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages. 
+The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages.
 When evaluation expressions, logical operators come first, followed by the comparison operators, followed by the arithmetic operators.
 
 ## Type Conversion

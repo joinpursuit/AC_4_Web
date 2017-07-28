@@ -19,7 +19,7 @@
     * condition
     * increment
 
-## Statements
+## Expressions
 
 In the previous lesson we only used expressions in our code. But on their own, expressions don't really do anything. We can write the following program, using `;` to indicate the end of a line.
 
@@ -56,9 +56,7 @@ A value that is returned by a function works like any other value. So, we can pu
 console.log(Math.max(2, 1, 4))
 ```
 
-## Variables
-
-### Creating a variable
+## Creating a variable
 
 To save values in the computer's memory, we use <b> variables </b>. To create a variable, we use the keyword `var`, followed by the name of the variable.
 
@@ -82,6 +80,18 @@ var myCat = 'Tom'
 console.log(myCat)
 console.log('My cat\'s name is ' + myCat)
 ```
+
+We can use variables as the left hand and right hand sides of any comparison operator:
+
+```js
+var num1 = 2
+var num2 = 4
+console.log(num1 === num2)
+console.log(num2 >= num1 + 2)
+console.log(num1 + num2 === 6)
+```
+
+### Statements and Expressions
 
 Variable assignment is our first example of a <b>statement</b>. When we assign a value to a variable, nothing visible happens. Instead, the <b>state</b> of our program changes. <b>State</b> is everything that's stored in memory while a program runs. In general, an expression produces a value, while a statement changes the programs state. When using the assignment operator, the right hand side is actually an expression. This means that we are not limited to writing a single value.
 
@@ -107,10 +117,27 @@ var sentence = string + number
 console.log(sentence)
 ```
 
+### Undefined
+
+If we don't assign a value to a variable, it will hold the value `undefined`. This is not a description but an actual value: we can write it in the node REPL:
+
+```js
+> undefined
+undefined
+```
+
+We can compare a variable to it:
+
+```js
+var myVar
+console.log(myVar === undefined)
+// will print true
+```
+
 ## Exercises
 
 * Taking an argument in node
 * Checking if number is: even / odd, positive / negative / zero, etc.
 * Sum from 1 to `n`
 * Logging all numbers from 1 to n
-* `EJS` Looping A Triangle, Fizzbuzz, Chessboard
+* `Eloquent Javascript`: Looping A Triangle, Fizzbuzz, Chessboard
