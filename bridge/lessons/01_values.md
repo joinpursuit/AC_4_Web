@@ -174,7 +174,7 @@ The three logical operators are AND (`&&`) OR (`||`) and NOT (`!`). Logical oper
 
 #### The AND  (&&) Operator
 
-We use the `&&` operator to test if two statements are <b>both</b> true. For example, 
+We use the `&&` operator to test if two statements are <b>both</b> true. For example,
 
 > A: It will rain tomorrow.
 > B: It did not rain today.
@@ -250,6 +250,12 @@ All the code we've written in this lesson has consisted of <b>expressions</b>. A
 * -> `3 + 3 + 4`
 * -> `6 + 4`
 * -> `10`
+
+In the case of concatenating strings, a similar process will happen:
+
+* `'af' + 'ter' + 'wards'`
+* -> `'after' + 'wards'`
+* -> `'afterwards'`
 
 In the case of `1 === 2 || 3 === 3` the same process will happen. The computer will scan the expression and identify the OR operator. To evaluate this operator, we need to check if either the left hand or right hand side are the value `true`. We typically start by examining the left hand side. In this case, it is an expression, so we evaluate it. Since it produces the value `false`, we continue examine the right operand of the `||` operator. This is again an expression, which produces the value `true`. Now we can finally say that the entire expression, `1 === 2 || 3 === 3` produces `true`.
 

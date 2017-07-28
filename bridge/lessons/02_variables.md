@@ -119,19 +119,43 @@ console.log(sentence)
 
 ### Undefined
 
-If we don't assign a value to a variable, it will hold the value `undefined`. This is not a description but an actual value: we can write it in the node REPL:
+If we don't assign a value to a variable, it will hold the value `undefined`. This is not a description but an actual value, one we can write in the node REPL:
 
 ```js
 > undefined
 undefined
 ```
 
-We can compare a variable to it:
+This means we can used `undefined` like we would use any other value. Why this is useful will become clear in the following lessons.
+
+## Modifying Variables
+
+We can assign a new value to a variable at any time by using the assignment operator. This will overwrite the old value of that variable.
 
 ```js
-var myVar
-console.log(myVar === undefined)
-// will print true
+var day = 'Monday'
+cosole.log('Today is ' + day)
+day = 'Tuesday'
+console.log('Tomorrow will be ' + day)
+```
+
+We may want to use the current value when modifying a variable. For example,we may want to add some numeric value to an existing number. To do this, we can use the variable's name to the right hand side of the assignment operator:
+
+```js
+var myNumber = 2
+myNumber = myNumber + 1
+console.log(myNumber)
+```
+
+Since the right hand side of `=` is an expression, it will first be evaluated to a single number. This number will then be assigned to the variable `myNumber`.
+
+> Ex. write the step-by-step evaluation of the third line in the code below:
+
+```js
+var sentence = 'My name is'
+var name = 'Mia'
+sentence = sentence + ' ' + name
+console.log(sentence)
 ```
 
 ## Exercises

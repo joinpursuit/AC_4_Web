@@ -27,7 +27,6 @@
 * Students will be able to convert a step-by-step solution to a programming language.
 * Students will understand the fundamentals of objects and functions, and be able to use both in their code.
 
-
 #### <u>Knowledge and Skills</u>
 
 ### <u>Performance Tasks</u>
