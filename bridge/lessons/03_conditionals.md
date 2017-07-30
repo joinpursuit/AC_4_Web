@@ -1,7 +1,10 @@
 # Conditionals
 
-## Terms
+## Objectives
 
+## Vocabulary
+
+* control flow -  the order in which the computer executes statements. Sources: [mdn](https://developer.mozilla.org/en-US/docs/Glossary/Control_flow)
 * `if`, `else`, `else if`
 * code block
 
@@ -39,12 +42,12 @@ Note that an an `if` statement is not the end of a program. The code following i
 ```js
 var num = 4
 if (num > 2) {
-  console.log('hello')
+  console.log('It\'s larger than 2')
 }
-console.log('welcome back')
+console.log('done checking')
 ```
 
-In the code above,  `'hello'` may or may not be printed (depending on the value of num). Either way `'welcome back'` *will* be printed.
+In the code above,  `'Its larger than 2'` may or may not be printed (depending on the value of num). Either way `'done checking'` *will* be printed.
 
 #### if - else
 
@@ -102,6 +105,51 @@ if (num === 1) {
 
 Remember, only one of the code blocks will be executed.
 
+### Checking for range
+
+One way we can utilize `if - else if - else` statement is to check for different ranges. For example, we may want to perform a different action depending on the user's age group.
+
+```js
+var userAge = 19
+
+if (userAge < 18) {
+  console.log('Parental supervision is required')
+} else if (userAge < 21) {
+  console.log('Parental permission is required')
+} else {
+  console.log('You may proceed')
+}
+```
+
+> What are the ranges that the code above is checking for? How can we rewrite the statement with the **larger than** (`>`) operator?
+
+### Using logical operators
+
+So far in our `if ... ` statements we have been checking for a single condition. It is also possible to check for multiple conditions using the `&&` and `||` boolean operators. For example, we may want to perform the same action when the day is Saturday or Sunday.
+
+```js
+var day = 'Monday'
+
+if (day === 'Saturday' || day === 'Sunday'){
+  console.log('Have a nice weekend!')
+} else if (day === 'Friday') {
+  console.log('The weekend is almost here!')
+} else {
+  console.log('Have a nice day.')
+}
+```
+
+We can use the && operator to check for ranges. For example, say we want to check if a user's age is between 18-45. When writing code, this is how we will expresses this: if age is larger than 18 **AND** age is smaller than 45, then [...]. In javascript, the opening curly bracket stands in place of the word `then`, and the closing one stand in place of the period at the end of the sentence.
+
+```js
+var userAge = 27
+
+if (userAge > 18 && userAge < 45){
+  console.log('would you like to take a survey?')
+}
+```
+
+> How whould you write a conditional statement that outputs the same message if a user's age is either smaller than 18 **OR** larger than 45?
 
 ## **Exercises**
 
@@ -114,3 +162,5 @@ Remember, only one of the code blocks will be executed.
 4. In a file named `pluralize.js` create two variables, one two hold a  noun and one to hold a number. Use a `if - else` statement to print the
 number and either a single or plural form, like "5 cats" or "1 dog".
 Bonus: Make it handle a few collective nouns like "sheep" and "geese".
+
+5. The following

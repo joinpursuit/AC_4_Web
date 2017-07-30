@@ -1,5 +1,7 @@
 # Variables
 
+## Objectives
+
 ## Vocabulary
 
 * expression vs statement
@@ -158,10 +160,19 @@ sentence = sentence + ' ' + name
 console.log(sentence)
 ```
 
+### Updating Variables Shorthand
+
+There is a shorter syntax to updating variables using their existing value. When we wish to add something to the variable's value, we may use the `+=` operator, as in `num += 1`. This is a shorthand for `num = num + 1`. The same works with `-=`:
+
+```js
+var num = 2
+num += 6
+// Num is 8
+num -= 3
+// num is 5
+```
+
 ## Exercises
 
 * Taking an argument in node
 * Checking if number is: even / odd, positive / negative / zero, etc.
-* Sum from 1 to `n`
-* Logging all numbers from 1 to n
-* `Eloquent Javascript`: Looping A Triangle, Fizzbuzz, Chessboard

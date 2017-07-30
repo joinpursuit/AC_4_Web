@@ -78,7 +78,7 @@ The `+` Operator can be used to join two   strings together.
 
 ```js
 > 'My name is Jo' + 'hn'
-'My Name is John' 
+'My Name is John'
 ```
 
 The is called string concatenation (verb: concatenate).
