@@ -1,11 +1,11 @@
-# The Terminal
+# Terminal
 
-Objectives: students will learn to use the terminal for navigating through the file system, creating and deleting files and folders, running the node repl and using node to execute javascript code.
+Objective: Students will learn to use Terminal for navigating through the file system, creating and deleting files and folders, running the node REPL, and using node to execute JavaScript code.
 
 ## Vocabulary
 
-* command line = cli = terminal = bash = shell
-* folder = directory
+* Command line interface = CLI = Terminal = Bash = Shell
+* Folder = directory
 * `pwd` - print working directory
 * `cd ..` - go directory up
 * `cd [folder]` - go into folder
@@ -19,6 +19,14 @@ Objectives: students will learn to use the terminal for navigating through the f
 * `mv [filename] [new filename]` - rename a file
 * `node` - start a node REPL
 * `node [filename]` - execute a javascript file
+
+## Activity
+* Navigate to your `Desktop` directory.
+* Create a directory called `terminal_exercise`.
+* Inside `terminal_exercise`, create a file called `foo.js`.
+* Inside `terminal_exercise`, create a directory called `blank_dir`. 
+* Move `foo.js` into `blank_dir`.
+* Try playing with all of the Terminal commands!
 
 ## Resources
 
@@ -51,3 +59,10 @@ Type an expression and press enter, and it will be evaluated, the resulting valu
 > 2 + 8 - 1
 11
 ```
+
+What happens if you try to type two numbers?
+```js
+> 2 2
+```
+
+*How can errors be useful when using Terminal and node?*
