@@ -29,13 +29,15 @@ var sentence = 'I am a string!'
 console.log(sentence)
 ```
 
-A string is really a list of character. A character is either a letter, number, punctuation mark, or white space. There are also a some special characters, two of whice are quotation marks and new lines. If we are using single quotation marks, and want these inside our string, we must use a backslash (`\`):
+A string is really a list of character. A character is either a letter, number, punctuation mark, or white space. There are also a some special characters, two of whice are quotation marks and new lines. If we are using single quotation marks, and want these inside our string, we must use a backslash (`\`). Say we want a string with the value: `so he said to me, 'hello there'`. We will need quotation marks for the outside, and inside we will use backslah - followed by a quotation mark:
 
+```js
+var str = 'So he said to me, \' hello there \''
 ```
-var str = 'So he says me, \' hello there \''
-```
 
+To make part of a string begin on a new line, use \'n.
 
+> Ex make a string variable. Part of it must begin on a new line.
 
 ### String Index
 
