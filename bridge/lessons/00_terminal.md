@@ -20,14 +20,7 @@ Objective: Students will learn to use Terminal for navigating through the file s
 * `node` - start a node REPL
 * `node [filename]` - execute a javascript file
 
-## Activity
 
-* Navigate to your `Desktop` directory.
-* Create a directory called `terminal_exercise`.
-* Inside `terminal_exercise`, create a file called `foo.js`.
-* Inside `terminal_exercise`, create a directory called `blank_dir`. 
-* Move `foo.js` into `blank_dir`.
-* Try playing with all of the Terminal commands!
 
 ## Resources
 
@@ -62,8 +55,17 @@ Type an expression and press enter, and it will be evaluated, the resulting valu
 ```
 
 What happens if you try to type two numbers?
+
 ```js
 > 2 2
 ```
 
 *How can errors be useful when using Terminal and node?*
+
+## Exercises
+
+1. * Navigate to your `Desktop` directory.
+* Create a directory called `terminal_exercise`.
+* Inside `terminal_exercise`, create a file called `foo.js`.
+* Inside `terminal_exercise`, create a directory called `blank_dir`.
+* Move `foo.js` into `blank_dir`.
