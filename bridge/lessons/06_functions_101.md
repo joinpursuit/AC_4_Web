@@ -1,4 +1,4 @@
-# Functions
+# Functions 101
 
 ## Terms
 
@@ -26,17 +26,16 @@ This is called defining a function.
 var hello = function (){
   console.log('hello')
 }
-
 ```
+
 Once we created a function, we can run it at any time by writing its name, followed by parentheses. This is called calling or invoking the function.
 
-```
+```js
 hello()
 ```
 
 We can put any code inside a function. We could put the printing loop from above. 
 
-A function is like a mini-program inside our main program. Whenever the code inside it is done running, we return 
-
+A function is like a mini-program inside our main program. Whenever the code inside it is done running, we return to the line from which we called the function.
 
 We can also define a function to take in vales from the outside world. 

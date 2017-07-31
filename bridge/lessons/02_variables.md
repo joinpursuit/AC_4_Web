@@ -11,15 +11,6 @@
 * state
 * the `undefined` type
 * keyword
-* control flow
-  * conditionals
-    * if, else, else if
-  * while loops
-    * condition
-  * for loops
-    * initialization
-    * condition
-    * increment
 
 ## Expressions
 

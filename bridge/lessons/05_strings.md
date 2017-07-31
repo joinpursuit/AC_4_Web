@@ -1,6 +1,6 @@
 # Strings
 
-## Objectives
+## Terms
 
 ## Vocabulary
 
