@@ -21,6 +21,7 @@ Objective: Students will learn to use Terminal for navigating through the file s
 * `node [filename]` - execute a javascript file
 
 ## Activity
+
 * Navigate to your `Desktop` directory.
 * Create a directory called `terminal_exercise`.
 * Inside `terminal_exercise`, create a file called `foo.js`.

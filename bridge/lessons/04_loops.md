@@ -4,12 +4,14 @@
 
 ## Vocabulary
 
-* while loops
+* `while` loops
   * condition
-* for loops
+* `for` loops
   * initialization
   * condition
   * increment
+
+## Lesson
 
 Consider a program that prints the numbers between 1 and 10:
 
