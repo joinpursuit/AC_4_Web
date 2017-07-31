@@ -12,7 +12,7 @@
 3. [Conditionals](bridge/lessons/03_conditionals.md)
 4. [Loops](bridge/lessons/04_loops.md)
 5. [String](bridge/lessons/05_strings.md)
-6. [Functions 101] (bridge/lessons/06_functions_101.md)
+6. [Functions 101](bridge/lessons/06_functions_101.md)
 
 ## Goals
 
