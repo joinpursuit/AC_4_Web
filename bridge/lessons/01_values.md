@@ -4,13 +4,13 @@
 
 ## Vocabulary
 
-* Types: number, string, boolean and undefined. Sources: [microsoft](https://docs.microsoft.com/en-us/scripting/javascript/data-types-javascript)
+* Types: *number*, *string*, *boolean* and *undefined*. Sources: [Microsoft](https://docs.microsoft.com/en-us/scripting/javascript/data-types-javascript)
 * Operators. Sources: [WhatIs](http://whatis.techtarget.com/definition/operator)
 * Arithmetic operators, string concatenation, comparison operators,  the negation operator, the typeof operator.
 * Logical Operators: [IBM](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_20.0.0/com.ibm.spss.statistics.help/syn_transformation_expressions_and_or_logical_operators.htm)
-* Literals: [wikipedia](https://en.wikipedia.org/wiki/Literal_%28computer_programming%29)
-* Expressions: [wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))
-* Truth tables: [medium](https://medium.com/i-math/intro-to-truth-tables-boolean-algebra-73b331dd9b94)
+* Literals: [Wikipedia](https://en.wikipedia.org/wiki/Literal_%28computer_programming%29)
+* Expressions: [Wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))
+* Truth tables: [Medium](https://medium.com/i-math/intro-to-truth-tables-boolean-algebra-73b331dd9b94)
 
 ## Resources
 
@@ -22,7 +22,7 @@
 
 ## Lesson
 
-In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In javascript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in javascript are: number, string, boolean, object, function, and undefined. The easiest way to create a value is to <b>literally</b> write its name.
+In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In javascript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in javascript are: `number`, `string`, `boolean`, `object`, `function`, and `undefined`. The easiest way to create a value is to <b>literally</b> write its name.
 
 ### <b> Numbers </b>
 
@@ -40,6 +40,10 @@ We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We 
 ```js
 > 2 + 2 * 4
 10
+```
+```js
+> (2 + 2) * 4
+16
 ```
 
 Another useful operator is `modulo`, the remainer operator. 

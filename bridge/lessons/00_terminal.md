@@ -64,7 +64,8 @@ What happens if you try to type two numbers?
 
 ## Exercises
 
-1. * Navigate to your `Desktop` directory.
+### 1. ###
+* Navigate to your `Desktop` directory.
 * Create a directory called `terminal_exercise`.
 * Inside `terminal_exercise`, create a file called `foo.js`.
 * Inside `terminal_exercise`, create a directory called `blank_dir`.
