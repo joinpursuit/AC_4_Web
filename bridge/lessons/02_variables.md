@@ -4,7 +4,7 @@
 
 ## Vocabulary
 
-* expression vs statement
+* expression vs. statement
 * variable
   * definition
   * assignment
@@ -49,29 +49,52 @@ A value that is returned by a function works like any other value. So, we can pu
 console.log(Math.max(2, 1, 4))
 ```
 
+> *Try the Math.min function!*
+
 ## Creating a variable
 
 To save values in the computer's memory, we use <b> variables </b>. To create a variable, we use the keyword `var`, followed by the name of the variable.
 
 ```js
-var myVariable
+> var myVariable
+undefined
 ```
+
+### Undefined
+
+If we don't assign a value to a variable, it will hold the value `undefined`. This is not a description but an actual value, one we can write in the node REPL:
+
+```js
+> undefined
+undefined
+```
+
+This means we can used `undefined` like we would use any other value. Why this is useful will become clear in the following lessons.
 
 ### Assigning a value
 
 A variable is really a placeholder for a value that is stored somewhere in the computer's memory. We can assign a value to a variable by using the assignment operator, `=`.
 
 ```js
-var myCat = 'Tom'
-var myAge = 25
+> var myCat = 'Tom'
+undefined
+
+> var myAge = 25
+undefined
 ```
 
 To get back the value we assigned, we simply need to write the variable's name. The name can be used by itself, or as part of an expression.
 
 ```js
-var myCat = 'Tom'
-console.log(myCat)
-console.log('My cat\'s name is ' + myCat)
+> var myCat = 'Tom'
+undefined
+
+> console.log(myCat)
+Tom
+undefined
+
+> console.log('My cat\'s name is ' + myCat)
+?
 ```
 
 We can use variables as the left hand and right hand sides of any comparison operator:
@@ -109,17 +132,6 @@ var number = 42
 var sentence = string + number
 console.log(sentence)
 ```
-
-### Undefined
-
-If we don't assign a value to a variable, it will hold the value `undefined`. This is not a description but an actual value, one we can write in the node REPL:
-
-```js
-> undefined
-undefined
-```
-
-This means we can used `undefined` like we would use any other value. Why this is useful will become clear in the following lessons.
 
 ## Modifying Variables
 

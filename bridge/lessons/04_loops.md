@@ -19,10 +19,16 @@ Consider a program that prints the numbers between 1 and 10:
 console.log(1)
 console.log(2)
 console.log(3)
-...
+console.log(4)
+console.log(5)
+console.log(6)
+console.log(7)
+console.log(8)
+console.log(9)
+console.log(10)
 ```
 
-This program isn't much fun to write, and it isn't very practical either. What if we wanted to print the numbers between 1 and 1000? There is a better solution than writing this by hand: **loops**. Loops are really a solution for many repetitive tasks.
+This program isn't much fun to write, and it isn't very practical either. What if we wanted to print the numbers between 1 and 1000? There is a better solution than writing this by hand: **loops**. Loops are a solution for many *repetitive* tasks.
 
 ## The `while` loop
 
@@ -55,7 +61,7 @@ while (num < 10) {
 }
 ```
 
-> Ex 1. Write a `while` loop that prints all the even numbers between 2 and 100.
+> Ex 1. Write a `while` loop that prints all the even numbers between 2 and 100. <br>
 > Ex 2. Write a `while` loop that prints all the odd numbers starting from 99, and going down to 1.
 
 ### The `for` loop
@@ -67,6 +73,8 @@ for (var num = 1; num < 10; num += 1) {
   console.log(num)
 }
 ```
+
+In this example, the variable `num` is created and initialized to the value `1`. The condition for continuing the loop is `num < 10`, and the variable is changed by incrementing by 1 (`num += 1`).
 
 The above loop prints the numbers between 1 and 10, just like the while loop above. Generally speaking, the structure of the `for` is the same every time. There are two semicolons. The part before the first semicolon defines a variable. The second part is a boolean expression that checks if the loop should continue. The last part updates the variable we created after every iteration. More formally, this is what each part is called:
 
@@ -113,6 +121,7 @@ We can write a chart to see what's going on more closely:
 
 |i   | sum   |
 |:--:|:-----:|
+|    | 0     |
 | 1  | 1     |
 | 2  | 3     |
 | 3  | 6     |
@@ -128,8 +137,8 @@ You may have noticed that to find the value of `sum` in every new row, we take t
 
 ## Loop exercises
 
-* Create a variable `num` that holds a positive number. Write a loop that prints all the numbers, descending, between `num` and 1.
-* Create a variable `num` that holds a positive number. Write a loop that sums up all the even numbers numbers between `1` and `num`
+1. Create a variable `num` that holds a positive number. Write a loop that prints all the numbers, *descending*, from `num` to 1.
+2. Create a variable `num` that holds a positive number. Write a loop that sums up all the *even* numbers numbers between `1` and `num`.
 
 
 ## Leftover

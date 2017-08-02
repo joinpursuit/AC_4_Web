@@ -40,8 +40,7 @@ We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We 
 ```js
 > 2 + 2 * 4
 10
-```
-```js
+
 > (2 + 2) * 4
 16
 ```
@@ -51,6 +50,9 @@ Another useful operator is `modulo`, the remainer operator.
 ```js
 > 24 % 12
 0
+
+> 17 % 5
+2
 ```
 
 ### Special Numbers
@@ -76,13 +78,19 @@ Strings are used to represent text. To create a string, write any text enclosed 
 ```js
 > 'Hello there'
 'Hello there'
+
+> "This is also fine"
+'This is also fine'
 ```
 
-The `+` Operator can be used to join two   strings together.
+The `+` Operator can be used to join multiple strings together.
 
 ```js
 > 'My name is Jo' + 'hn'
 'My Name is John'
+
+> "H" + "ell" +"o"
+'Hello'
 ```
 
 The is called string concatenation (verb: concatenate).
@@ -99,9 +107,12 @@ The `typeof` operator produces a string with the type of the value that follows 
 ```
 
 The earlier operators required two values - one to the left and one to the right.
-In contrast, `typeof` only takes one value. The `-` (minus) operator can also take a single value, when placed to the left of a mathematical expression:
+In contrast, `typeof` only takes one value. The `-` (minus) operator can also take a single value, when placed to the left of a mathematical expression as a negative sign:
 
 ```js
+> - 3
+-3
+
 > - (2 * 4)
 -8
 ```
@@ -111,6 +122,24 @@ In contrast, `typeof` only takes one value. The `-` (minus) operator can also ta
 ## <b>Booleans</b>
 
 Boolean is a type that can only have one of two possible values: `true` or `false`. Boolean values are produced when using certain operators.
+
+### Creating and Comparing Booleans
+
+A boolean type can be created by simply typing one of the values:
+
+```js
+> true
+true
+> false
+false
+```
+
+Javascript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `brroom`:
+
+```js
+> brroom
+ReferenceError: brroom is not defined
+```
 
 ### Comparison Operators
 
@@ -134,24 +163,6 @@ false
 true
 > 'cat' === 'cat'
 true
-```
-
-### Creating and Comparing Booleans
-
-A boolean type can be created by simply typing one of the values:
-
-```js
-> true
-true
-> false
-false
-```
-
-Javascript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `brroom`:
-
-```js
-> brroom
-ReferenceError: brroom is not defined
 ```
 
 We can also use `typeof` with boolean values:
@@ -233,7 +244,7 @@ false
 false
 ```
 
-> Exercise: create a truth-table for the `||` operator
+> **Exercise**: create a truth-table for the `||` operator
 
 #### The NOT (`!`) Operators
 
@@ -250,23 +261,24 @@ true
 
 All the code we've written in this lesson has consisted of <b>expressions</b>. An expression is anything that produces a value. `1 + 2` is an expression - it produces the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which produces the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This process can be simple, as in the case of `1 + 2` (simply add the two numbers). But in some cases the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In the case of `1 + 2 + 3 + 4`, one and two will be added first, then their result will be added to `3`, etc. We will use the arrow  `->` as a symbol for <i>evaluates to</i>.
 
-* `1 + 2 + 3 + 4`
-* -> `3 + 3 + 4`
-* -> `6 + 4`
-* -> `10`
+
+> `1 + 2 + 3 + 4` <br>
+> -> `3 + 3 + 4` <br>
+> -> `6 + 4` <br>
+> -> `10`
 
 In the case of concatenating strings, a similar process will happen:
 
-* `'af' + 'ter' + 'wards'`
-* -> `'after' + 'wards'`
-* -> `'afterwards'`
+> `'af' + 'ter' + 'wards'` <br>
+> -> `'after' + 'wards'` <br>
+> -> `'afterwards'`
 
 In the case of `1 === 2 || 3 === 3` the same process will happen. The computer will scan the expression and identify the OR operator. To evaluate this operator, we need to check if either the left hand or right hand side are the value `true`. We typically start by examining the left hand side. In this case, it is an expression, so we evaluate it. Since it produces the value `false`, we continue examine the right operand of the `||` operator. This is again an expression, which produces the value `true`. Now we can finally say that the entire expression, `1 === 2 || 3 === 3` produces `true`.
 
-* `1 === 2 || 3 === 3`
-* -> `false || 3 === 3`
-* -> `false || true`
-* -> `true`
+> `1 === 2 || 3 === 3` <br>
+> -> `false || 3 === 3` <br>
+> -> `false || true` <br>
+> -> `true`
 
 The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages.
 When evaluation expressions, logical operators come first, followed by the comparison operators, followed by the arithmetic operators.
@@ -313,11 +325,11 @@ If the left-hand expression evaluates to false, the value in the right-hand side
 
 ## <b> Exercises </b>
 
-1.Create truth tables for the following expressions:
+1. Create truth tables for the following expressions:
 * `!A && !B`
 * `!A || !B`
 
-2.Write the step by step evaluation (mind the order of operations):
+2. Write the step by step evaluation (mind the order of operations):
 * `2 + 3 * 2 + 1`
 * `4 / 2 + 8 / 4`
 * `'ca' + 'ter' + 'pi' + 'llar'`

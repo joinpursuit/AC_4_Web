@@ -14,7 +14,7 @@ So far our programs have been running line-by-line, from top to bottom. Conditio
 
 ### The `if` statement
 
-#### Only `if`
+#### `if`
 
 Our first conditional is the `if` statement. It executes a block of code only when an expression (provided in parentheses) evaluates to the boolean value `true`. A block of code is any number of lines enclosed with curly brackets: `{...}`.
  The simplest `if` statement is the one where we simply provide the value true.
@@ -33,11 +33,11 @@ if (false) {
 }
 ```
 
-The code block following the `if` statement will **never** be executed. Similarly to the previous example, `false` can be substituted with any expression that evaluates to `false`.
+In this situation, the code block following the `if` statement (between the brackets) will **never** be executed. Similarly to the previous example, `false` can be substituted with any expression that evaluates to `false`.
 
 > Ex. provide examples of expressions for the condition to an `if` statement, so that the code block following it will never be executed
 
-Note that an an `if` statement is not the end of a program. The code following it will run as usual.
+Note that an `if` statement is not the end of a program! The code following it will run as usual.
 
 ```js
 var num = 4
@@ -47,9 +47,9 @@ if (num > 2) {
 console.log('done checking')
 ```
 
-In the code above,  `'Its larger than 2'` may or may not be printed (depending on the value of num). Either way `'done checking'` *will* be printed.
+In the code above,  `'Its larger than 2'` may or may not be printed (depending on the value of num). However, `'done checking'` *will always* be printed.
 
-#### if - else
+#### `if` - `else`
 
 We can extend the `if` statement to make it an `if - else` statement. This statement will execute one of two code blocks:
 
@@ -58,7 +58,7 @@ var num = 3
 if (num > 2) {
   console.log('it\'s larger than 2')
 } else {
-  console.log('it\'s not large than 2')
+  console.log('it\'s not larger than 2')
 }
 ```
 
@@ -70,7 +70,7 @@ If the condition evluates to `true`, the first block will be executed. If it eva
 
 > Ex. write three `if - else` statements in which the second block of code will always be executed.
 
-#### if - else if - else
+#### `if` - `else if` - `else`
 
 We can use the `if - else if - else` statement when we want one of three or more code blocks to be executed. We will have the initial `if`, followed by any number of `else if`, optionally followed by an `else`.
 
@@ -103,7 +103,7 @@ if (num === 1) {
 }
 ```
 
-Remember, only one of the code blocks will be executed.
+*Remember, only one of the code blocks will be executed. As soon as one condition evaluates to true, the corresponding block of code is executed, and the REPL jumps to the end of the entire conditional.*
 
 ### Checking for range
 
@@ -139,7 +139,7 @@ if (day === 'Saturday' || day === 'Sunday'){
 }
 ```
 
-We can use the && operator to check for ranges. For example, say we want to check if a user's age is between 18-45. When writing code, this is how we will expresses this: if age is larger than 18 **AND** age is smaller than 45, then [...]. In javascript, the opening curly bracket stands in place of the word `then`, and the closing one stand in place of the period at the end of the sentence.
+We can use the `&&` operator to check for ranges. For example, say we want to check if a user's age is between 18-45. When writing code, this is how we will expresses this: if age is larger than 18 **AND** age is smaller than 45, then [...]. In javascript, the opening curly bracket `{` stands in place of the word "then", and the closing one stand in place of the period at the end of the sentence.
 
 ```js
 var userAge = 27
