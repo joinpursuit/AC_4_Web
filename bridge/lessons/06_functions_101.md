@@ -4,9 +4,9 @@
 
 ## Lesson
 
-Functions are one of the most powerful things in javascript. Today we will begin to learn about their different uses.
+Functions are one of the most powerful things in JavaScript. Today we will begin to learn about their different uses.
 
-Code reuse.
+Code Reuse <br>
 In past lessons we've written code to print the numbers from 1 to 10. More generally we can use two variables to print the values between any two numbers: 
 
 ```js
