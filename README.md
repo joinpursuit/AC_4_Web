@@ -13,6 +13,7 @@
 4. [Function I](bridge/lessons/04_functions_i.md)
 5. [Loops](bridge/lessons/05_loops.md)
 6. [Strings I](bridge/lessons/06_strings_i.md)
+7. [Arrays I](bridge/lessons/07_arrays_i.md)
 
 ## Goals
 
