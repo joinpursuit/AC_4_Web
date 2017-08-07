@@ -137,10 +137,14 @@ You may have noticed that to find the value of `sum` in every new row, we take t
 
 ## Loop exercises
 
-1. Create a variable `num` that holds a positive number. Write a loop that prints all the numbers, *descending*, from `num` to 1.
-2. Create a variable `num` that holds a positive number. Write a loop that sums up all the *even* numbers numbers between `1` and `num`.
+* Write a function that takes a number as an argument and prints all the numbers, descending, between the number and 1.
+* Write a a function that takes a number `num` as an argument, and iterates over all numbers from 0 to `num`. For each iteration, it will check if the current number is even or odd, and print that to the screen (e.g. "2 is even")
+* Write a function that takes a number `num` as an argument and iterates over all numbers from 0 to `num`. For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18")
+* USe the `assignGrade` function from unit 4 (fuctions). Create a loop that will iterate over the numbers from `60` to `100`. For each number, it will call `assignGrade` with that number as an argument.
 
+### Bonus
 
-## Leftover
+Eloquent JS
+* Write a function that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
 
-* `Eloquent Javascript`: Looping A Triangle, Fizzbuzz, Chessboard
+When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
