@@ -26,7 +26,7 @@ Each of the expressions will be evaluated, produce a value, and then get discard
 
 ## console.log
 
-The first kind of effect we need is printing text to the screen. We have been using the node REPL, where the value produced by an expression was printed for us. To write programs, however, we will be creating a files in which we put our javascript code. When running a file with the code above, nothing will get printed. In order to print something in javascript file, we will need to use the `console.log` function.
+The first kind of effect we need is printing text to the screen. We have been using the node REPL, where the value produced by an expression was printed for us. To write programs, however, we will be creating a files in which we put our JavaScript code. When running a file with the code above, nothing will get printed. In order to print something in JavaScript file, we will need to use the `console.log` function.
 
 ```js
 console.log("bat" + "man")

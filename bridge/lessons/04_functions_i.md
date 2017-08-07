@@ -10,7 +10,7 @@
 
 ## Lesson
 
-Functions are one of the most powerful features of javascript. Today we will begin to learn about their different uses.
+Functions are one of the most powerful features of JavaScript. Today we will begin to learn about their different uses.
 
 A function is a reusable block of code. To create a function, we use the `function` keyword, followed by a name of our choosing, followed by parentheses, followed by the code block.
 This is called defining a function.

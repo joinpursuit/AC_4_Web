@@ -78,7 +78,7 @@ str += ' there'
 console.log(str)
 ```
 
-We can use concatenation inside a loop to keep adding stuff  to a string. For example, let's say we want to print all the numbers between **1** and **5**, in the same line, seperated by commas. We start by creating an empty string using `''` or `""`. We need javascript to know our variable is a string, otherwise it wouldn't know what do make of the `+` or `+=` operator.
+We can use concatenation inside a loop to keep adding stuff  to a string. For example, let's say we want to print all the numbers between **1** and **5**, in the same line, seperated by commas. We start by creating an empty string using `''` or `""`. We need JavaScript to know our variable is a string, otherwise it wouldn't know what do make of the `+` or `+=` operator.
 
 ```js
 var str = ''
@@ -168,7 +168,7 @@ name[0] = name[0].toUpperCase()
 console.log(name)
 ```
 
-However, it will not work as expected. There will not be an error, but name will still hold the value `'jane'`. This is because strings in javascript canot be modified. Variable types that cannot be changed are called `immutable` (can't be mutated - more on this term in later lessons).
+However, it will not work as expected. There will not be an error, but name will still hold the value `'jane'`. This is because strings in JavaScript canot be modified. Variable types that cannot be changed are called `immutable` (can't be mutated - more on this term in later lessons).
 
 ### Slice
 

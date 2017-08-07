@@ -66,7 +66,7 @@ If the condition evluates to `true`, the first block will be executed. If it eva
 
 ![if statement diagram](assets/if.svg)
 
-<sup> Image: [Eloquent Javascript, Chapter 2](http://eloquentjavascript.net/02_program_structure.html)</sup>
+<sup> Image: [Eloquent JavaScript, Chapter 2](http://eloquentjavascript.net/02_program_structure.html)</sup>
 
 > Ex. write three `if - else` statements in which the second block of code will always be executed.
 
@@ -139,7 +139,7 @@ if (day === 'Saturday' || day === 'Sunday'){
 }
 ```
 
-We can use the `&&` operator to check for ranges. For example, say we want to check if a user's age is between 18-45. When writing code, this is how we will expresses this: if age is larger than 18 **AND** age is smaller than 45, then [...]. In javascript, the opening curly bracket `{` stands in place of the word "then", and the closing one stand in place of the period at the end of the sentence.
+We can use the `&&` operator to check for ranges. For example, say we want to check if a user's age is between 18-45. When writing code, this is how we will expresses this: if age is larger than 18 **AND** age is smaller than 45, then [...]. In JavaScript, the opening curly bracket `{` stands in place of the word "then", and the closing one stand in place of the period at the end of the sentence.
 
 ```js
 var userAge = 27

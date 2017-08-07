@@ -13,13 +13,24 @@
 
 ## Lesson
 
-An array provides a convenient way to store a collection of things. Say we want to keep the numbers `2`, `3`, `5`, `7`, and `11` - all in one place. Instead of creating five separate variables we can crate an array to story all these values. To create an array, we use the `[` and `]` brackets, and in between put whatever values we need.
+*Arrays* provide a convenient way to store a collection of things. Say we want to keep the numbers `2`, `3`, `5`, `7`, and `11` - all in one place. Instead of creating five separate variables, we can create an array to store all these values. To create an array, we use the `[` and `]` brackets, and in between put whatever values we want to store.
 
 ```js
 var arr = [2, 3, 5, 7, 11]
 ```
 
 Arrays can be accessed like strings. They also have indexes and a `length` property.
+
+```js
+> var arr = [2, 3, 5, 7, 11]
+undefined
+> arr.length
+5
+> arr[0]
+2
+> arr[4]
+11
+```
 
 ![array](assets/array_elements.jpg)
 
@@ -30,7 +41,7 @@ var animals = ['cat', 'dog', 'racoon']
 var mixedArray = [2, 5, 'zebra']
 ```
 
-We access the first element of the array by using index `0`, and the last by using index `array.length - 1`
+We access the first element of the array by using index `0`, and the last by using index `arrayName.length - 1`
 
 ```js
 var animals = ['cat', 'dog', 'racoon', 'giraffe']
@@ -39,12 +50,12 @@ var animals = ['cat', 'dog', 'racoon', 'giraffe']
 console.log(animals[0])
 
 // this will print 'giraffe'
-console.log(animals[0])
+console.log(animals[animals.length-1])
 ```
 
 ### Adding, Removing and Modifying Elements
 
-Unlike with strings, we can modify array elements:
+Unlike strings, which cannot be changed after creation, arrays and their elements can be modified:
 
 ```js
 var animals = ['cat', 'dog', 'racoon', 'giraffe']
@@ -56,31 +67,31 @@ We can also add elements to the end of an array by using the `push` method
 
 ```js
 var numbers = [2, 4, 6]
-// adding the numbers 8 and 10 to the array
+// adding the number 8 to the array
 numbers.push(8)
-// now array will be: [2, 4, 6, 8]
+// now numbers will be: [2, 4, 6, 8]
 ```
 
 And remove an element from the end of an array by using the `pop` method:
 
 ```js
 var numbers = [2, 4, 6]
-// removing the last element in the  array
+// removing the last element in the array
 numbers.pop()
-// now array will be: [2, 4]
+// now numbers will be: [2, 4]
 ```
 
 ### Slicing and Splicing
 
-Arrays have a `slice` method that works just like the same-named string method.
+Arrays have a `slice` method that works just like the same-named string method. *Unlike push() and pop(), slice() does not modify the original array!*
 
 ```js
 var arr = [4, 6, 8, 10, 12]
-// getting [6, 8, 10]. arr will still be the same.
+// stores [6, 8, 10] in sliceOfArr. arr will still be the same.
 var sliceOfArr = arr.slice(1, 4)
 ```
 
-A method we have in arrays but not in strings is `splice`. This method takes a starting index as an argument an removes all array elements starting from that index.
+A method we have in arrays but not in strings is `splice`. This method takes a starting index as an argument and modifies the array by removing all elements starting from that index.
 
 ```js
 var arr = ['dog', 'cat', 'mouse']
@@ -105,28 +116,28 @@ arr.splice(1, 2, "fish")
 // arr contains ['dog', 'fish', 'giraffe']
 ```
 
-`splice` **returns** an array containig the elements that were removed. The modification happens on the array that the method was called from.
+`splice` **returns** an array containing the elements that were removed. The modification occurs to the original array that the method was called upon.
 
 ### Array --> String
 
-Arrays can be converted to strings by using the `join` method. This method does not change the array, instead it **returns** a string that  The string will contain the array element separated by a comma. We can also pass a separator as argument to `join`.
+Arrays can be converted to strings by using the `join` method. This method does not modify the array, but instead **returns** a new string that is constructed by joining the elements of the array using commas. We can also pass a separator as argument to `join`, which would be inserted in the string between each element.
 
 ```js
-var animals = ['cat', 'dog', 'lamma']
+var animals = ['cat', 'dog', 'llama']
 
 console.log(animals.join())
-// will log: 'cat,dog,'lamma'
+// will log: 'cat,dog,llama'
 
 console.log(animals.join(''))
-// will log: 'catdoglamma'
+// will log: 'catdogllama'
 
 console.log(animals.join(' '))
-// will log: 'cat dog lamma'
+// will log: 'cat dog llama'
 ```
 
 ### String --> Array
 
-Strings can be converted to arrays, by using the `split` method. This method will separate the string based on the **separator** provided as argument. For example, if our string is `'hello world'` and we provide a single space as an argument, we will get an array with two elements: `'hello'` and `'world'`:
+Strings can be converted to arrays by using the `split` method. This method will separate the string based on the **separator** provided as argument. For example, if our string is `'hello world'` and we provide a single space as an argument, we will get an array with two elements: `'hello'` and `'world'`:
 
 ```js
 var str = 'hello world'
@@ -153,9 +164,10 @@ console.log(arr1 === arr2)
 // will log: false
 ```
 
+
 ### Array Variables as References
 
-Each array is like a container. In javascript,  even if two containers hold the same values, they are still not considered equal to each other. These containers are located somewhere in the computer's memory. A variable defined as an array holds the address in which the array is located. This means that if we have a variable `firstArr` and set another varaible `secondArr` to be equal to `firstArr`, they will both have the address for the same array. When we modify either `firstArr` or `secondArr`, the same array will be modified.
+Arrays are *objects*. Each array is like a container. In JavaScript, even if two containers hold the same values, they are still not considered equal to each other. These containers are located somewhere in the computer's memory. A variable defined as an array holds the address in which the array is located. This means that if we have a variable `firstArr` and set another varaible `secondArr` to be equal to `firstArr`, they will both have the address for the same array. When we modify either `firstArr` or `secondArr`, the same array will be modified.
 
 ```js
 var firstArr = ['cat', 'dog', 'mouse']
@@ -176,13 +188,15 @@ console.log(arr1 === arr2)
 
 ### Custom Comparison
 
-So what if we did want to check if two arrays contain exactly the same elements? We would need to write our own code to test for that. Let's call this a **deep equality test** - since we have to go into each array and check the elements one-by-one.
+So how do we check if two arrays contain exactly the same elements? 
+
+We would need to write our own code to test for that. Let's call this a **deep equality test** - since we have to go into each array and check the elements one-by-one.
 
 ```js
 function deepEqualityTest(arr1, arr2){
   // we will assume they are equal
   var deeplyEqual = true
-  // no we will iterate and check if there is a difference
+  // now we iterate through the arrays and check for any differences
   for (var i = 0; i < arr1.length; i++ ){
     if (arr1[i] !== arr2[i]){
       deeplyEqual = false
@@ -192,7 +206,7 @@ function deepEqualityTest(arr1, arr2){
 }
 ```
 
-The function above is would compare the element in index `0` for both arrays, then the element at index `1` for both, up to the element at the end of the first array. This will work, but only if both arrays have the same number of elements. If, for example, `arr1` is `[1, 2, 3]` and `arr2` is `[1, 2, 3, 4]`, the function would return `true`, because we have only checked until the last element of `arr1` (and they were equal up to that point). To fix this problem, we will check first if the two arrays have different lengths. If that **is** the case, then the arrays are not deeply equal.
+The function above begins by comparing the element in index `0` for both arrays, then the element at index `1` for both, up to the element at the end of the first array. This will work, but only if both arrays have the same number of elements. If, for example, `arr1` is `[1, 2, 3]` and `arr2` is `[1, 2, 3, 4]`, the function would return `true`, because we have only checked until the last element of `arr1` (and they were equal up to that point). To fix this problem, we will check first if the two arrays have different lengths. If that **is** the case, then the arrays are not deeply equal.
 
 ```js
 function deepEqualityTest(arr1, arr2){

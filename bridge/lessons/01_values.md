@@ -14,7 +14,7 @@
 
 ## Resources
 
-* Eloquent Javascript: [Chapter 1](http://eloquentjavascript.net/01_values.html)
+* Eloquent JavaScript: [Chapter 1](http://eloquentjavascript.net/01_values.html)
 * Microsoft: [JavaScript Fundamentals](https://docs.microsoft.com/en-us/scripting/javascript/javascript-fundamentals)
   * Data Types
   * Operators
@@ -22,7 +22,7 @@
 
 ## Lesson
 
-In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In javascript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in javascript are: `number`, `string`, `boolean`, `object`, `function`, and `undefined`. The easiest way to create a value is to <b>literally</b> write its name.
+In the computer's world, the only thing that exist is a sequence of bits: `1`s and `0`s. In JavaScript, these bits are separated  into things called values. Each value has a `type`, that determines its role in a program. The basic types of values in JavaScript are: `number`, `string`, `boolean`, `object`, `function`, and `undefined`. The easiest way to create a value is to <b>literally</b> write its name.
 
 ### <b> Numbers </b>
 
@@ -35,7 +35,7 @@ To create a number, we just type the value:
 
 ### Arithmetic
 
-We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We may also use parentheses `()` to affect the order of operations. Javascript will evaluate <b> expressions </b> and produce a single number
+We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We may also use parentheses `()` to affect the order of operations. JavaScript will evaluate <b> expressions </b> and produce a single number
 
 ```js
 > 2 + 2 * 4
@@ -134,7 +134,7 @@ true
 false
 ```
 
-Javascript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `brroom`:
+JavaScript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `brroom`:
 
 ```js
 > brroom
@@ -194,7 +194,7 @@ We use the `&&` operator to test if two statements are <b>both</b> true. For exa
 > A: It will rain tomorrow.
 > B: It did not rain today.
 
-Each statment is either true or false, which corresponds to the boolean values in javascript. To check whether both are true, we would use `&&`.
+Each statment is either true or false, which corresponds to the boolean values in JavaScript. To check whether both are true, we would use `&&`.
 
 ```js
 > 1 === 1 && 2 === 2
@@ -280,7 +280,7 @@ In the case of `1 === 2 || 3 === 3` the same process will happen. The computer w
 > -> `false || true` <br>
 > -> `true`
 
-The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages.
+The process outlined above is typical for evaluating expressions, both for JavaScript and for many other programming languages.
 When evaluation expressions, logical operators come first, followed by the comparison operators, followed by the arithmetic operators.
 
 ## Type Conversion
