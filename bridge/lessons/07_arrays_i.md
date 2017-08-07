@@ -229,9 +229,9 @@ function deepEqualityTest(arr1, arr2){
 
 ### Exercises
 
-1. Write a function that returns the last element of an array. If the array is empty, return `undefined`.
-2. Write a function that takes an array and a value as arguments. The function returns `true` if the element is in the array, and `false` otherwise.
-3. Write a function that takes an array and a value as arguments, and returns a new array without any element that are equal to that value.
+1. Write a function `lastElement` that take an array as input, and returns the last element of the array. If the array is empty, return `undefined`.
+2. Write a function `contains` that takes an array and a value as arguments. The function returns `true` if the element is in the array, and `false` otherwise.
+3. Write a function `removeFromArray` that takes an array and a value as arguments, and returns a new array without any element that are equal to that value.
 
 ```js
 var arr = ['cat', 'dog', 'mouse', 'cat']
@@ -239,7 +239,7 @@ var newArr = removeFromArray(arr, 'cat')
 // newArr is ['dog', 'mouse']
 ```
 
-4. Write a functi4on that takes an array of numbers **and** a number as input, and returns a new array where each element is incremented by the number.
+4. Write a function `addToAll` that takes an array of numbers **and** a number as input, and returns a new array where each element is incremented by the number.
 
 ```js
 var arr = [2, 4, 6]
