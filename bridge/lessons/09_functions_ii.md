@@ -1,16 +1,46 @@
 # Functions II
 
+## objectives
+
+## keywords
+
+* conciseness
+* readability
+* abstrac
 
 ## Lesson
 
-In the past lessons we've written code to print the numbers from 1 to 10. More generally we can use two variables to print the values between any two numbers:
+Programs can vary a lot in conciseness and readability. Ideally, we would want to write code that resembels natural language (i.e. English). Consider the following code that calculates the sum of all numbers between `min` and `max`
 
 ```js
-var start = 2
-var end = 12
-for (var num = start; num <= end; num += 1){
-  console.log(num)
+var min = 1
+var max = 10
+var sum = 0
+
+for (count = min; count < max; count++){
+  sum += count
 }
+
+console.log(sum)
 ```
 
-What we want to print the numbers from 2 - 12, and later print the numbers from 4 - 14, in the same program? We would have to create two loops. These would look the same except for the values of `start` and `end`. Alternatively, we could create a function.
+There is nothing inherently wrong with the code above. However, we would like to be able to express this program in a more intuitive way. We can do this by breaking the problem into smaller pieces. The first piece would be getting all the numbers between `min` and `max`. Let's create a function `range` that does returns those numbers in an array.
+
+```js
+
+```
+
+```js
+function sum (min, max){
+  var sum = 0
+
+  for (count = min; count < max; count++){
+    sum += count
+  }
+
+  return sum
+}
+
+console.log(sum)
+
+```

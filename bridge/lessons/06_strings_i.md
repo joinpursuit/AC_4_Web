@@ -208,19 +208,19 @@ var capitalized = name[0].toUpperCase() + name.concat(1)
 
 ## Exercises
 
-1. Create a function called `capitalFirst` that takes a single argument, a string, and returns a copy of the string with the first letter capitalized. For example:
+1. Create a function called `capitalFirst` that takes a single argument, a string, and returns a copy of the string with the last letter capitalized. For example:
 
 ```js
 capitalLast(jimmy)
-// => 'JimmY'
+// => 'jimmY'
 ```
 
 2. Create a function called `DrEvil`. It should take a single argument, an amount, and return '<amount> dollars', except it will add '(pinky)' at the end if the amount is 1 million. For example:
 
 ```js
-DrEvil(10)
+drEvil(10)
 // => 10 dollars
-DrEvil(1000000)
+drEvil(1000000)
 // =>  1000000 dollars (pinky)
 ```
 
