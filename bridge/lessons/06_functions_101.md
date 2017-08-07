@@ -17,10 +17,12 @@ for (var num = start; num <= end; num += 1){
 }
 ```
 
-What we want to print the numbers from 2 - 12, and later print the numbers from 4 - 14, in the same program? We would have to create two loops. These would look the same except for the values of `start` and `end`. Alternatively, we could create a function.
+What if we want to print the numbers from 2 - 12, and later print the numbers from 4 - 14, in the same program? We would have to create two loops, which would look the same except for the values of `start` and `end`. Alternatively, we could create a *function*.
 
-A function is a reusable block of code. To create a function, we can create a new variable, and as the value use the `function` keyword, followed by parentheses, followed by the code block.
-This is called defining a function.
+A function is a reusable block of code. In mathematics, a function is a relationship where each input has a single output. This definition can be transferred to computer science. 
+
+To create a function, we can create a new variable, using the `function` keyword as the value, followed by parentheses `()`, followed by the code block `{}`.
+This is called *defining* a function.
 
 ```js
 var hello = function (){
@@ -28,10 +30,13 @@ var hello = function (){
 }
 ```
 
+It is important to note that the function above takes **no inputs**.
+
 Once we created a function, we can run it at any time by writing its name, followed by parentheses. This is called calling or invoking the function.
 
 ```js
-hello()
+> hello()
+hello
 ```
 
 We can put any code inside a function. We could put the printing loop from above. 

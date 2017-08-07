@@ -63,13 +63,20 @@ function dynamicChange(num, arr){
     return helper(num);
 }
 
-console.time("dbsave");  
-console.log("(num:" + 60 + ", " + "currency:[1,5,12], min:" + recursiveChange(60, [1,5,12]));
-console.timeEnd("dbsave"); 
+function timer(testAmount, testCurrency){
+    // console.time("dbsave");  
+    // console.log("(num:" + testAmount + ", " + "currency:[1,5,12], min:" + recursiveChange(testAmount, testCurrency));
+    // console.timeEnd("dbsave"); 
 
-console.time("dbsave");  
-console.log("(num:" + 60 + ", " + "currency:[1,5,12], min:" + dynamicChange(60, [1,5,12]));
-console.timeEnd("dbsave"); 
+    console.time("dbsave");  
+    console.log("(num:" + testAmount + ", " + "currency:" + testCurrency + ", min:" + dynamicChange(testAmount, testCurrency));
+    console.timeEnd("dbsave"); 
+}
+
+// timer(60, [1,2,5,10]);
+// timer(80, [1,2,5,10]);
+// timer(1230, [1,2,5,10]);
+timer(23902323, [1,5,12,58,237,489,2309]);
 
 // for (var i = 0; i < 10; i++){ 
 //     var num = Math.floor(Math.random()*100)+200;
