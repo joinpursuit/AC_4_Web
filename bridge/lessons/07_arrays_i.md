@@ -7,6 +7,7 @@
 * data type
 * collection
 * index
+* mutable
 * array element
 * array join
 * string split
