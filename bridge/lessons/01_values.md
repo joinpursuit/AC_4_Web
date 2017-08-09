@@ -35,9 +35,13 @@ To create a number, we just type the value:
 42
 ```
 
+### Operators
+
+An **operator** is one of a predefined group of words and symbols. It takes one or two values, does some work behind the scenes, and returns the result of that work. For example, the `+` operator takes two numbers, add them, and the sum. In JavaScript, some operators - such as `+`, will take one value to their left and one value to their right. Some operators, such as `typeof` (discussed below) take only the value to their right.
+
 ### Arithmetic
 
-We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We may also use parentheses `()` to affect the order of operations. Javascript will evaluate <b> expressions </b> and produce a single number
+We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We may also use parentheses `()` to affect the order of operations. Javascript will evaluate <b> expressions </b> and return a single number.
 
 ```js
 > 2 + 2 * 4
@@ -87,7 +91,7 @@ The is called string concatenation (verb: concatenate).
 
 ## The `typeof` Operator
 
-The `typeof` operator produces a string with the type of the value that follows it.
+The `typeof` operator returns a string with the type of the value that follows it.
 
 ```js
 > typeof 2
@@ -108,11 +112,11 @@ In contrast, `typeof` only takes one value. The `-` (minus) operator can also ta
 
 ## <b>Booleans</b>
 
-Boolean is a type that can only have one of two possible values: `true` or `false`. Boolean values are produced when using certain operators.
+Boolean is a type that can only have one of two possible values: `true` or `false`. Boolean values are returned when using certain operators.
 
 ### Comparison Operators
 
-Comparison operators inlcude `===`, `>`, `<`. These do not make a statement about values, but rather test the relationship between them. The test produces one of the two boolean values.
+Comparison operators inlcude `===`, `>`, `<`. These do not make a statement about values, but rather test the relationship between them. The test returns one of the two boolean values.
 
 ```js
 > 2 === 2
@@ -195,7 +199,7 @@ In the statement above, both right hand side and left hand side of the `&&` oper
 true
 ```
 
-The `&&` operator will produce `true` only if both left-hand and right-hand sides are true. Otherwise it will produce `false`:
+The `&&` operator will evaluate to `true` only if both left-hand and right-hand sides are true. Otherwise it will return `false`:
 
 ```js
 > 1 === 1 && 2 === 3
@@ -222,7 +226,7 @@ true
 true
 ```
 
-This will produce `false` only if both left-hand side and right hand side are false:
+This will be `false` only if both left-hand side and right hand side are false:
 
 ```js
 > 2 === 3 || 4 === 5
@@ -235,7 +239,7 @@ false
 
 #### The NOT (`!`) Operators
 
-The `!` operator, like `typeof` takes a single boolean value to its right. It produces the opposite value - given `true`, it produces `false`; given `false`, it produces `true`
+The `!` operator, like `typeof` takes a single boolean value to its right. It returns the opposite value - given `true`, it returns `false`; given `false`, it returns `true`
 
 ```js
 > !true
@@ -246,7 +250,7 @@ true
 
 ### Expressions
 
-All the code we've written in this lesson has consisted of <b>expressions</b>. An expression is anything that produces a value. `1 + 2` is an expression - it produces the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which produces the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This process can be simple, as in the case of `1 + 2` (simply add the two numbers). But in some cases the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In the case of `1 + 2 + 3 + 4`, one and two will be added first, then their result will be added to `3`, etc. We will use the arrow  `->` as a symbol for <i>evaluates to</i>.
+All the code we've written in this lesson has consisted of <b>expressions</b>. An expression is anything that returns a value. `1 + 2` is an expression - it returns the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which returns the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This process can be simple, as in the case of `1 + 2` (simply add the two numbers). But in some cases the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In the case of `1 + 2 + 3 + 4`, one and two will be added first, then their result will be added to `3`, etc. We will use the arrow  `->` as a symbol for <i>evaluates to</i>.
 
 * `1 + 2 + 3 + 4`
 * -> `3 + 3 + 4`
@@ -259,7 +263,7 @@ In the case of concatenating strings, a similar process will happen:
 * -> `'after' + 'wards'`
 * -> `'afterwards'`
 
-In the case of `1 === 2 || 3 === 3` the same process will happen. The computer will scan the expression and identify the OR operator. To evaluate this operator, we need to check if either the left hand or right hand side are the value `true`. We typically start by examining the left hand side. In this case, it is an expression, so we evaluate it. Since it produces the value `false`, we continue examine the right operand of the `||` operator. This is again an expression, which produces the value `true`. Now we can finally say that the entire expression, `1 === 2 || 3 === 3` produces `true`.
+In the case of `1 === 2 || 3 === 3` the same process will happen. The computer will scan the expression and identify the OR operator. To evaluate this operator, we need to check if either the left hand or right hand side are the value `true`. We typically start by examining the left hand side. In this case, it is an expression, so we evaluate it. Since it returns the value `false`, we continue examine the right operand of the `||` operator. This is again an expression, which returns the value `true`. Now we can finally say that the entire expression, `1 === 2 || 3 === 3` returns `true`.
 
 * `1 === 2 || 3 === 3`
 * -> `false || 3 === 3`
@@ -287,7 +291,7 @@ This automatic conversion can lead to unexpected results:
 
 Since the number is converted to a string, the above was the same as writing `'2' + '4'` - like concatenating any two strings.
 
-Another case of automatic conversion occurs when a non-boolean value appears instead of a boolean. In that case, most values will be converted to `true`. Exceptions include the number `0`, the empty string `''`, and a few others which we will discuss later. These evaluate to `false`. In those cases the `||` operator behaves in an unusual way: if the left-hand side evaluates to true, the original left-hand value will be produced (instead of `true`).
+Another case of automatic conversion occurs when a non-boolean value appears instead of a boolean. In that case, most values will be converted to `true`. Exceptions include the number `0`, the empty string `''`, and a few others which we will discuss later. These evaluate to `false`. In those cases the `||` operator behaves in an unusual way: if the left-hand side evaluates to true, the original left-hand value will be returned (instead of `true`).
 
 ```js
 > false || 1
@@ -300,7 +304,7 @@ true
 false
 ```
 
-If the left-hand expression evaluates to false, the value in the right-hand side is produced:
+If the left-hand expression evaluates to false, the value in the right-hand side is returned:
 
 ```js
 > 0 || 2
