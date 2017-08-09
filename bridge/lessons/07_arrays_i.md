@@ -213,7 +213,6 @@ function deepEqualityTest(arr1, arr2){
 }
 ```
 
-
 ### Exercises
 
 1. Write a function that returns the last element of an array. If the array is empty, return `undefined`.

@@ -44,7 +44,7 @@ We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We 
 10
 ```
 
-Another useful operator is `modulo`, the remainer operator. 
+Another useful operator is `modulo`, the remainer operator.
 
 ```js
 > 24 % 12

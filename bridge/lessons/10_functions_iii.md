@@ -76,7 +76,7 @@ Let's examine a built-in function `setInterval`. This function is given as argum
 1. a function
 2. a time interval (in milliseconds)
 
-`setInterval` will call the function every time the given time interval has 
+`setInterval` will call the function every time the given time interval has
 passed. To see it in action, let's try logging `hello` every second:
 
 ```js

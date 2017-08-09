@@ -21,8 +21,7 @@ Students will understand what a Graphical User Interface (GUI) is, what a comman
 * `rm -r [directory name]` - remove (recursively) a folder, all files, subfolder, subfiles, etc. Will prompt if trying to remove special files.
 * `mv [filename] [foldername]` - move a file to a different folder
 * `mv [filename] [new filename]` - rename a file
-* `node` - start a node REPL
-* `node [filename]` - execute a javascript file
+* `vim` - open the vim editor
 
 ## Resources
 

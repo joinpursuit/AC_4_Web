@@ -1,6 +1,5 @@
 # Node.js
 
-
 ## Objectives
 
 Students will understand what a REPL is, how to open it and use it to write some basic code. Students will also understand how to use node to execute javascript files.
@@ -9,6 +8,8 @@ Students will understand what a REPL is, how to open it and use it to write some
 
 * Read-Eval-Print-Loop (REPL)
 * node scripts
+* `node` - start a node REPL
+* `node [filename]` - execute a javascript file
 
 ### Lesson
 
