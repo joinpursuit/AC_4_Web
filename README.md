@@ -7,7 +7,7 @@
 ## Lessons
 
 0. [Terminal 101](bridge/lessons/0a_terminal.md)
-1. [Node] (bridge/lessons/0b_node.md)
+1. [Node](bridge/lessons/0b_node.md)
 1. [Values, Types, Operators](bridge/lessons/01_values.md)
 2. [Variables](bridge/lessons/02_variables.md)
 3. [Conditionals](bridge/lessons/03_conditionals.md)

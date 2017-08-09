@@ -4,7 +4,9 @@ Objective: Students will learn to use Terminal for navigating through the file s
 
 ## Vocabulary
 
-* Command line interface = CLI = Terminal = Bash = Shell
+* Operating System (OS)
+* Graphical User Interace (GUI)
+* Command Line Interface (CLI) = Terminal = Shell
 * Folder = directory
 * `pwd` - print working directory
 * `cd ..` - go directory up
@@ -20,47 +22,111 @@ Objective: Students will learn to use Terminal for navigating through the file s
 * `node` - start a node REPL
 * `node [filename]` - execute a javascript file
 
-
-
 ## Resources
 
+* Tree House: [Introduction to the Mac OS X Command Line](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 * Git Tower: [Command Line 101](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101)
+* TuxRadar: [The Command Line](http://tuxradar.com/content/lpi-learn-linux-and-get-certified-part-5-command-line)
 
 ## Lesson
 
+### What is the terminal (= command line)
+
+One way people interact daily with their operating system (be it Mac OS, Windows or Linux) is through the Graphical User Interface, or in short - GUI. A graphical user interface uses graphics, along with a keyboard and a mouse, to provide an easy-to-use interface to the OS. A GUI provides windows, pull-down menus, buttons, scrollbars, icons, and the mouse to enable users to interact with the operating system or application.
+
+A command line interface (CLI) enables users to type commands in a terminal or console window to interact with an operating system. Users respond to a visual prompt by typing a command on a specified line, and receive a response back from the system. Users type a command or series of commands for each task they want to perform. [Oracle](https://docs.oracle.com/cd/E19683-01/806-7612/startup-78447/index.html)
+
+### Getting Started
+
+To open the terminal On OS X, open your Applications folder, then open the Utilities folder. Open the Terminal application. You may want to add this to your dock. You could also use the Spotlight to search for `terminal`. [Tree House](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
+
+When it’s launched, we see something like this:
+
+```bash
+computer:~ user$
+```
+
+The `~` symbol stands for your home directory.
+
+### Where Are We
+
+In the console, you are always working in a directory (=folder). We call this the working directory. You can see where you are using pwd (=print working directory)
+
+```bash
+pwd
+```
+
+### Navigation
+
+You can change your directory with cd (= change directory). If you follow this command with a name, it will move you to that location, if it exists. Without an argument, it will take you to your home directory (~).
+
+```bash
+cd Downloads
+```
+
+I was in my home directory, which contains the a directory called `Downloads`. This is relative path, because I specified my destination relative to my current directory. I can provide a full path beginning starting with my home directory (~) such as:
+
+```bash
+cd ~/Downloads
+```
+
+If you want to navigate “up”, to the directory that contains your current directory, you can use the special name `..`. From the `Documents` directory, this command will take us up to the home directory.
+
+```bash
+cd ..
+```
+
+### Editing Files and Folders
+
+* The `cp` command will make a copy of a file for you. For example:
+
+```bash
+cp bar foo
+```
+
+Will make an exact copy of `bar` and name it `foo`.
+
+* The `mv` command will move a file to a different location or will rename a file. For example:
+
+```bash
+mv bar foo
+```
+
+Will rename the file `bar` to `foo`. `mv foo ~/Downloads` will move the file `foo` to the `Downloads` directory, but it will not rename it.
+
+* The `rm` command removes a file. For example:
+
+```bash
+rm foo
+```
+
+Will remove a file named foo in the current directory.
+
+* The `rmdir` command will delete an empty directory. To delete a directory and all of its contents recursively, use `rm -r` instead.
+
+* The mkdir command creates a new directory. For example:
+
+```bash
+mkdir music
+```
+
+will create a new directory called `Music`.
+
+### Opening Files
+
+To open a file (such as a text file) to view its contents, type the name of the app you would like to use to open it. For example, we will use a text editor called **vim** to open a text file:
+
+```bash
+vim foo
+```
+
+To exit vim, first hold the `shift` and `;` (colon) keys. This will bring you to the command mode. Now type `q` and press `enter`. To exit and save changes type `wq`. To exit without saving changes type `q!`. You  navigate the file using the arrow keys, and starting inserting text by pressing the `i` key. To move from command mode to navigation, press the `escape` key.
+
+### Tips
+
 * Use tab to autocomplete. for example, if the current folder has subfolders titled `games`, `photos` and `photography`, typing `pho` and pressing the tab key will result in displaying `photo` and `photography`. If we then type the letter `g` to get `photog`,and press the tab key - the command will be autocomplete to `photography`.
 
-We can also use the up and down keys to step through the commands we had typed before.
-
-### Node REPL
-
-A REPL (Read–Eval–Print Loop) is a programming environment that takes user input one line at a time. The REPL evaluate each line and prints the resulting value to the screen. (if there is one). To start the node REPL, simply typed `node` in the terminal, and press enter. You should see the following:
-
-```js
->
-```
-
-Type a number and press enter, and the number will be displayed back to you.
-
-```js
-> 5
-5
-```
-
-Type an expression and press enter, and it will be evaluated, the resulting value printed.
-
-```js
-> 2 + 8 - 1
-11
-```
-
-What happens if you try to type two numbers?
-
-```js
-> 2 2
-```
-
-*How can errors be useful when using Terminal and node?*
+* You can also use the up and down keys to step through the commands typed before.
 
 ## Exercises
 
