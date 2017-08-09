@@ -24,11 +24,11 @@ In the previous lesson we only used expressions in our code. But on their own, e
 "bat" + "man";
 ```
 
-Each of the expressions will be evaluated, produce a value, and then get discarded. None of the expressions will have any effect on anything.
+Each of the expressions will be evaluated, return a value, and then get discarded. None of the expressions will have any effect on anything.
 
 ## console.log
 
-The first kind of effect we need is printing text to the screen. We have been using the node REPL, where the value produced by an expression was printed for us. To write programs, however, we will be creating a files in which we put our javascript code. When running a file with the code above, nothing will get printed. In order to print something in javascript file, we will need to use the `console.log` function.
+The first kind of effect we need is printing text to the screen. We have been using the node REPL, where the value returned by an expression was printed for us. To write programs, however, we will be creating a files in which we put our javascript code. When running a file with the code above, nothing will get printed. In order to print something in javascript file, we will need to use the `console.log` function.
 
 ```js
 console.log("bat" + "man")
@@ -88,7 +88,7 @@ console.log(num1 + num2 === 6)
 
 ### Statements and Expressions
 
-Variable assignment is our first example of a <b>statement</b>. When we assign a value to a variable, nothing visible happens. Instead, the <b>state</b> of our program changes. <b>State</b> is everything that's stored in memory while a program runs. In general, an expression produces a value, while a statement changes the programs state. When using the assignment operator, the right hand side is actually an expression. This means that we are not limited to writing a single value.
+Variable assignment is our first example of a <b>statement</b>. When we assign a value to a variable, nothing visible happens. Instead, the <b>state</b> of our program changes. <b>State</b> is everything that's stored in memory while a program runs. In general, an expression returns a value, while a statement changes the programs state. When using the assignment operator, the right hand side is actually an expression. This means that we are not limited to writing a single value.
 
 ```js
 var myNumber = 2 * 4 + 2

@@ -1,4 +1,4 @@
-# Functions I
+# Functions & Scope
 
 ## Terms
 
@@ -73,7 +73,7 @@ console.log(greeting)
 A commonly used term for this is **scope**: a variable inside a function has local scope, and a variables not inside any function has global scope. If we create a variable inside a function with the same name as a global variable - the function will only be aware of the local one. This, however, will not change the value of the global variable.
 
 ```js
-var greeting = 'hello
+var greeting = 'hello'
 
 function hello(){
   var greeting = 'what\'s up?'
