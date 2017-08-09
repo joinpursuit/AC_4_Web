@@ -19,6 +19,7 @@
 9. [Function Composition](bridge/lessons/09_functions_ii.md)
 10. [Callbacks](bridge/lessons/10_functions_iii.md)
 11. [User Input](bridge/lessons/11_user_input.md)
+11. [Constructors and `this`](bridge/lessons/12_objects_ii.md)
 
 ## Goals
 

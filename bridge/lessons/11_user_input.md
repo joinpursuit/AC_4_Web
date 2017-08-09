@@ -123,3 +123,4 @@ getUserInput()
 
 1. Write a program that asks the user for input. If the input is `'dog'`, log `'cat'`.
 2. Write a program that asks the user for input. The input must be of length 10 or greater. Ask the user for input until they provide the correct length.
+3. Write a program that asks the user for number input repeatedly. Every time an input is receieved, it will be added to a sum, and the sum will be displayed to the user. If the user inputs a nu,begit
