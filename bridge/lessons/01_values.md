@@ -2,6 +2,8 @@
 
 ## Objectives
 
+Students will understand what values are in javascript. They will know some basic types of values (number, string, boolean, undefined) and how to check for types (`typeof`). They will understand what operators are and how to use them in conjunction with values to: peform arithmetics, modify string, compare boolean values. They will learn about expressions and order of evaluation.
+
 ## Vocabulary
 
 * Types: number, string, boolean and undefined. Sources: [microsoft](https://docs.microsoft.com/en-us/scripting/javascript/data-types-javascript)

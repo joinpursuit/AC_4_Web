@@ -1,6 +1,8 @@
-# Terminal
+# The Command Line
 
-Objective: Students will learn to use Terminal for navigating through the file system, creating and deleting files and folders, running the node REPL, and using node to execute JavaScript code.
+## Objectives
+
+Students will understand what a Graphical User Interface (GUI) is, what a command line (=terminal) is, and why we use the command line. They will learn to use Terminal to perform basic tasks such as navigating the file system, creating, moving and deleting files and folders, and opening and editing text files.
 
 ## Vocabulary
 

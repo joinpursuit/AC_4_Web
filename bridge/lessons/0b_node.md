@@ -1,5 +1,10 @@
 # Node.js
 
+
+## Objectives
+
+Students will understand what a REPL is, how to open it and use it to write some basic code. Students will also understand how to use node to execute javascript files.
+
 ## Keywords
 
 * Read-Eval-Print-Loop (REPL)

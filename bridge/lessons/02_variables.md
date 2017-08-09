@@ -2,6 +2,8 @@
 
 ## Objectives
 
+Students will understand the difference between a statement and an expression. They will be able to define, assign value to, and modify variables. They will understand what `state` broadly means and why we want to save values to begin with.
+
 ## Vocabulary
 
 * expression vs statement
