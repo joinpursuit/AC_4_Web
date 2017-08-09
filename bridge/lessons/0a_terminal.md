@@ -50,7 +50,7 @@ computer:~ user$
 
 The `~` symbol stands for your home directory.
 
-### Where Are We
+### Where We Are
 
 In the console, you are always working in a directory (=folder). We call this the working directory. You can see where you are using pwd (=print working directory)
 
@@ -78,9 +78,27 @@ If you want to navigate “up”, to the directory that contains your current di
 cd ..
 ```
 
+### Creating Files and Folders
+
+* the `touch` command creates a new file with the provided name. For example:
+
+```bash
+touch foo
+```
+
+Will create a new file with the name `foo` in the current directory.
+
+* the `mkdir` command creates a new folder with the provided name. For example:
+
+```bash
+touch js
+```
+
+Will create a new folder named `js`.
+
 ### Editing Files and Folders
 
-* The `cp` command will make a copy of a file for you. For example:
+* The `cp` command creates a copy of a file. For example:
 
 ```bash
 cp bar foo
