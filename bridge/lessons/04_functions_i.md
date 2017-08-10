@@ -6,7 +6,7 @@
   * definition
   * call
 
-* scope: global, locals
+* scope: global, local
 
 ## Lesson
 

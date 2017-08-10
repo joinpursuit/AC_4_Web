@@ -162,5 +162,3 @@ if (userAge > 18 && userAge < 45){
 4. In a file named `pluralize.js` create two variables, one two hold a  noun and one to hold a number. Use a `if - else` statement to print the
 number and either a single or plural form, like "5 cats" or "1 dog".
 Bonus: Make it handle a few collective nouns like "sheep" and "geese".
-
-5. The following

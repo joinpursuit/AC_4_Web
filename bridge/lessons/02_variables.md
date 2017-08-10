@@ -28,13 +28,13 @@ Each of the expressions will be evaluated, return a value, and then get discarde
 
 ## console.log
 
-The first kind of effect we need is printing text to the screen. We have been using the node REPL, where the value returned by an expression was printed for us. To write programs, however, we will be creating a files in which we put our javascript code. When running a file with the code above, nothing will get printed. In order to print something in javascript file, we will need to use the `console.log` function.
+The first kind of effect we need is logging text to the screen. We have been using the node REPL, where the value returned by an expression was logged for us. To write programs, however, we will be creating a files in which we put our javascript code. When running a file with the code above, nothing will get logged. In order to log something in javascript file, we will need to use the `console.log` function.
 
 ```js
 console.log("bat" + "man")
 ```
 
-We will go into greater detail about functions in subsequent lessons. For now it is sufficient to know that to use a function, we need to write its name, followed by parentheses. We may pass a value or an expression to the function by putting it inside the parentheses. An expression will get evaluated first. Some functions return values once they are done executing. However, in the case of `console.log`, nothing useful is returned. Instead the function causes an effect (or side-effect), which is printing the value to the screen.
+We will go into greater detail about functions in subsequent lessons. For now it is sufficient to know that to use a function, we need to write its name, followed by parentheses. We may pass a value or an expression to the function by putting it inside the parentheses. An expression will get evaluated first. Some functions return values once they are done executing. However, in the case of `console.log`, nothing useful is returned. Instead the function causes an effect (or side-effect), which is logging the value to the screen.
 
 ## Math functions: max and min
 
@@ -103,7 +103,7 @@ var num2 = 8
 var sum = num1 + num2
 ```
 
-> Ex. In the following code, explain the evaluation process when assigning a value to the variable `sentence`. What would be printed to the screen?
+> Ex. In the following code, explain the evaluation process when assigning a value to the variable `sentence`. What would be logged to the screen?
 
 ```js
 var string = 'My favorite number is '
@@ -184,8 +184,8 @@ num -= 3
 3. Calculate properties of a circle, using the definitions [here](http://math2.org/math/geometry/circles.htm).
 * Use google: find how to get the number `Pi` in JavaScript.
 * Store a radius into a variable.
-* Calculate the circumference based on the radius, and print "The circumference is NN".
-* Calculate the area based on the radius, and print "The area is NN".
+* Calculate the circumference based on the radius, and log "The circumference is NN".
+* Calculate the area based on the radius, and log "The area is NN".
 
 4. Temperature Converter:
 * Store a celsius temperature into a variable.
