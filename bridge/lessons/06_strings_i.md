@@ -208,7 +208,7 @@ var capitalized = name[0].toUpperCase() + name.concat(1)
 
 ## Exercises
 
-1. Create a function called `capitalFirst` that takes a single argument, a string, and returns a copy of the string with the last letter capitalized. For example:
+1. Create a function called `capitalLast` that takes a single argument, a string, and returns a copy of the string with the last letter capitalized. For example:
 
 ```js
 capitalLast(jimmy)
