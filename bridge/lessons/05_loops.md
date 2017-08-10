@@ -128,13 +128,26 @@ You may have noticed that to find the value of `sum` in every new row, we take t
 
 ### Changing the increment
 
-So far we've been incrementing a variable by `1` on each iteration of the loop. We can increment or decrement by other numbers as well. For example, the following loop will log 
+So far we've been incrementing a variable by `1` on each iteration of the loop. We can increment by other numbers as well.
 
 ```js
-for 
+// logging all multiples of 5 between 5 and 50
+for (var i = 5; i <= 50; i += 5) {
+  console.log(i)
+}
 ```
 
+We can also decrement instead of incrementing:
 
+```js
+// logging all multiples of 5 between 50 and 5, descending
+for (var i = 50; i >= 5; i -= 5){
+  console.log(i)
+}
+```
+
+> Ex. Log all multiples of 10 between 10 and 100
+> Ex. Log all multiples of 10 between 100 and 0, descending
 
 ## Loop exercises
 
