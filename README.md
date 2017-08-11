@@ -15,7 +15,7 @@
 5. [Loops](bridge/lessons/05_loops.md)
 6. [Strings I](bridge/lessons/06_strings_i.md)
 7. [Arrays I](bridge/lessons/07_arrays_i.md)
-8. [Objects I](bridge/lessons/08_object_i.md)
+8. [Objects I](bridge/lessons/08_objects_i.md)
 9. [Function Composition](bridge/lessons/09_functions_ii.md)
 10. [Callbacks](bridge/lessons/10_functions_iii.md)
 11. [User Input](bridge/lessons/11_user_input.md)
