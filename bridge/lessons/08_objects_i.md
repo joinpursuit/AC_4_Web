@@ -61,7 +61,7 @@ getFullName(anotherPerson)
 
 ### Arrays vs objects
 
-Arrays and object are closely realted to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the property names are number. Arrays also have special properties (such as length) and methods to insert, delete, iterate over and modify elements.
+Arrays and object are closely realted to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the property names are numbers. Arrays also have special properties (such as length) and methods to insert, delete, iterate over and modify elements.
 
 ### Arrays of Objects
 
