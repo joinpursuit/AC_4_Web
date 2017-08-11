@@ -159,9 +159,9 @@ Let's put everything together by building a small todo list program. Here are th
 ### Exercises
 
 1. The Watch List
-Keep track of which films you watched and which films you want to watch! Create an array of films, where each object describes a film and has properties for the title (a string), director (a string), and startedWatching (a boolean indicating if you started watching it).
+Keep track of which films you watched and which films you want to watch! Create an array of films, where each film and has properties for the title (a string), director (a string), and startedWatching (a boolean indicating if you started watching it).
 Iterate through the array of films. For each film, log the title and director like this: `'Wonder Woman, directed by Patty Jenkins'`.
-Now use an `if ... else` statement to change the output depending on whether you watched it yet. If you watched it, log a string like 'You watched "Wonder Woman" directed by Patty Jenkins', and if not, log  `'You still need to watched "Wonder Woman" by director Patty Jenkins.'`
+Now use an `if ... else` statement to change the output depending on whether you watched it yet. If you watched it, log a string like 'You watched "Wonder Woman" directed by Patty Jenkins', and if not, log  `'You still need to watch "Wonder Woman" by director Patty Jenkins.'`
 
 2. Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).On separate lines (one console.log statement for each), log the recipe information so it looks like:
 
