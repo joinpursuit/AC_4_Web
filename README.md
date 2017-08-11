@@ -4,6 +4,8 @@
 
 ## <b><u>Bridge</u></b>
 
+[Introduction](bridge/lessons/00_intro.md)
+
 ## Lessons
 
 0. [The Command Line](bridge/lessons/0a_terminal.md)

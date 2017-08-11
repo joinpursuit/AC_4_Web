@@ -1,5 +1,7 @@
 # Web Bridge Introduction
 
+Hi Everyone. Welcome. We will start the day by installing [NodeJS](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).  Meanwhile, here are some logic puzzles.
+
 ## Logic Puzzles
 
 ### Hats
