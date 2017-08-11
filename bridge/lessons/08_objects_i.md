@@ -158,12 +158,12 @@ Let's put everything together by building a small todo list program. Here are th
 
 ### Exercises
 
-1. The Watch List
+1. **The Watch List**:
 Create an array of films, where each film has the following properties: title, director, and a boolean indicating if you started watching it.
 Create a function that iterates over the array and logs the title and director for each film. Like this: `'Wonder Woman, directed by Patty Jenkins'`.
 Now Change the output depending on whether the film was watched. If it was watched, log a string like 'You watched "Wonder Woman" directed by Patty Jenkins', and if not, log  `'You still need to watch "Wonder Woman" by director Patty Jenkins.'`
 
-2. Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).On separate lines (one console.log statement for each), log the recipe information so it looks like:
+2. Create an object to hold information on your favorite recipe. It should have the following properties:  title, number of servings, and ingredients (an array).  Create a function that logs the recipe information, so it looks like:
 
 ```js
 name: Mole
@@ -172,4 +172,12 @@ ingredients:
 cinnamon
 cumin
 cocoa
+```
+
+* **Bonus**: change the function to log all ingredients on the same line:
+
+```js
+name: Mole
+servings: 2
+ingredients: cinnamon, cumin, cocoa
 ```
