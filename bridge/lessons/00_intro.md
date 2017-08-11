@@ -1,6 +1,8 @@
 # Web Bridge Introduction
 
-Hi Everyone. Welcome. We will start the day by installing [NodeJS](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).  Meanwhile, here are some logic puzzles.
+Hi Everyone. Welcome. We will start the day by installing [NodeJS](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).
+
+Here are some logic puzzles.
 
 ## Logic Puzzles
 
@@ -26,14 +28,22 @@ Citizens of the City of Truth always tell the truth.
 
 There are two citizens at the intersection. You know one of the is from the City of Lies and the other is from the City Of Truth. Unfortunately, you don't know which is which. You can only ask one of them a single question. What question could you ask to find the way to the City of Truth?
 
-### Crates of Fruit
+### Deadly Choice
 
-You work at a fruit factory.
+A man is caught on the King's property. He is brought before the King to be punished.
 
-There are 3 crates in front of you. One crate contains only apples. One crate contains only oranges. The other crate contains both apples and oranges.
+The King says, "You must give me a statement. If it is true, you will killed by lions. If it is false, you will be killed by trampling of wild buffalo."
 
-And each crate is labeled. One reads "apples", one reads "oranges", and one reads "apples and oranges".
+But in the end, the King has to let the man go.
 
-But the labeling machine has gone crazy and is now labeling all boxes incorrectly.
+What was the man's statement?
 
-If you can only take out and look at just one of the pieces of fruit from just one of the crates, how can you label ALL of the crates correctly?
+### Farmer Crosses River
+
+A farmer wants to cross a river and take with him a wolf, a goat, and a cabbage.
+
+There is a boat that can fit herself plus either the wolf, the goat, or the cabbage.
+
+If the wolf and the goat are alone on one shore, the wolf will eat the goat. If the goat and the cabbage are alone on the shore, the goat will eat the cabbage.
+
+How can the farmer bring the wolf, the goat, and the cabbage across the river?
