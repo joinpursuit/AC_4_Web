@@ -61,7 +61,7 @@ getFullName(anotherPerson)
 
 ### Arrays vs objects
 
-Arrays and object are closely realted to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the property names are numbers. Arrays also have special properties (such as length) and methods to insert, delete, iterate over and modify elements.
+Arrays and object are closely realted to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the property names are numbers. Arrays also have special properties (such as length) and methods to insert, delete, iterate over, and modify elements.
 
 ### Arrays of Objects
 
@@ -159,9 +159,9 @@ Let's put everything together by building a small todo list program. Here are th
 ### Exercises
 
 1. The Watch List
-Keep track of which films you watched and which films you want to watch! Create an array of films, where each film and has properties for the title (a string), director (a string), and startedWatching (a boolean indicating if you started watching it).
-Iterate through the array of films. For each film, log the title and director like this: `'Wonder Woman, directed by Patty Jenkins'`.
-Now use an `if ... else` statement to change the output depending on whether you watched it yet. If you watched it, log a string like 'You watched "Wonder Woman" directed by Patty Jenkins', and if not, log  `'You still need to watch "Wonder Woman" by director Patty Jenkins.'`
+Create an array of films, where each film has the following properties: title, director, and a boolean indicating if you started watching it.
+Create a function that iterates over the array and logs the title and director for each film. Like this: `'Wonder Woman, directed by Patty Jenkins'`.
+Now Change the output depending on whether the film was watched. If it was watched, log a string like 'You watched "Wonder Woman" directed by Patty Jenkins', and if not, log  `'You still need to watch "Wonder Woman" by director Patty Jenkins.'`
 
 2. Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).On separate lines (one console.log statement for each), log the recipe information so it looks like:
 
