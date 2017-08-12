@@ -1,7 +1,5 @@
 # <b>Access Code 4.1</b>
 
-*This is a work in progress*
-
 ## <b><u>Bridge</u></b>
 
 [Introduction](bridge/lessons/00_intro.md)
