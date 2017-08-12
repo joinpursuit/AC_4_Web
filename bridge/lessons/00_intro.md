@@ -20,7 +20,11 @@ How did he know the color of his hat and what color was it?
 
 ### Island of Truthtellers and Liars
 
-The island has only one city, the capital, Quandary. Its population is made up entirely of members of two groups, the Truthtellers and the Liars. The Truthtellers always say the truth, and the Liars always lie. The members of each tribe can always recognize who is or isn't a member of their tribe. Ellen decided that her best course was to reach the capital. Walking from the beach, she came to a road that split in two and saw a man and a woman: she could tell for sure they were members of opposite tribes,but she could not tell who of them belonged to which one. With one `yes / no` question, Helen found out which way she should go to reach the capital. What was the question?
+The island has only one city, the capital, Quandary. Its population is made up entirely of members of two groups, the Truthtellers and the Liars. The Truthtellers always say the truth, and the Liars always lie. The members of each tribe can always recognize who is or isn't a member of their tribe.
+
+Ellen decided that her best course was to reach the capital. Walking from the beach, she came to a road that split in two and saw a man and a woman: she could tell for sure they were members of opposite tribes, but she could not tell who of them belonged to which one.
+
+With one `yes / no` question, Helen found out which way she should go to reach the capital. What was the question?
 
 ### Deadly Choice
 
