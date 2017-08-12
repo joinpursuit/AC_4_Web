@@ -1,6 +1,6 @@
 # Web Bridge Introduction
 
-Hi Everyone. Welcome. We will start the day by installing [NodeJS](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).
+Hi Everyone. Welcome. We will start the day by installing [NodeJS 6.11.2](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).
 
 ## Slack
 ### Setup Slack Account
