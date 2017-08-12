@@ -8,9 +8,9 @@ Here are some logic puzzles.
 
 ### Hats
 
-Cannibals ambush a safari in the jungle and capture three people. The cannibals give the people men a single chance to escape uneaten.
+Cannibals ambush a safari in the jungle and capture three people. The cannibals give the people a single chance to escape uneaten.
 
-The captives are lined up in order of height, and are tied to stakes. The person in the rear can see the backs of his two friends, the person in the middle can see the back of the person in front, and the person in front cannot see anyone. The cannibals show the men five hats. Three of the hats are black and two of the hats are white.
+The captives are lined up in order of height, and are tied to stakes. The person in the rear can see the backs of his two friends, the person in the middle can see the back of the person in front, and the person in front cannot see anyone. The cannibals show the people five hats. Three of the hats are black and two of the hats are white.
 
 Blindfolds are then placed over each person's eyes and a hat is placed on each person's head. The two hats left over are hidden. The blindfolds are then removed and it is said to the people that if one of them can guess what color hat he is wearing they can all leave unharmed.
 
@@ -24,7 +24,7 @@ The island has only one city, the capital, Quandary. Its population is made up e
 
 Ellen decided that her best course was to reach the capital. Walking from the beach, she came to a road that split in two and saw a man and a woman: she could tell for sure they were members of opposite tribes, but she could not tell who of them belonged to which one.
 
-With one `yes / no` question, Helen found out which way she should go to reach the capital. What was the question?
+With one question, Helen found out which way she should go to reach the capital. What was the question?
 
 ### Deadly Choice
 
