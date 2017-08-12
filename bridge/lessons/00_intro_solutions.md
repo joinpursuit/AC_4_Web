@@ -1,6 +1,8 @@
-# Very Secret Solution File
+# Secret Solution File
 
-## Hats
+## Solutions
+
+### Hats
 
 The person in front knew he was wearing a black hat because:
 1. he knew that the first person did not see two white hats.
@@ -26,13 +28,13 @@ So the King can't tell if it is a lie or the truth, and decides to let him go.
 
 ### Farmer Crosses River
 
-Farmer takes Goat across (leaving Wolf and Cabbage behind)
-Farmer returns alone
-Farmer takes Wolf across
-Farmer returns with Goat
+Farmer takes Goat across (leaving Wolf and Cabbage behind).
+Farmer returns alone.
+Farmer takes Wolf across.
+Farmer returns with Goat.
 
-* We now have the Farmer, the Cabbage and the Goat on one side and the Wolf on the other side
+* We now have the Farmer, the Cabbage and the Goat on one side and the Wolf on the other side.
 
-Farmer takes Cabbage across
-Farmer returns alone
-Farmer takes Goat across
+Farmer takes Cabbage across.
+Farmer returns alone.
+Farmer takes Goat across.
