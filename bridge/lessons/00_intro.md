@@ -6,7 +6,7 @@ Hi Everyone. Welcome. We will start the day by installing [NodeJS 6.11.2](https:
 ### Setup Slack Account
 Slack is our less-formal, more immediate messaging/chat app. It should be used for quick short term communication and is not preferred for anything you would want to save long term.
 
-1. To sign up for slack go to this [link](https://c4qbridge-androidnw.slack.com/join/shared_invite/MjI1MDQyOTI0ODcxLTE1MDIyMjYxODktNTg4NWIwYTQwMg). 
+1. To sign up for slack go to this [link](https://join.slack.com/t/c4qbridge-webdays/shared_invite/MjI0ODM0MjMxNjIyLTE1MDIyMjUzODMtNTFhYzI5MTVlNg). 
 2. You will be prompted to enter your email address. Enter it and hit the green button.
 3. Check your email for the confirmation and click "Confirm Email".
 4. Enter your name and choose a user name.
