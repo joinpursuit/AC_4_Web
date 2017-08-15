@@ -273,6 +273,17 @@ In the case of `1 === 2 || 3 === 3` the same process will happen. The computer w
 The process outlined above is typical for evaluating expressions, both for javascript and for many other programming languages.
 When evaluation expressions, logical operators come first, followed by the comparison operators, followed by the arithmetic operators.
 
+## The Ternary Operator
+
+The ternary operator works with three values. The value on the left of the question mark “picks” which of the other two values will come out. When it is true, the middle value is chosen, and when it is false, the value on the right comes out.
+
+```js
+> 1 === 1 ? 1 : 2
+1
+> 1 ==== 2 ? 1 : 2
+2
+```
+
 ## Type Conversion
 
 Type conversions may occur in expressions that feature variables of different types. A common situation is when the `+` operator is used with a string and a number. In this case, the number will be converted to a string:
@@ -313,14 +324,24 @@ If the left-hand expression evaluates to false, the value in the right-hand side
 'cat'
 ```
 
-## <b> Exercises </b>
+### Operator Precedence
 
-1.Create truth tables for the following expressions:
-* `!A && !B`
-* `!A || !B`
+This higher precendence operator is evaluated first:
 
-2.Write the step by step evaluation (mind the order of operations):
-* `2 + 3 * 2 + 1`
-* `4 / 2 + 8 / 4`
-* `'ca' + 'ter' + 'pi' + 'llar'`
-* `2 * 4 === 8 && 'car' + 'pool' === 'carpool'`
+[mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+
+[microsoft](https://docs.microsoft.com/en-us/scripting/javascript/operator-subtractprecedence-javascript)
+
+## <b> In class Exercises </b>
+
+1. What are the types of the following expressions and what do they evaluate to, and why?
+* `17`
+* `1 + 2 * 3 + 4`
+* `800 / 80 / 8`
+* `400 > 200`
+* `1 !== 1`
+* `true || false`
+* `true && false`
+* `true? true: false`
+* `'%'`
+* `'a' + 'b'`
