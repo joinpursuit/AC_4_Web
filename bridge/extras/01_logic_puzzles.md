@@ -7,3 +7,7 @@ The island's population is made up entirely of members of two groups, the Trutht
 ### Puzzle 1
 
 Three inhabitant of the Island: `A`, `B` and `C` were standing together in a garden. Hellen passed by and asked `A`, "Are you a Truthteller or a Liar?" `A` answered, but his voice was too low and Helen couldn't hear him. So she asked `B`, "What did `A` say?". `B` replied, "`A` said that he is a liar". At the point `C` said, "Don't believe `B`, he is lying!". What tribe do `B` and `C` belong to?
+
+### Puzzle 2
+
+Stephanie comes across two inhabitants, `A` and `B`. `A` says: "Either I am a Liar or `B` is a Truthteller." What tribe do `A` and `B` belong to?

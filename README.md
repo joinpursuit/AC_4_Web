@@ -21,6 +21,10 @@
 11. [User Input](bridge/lessons/11_user_input.md)
 11. [Constructors and `this`](bridge/lessons/12_objects_ii.md)
 
+
+## Extras
+
+1. [Logic Puzzles](bridge/extras/01_logic_puzzles.md)
 ## Goals
 
 ### <u>Enduring Understanding</u>
