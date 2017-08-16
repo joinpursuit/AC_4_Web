@@ -131,7 +131,7 @@ console.log(sum)
 
 Note that we are not changing the values of `num1` and `num2`.
 
-> Ex 1. Create a function that returns the number multiplied by 2
+> Ex 1. Create a function that takes a number as input and returns the number multiplied by 2
 
 ### Calling functions from other functions
 
