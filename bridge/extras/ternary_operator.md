@@ -9,7 +9,7 @@ console.log(false ? 1 : 2);
 // will log 2
 ```
 
-The value to the left of the question mark determines which of the other two values will be returned. There are two values that follow the question mark, separated by a colon (`:`). When the value to the left of the question mark is `true`, the first value after the question mark will be returned. When the value to the left of the quesiton mark is `false`, the rightmost value will be returned. The following is an example checking if two numbers are equal.
+The value to the left of the question mark determines which of the other two values will be returned. There are two values that follow the question mark, separated by a colon (`:`). When the value to the left of the question mark is `true`, the first value will be returned. When the value to the left of the quesiton mark is `false`, the second value will be returned. The following is an example checking if two numbers are equal.
 
 ```js
 var num1 = 2
