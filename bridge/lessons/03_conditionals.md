@@ -151,14 +151,28 @@ if (userAge > 18 && userAge < 45){
 
 > How whould you write a conditional statement that outputs the same message if a user's age is either smaller than 18 **OR** larger than 45?
 
-## **Exercises**
+### Truthy and Falsy Values
 
-1. In a file named `greaterNum.js`, create two numeric variables. Use an `if` statement to print which number is larger. For example, for the numbers  `5` and `10`, your output should look like this: `'The greater number of 5 and 10 is 10'`
+We can provide the `if` statement with a non-boolean value, or an expression that returns a non-boolean value.
 
-2. In a file named `helloWorld.js`, create a string variable with a language code (e.g. "es", "de", "en"). Use an `if - else if - else` statement to print "Hello, World" for the given language, for at least 3 languages. It should default to returning English.
+```js
+// this will log 'hello'
+if (1){
+  console.log('hello')
+} else {
+  console.log('goodbye')
+}
+```
 
-3. In a file named `assignGrade.js` create a variable `numGrade` that will containt a numeric grade (out of 100). Use an `if - else if - else ` statement to print a letter grade, either "A", "B", "C", "D", or "F".
+Checking whether the number `1` is true or false doesn't seem to make much sense. Still, javascript tries to work with us and will convert **any** value to boolean. For numbers, `0` will be converted to `false`, and any other number will be converted to `true`.
 
-4. In a file named `pluralize.js` create two variables, one two hold a  noun and one to hold a number. Use a `if - else` statement to print the
-number and either a single or plural form, like "5 cats" or "1 dog".
-Bonus: Make it handle a few collective nouns like "sheep" and "geese".
+```js
+// this will log 'goodbye'
+if (0){
+  console.log('hello')
+} else {
+  console.log('goodbye')
+}
+```
+
+For strings, the empty string will be converted to `false`, and any other strings will be converted to `true`. Other values that will be converted to false are `null` and `undefined` and `NaN`. The values that get converted to `false` are called [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). The values that get converted to `true` are called [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
