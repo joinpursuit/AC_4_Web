@@ -23,5 +23,5 @@ Beautiful Portia has three caskets: one gold, one silver and one lead. Inside on
 Portia tells her suitor that of these three statements at most one is true. Which should he choose?
 
 | Gold Casket  | Silver Casket  | Lead Casket  |
-|:---------:|:---------:| -----:  |
+|:---------:|:---------:| :-----:  |
 | The portrait is in this casket   | The portrait is not in this casket      | The portrait is not in the gold casket|
