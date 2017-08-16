@@ -18,9 +18,9 @@ Stephanie comes across two inhabitants, `A` and `B`. `A` says: "Either I am a Li
 
 Beautiful Portia has three caskets: one gold, one silver and one lead. Inside one of them is her portrait. She has decided that a suitor must choose the casket with the portrait in order to win her hand in marriage.
 
-1) Portia has the following words written on the caskets:
-
 Portia tells her suitor that of these three statements at most one is true. Which should he choose?
+
+1) Portia has the following words written on the caskets:
 
 | Gold Casket  | Silver Casket  | Lead Casket  |
 |:---------:|:---------:| :-----:  |
