@@ -257,13 +257,13 @@ Many JavaScript constructs are types of objects (e.g. Arrays fall under the Obje
 For any variable of the object type, the quality operator (i.e. `===`) will only return `true` if both sides refer to the *exact same* object. It's not enough for them to just look the same.
 
 ```JavaScript
-  const firstPerson = {name: 'Bob', age: 47};
-  const secondPerson = {name: 'Bob', age: 47};
+  var firstPerson = {name: 'Bob', age: 47};
+  var secondPerson = {name: 'Bob', age: 47};
 
   console.log(firstPerson === secondPerson); // False
   console.log(firstPerson === firstPerson); // True
 
-  const pointer = firstPerson; // Create a variable pointing to firstPerson
+  var pointer = firstPerson; // Create a variable pointing to firstPerson
   console.log(pointer === firstPerson); // True
 ```
 
@@ -278,7 +278,7 @@ But with an object, you don't know what those keys are. They may not be numbers,
 For this, we use the `for...in` loop. Its syntax is:
 
 ```JavaScript
-  for(let key in object){
+  for(var key in object){
     // Code to execute on each each key
   };
 ```
@@ -286,12 +286,12 @@ For this, we use the `for...in` loop. Its syntax is:
 For example, to log all the key/value pairs of an object:
 
 ```JavaScript
-  const cat = {
+  var cat = {
     name: 'Tom',
     type: 'Domestic'
   }
 
-  for(let key in cat){
+  for(var key in cat){
     console.log(key);
   };
   // Logs: 'name' and then logs 'type'
@@ -301,7 +301,7 @@ For example, to log all the key/value pairs of an object:
 Okay so that's how we get the keys. How do we get the values? We can simply key into the object.
 
 ```JavaScript
-  for(let key in cat){
+  for(var key in cat){
     console.log(key + ": " + cat[key]);
   };
   // Logs 'name: Tom' and then 'type: Domestic'
