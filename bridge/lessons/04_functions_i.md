@@ -173,40 +173,15 @@ egg()
 
 One way to imagine the code above is as a stack of functions calls - each time we call a new function, it gets put on the stack. The function is put out of the stack only when it is done running. In the code above, we keep piling `chicken` and `egg` functions, and never takes them off - until the computer runs out of memory.
 
-## Exercises
+### Exercises
 
-1. Convert all exercise answers from unit 3 (conditionals) into functions.
-2. Write a function named calculateDogAge that:
-takes 1 argument: your dog's age.
-* calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
-outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
-* Call the function three times with different sets of values.
+1. Write a function that takes two numbers and returns the largest of the two. If the numbers are equal, the function should return the second one.
+2. Write a function that takes a number as input, and returns `true` if the number is even, and `false` if the number is odd.
+3. Write a function that takes a number as input, and returns a string representation of the number. For exaple:
 
-3. Create 2 functions that calculate properties of a circle, using the definitions [here](http://math2.org/math/geometry/circles.htm).
-* Create a function called calcCircumfrence:
-* Pass the radius to the function.
-Calculate the circumference based on the radius, and output "The circumference is NN".
-Create a function called calcArea:
-* Pass the radius to the function.
-Calculate the area based on the radius, and output "The area is NN".
-4. Make a temperature converter based on [these steps](http://www.mathsisfun.com/temperature-conversion.html).
-Create a function called `celsiusToFahrenheit`:
-* Store a celsius temperature into a variable.
-* Convert it to fahrenheit and output "NN°C is NN°F".
-Create a function called `fahrenheitToCelsius`:
-* Now store a fahrenheit temperature into a variable.
-* Convert it to celsius and output "NN°F is NN°C."
+```js
+numberToString(123)
+// returns '123'
+```
 
-### Bonus
-
-The Calculator:
-* Write a function `square` that will return the square of a number.
-* Write a function called `half` that will return half the value of a number.
-* Write a function called `percentOf` that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
-* Write a function called `areaOfCircle` that will take one argument (the radius), and return the area of a circle with that radius.
-  * Bonus: Round the result so there are only two digits after the decimal.
-* Write a function that will take one argument (a number) and perform the following operations, using the functions you wrote earlier:
-  1. Calcualte half the number and save the value
-  2. Square the result of #1 and store that result.
-  3. Calculate the area of a circle with the result of #2 as the radius.
-  4. Calculate what percentage that area is of the squared result (#3). Save and print the result of this calculation.
+4. Write a function function that takes a boolean value as input, and returns a string representation of the input: either the string `'true'` or the string `'false'`.

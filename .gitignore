@@ -1,3 +1,5 @@
 *.DS_Store
 
 bridge/graph/node_modules
+projects/
+bridge/assessments
