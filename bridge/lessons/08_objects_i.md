@@ -55,7 +55,7 @@ As in the above apple examples, JavaScript objects are often represented using c
 This notation is one common way to declare an object (another way is `new Object()`, but don't worry about that for now). You can then store the result in a variable. For example:
 
 ```JavaScript
-const person = {
+var person = {
   firstName: 'Erika',
   lastName: 'Kim',
   age: 25
@@ -78,7 +78,7 @@ If you had an object stored in the variable `person` and wanted to get that pers
 
 ```JavaScript
   // Same object as before
-  const person = {
+  var person = {
     firstName: 'Erika',
     lastName: 'Kim',
     age: 25
@@ -98,7 +98,7 @@ console.log(person.propertyThatDoesntExist);
 You could also use a key stored in a variable, but you need to use brackets (`[]`) in this case. For example:
 
 ```JavaScript
-const someVariable = 'firstName';
+var someVariable = 'firstName';
 console.log(person[someVariable]);
 // 'Erika' will be logged
 ```
@@ -121,7 +121,7 @@ Once we have the `getFullName` function, we can call it at any time, with any ob
 
 ```JavaScript
   // Creates the object `anotherPerson`
-  const anotherPerson = {
+  var anotherPerson = {
     firstName: 'Joe',
     lastName: 'Stein',
     favoriteFood: 'pizza'
@@ -139,7 +139,7 @@ Now that we know how to *get* an object's properties -- how do we *set* them? In
 Let's revisit our basic person object:
 
 ```JavaScript
-  const person = {
+  var person = {
     firstName: 'Erika',
     lastName: 'Kim',
     age: 25
@@ -171,10 +171,10 @@ If it doesn't already exist, the same notation adds a property:
 Arrays and object are closely related to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the keys are numbers. Arrays also have special properties (such as length) and special methods.
 
 ```JavaScript
-  const myArray = ['firstValue', 'secondValue'];
+  var myArray = ['firstValue', 'secondValue'];
   console.log(myArray[0]); // Logs 'firstValue'
 
-  const myObject = {0: 'firstValue', 1: 'secondValue'}
+  var myObject = {0: 'firstValue', 1: 'secondValue'}
   console.log(myObject[0]); // Logs 'firstValue'
 ```
 
@@ -185,7 +185,7 @@ What if you were to want a collection of objects (e.g. a collection of films)? O
 For example, we may want to create an array of films, where each film is an object that contains a name, release year and director.
 
 ```JavaScript
-const films = [
+var films = [
   {
     name: 'Psycho',
     director: 'Alfred Hitchcock',
@@ -313,13 +313,13 @@ Okay so that's how we get the keys. How do we get the values? We can simply key 
 Arrays have order; objects do not. There is a first item in an array, whereas there isn't a "first" item in an object.
 
 ```JavaScript
-  const person1 = {
+  var person1 = {
     firstName: 'Erika',
     lastName: 'Kim',
     age: 25
   }
 
-  const person2 = {
+  var person2 = {
     age: 25,
     firstName: 'Erika',
     lastName: 'Kim'
