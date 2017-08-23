@@ -9,7 +9,16 @@
 
 ## Lesson
 
-Functions in JavaScript are no different than those other values. Even though they have appeared different, since the rest were defined by using the `var` keyword. But this is just a shorthand notation. We can equally create functions like this:
+We've talked about different values that can be stored in variables: numbers, strings, arrays and objects.
+In JavaScript, functions are no different than other values. Even though they may appear different.
+
+```js
+function add(num1, num2){
+  return num1 + num2
+}
+```
+
+The above is really a shorthand syntax to defining functions. We can also create functions using the longer syntax with the `var` keyword:
 
 ```js
 var add = function(num1, num2) {
@@ -19,17 +28,25 @@ var add = function(num1, num2) {
 add(4, 8)
 ```
 
-So we can see that a function is just another variable. This means that we can pass a functions as an argument to other functions. It may seem weird at first, and not very useful. And we will start with a not-so-useful example.
+The only different from the shorthand syntax is that there is no name following the `function` keyword. But we still have the variable name `add` to refer to the function. A function without a name is also called an **anonymous function** - we will talk about the significance of this at a later time. For now, both shorthand and longhand syntax can be used interchangeably.
+
+So we can see that a function is just another variable type. As is the case with other variables, we can pass a functions as an argument to another functions. Let us start with a with a not-so-useful example.
 
 ```js
 function call(func, arg1, arg2){
   func(arg1, arg2)
 }
 
-call(add(2, 4))
+call(add, 2, 4)
 ```
 
-The function `call` takes a function and two more arguments, and calls the function with the provided arguments. Again, not so useful, since we could just call `add` directly. Let's try something more useful. The function `forEach` below takes as input an array and a function, and call the function for each element of the array.
+The function `call` takes a function and two more arguments, and calls the function with the provided arguments. This is not very useful, since we could just call `add` directly:
+
+```js
+add(2, 4)
+```
+
+Let's try something more useful. The function `forEach` below takes as input an array and a function, and call the function for each element of the array.
 
 ```js
 function forEach(arr, func) {
@@ -52,11 +69,11 @@ We pass to the `forEach` function:
 1. an array of numbers.
 2. a function `logDouble`, that takes a number as an argument and logs its value times two.
 
-For each element in the array, the `forEach` function calls `logDouble`. This way it display double the value of each element. A function that is given as input to another function, to be executed at any later time, is also called a *callback function* or just *callback*.
+For each element in the array, the `forEach` function calls `logDouble`, displaying the doubled value of each element. A function that is given as an argument to another function is also called a *callback function* or just *callback*.
 
-### Anonymous Callbacks
+### Anonymous Functions
 
-When a function is needed only as a callback, it is common in javascript to just define the callback on the spot. This type of definition is called an **anonymous function**,because the function does not have a name.
+When a function is needed only as a callback, it is common to just define it on the spot. A function defined  **anonymous function**,because the function does not have a name.
 
 ```js
 forEach(arr, function(num) {
