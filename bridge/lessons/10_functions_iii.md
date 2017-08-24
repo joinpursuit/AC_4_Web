@@ -3,44 +3,64 @@
 ## Terms
 
 * Functions as values
-* functions as input to other functions
-* asynchronous programming
-* callback
+* Functions as input to other functions
+* Asynchronous programming
+* Callback
 
 ## Lesson
 
-We've talked about different values that can be stored in variables: numbers, strings, arrays and objects.
-In JavaScript, functions are no different than other values. Even though they may appear different.
+### Syntax for Declaring Functions
+
+We've learned that many different types of data that can be stored in variables -- for example, numbers, strings, arrays and objects.
+
+In JavaScript, functions can be stored in variables just like other data types.
+
+So far, we have declared functions using this syntax:
 
 ```js
 function add(num1, num2){
-  return num1 + num2
+  return num1 + num2;
 }
 ```
 
-The above is really a shorthand syntax to defining functions. We can also create functions using the longer syntax with the `var` keyword:
+This is one way to create a function. We could also create the function and not give it a name.
+
+```js
+function(num1, num2) {
+  return num1 + num2;
+}
+```
+
+In this example, there is no name following the `function` keyword. A function without a name is called an **anonymous function** -- we will discuss the significance of this at a later time. This isn't very useful if we plan to invoke the function later.
+
+Instead, we could use this same syntax but declare a variable (using the `var` keyword) that points to the function:
+
 
 ```js
 var add = function(num1, num2) {
-  return num1 + num2
+  return num1 + num2;
 }
-
-add(4, 8)
 ```
 
-The only different from the shorthand syntax is that there is no name following the `function` keyword. But we still have the variable name `add` to refer to the function. A function without a name is also called an **anonymous function** - we will talk about the significance of this at a later time. For now, both shorthand and longhand syntax can be used interchangeably.
+This is equivalent to the first example, and operates the same way. You should be familiar with both ways to create functions, and for now, both ways can be used interchangeably.
 
-So we can see that a function is just another variable type. As is the case with other variables, we can pass a functions as an argument to another functions. Let us start with a with a not-so-useful example.
+### Callback Functions
+
+As demonstrated above, a variable can hold a function just like any other data type (e.g. array, integer, string).
+
+Similarly, as is the case with other variables, we can pass a functions as an argument to other functions. A function that is passed as an argument to another function is called a **callback function**, or just **callback**.
+
+Let us start with a with a not-so-useful example.
 
 ```js
-function call(func, arg1, arg2){
-  func(arg1, arg2)
+function call(arg1, arg2, callback){
+  callback(arg1, arg2)
 }
 
-call(add, 2, 4)
+call(2, 4, add)
 ```
 
-The function `call` takes a function and two more arguments, and calls the function with the provided arguments. This is not very useful, since we could just call `add` directly:
+The function `call` takes two arguments and a function (i.e. callback), and calls the callback with the provided arguments. This is not very useful, since we could just call `add` directly:
 
 ```js
 add(2, 4)
@@ -49,52 +69,56 @@ add(2, 4)
 Let's try something more useful. The function `forEach` below takes as input an array and a function, and call the function for each element of the array.
 
 ```js
-function forEach(arr, func) {
+function forEach(arr, callback) {
   for (var i = 0; i < arr.length; i++) {
-    func(arr[i])
+    callback(arr[i]);
   }
 }
 
 function logDouble(num) {
-  console.log(num * 2)
+  console.log(num * 2);
 }
 
-var arr = [1, 2, 3]
+var arr = [1, 2, 3];
 
-forEach(arr, logDouble)
+forEach(arr, logDouble);
 // will log: 2, 4, 6
 ```
 
 We pass to the `forEach` function:
-1. an array of numbers.
+1. an array of numbers, and
 2. a function `logDouble`, that takes a number as an argument and logs its value times two.
 
-For each element in the array, the `forEach` function calls `logDouble`, displaying the doubled value of each element. A function that is given as an argument to another function is also called a *callback function* or just *callback*.
+The `forEach` functions invokes the callback (in this case, logDouble) on each element of the array. This displays the doubled value of each element.
 
-### Anonymous Functions
+### Anonymous Callbacks
 
-When a function is needed only as a callback, it is common to just define it on the spot. A function defined  **anonymous function**,because the function does not have a name.
+When a function is needed only as a callback, it is common to just define it on the spot and not give it a name (i.e. create it as an **anonymous function**).
 
 ```js
 forEach(arr, function(num) {
-  console.log(num * 2)
+  console.log(num * 2);
 })
 ```
 
-The code above works the same as the earlier code. The function definition looks the same as when we define a function using the `var` keyword. The only difference is - instead of putting the function into a variable, we are immediately passing it as an argument. Remember, a function in javascript is a value, just like a string or a number.
+The code above works the same as the earlier code. The function definition looks the same as when we define a function using the `var` keyword. The only difference is instead of storing the function into a variable, we are immediately passing it as an argument. Remember, a function in JavaScript is a value, just like a string or an integer.
 
 ### Asynchronous Programming
 
-The scary-sounding word `asynchronous` means that we don't know the exact order or time that different pieces of code will be executed. Being a language for the web, JavaScript is largely design to support this. Think of a web page with a simple counter: you click on the `+` button to increment the counter, and on the `-` button to decrement it. We don't know which button the user would click on, or when.
+We traditionally think of code as being executed from top to bottom such that lower code waits for code higher up to complete before being executed.
+
+Many programming languages operate this way. But this is not always useful. For example, if you're fetching data through an API call, it might take a while for that request to go all the way to the server, be processed, and make its way back to you. Meanwhile, your app could be doing other things, like loading the rest of the page.
+
+For this reason, JavaScript -- a language designed for the web -- heavily relies on `asynchronous` processes. From StackOverflow: "When you execute something *synchronously*, you wait for it to finish before moving on to another task. When you execute something *asynchronously*, you can move on to another task before it finishes."
 
 ### setInterval
 
-Let's examine a built-in function `setInterval`. This function is given as argument:
-1. a function
+Let's examine a built-in function `setInterval`, which is available on the browser window. This function takes as arguments:
+
+1. a callback
 2. a time interval (in milliseconds)
 
-`setInterval` will call the function every time the given time interval has
-passed. To see it in action, let's try logging `hello` every second:
+`setInterval` will call the callback every `n` milliseconds, as defined by the second argument. To see it in action, let's log `hello` every second:
 
 ```js
 function sayHello() {
@@ -104,7 +128,7 @@ function sayHello() {
 setInterval(sayHello, 1000)
 ```
 
-Or with an anoymous function:
+Or with an anonymous function:
 
 ```js
 setInterval(function(){
