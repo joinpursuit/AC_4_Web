@@ -142,7 +142,7 @@ console.log(formatFruitData(rawData));
 
 ## Exercises
 
-1. Create two functions: `double` and `square`. Create a third function `doubleSquare` that uses both of the functions.
+1. Create two functions: `double` and `square`. `double` should take a number and return the number times two. `square` should take a number and return the number squared. Create a third function `doubleSquare` that uses both of the functions to return a number that is first doubled and then squared.
 
 2. Create a function `classyGreeting` that takes as input the strings `firstName` and `lastName`, and returns a string with a greeting using the two. Create a second function `yell` that takes as input as string and returns the string in all capitalized letters. Create a third function `yellGreeting` that will take the `firstName` and `lastName` as inputs and yell a greeting using the two.
 
