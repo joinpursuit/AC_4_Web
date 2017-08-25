@@ -77,3 +77,39 @@ rl.on('line', function(input) {
 ```
 
 Readline will continue listening for input by default until the program stops. So every time the user inputs a number, the callback will be triggered.
+
+### Clear Screen
+
+The following function, when called, will clear the terminal screen:
+
+```js
+function clear () {
+  process.stdout.write('\u001B[2J\u001B[0;0f')
+}
+```
+
+### Boilerplate
+
+These are all the excerpts of code we have used in this lesson to create a node app with readline. Use them as a boilerplate when writing your own node app.
+
+```js
+//  importing the readline module
+var readline = require('readline')
+
+// We will be able to use `rl`
+// Only After creating the readline interface
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+
+// Clears the terminal screen
+function clear () {
+  process.stdout.write('\u001B[2J\u001B[0;0f')
+}
+
+// Listening to end of line event
+rl.on('line', function(input) {
+
+})
+```
