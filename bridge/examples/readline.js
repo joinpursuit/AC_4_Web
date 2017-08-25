@@ -1,18 +1,22 @@
 var readline = require('readline')
 
+
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })
 
-console.log('enter a number')
-rl.on('line', function(input) {
-  // attempting to convert the input to a number
+var num = 
+rl.on('line', function (input) {
+  
   var num = Number(input)
-  // checking if input was not a number
-  if (isNaN(num)) {
-    console.log('that is not a valid number')
-  } else {
-    console.log('your input was the number: ' + num)
+
+  if (isNaN(num)){
+    console.log('not a number')
+  } 
+  else {
+    console.log(input)
   }
 })
+
+console.log('insert a number: ')
