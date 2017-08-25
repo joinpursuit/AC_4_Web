@@ -1,4 +1,4 @@
-# Objects II
+# Factory Functions and `this`
 
 ## Objectives
 
@@ -6,10 +6,7 @@
 
 * methods
 * The `this` keyword
-* constructor function
-* constructor
-* blueprint
-* The `new` operator
+* Factory functions
 
 ## Lesson
 
@@ -47,7 +44,7 @@ speak(erica)
 
 The function above works, and sometimes we will want to create functions of this kind. However, there is another way to make this function work well and keep it inside the object. We can use the `this` keyword to access an object`s properties from within that object.
 
-### This
+### `this`
 
 Whenever we create a function that as the property of an object (i.e. a method), we can use the `this` keyword to access any of the other properties of that object.
 
@@ -84,7 +81,7 @@ erica.speak()
 // will log  'Hello, my name is Erica Michaels'
 ```
 
-### Constructor Functions
+### Factory Functions
 
 We may want to create several objects with the same properties but different values. Reacll the film array from our **Obejcts I** lesson:
 
@@ -120,19 +117,21 @@ function addFilm(name, director, released){
 addFilm('The Truman Show', 'Peter Weir', 1998)
 ```
 
-We can also a **blueprint** for a film, and then create films using that blueprint. In javascript the blueprint looks like a regular function, except that it employes the `this` keyword and usually doesn't seem to return anything. Also, we call it by using the `new` operator.
+We can also create a function that, whenever called, will return a new `film` object. We call this kind of function a **factory function**.
 
 ```js
-function Film(name, director, released){
-  this.name = name
-  this.director = director
-  this.released = released
+function createFilm(name, director, released){
+  var film = {
+    name: name,
+    director: director,
+    released: released
+  }
+  return film
 }
-
-var film = new Film('The Truman Show', 'Peter Weir', 1998)
+var film = createFilm('The Truman Show', 'Peter Weir', 1998)
 ```
 
-The `new` operator creates an empty object, on which the function is applied. The empty object becomes the `this` we see in the `Film` function. To differnciate constructors from regular functions, we begin the with a capital letter. In later lessons we will explore further the internals of `new`. For now it is sufficient to understand how it works. If we want to add a new film to our films array, we may do the following:
+Whenever we call a function, all variables are created anew. When we reach the end of the function, the varaiables that have been created are destroyed. However, 
 
 ```js
 films.push(new Film('The Truman Show', 'Peter Weir', 1998))
