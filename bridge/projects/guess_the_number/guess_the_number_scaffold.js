@@ -111,7 +111,7 @@ function startGame(){
   var gameNumber = getRandomNumber(1, 10)
   var tries = 10
   var gameOver = false
-  var message = 'Guessing Number Game'
+  var message = 'Guess The Number'
   game = Game(gameNumber, tries, gameOver, message)
 
   render(game, 'guess a number')
