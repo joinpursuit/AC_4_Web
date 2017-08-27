@@ -1,89 +1,15 @@
-# Factory Functions and `this`
+# Factory Functions
 
 ## Objectives
 
 ## Vocabulary
 
-* methods
-* The `this` keyword
-* Factory functions
+* Factory Functions
+* Array: [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
 ## Lesson
 
-We have been using the dot notation to access the length of strings and arrays. We have also been using the dot notation to call methods like `push` and `pop`. When we create an objects we can define our own methods, by defining the value for a property as a `function`.
-
-```js
-var erica = {
-  firstName: 'Erica',
-  lastName: 'Lee',
-  age: 25,
-  speak: function(){
-    return 'Hello, my name is Erica Lee'
-  }
-}
-
-erica.speak()
-// will log: 'Hello, my name is Erica Lee'
-```
-
-The `speak` method above may not work as expected. Whenever we change either `firstName` or `lastName`, we will need to change the name returned by the function as well. One way to overcome this problem is by making a function `speak` outside of the object. This function will take as input an object.
-
-```js
-var erica = {
-  firstName: 'Erica',
-  lastName: 'Lee',
-  age: 25
-}
-
-function speak(person){
-   return 'Hello, my name is ' + person.firstName + ' ' + person.lastName
-}
-
-speak(erica)
-```
-
-The function above works, and sometimes we will want to create functions of this kind. However, there is another way to make this function work well and keep it inside the object. We can use the `this` keyword to access an object`s properties from within that object.
-
-### `this`
-
-Whenever we create a function that as the property of an object (i.e. a method), we can use the `this` keyword to access any of the other properties of that object.
-
-```js
-var erica = {
-  firstName: 'Erica',
-  lastName: 'Lee',
-  age: 25
-  speak: function(){
-    return 'Hello, my name is ' + this.firstName + ' ' + this.lastName
-  }
-}
-
-erica.speak()
-// will log  'Hello, my name is Erica Lee'
-```
-
-Every time we call the `speak` method, it will access the object's `firstName` and `lastName` properties to get their most recent values.
-
-```js
-var erica = {
-  firstName: 'Erica',
-  lastName: 'Lee',
-  age: 25
-  speak: function(){
-    return 'Hello, my name is ' + this.firstName + ' ' + this.lastName
-  }
-}
-
-erica.speak()
-// will log  'Hello, my name is Erica Lee'
-erica.lastName = 'Michaels'
-erica.speak()
-// will log  'Hello, my name is Erica Michaels'
-```
-
-### Factory Functions
-
-We may want to create several objects with the same properties but different values. Reacll the film array from our **Obejcts I** lesson:
+Often are often useful when combined with arrays. For example,  may want to create several we may want to create an array of objects, where each objects has the same properties. One such example is the films array from our first **Obejcts** lesson:
 
 ```js
 var films = [
@@ -128,25 +54,237 @@ function createFilm(name, director, released){
   }
   return film
 }
-var film = createFilm('The Truman Show', 'Peter Weir', 1998)
+
+var myFilm = createFilm('The Truman Show', 'Peter Weir', 1998)
 ```
 
-Whenever we call a function, all variables are created anew. When we reach the end of the function, the varaiables that have been created are destroyed. However, 
+A variable that is defined within a function is created anew every time the function is called. When we get to the end of a function, the varaiables that have been created within it are forgotten. We can, however, return a variable that was created inside a function. The variable itself will be forgotten, but its value will be assigned to a variable that lives outside the function. So, in the above example, we are assigning the value of the `film` variable from inside the function to the `myFilm` variable outside the function.
+
+An advantage of a factory functions is that we can insure that each object will have the same properties. This will make it easier to with an array of objects later on. In our films example, when we only use the `createFilm` function to add new films to the films array, we can then create a function to get the film title for any film in the array.
 
 ```js
-films.push(new Film('The Truman Show', 'Peter Weir', 1998))
+function logTitle(film){
+  console.log(film.title)
+}
+
+films.push(createFilm('The Truman Show', 'Peter Weir', 1998))
+films.push(createFilm('Citizen Kane', 'Orson Welles', 1941))
+films.push(createFilm('The Usual Suspects', 'Bryan Singer', 1995))
+
+logTitle(films[2])
+// will log: 'The Usual Suspects'
 ```
 
-So we no longer need the `addFilm` function.
-
-### Modeling The world
-
-Let's take a look at a more complex example. We want to represent a school class. A class has a subject, a teacher, and a number of students. Each student has a first name, a last name, and a grade. We will use an object to represent the class. This object will have the properties: teacher (string), subject (string), students (array of Students). We will use an object to represent each student. Let's start by making a `Student` constructor:
+We can now use the `getTitle` function as input to a `forEachArr` function, that applies a function to each element in an array.
 
 ```js
-function Student(firstName, lastName, grade) {
-  this.firstName = firstName
-  this.lastName = lastName
-  this.grade = grade
+function forEachArr(arr, callback){
+  for (var i = 0; i < arr.length; i++){
+    callback(arr[i])
+  }
+}
+
+forEach(films, logTitle)
+// will log:
+// The Truman Show
+// Citizen Kane
+// The Usual Suspects
+```
+
+### A Todo List
+
+Let's create a todo list with everything we've learned so far. Our app will consist of a `todos` array, where each element is a `todo` object. Each `todo` object will have two properties:
+
+1. `title`: a string.
+2. `completed`: a boolean.
+
+Let's create a factory function to create a new `todo` object.
+
+```js
+function createTodo(title, completed){
+  var todo = {
+    title: title,
+    completed: completed
+  }
+  return todo
+}
+
+var buyMilk = createTodo('buy milk', false)
+console.log(buyMilk)
+// will log: {title: 'buy milk', completed: 'false'}
+```
+
+Now let's create an empty `todoArr` array, and a function to add a `todo` to the array. Instead of using the `push` method, we will create a new `todoArr` array every time. This new array will contain all previous `todo` object and the new `todo` that we want to add. We will accomplish this by using a built-in array method called `concat`. When we pass the `concat` method a value as argument, it will returns a new array consisting of the original one **plus** the supplied value. The `concat` method will **not** change the existing array.
+
+```js
+var arr1 = ['a', 'b', 'c'];
+
+var arr2 = arr1.concat('d')
+
+console.log(arr2)
+// will log ['a', 'b', 'c', 'd']
+
+console.log(arr1)
+// will log ['a', 'b', 'c']
+```
+
+Let's use the concat method in our `addTodo` function:
+
+```js
+function addTodo(todoArr, todo){
+  return todoArr.concat(todo)
+}
+
+var todos = []
+
+var buyMilk = createTodo('buy milk', false)
+todos = addTodo(todos, buyMilk)
+
+var cleanHouse = createTodo('clean the house', false)
+todos = addTodo(todos, cleanHouse)
+
+console.log(todos)
+// will log:
+// [ { title: 'buy milk', completed: false },
+//   { title: 'clean the house', completed: false}]
+```
+
+Now that we are able to add todos to our list, we would like to be able to log them more nicely. Let's log the todos with a number for each, like this:
+
+1. buy milk. Completed: false.
+2. clean the house. Completed: false.
+
+Let's create a function `logTodos`.
+
+```js
+logTodos(todoArr){
+  for (var i = 0; i < todoArr.length; i ++){
+    console.log(i + '. ' + todoArr[i].title + '. Completed: ' + todoArr[i].completed)
+  }
+}
+```
+
+We could have used the `forEachArr` function. The problem is that it only works with array element, but here we need the index numbers as well. So let's modify it:
+
+```js
+function forEachArr(arr, callback){
+  for (var i = 0; i < arr.length; i++){
+    callback(arr[i], i)
+  }
+}
+```
+
+Now in addition to the element, we are passing the index to the callback every time. What about callbacks that don't expect an index number? For javascript this doesn't matter. If we pass extra arguments to a function, it will just ignore them:
+
+```js
+function add(num1, num2){
+  return num1 + num
+}
+
+add(2, 3, 10)
+// will return 5, ignoring the `10`
+```
+
+Now we can rewrite our `logTodos` fucntion:
+
+```js
+logTodos(todoArr){
+  forEachArr(todoArr, function(todo, i){
+    console.log(i + '. ' + todo.title + '. Completed: ' + todo.completed)
+  })
+}
+```
+
+The next piece of our program will be changing the `completed` property of a `todo`. Let's create a function called `toggleTodo` that takes a `doto` as an argument, and returns a new `todo` with the same title, but with the completed property toggled: if it was `true` it will be `false`, it was `false` it will be `true`.
+
+```js
+function toggleTodo(todo){
+  var toggledTodo = createTodo(todo.title, !todo.completed)
+  return toggledTodo
+}
+```
+
+We still need to figure out how to use the `toggleTodo` function inside our app. One way to do so is to toggle a todo by its index in the `todoArr` array. That is, we will create a function that takes as arguments the `todoArr` and an index, and return a new `toDoArr` array where the todo at that index has a toggled `completed` value. For example, if we are taking this `todoArr` (with the index numbers marked to the left):
+
+```js
+0: {todo: 'buy milk', completed: true}
+1: {todo: 'clean house', completed: false}
+2: {todo: 'walk dog', completed: false}
+```
+
+and the number `1`, we return this new `todoArr`:
+
+```js
+0: {todo: 'buy milk', completed: true}
+1: {todo: 'clean house', completed: true}
+2: {todo: 'walk dog', completed: false}
+```
+
+So the object at index 1 has been transformed, and the rest have remained the same. This is a mapping operation, i.e. mapping an array of `todo` objects to a new array of `todo` objects. So we can use a function called `mapArr`, that takes an array and a callback function, and returns a new array where the callback function has been applied on each element of the array.
+
+```js
+function mapArr(arr, callback){
+  var newArr = []
+  for (var i = 0; i < arr.length; i++){
+    newArr.push(callback(arr[i]))
+  }
+  return newArr
+}
+```
+
+### Map Array Refresher
+
+As a refresher: the `mapArr` function can take an array of numbers and a function `add1` and return a new array of numbers where each element has been incremented by 1:
+
+```js
+var arr1 = [1, 2, 3]
+
+function add1(num){
+  return num + 1
+}
+
+var arr2 = mapArr(arr1, add1)
+
+console.log(arr2)
+// will log: [2, 3, 4]
+```
+
+Or with an anonymous callback:
+
+```js
+var arr1 = [1, 2, 3]
+
+var arr2 = mapArr(arr1, function(num){
+  return num + 1
+})
+```
+
+### Map Array in Todos
+
+In order to use the `mapArr` function to transform our  a `todoArr` array, we will need to modify it in the same way as we did to `forEachArr`. Each time the callback will be passed the index number as well as the array element:
+
+```js
+function mapArr(arr, callback){
+  var newArr = []
+  for (var i = 0; i < arr.length; i++){
+    newArr.push(callback(arr[i], i))
+  }
+  return newArr
+}
+```
+
+As stated before, this will not interfer with cases where we do not need the index number. Now let's write a `toggleInTodoArr` function that will take as arguments a `TodoArr` array and an index number. We will only need to modify the element in the array where the index matches the request index. The other element will remain the same.
+
+```js
+function toggleInTodoArr(todoArr, toDoIndex){
+  var newTodoArr = mapArray(todoArr, function(todo, index){
+    if (index === toDoIndex){
+      var newTodo = createTodo(todo.title, !todo.completed)
+      return newTodo
+    } else {
+      return todo
+    }
+  })
+  return newTodoArr
 }
 ```

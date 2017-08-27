@@ -35,13 +35,13 @@ In English, you might refer to an apple as an object. Similarly to a JavaScript 
 
 You might represent this in JavaScript like so (syntax explained in next section):
 
-```JavaScript
+```javascript
 {type: 'Gala', color: 'red', ripeness: 'ripe', owner: 'Tomer'}
 ```
 
 The above JavaScript object represents a single apple. You could represent many apples this way:
 
-```JavaScript
+```javascript
 {type: 'Gala', color: 'red', ripeness: 'ripe', owner: 'Tomer'}
 {type: 'Granny Smith', color: 'green', ripeness: 'unripe', owner: 'Daniel'}
 {type: 'Golden Delicious', color: 'yellow', ripeness: 'rotten', owner: 'Ashley'}
@@ -54,7 +54,7 @@ As in the above apple examples, JavaScript objects are often represented using c
 
 This notation is one common way to declare an object (another way is `new Object()`, but don't worry about that for now). You can then store the result in a variable. For example:
 
-```JavaScript
+```javascript
 var person = {
   firstName: 'Erika',
   lastName: 'Kim',
@@ -76,7 +76,7 @@ Once you have an object, what might you want to do with it? For starters, you ma
 
 If you had an object stored in the variable `person` and wanted to get that person's firstName, you could use **dot notation**. The syntax looks like this:
 
-```JavaScript
+```javascript
   // Same object as before
   var person = {
     firstName: 'Erika',
@@ -90,14 +90,14 @@ If you had an object stored in the variable `person` and wanted to get that pers
 
 If you try to get a property that doesn't exist, `undefined` will be returned.
 
-```JavaScript
+```javascript
 console.log(person.propertyThatDoesntExist);
 // 'undefined' will be logged
 ```
 
 You could also use a key stored in a variable, but you need to use brackets (`[]`) in this case. For example:
 
-```JavaScript
+```javascript
 var someVariable = 'firstName';
 console.log(person[someVariable]);
 // 'Erika' will be logged
@@ -105,13 +105,13 @@ console.log(person[someVariable]);
 
 We could also log the person's full name like this:
 
-```JavaScript
+```javascript
 console.log(person.firstName + ' ' + person.lastName);
 ```
 
 We could also put the above into a function that takes a person object as an argument.
 
-```JavaScript
+```javascript
   function getFullName(person){
     console.log(person.firstName + ' ' + person.lastName);
   }
@@ -119,7 +119,7 @@ We could also put the above into a function that takes a person object as an arg
 
 Once we have the `getFullName` function, we can call it at any time, with any object that has a `firstName` and `lastName` properties.
 
-```JavaScript
+```javascript
   // Creates the object `anotherPerson`
   var anotherPerson = {
     firstName: 'Joe',
@@ -138,7 +138,7 @@ Now that we know how to *get* an object's properties -- how do we *set* them? In
 
 Let's revisit our basic person object:
 
-```JavaScript
+```javascript
   var person = {
     firstName: 'Erika',
     lastName: 'Kim',
@@ -150,7 +150,7 @@ Just as we could use dot notation to get the property of a person, we could use 
 
 If it already exists, we can change it like this:
 
-```JavaScript
+```javascript
   console.log(person.firstName); // Logs 'Erika'
 
   person.firstName = 'Jane'; // Changes firstName property
@@ -159,7 +159,7 @@ If it already exists, we can change it like this:
 
 If it doesn't already exist, the same notation adds a property:
 
-```JavaScript
+```javascript
   console.log(person.hometown); // Logs 'undefined'
 
   person.hometown = 'Arkansas'; // Creates and sets hometown property to 'Arkansas'
@@ -170,7 +170,7 @@ If it doesn't already exist, the same notation adds a property:
 
 Arrays and object are closely related to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the keys are numbers. Arrays also have special properties (such as length) and special methods.
 
-```JavaScript
+```javascript
   var myArray = ['firstValue', 'secondValue'];
   console.log(myArray[0]); // Logs 'firstValue'
 
@@ -184,7 +184,7 @@ What if you were to want a collection of objects (e.g. a collection of films)? O
 
 For example, we may want to create an array of films, where each film is an object that contains a name, release year and director.
 
-```JavaScript
+```javascript
 var films = [
   {
     name: 'Psycho',
@@ -206,14 +206,14 @@ var films = [
 
 Now, we could access any of the films just as we do any values in an array, and then access that object's properties. In the below example, we access the name of the first film.
 
-```JavaScript
+```javascript
 console.log(films[0].name);
 // Logs 'Psycho'
 ```
 
 Adding a new object to the array might be cumbersome:
 
-```JavaScript
+```javascript
   films.push({
     name: 'Inception',
     director: 'Christopher Nolan',
@@ -223,7 +223,7 @@ Adding a new object to the array might be cumbersome:
 
 We could make this process easier by creating a function `addFilm` that takes `name`, `director` and `released` as arguments.
 
-```JavaScript
+```javascript
   function addFilm(name, director, released){
     film.push({
       name: name,
@@ -237,7 +237,7 @@ We could make this process easier by creating a function `addFilm` that takes `n
 
 Note that in this case the property keys to the left are the same as the argument variables. This doesn't have to be the case but is easier to read.
 
-```JavaScript
+```javascript
   function addFilm(blah1, blah2, blah3){
     film.push({
       name: blah1,
@@ -256,7 +256,7 @@ Many JavaScript constructs are types of objects (e.g. Arrays fall under the Obje
 
 For any variable of the object type, the quality operator (i.e. `===`) will only return `true` if both sides refer to the *exact same* object. It's not enough for them to just look the same.
 
-```JavaScript
+```javascript
   var firstPerson = {name: 'Bob', age: 47};
   var secondPerson = {name: 'Bob', age: 47};
 
@@ -277,7 +277,7 @@ But with an object, you don't know what those keys are. They may not be numbers,
 
 For this, we use the `for...in` loop. Its syntax is:
 
-```JavaScript
+```javascript
   for(var key in object){
     // Code to execute on each each key
   };
@@ -285,7 +285,7 @@ For this, we use the `for...in` loop. Its syntax is:
 
 For example, to log all the key/value pairs of an object:
 
-```JavaScript
+```javascript
   var cat = {
     name: 'Tom',
     type: 'Domestic'
@@ -300,7 +300,7 @@ For example, to log all the key/value pairs of an object:
 
 Okay so that's how we get the keys. How do we get the values? We can simply key into the object.
 
-```JavaScript
+```javascript
   for(var key in cat){
     console.log(key + ": " + cat[key]);
   };
@@ -312,7 +312,7 @@ Okay so that's how we get the keys. How do we get the values? We can simply key 
 
 Arrays have order; objects do not. There is a first item in an array, whereas there isn't a "first" item in an object.
 
-```JavaScript
+```javascript
   var person1 = {
     firstName: 'Erika',
     lastName: 'Kim',
@@ -353,7 +353,7 @@ Let's put everything together by building a small todo list program. Here are th
 * Create an object to hold information on your favorite recipe. It should have the following properties: `title`, `numberOfServings`, and `ingredients` (an array).
 * Create a function that logs the recipe information, so it looks like:
 
-```JavaScript
+```javascript
 name: Mole
 servings: 2
 ingredients:
@@ -364,7 +364,7 @@ cocoa
 
 * **Bonus**: change the function to log ingredients on the same line:
 
-```JavaScript
+```javascript
 name: Mole
 servings: 2
 ingredients: cinnamon, cumin, cocoa
