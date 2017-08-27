@@ -66,10 +66,10 @@ The function `call` takes two arguments and a function (i.e. callback), and call
 add(2, 4)
 ```
 
-Let's try something more useful. The function `forEach` below takes as input an array and a function, and call the function for each element of the array.
+Let's try something more useful. The function `forEachArr` below takes as input an array and a function, and call the function for each element of the array.
 
 ```js
-function forEach(arr, callback) {
+function forEachArr(arr, callback) {
   for (var i = 0; i < arr.length; i++) {
     callback(arr[i]);
   }
@@ -81,22 +81,22 @@ function logDouble(num) {
 
 var arr = [1, 2, 3];
 
-forEach(arr, logDouble);
+forEachArr(arr, logDouble);
 // will log: 2, 4, 6
 ```
 
-We pass to the `forEach` function:
+We pass to the `forEachArr` function:
 1. an array of numbers, and
 2. a function `logDouble`, that takes a number as an argument and logs its value times two.
 
-The `forEach` functions invokes the callback (in this case, logDouble) on each element of the array. This displays the doubled value of each element.
+The `forEachArr` functions invokes the callback (in this case, logDouble) on each element of the array. This displays the doubled value of each element.
 
 ### Anonymous Callbacks
 
 When a function is needed only as a callback, it is common to just define it on the spot and not give it a name (i.e. create it as an **anonymous function**).
 
 ```js
-forEach(arr, function(num) {
+forEachArr(arr, function(num) {
   console.log(num * 2);
 })
 ```
