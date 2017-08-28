@@ -232,7 +232,7 @@ function mapArr(arr, callback){
 }
 ```
 
-### Map Array Refresher
+### Map-Array Refresher
 
 As a refresher: the `mapArr` function can take an array of numbers and a function `add1` and return a new array of numbers where each element has been incremented by 1:
 
@@ -259,7 +259,7 @@ var arr2 = mapArr(arr1, function(num){
 })
 ```
 
-### Map Array in Todos
+### Map-Array in Todos
 
 In order to use the `mapArr` function to transform our  a `todoArr` array, we will need to modify it in the same way as we did to `forEachArr`. Each time the callback will be passed the index number as well as the array element:
 
