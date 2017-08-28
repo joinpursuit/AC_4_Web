@@ -31,7 +31,6 @@ function forEachArr(arr, callback){
 
 
 
-forEachArr(todoArr, logTodo)
 
 var todoArr = []
 var buyMilk = createTodo('buy milk', false)
@@ -39,3 +38,6 @@ todoArr = addTodo(todoArr, buyMilk)
 
 var cleanHouse = createTodo('clean the house', false)
 todoArr = addTodo(todoArr, cleanHouse)
+
+// logging all todos
+forEachArr(todoArr, logTodo)
