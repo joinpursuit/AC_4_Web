@@ -14,10 +14,6 @@ function createTodo(description, completed){
   return todo
 }
 
-function addTodo(todoArr, todo){
-  return todoArr.concat(todo)
-}
-
 function logTodo(todo, i){
   console.log(i + '. ' + todo.description + '. Completed: ' + todo.completed)
 }
@@ -28,16 +24,14 @@ function forEachArr(arr, callback){
   }
 }
 
-
-
-
-
 var todoArr = []
-var buyMilk = createTodo('buy milk', false)
-todoArr = addTodo(todoArr, buyMilk)
 
-var cleanHouse = createTodo('clean the house', false)
-todoArr = addTodo(todoArr, cleanHouse)
+var buyMilk = createTodo('buy milk', false)
+todoArr.push(buyMilk)
+
+var cleanHouse = createTodo('clean the house', true)
+todoArr.push(cleanHouse)
 
 // logging all todos
 forEachArr(todoArr, logTodo)
+
