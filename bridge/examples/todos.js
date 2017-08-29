@@ -5,6 +5,10 @@ var rl = readline.createInterface({
   output: process.stdout
 })
 
+function clear () {
+  process.stdout.write('\u001B[2J\u001B[0;0f')
+}
+
 function createTodo(description, completed){
   var todo = {
     description: description,
@@ -26,15 +30,35 @@ function forEachArr(arr, callback){
 
 var todoArr = []
 
-var buyMilk = createTodo('buy milk', false)
-todoArr.push(buyMilk)
-
-var walkDog = createTodo('walk dog', true)
-todoArr.push(walkDog)
-
 forEachArr(todoArr, logTodo)
 
 rl.on('line', function(input){
+  clear()
+  var arr = input.split(' ')
 
+  if (arr[0] === 'add'){
+    arr = arr.slice(1)
+    if (arr[arr.length - 1] === 'true'){
+      arr.pop()
+      var description = arr.join(' ')
+      var todo = createTodo(description, true)
+      todoArr.push(todo)
+    } else if (arr[arr.length - 1] === 'false'){
+      arr.pop()
+      var description = arr.join(' ')
+      var todo = createTodo(description, false)
+      todoArr.push(todo)
+    } else {
+      var description = arr.join(' ')
+      var todo = createTodo(description, false)
+      todoArr.push(todo)
+    }
+
+    forEachArr(todoArr, logTodo)
+  } else {
+    console.log('start with add')
+  }
 })
 
+clear()
+console.log('Todos')
