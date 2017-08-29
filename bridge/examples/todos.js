@@ -26,7 +26,12 @@ function forEachArr(arr, callback){
 
 var todoArr = []
 
-// logging all todos
+var buyMilk = createTodo('buy milk', false)
+todoArr.push(buyMilk)
+
+var walkDog = createTodo('walk dog', true)
+todoArr.push(walkDog)
+
 forEachArr(todoArr, logTodo)
 
 rl.on('line', function(input){
