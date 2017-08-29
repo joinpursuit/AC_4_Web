@@ -5,7 +5,6 @@
 ## Vocabulary
 
 * Factory Functions
-* Array: [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
 ## Lesson
 
@@ -114,36 +113,21 @@ console.log(buyMilk)
 // will log: {title: 'buy milk', completed: 'false'}
 ```
 
-Now let's create an empty `todoArr` array, and a function to add a `todo` to the array. Instead of using the `push` method, we will create a new `todoArr` array every time. This new array will contain all previous `todo` object and the new `todo` that we want to add. We will accomplish this by using a built-in array method called `concat`. When we pass the `concat` method a value as argument, it will returns a new array consisting of the original one **plus** the supplied value. The `concat` method will **not** change the existing array.
+Now let's create an empty `todoArr` array, and a function to add a `todo` to the array.
+
+Let's use the `push` to add the new `todo` object to the array:
 
 ```js
-var arr1 = ['a', 'b', 'c'];
-
-var arr2 = arr1.concat('d')
-
-console.log(arr2)
-// will log ['a', 'b', 'c', 'd']
-
-console.log(arr1)
-// will log ['a', 'b', 'c']
-```
-
-Let's use the concat method in our `addTodo` function:
-
-```js
-function addTodo(todoArr, todo){
-  return todoArr.concat(todo)
-}
-
 var todos = []
 
 var buyMilk = createTodo('buy milk', false)
-todos = addTodo(todos, buyMilk)
+todos.push(buyMilk)
 
 var cleanHouse = createTodo('clean the house', false)
-todos = addTodo(todos, cleanHouse)
+todos.push(cleanHouse)
 
 console.log(todos)
+
 // will log:
 // [ { title: 'buy milk', completed: false },
 //   { title: 'clean the house', completed: false}]
