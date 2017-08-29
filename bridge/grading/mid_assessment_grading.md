@@ -8,18 +8,9 @@ Total: 53 point
 
 3. **2 points.** I am in the directory /home/benno/Desktop/ which contains the file hello.js. Write the command I can use to run this file with Node.
 
-answer: `node hello.js`
-points: `2`
-
 4. **1 point.** `+`,`-`,`*`, and `/` are mathematical operators that evaluate a basic arithmetic expression and return the result. Which of the following is an operator that returns the remainder of a division?
 
-answer: `%`
-points: `1`
-
 5. **1 point.** Sometimes basic mathematical operators are insufficient. Name the object that contains useful methods such as .floor(), .round(), and .pow().
-
-answer: `Math`
-points: `1`
 
 6. **2 points.** Explain in one sentence the difference between `popsicle` and `'popsicle'`
 
