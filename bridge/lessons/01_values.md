@@ -302,17 +302,19 @@ This automatic conversion can lead to unexpected results:
 
 Since the number is converted to a string, the above was the same as writing `'2' + '4'` - like concatenating any two strings.
 
-Another case of automatic conversion occurs when a non-boolean value appears instead of a boolean. In that case, most values will be converted to `true`. Exceptions include the number `0`, the empty string `''`, and a few others which we will discuss later. These evaluate to `false`. In those cases the `||` operator behaves in an unusual way: if the left-hand side evaluates to true, the original left-hand value will be returned (instead of `true`).
+Another case of automatic conversion occurs when a non-boolean value appears instead of a boolean. In that case, most values will be converted to `true`. Exceptions include the number `0`, the empty string `''`, and a few others which we will discuss later. These evaluate to `false`. In those cases the `||` operator behaves in an unusual way: if the left-hand side evaluates to true, the original left-hand value will be returned (instead of `true`). If the left-hand side evaluates to ale, the right-hand value will be returned (regardless of whether it evaluates to `true` or to `false`).
 
 ```js
 > false || 1
 1
+> '' || 0
+0
 > 'cat' || false
 'cat'
 > 0 || true
 true
 > false || ''
-false
+''
 ```
 
 If the left-hand expression evaluates to false, the value in the right-hand side is returned:
