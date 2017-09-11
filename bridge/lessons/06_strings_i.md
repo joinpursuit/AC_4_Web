@@ -176,7 +176,7 @@ It is still possible to do what we were trying above, but we will need a differe
 
 ```js
 var name = 'cat'
-name = name[0].toUpperCase + name[1] + name[2]
+name = name[0].toUpperCase() + name[1] + name[2]
 console.log(name)
 ```
 
@@ -187,7 +187,7 @@ Another way is using the `slice` method: We provide as arguments a beginning ind
 ```js
 var name = 'alice'
 var copy = name.slice(1,3)
-// copy holds the string 'an'
+// copy holds the string 'li'
 ```
 
 If we do not provide an ending index, we will get a copy from the starting index to the end of the string.
@@ -202,7 +202,7 @@ We need to take the character at the `0` index, capitalize it, and concatenate t
 
 ```js
 var name = 'alice'
-var capitalized = name[0].toUpperCase() + name.concat(1)
+var capitalized = name[0].toUpperCase() + name.concat().slice(1)
 // capitalized has the string 'Alice'
 ```
 
@@ -211,7 +211,7 @@ var capitalized = name[0].toUpperCase() + name.concat(1)
 1. Create a function called `capitalLast` that takes a single argument, a string, and returns a copy of the string with the last letter capitalized. For example:
 
 ```js
-capitalLast(jimmy)
+capitalLast('jimmy')
 // => 'jimmY'
 ```
 
@@ -227,8 +227,10 @@ drEvil(1000000)
 3. Create a function called `verbing`. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
 
 ```js
-verbing('swim')
-// => 'swimming'
+verbing('box')
+// => 'boxing'
+verbing('train')
+// => 'training'
 verbing('swimming')
 // =>  'swimmingly'
 verbing('go')
@@ -238,14 +240,14 @@ verbing('go')
 4. Create a function called `withoutLast` that takes a single argument, a string, and returns a copy of the string without the  last letter. For example:
 
 ```js
-capitalLast(jimmy)
+capitalLast('jimmy')
 // => 'jimm'
 ```
 
 5. Create a function called `getLast` that takes a single argument, a string, and returns the last letter of the string. For example:
 
 ```js
-getLast(jimmy)
+getLast('jimmy')
 // => 'y'
 ```
 
@@ -254,7 +256,7 @@ getLast(jimmy)
 6. Using 'withoutLast' and  `getLast`, create a function called `capitalLast` that takes a single argument, a string, and returns a copy of the string with the last letter capitalized. For example:
 
 ```js
-capitalLast(jimmy)
+capitalLast('jimmy')
 // => 'jimmY'
 ```
 

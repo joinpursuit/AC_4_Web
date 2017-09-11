@@ -40,7 +40,7 @@ var animals = ['cat', 'dog', 'racoon', 'giraffe']
 console.log(animals[0])
 
 // this will print 'giraffe'
-console.log(animals[0])
+console.log(animals[animals.length -1])
 ```
 
 ### Adding, Removing and Modifying Elements
@@ -58,8 +58,8 @@ We can also add elements to the end of an array by using the `push` method
 ```js
 var numbers = [2, 4, 6]
 // adding the numbers 8 and 10 to the array
-numbers.push(8)
-// now array will be: [2, 4, 6, 8]
+numbers.push(8,10)
+// now array will be: [2, 4, 6, 8, 10]
 ```
 
 And remove an element from the end of an array by using the `pop` method:
@@ -100,9 +100,9 @@ arr.splice(1, 1)
 Any additional arguments to `splice` (after the first two) will be inserted into the array in place of the deleted ones.
 
 ```js
-var arr = ['dog', 'cat', 'mouse', "giraffe"]
+var arr = ['dog', 'cat', 'mouse', 'giraffe']
 // removing 'cat' and 'mouse' and inserting 'fish'
-arr.splice(1, 2, "fish")
+arr.splice(1, 2, 'fish')
 // arr contains ['dog', 'fish', 'giraffe']
 ```
 
@@ -113,16 +113,16 @@ arr.splice(1, 2, "fish")
 Arrays can be converted to strings by using the `join` method. This method does not change the array, instead it **returns** a string that  The string will contain the array element separated by a comma. We can also pass a separator as argument to `join`.
 
 ```js
-var animals = ['cat', 'dog', 'lamma']
+var animals = ['cat', 'dog', 'llama']
 
 console.log(animals.join())
-// will log: 'cat,dog,'lamma'
+// will log: 'cat,dog,llama'
 
 console.log(animals.join(''))
-// will log: 'catdoglamma'
+// will log: 'catdogllama'
 
 console.log(animals.join(' '))
-// will log: 'cat dog lamma'
+// will log: 'cat dog llama'
 ```
 
 ### String --> Array
@@ -135,7 +135,7 @@ var arr = str.split(' ')
 // arr will be ['hello', 'world']
 ```
 
-If we provide an empty space as an argument to `split`, we will get an array with as many elements as there are characters in the string.
+If we provide an empty string as an argument to `split`, we will get an array with as many elements as there are characters in the string.
 
 ```js
 var str = 'hello'
