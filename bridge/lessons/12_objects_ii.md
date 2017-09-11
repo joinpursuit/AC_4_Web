@@ -8,7 +8,7 @@
 
 ## Lesson
 
-Often are often useful when combined with arrays. For example,  may want to create several we may want to create an array of objects, where each objects has the same properties. One such example is the films array from our first **Obejcts** lesson:
+Often are often useful when combined with arrays. For example,  may want to create several we may want to create an array of objects, where each objects has the same properties. One such example is the films array from our first **Objects** lesson:
 
 ```js
 var films = [
@@ -74,16 +74,16 @@ logTitle(films[2])
 // will log: 'The Usual Suspects'
 ```
 
-We can now use the `getTitle` function as input to a `forEachArr` function, that applies a function to each element in an array.
+We can now use the `getTitle` function as input to a `forEachElem` function, that applies a callback function to each element in an array.
 
 ```js
-function forEachArr(arr, callback){
+function forEachElem(arr, callback){
   for (var i = 0; i < arr.length; i++){
     callback(arr[i])
   }
 }
 
-forEach(films, logTitle)
+forEachElem(films, logTitle)
 // will log:
 // The Truman Show
 // Citizen Kane
@@ -148,10 +148,10 @@ logTodos(todoArr){
 }
 ```
 
-We could have used the `forEachArr` function. The problem is that it only works with array element, but here we need the index numbers as well. So let's modify it:
+We could have used the `forEachElem` function. The problem is that it only works with array element, but here we need the index numbers as well. So let's modify it:
 
 ```js
-function forEachArr(arr, callback){
+function forEachElem(arr, callback){
   for (var i = 0; i < arr.length; i++){
     callback(arr[i], i)
   }
@@ -173,7 +173,7 @@ Now we can rewrite our `logTodos` fucntion:
 
 ```js
 logTodos(todoArr){
-  forEachArr(todoArr, function(todo, i){
+  forEachElem(todoArr, function(todo, i){
     console.log(i + '. ' + todo.title + '. Completed: ' + todo.completed)
   })
 }

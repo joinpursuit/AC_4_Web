@@ -107,7 +107,7 @@ Oftentimes when designing an app you will receive data from an API that you'd th
 
 In these cases, it's helpful to write a helper function that formats the data. You could then take the return value (i.e. the formatted data) and pass it to the function.
 
-```JavaScript
+```js
 var rawData = [
   {
     somethingUseless: 192845738,

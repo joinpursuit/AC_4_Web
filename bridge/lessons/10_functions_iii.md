@@ -35,7 +35,6 @@ In this example, there is no name following the `function` keyword. A function w
 
 Instead, we could use this same syntax but declare a variable (using the `var` keyword) that points to the function:
 
-
 ```js
 var add = function(num1, num2) {
   return num1 + num2;
@@ -66,10 +65,10 @@ The function `call` takes two arguments and a function (i.e. callback), and call
 add(2, 4)
 ```
 
-Let's try something more useful. The function `forEachArr` below takes as input an array and a function, and call the function for each element of the array.
+Let's try something more useful. The function `forEachElem` below takes as input an array and a function, and call the function for each element of the array.
 
 ```js
-function forEachArr(arr, callback) {
+function forEachElem(arr, callback) {
   for (var i = 0; i < arr.length; i++) {
     callback(arr[i]);
   }
@@ -81,22 +80,22 @@ function logDouble(num) {
 
 var arr = [1, 2, 3];
 
-forEachArr(arr, logDouble);
+forEachElem(arr, logDouble);
 // will log: 2, 4, 6
 ```
 
-We pass to the `forEachArr` function:
+We pass to the `forEachElem` function:
 1. an array of numbers, and
 2. a function `logDouble`, that takes a number as an argument and logs its value times two.
 
-The `forEachArr` functions invokes the callback (in this case, logDouble) on each element of the array. This displays the doubled value of each element.
+The `forEachElem` functions invokes the callback (in this case, logDouble) on each element of the array. This displays the doubled value of each element.
 
 ### Anonymous Callbacks
 
 When a function is needed only as a callback, it is common to just define it on the spot and not give it a name (i.e. create it as an **anonymous function**).
 
 ```js
-forEachArr(arr, function(num) {
+forEachElem(arr, function(num) {
   console.log(num * 2);
 })
 ```
