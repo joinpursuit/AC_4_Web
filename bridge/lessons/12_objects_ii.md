@@ -51,6 +51,7 @@ function createFilm(name, director, released){
     director: director,
     released: released
   }
+
   return film
 }
 
@@ -90,60 +91,58 @@ forEachElem(films, logTitle)
 // The Usual Suspects
 ```
 
-### A Todo List
+### A Task List
 
-Let's create a todo list with everything we've learned so far. Our app will consist of a `todos` array, where each element is a `todo` object. Each `todo` object will have two properties:
+Let's create a task list with everything we've learned so far. Our app will consist of a `task` array, where each element is a `task` object. Each `task` object will have two properties:
 
 1. `title`: a string.
 2. `completed`: a boolean.
 
-Let's create a factory function to create a new `todo` object.
+Let's create a factory function to create a new `task` object.
 
 ```js
-function createTodo(title, completed){
-  var todo = {
+function createTask(title, completed){
+  var task = {
     title: title,
     completed: completed
   }
-  return todo
+  return task
 }
 
-var buyMilk = createTodo('buy milk', false)
+var buyMilk = createTask('buy milk', false)
 console.log(buyMilk)
 // will log: {title: 'buy milk', completed: 'false'}
 ```
 
-Now let's create an empty `todoArr` array, and a function to add a `todo` to the array.
-
-Let's use the `push` to add the new `todo` object to the array:
+Now let's create an empty `taskArr` array, and use the `push` method to add the new `task` object to the array:
 
 ```js
-var todos = []
+var tasks = []
 
-var buyMilk = createTodo('buy milk', false)
-todos.push(buyMilk)
+var buyMilk = createTask('buy milk', false)
+tasks.push(buyMilk)
 
-var cleanHouse = createTodo('clean the house', false)
-todos.push(cleanHouse)
+var cleanHouse = createTask('clean the house', false)
+tasks.push(cleanHouse)
 
-console.log(todos)
+console.log(tasks)
 
 // will log:
 // [ { title: 'buy milk', completed: false },
 //   { title: 'clean the house', completed: false}]
 ```
 
-Now that we are able to add todos to our list, we would like to be able to log them more nicely. Let's log the todos with a number for each, like this:
+Now that we are able to add tasks to our list, we would like to be able to log them more nicely. Let's log the tasks with a number for each, like this:
 
 1. buy milk. Completed: false.
 2. clean the house. Completed: false.
 
-Let's create a function `logTodos`.
+Let's create a function `logtasks`.
 
 ```js
-logTodos(todoArr){
-  for (var i = 0; i < todoArr.length; i ++){
-    console.log(i + '. ' + todoArr[i].title + '. Completed: ' + todoArr[i].completed)
+logTasks(taskArr){
+  for (var i = 0; i < taskArr.length; i ++){
+    console.log(i + '. ' + taskArr[i].title + '. Completed: ' + taskArr[i].completed)
   }
 }
 ```
@@ -169,42 +168,44 @@ add(2, 3, 10)
 // will return 5, ignoring the `10`
 ```
 
-Now we can rewrite our `logTodos` fucntion:
+Now we can rewrite our `logTasks` fucntion:
 
 ```js
-logTodos(todoArr){
-  forEachElem(todoArr, function(todo, i){
-    console.log(i + '. ' + todo.title + '. Completed: ' + todo.completed)
+logTasks(taskArr){
+  forEachElem(taskArr, function(task, i){
+    console.log(i + '. ' + task.title + '. Completed: ' + task.completed)
   })
 }
 ```
 
-The next piece of our program will be changing the `completed` property of a `todo`. Let's create a function called `toggleTodo` that takes a `doto` as an argument, and returns a new `todo` with the same title, but with the completed property toggled: if it was `true` it will be `false`, it was `false` it will be `true`.
+
+<!-- 
+The next piece of our program will be changing the `completed` property of a `task`. Let's create a function called `toggleTask` that takes a `doto` as an argument, and returns a new `task` with the same title, but with the completed property toggled: if it was `true` it will be `false`, it was `false` it will be `true`.
 
 ```js
-function toggleTodo(todo){
-  var toggledTodo = createTodo(todo.title, !todo.completed)
-  return toggledTodo
+function toggleTask(task){
+  var toggledTask = createTask(task.title, !task.completed)
+  return toggledTask
 }
 ```
 
-We still need to figure out how to use the `toggleTodo` function inside our app. One way to do so is to toggle a todo by its index in the `todoArr` array. That is, we will create a function that takes as arguments the `todoArr` and an index, and return a new `toDoArr` array where the todo at that index has a toggled `completed` value. For example, if we are taking this `todoArr` (with the index numbers marked to the left):
+We still need to figure out how to use the `toggleTask` function inside our app. One way to do so is to toggle a task by its index in the `taskArr` array. That is, we will create a function that takes as arguments the `taskArr` and an index, and return a new `toDoArr` array where the task at that index has a toggled `completed` value. For example, if we are taking this `taskArr` (with the index numbers marked to the left):
 
 ```js
-0: {todo: 'buy milk', completed: true}
-1: {todo: 'clean house', completed: false}
-2: {todo: 'walk dog', completed: false}
+0: {task: 'buy milk', completed: true}
+1: {task: 'clean house', completed: false}
+2: {task: 'walk dog', completed: false}
 ```
 
-and the number `1`, we return this new `todoArr`:
+and the number `1`, we return this new `taskArr`:
 
 ```js
-0: {todo: 'buy milk', completed: true}
-1: {todo: 'clean house', completed: true}
-2: {todo: 'walk dog', completed: false}
+0: {task: 'buy milk', completed: true}
+1: {task: 'clean house', completed: true}
+2: {task: 'walk dog', completed: false}
 ```
 
-So the object at index 1 has been transformed, and the rest have remained the same. This is a mapping operation, i.e. mapping an array of `todo` objects to a new array of `todo` objects. So we can use a function called `mapArr`, that takes an array and a callback function, and returns a new array where the callback function has been applied on each element of the array.
+So the object at index 1 has been transformed, and the rest have remained the same. This is a mapping operation, i.e. mapping an array of `task` objects to a new array of `task` objects. So we can use a function called `mapArr`, that takes an array and a callback function, and returns a new array where the callback function has been applied on each element of the array.
 
 ```js
 function mapArr(arr, callback){
@@ -243,9 +244,9 @@ var arr2 = mapArr(arr1, function(num){
 })
 ```
 
-### Map-Array in Todos
+### Map-Array in Tasks
 
-In order to use the `mapArr` function to transform our  a `todoArr` array, we will need to modify it in the same way as we did to `forEachArr`. Each time the callback will be passed the index number as well as the array element:
+In order to use the `mapArr` function to transform our  a `taskArr` array, we will need to modify it in the same way as we did to `forEachArr`. Each time the callback will be passed the index number as well as the array element:
 
 ```js
 function mapArr(arr, callback){
@@ -257,18 +258,18 @@ function mapArr(arr, callback){
 }
 ```
 
-As stated before, this will not interfer with cases where we do not need the index number. Now let's write a `toggleInTodoArr` function that will take as arguments a `TodoArr` array and an index number. We will only need to modify the element in the array where the index matches the request index. The other element will remain the same.
+As stated before, this will not interfer with cases where we do not need the index number. Now let's write a `toggleInTaskArr` function that will take as arguments a `TaskArr` array and an index number. We will only need to modify the element in the array where the index matches the request index. The other element will remain the same.
 
 ```js
-function toggleInTodoArr(todoArr, toDoIndex){
-  var newTodoArr = mapArray(todoArr, function(todo, index){
+function toggleInTaskArr(taskArr, toDoIndex){
+  var newTaskArr = mapArray(taskArr, function(task, index){
     if (index === toDoIndex){
-      var newTodo = createTodo(todo.title, !todo.completed)
-      return newTodo
+      var newTask = createTask(task.title, !task.completed)
+      return newTask
     } else {
-      return todo
+      return task
     }
   })
-  return newTodoArr
+  return newTaskArr
 }
-```
+``` -->

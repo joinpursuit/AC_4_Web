@@ -60,13 +60,13 @@ Variables declared outside a function are called `global` and they can be access
 ```js
 var greeting = 'hi'
 
-// This function changes the global variable greeting
+// This function changes the global variable `greeting`
 function hello(){
   greeting = 'hello'
   console.log(greeting)
 }
-
-// will print hello
+hello()
+// will log hello
 console.log(greeting)
 ```
 
