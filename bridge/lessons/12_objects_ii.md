@@ -178,6 +178,9 @@ logTasks(taskArr){
 }
 ```
 
+#### Task IDs
+
+The next feature that we'd like to add is the ability to mark a task as *completed*.
 
 <!-- 
 The next piece of our program will be changing the `completed` property of a `task`. Let's create a function called `toggleTask` that takes a `doto` as an argument, and returns a new `task` with the same title, but with the completed property toggled: if it was `true` it will be `false`, it was `false` it will be `true`.

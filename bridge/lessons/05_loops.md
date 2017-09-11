@@ -31,7 +31,7 @@ Now you are hopefully convinced that loops can be a good idea. Our first loops i
 ```js
 var num = 1
 while (num <= 10) {
-  console.log(num)
+  console.log('the number is: ' + num)
 }
 ```
 
@@ -40,7 +40,7 @@ If you try to run the code above, the number `1` will be logged repeatedly. Even
 ```js
 var num = 1
 while (num <= 10) {
-  console.log(num)
+  console.log('the number is: ' + num)
   num += 1
 }
 ```
@@ -50,7 +50,7 @@ It works! Run the program and you will see that the numbers from 1 to 10 are log
 ```js
 var num = 1
 while (num < 10) {
-  console.log(num)
+  console.log('the number is: ' + num)
   num += 2
 }
 ```
@@ -93,11 +93,12 @@ for (var i = 0; i <= 10; i += 1){
 When you run this program, you will see the following:
 
 <pre>
-1 is even
-2 is odd
-3 is even
+0 is even
+1 is odd
+2 is even
 ...
-10 is odd
+9 is odd
+10 is even
 </pre>
 
 We can also use a loop to calculate the sum of all the number between 1 and 10:
