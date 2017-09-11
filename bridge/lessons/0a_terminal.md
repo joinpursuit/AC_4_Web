@@ -136,7 +136,7 @@ will create a new directory called `Music`.
 To open a file (such as a text file) to view its contents, type the name of the app you would like to use to open it. For example, we will use a text editor called **vim** to open a text file:
 
 ```bash
-vim foo
+vim foo.js
 ```
 
 **Vim** is a modal editor. This means that it has different modes. When opened, Vim will be in **normal** mode. Hold the `shift` and `;` (colon)keys to open the vim command line. Now type `q` and press `enter` to exit. To save the first type `w` and press enter. To exit without saving changes type `q!`. To go back to navigating the text press the `escape` key. When navigating the file, you can start inserting text by pressing the `i` key. This will switch to the **insert** mode. In insert mode you can type text freely. Navigate the text using the **arrow keys**. Start a new line by pressing `enter`. To go back to normal mode press the `escape` key. You can only get to the command line from the normal mode (if you wish to save, exit, etc.).
