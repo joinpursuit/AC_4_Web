@@ -7,11 +7,11 @@ Students will understand what a Graphical User Interface (GUI) is, what a comman
 ## Vocabulary
 
 * Operating System (OS)
-* Graphical User Interace (GUI)
+* Graphical User Interface (GUI)
 * Command Line Interface (CLI) = Terminal = Shell
 * Folder = directory
 * `pwd` - print working directory
-* `cd ..` - go directory up
+* `cd ..` - go to parent directory (aka up)
 * `cd [folder]` - go into folder
 * `~` - your home folder
 * `ls` - list files and subfolders in current folder
