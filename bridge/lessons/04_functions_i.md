@@ -10,22 +10,98 @@
 
 ## Lesson
 
-Functions are one of the most powerful features of javascript. Today we will begin to learn about their different uses.
+Functions are at the core of JavaScript programming. Today we will begin to learn how to use them.
 
-A function is a reusable block of code. To create a function, we use the `function` keyword, followed by a name of our choosing, followed by parentheses, followed by the code block.
-This is called defining a function.
+
+We use functions to store code that we want to re-use. Let's write a function that doubles a number. We begin by writing the `function` keyword.
 
 ```js
-function hello(){
-  console.log('hello')
+function (num) { return num + num }
+```
+
+The function above defines `num` as a name for something it would expect as *input*. The input is always written between parentheses, and these are always followed by the function *function body*. The function body consists of an opening curly bracket, any number of lines of code, and a closing curly bracket. The `return` keyword states that the code to follow it will be the *output* of the function.
+We can think of a function as a solid box that contains some machinery. The box has an opening on one side, where something can come in, and an opening at the other side, where something may come out. The names of the things that go in are called *parameters*. The function above, for example, defines one parameter called `num`. We call it `num`, and not `cat` or `giraffe`, in order to communicate that we are expecting a number as input.
+
+### Functions as Values
+
+Before we can begin using the above function, we need to store it somewhere. In JavaScript, a function is a value, just like numbers and string, and like other values, it can be assigned to a variable:
+
+```js
+var double = function (num) { return num + num }
+```
+
+Now that we have store the function into a variable called `double`, we can pass some input into the function and observe the output. We do this by writing the name of the variable to which the function is assigned (`double` in this case), followed by parentheses, in which we write the input for the function.
+
+```js
+double(5)
+```
+
+The input values we provide to a function are also called **arguments**. When you open a node REPL, write the function definition and call the function as we did above, you will see the output right away.
+
+```js
+> var double = function (num) {
+... return num + num
+... }
+> double(5)
+25
+```
+
+When we write programs, however, we will want to use the output in some way. For example, we may want to log the output.
+
+```js
+var double = function (num) {
+  return num + num
+}
+
+console.log(double(3))
+```
+
+Once the `return` statement is reaches inside a function, the function is execution is over, and we return to the point at which we called the function. The code `double(3)` will then be replaced by the value that was returned by the function. As far as `console.log`, what is being passed to it is the value `9`. It knows nothing about `double`.
+
+As you may have realized, `console.log`, is also a function - one that is provided for us. The dot in it's name is meaningful, and will be discussed at a later point. `console.log` differs from out `double` function in two other ways:
+
+1. It does not produce an output.
+2. It leads to something else happening - the value passed to it being logged to the screen.
+
+The first part is easy to replicate. All we need to do is write a function without a `return` keyword:
+
+```js
+var noReturn = function (num){
+  num + num
 }
 ```
 
-Once we created a function, we can run it at any time by writing its name, followed by parentheses. This is called calling or invoking the function.
+The function above takes a number as argument, doubles it, and does nothing with the result. We can test this:
 
 ```js
-hello()
+> var result = noReturn(2)
+> console.log(result)
+undefined
 ```
+
+In JavaScript, a function that does not have a return statement will return the value `undefined`.
+
+### Side-effects
+
+The second aspect of `console.log` - a value being logged to the screen, is not something we can replicate. However, this is part of a larger aspect of functions called a *side effect*. A *side effect* is anything that happens inside a function which result in changes to the outside world. One side effect that we *can* create is changing the value of a variable that was defined outside the function.
+
+```js
+var myNumber = 2
+var sideEffect = function(){
+  myNumber += 1
+}
+
+sideEffect()
+console.log(myNumber)
+```
+
+the function `sideEffect` above takes no arguments, and has a single side-effect, adding `1` to the value of `myNumber`.
+
+> Ex. Call `sideEffect` multiple times, and then log myNumber. What is the result?
+> Ex. Put a call to the `sideEffects` function as an argument to `console.log`: ```js console.log(sideEffects())```. What is logged? Why?
+> Ex. Writing a function that produces side effects *and* has a return value.
+
+### Funtions as Mini-Programs
 
 A function is like a mini-program inside our main program. Whenever the code inside it is done running, we return to the line from which we called the function. A variable defined inside a function will be forgotten when the function is done running. Every time we call the function `logPets` below, the variables will be created anew.
 
@@ -42,7 +118,7 @@ logPets()
 logPets()
 ```
 
-### Scope
+### Variable Scope
 
 The variables defined inside a function simply do not exist outside of it.
 
@@ -85,34 +161,7 @@ function hello(){
 console.log(greeting)
 ```
 
-### Parameters (arguments)
-
-We define functions to take in values from the outside world. These are called parameters. They are defined by writing their names inside the parenthese that follow the function's name. Then when we call the function we can pass the values to it inside the parentheses. Values that we pass to a function when calling it are called `arguments`.
-
-```js
-function say(what) {
-  console.log(what)
-}
-
-var greeting = 'hello'
-
-// we can pass variable values
-say(greeting)
-// or just plain values
-say('goodbye')
-```
-
-A function can also produce a value. This is done by using the `return` keyword followed by the value. The return value will be produced in the place where the function was called from.
-
-```js
-function getFive(){
-  return 5
-}
-
-var number = getFive()
-// This will print `5`
-console.log(number)
-```
+### Functions in English
 
 One way we often discuss functions is by stating what they do. For example: function `add` adds two numbers and returns the result. When talking of functions this way, it is usually assumed that the variables (in this case the two numbers), will be provided as arguments to the function.
 
@@ -131,7 +180,7 @@ console.log(sum)
 
 Note that we are not changing the values of `num1` and `num2`.
 
-> Ex 1. Create a function that takes a number as input and returns the number multiplied by 2
+> Ex 1. Write a function that takes a number as argument and returns the number to the power of 2
 
 ### Calling functions from other functions
 
