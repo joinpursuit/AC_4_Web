@@ -2,7 +2,7 @@
 
 ## <b><u>Fundamentals</u></b>
 
-[Introduction](lessons/intro.md)
+[Introduction](lessons/intro/intro.md)
 
 ## Lessons
 
