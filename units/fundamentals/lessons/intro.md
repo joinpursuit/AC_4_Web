@@ -1,8 +1,8 @@
 # Access Code 4.1 Introdcution
 
-Hi Everyone. Welcome. We will start the day by installing [NodeJS 6.11.2](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).
+Hi Everyone.
 
-## Mac OS Instructions
+## Mac OS Installation Instructions
 
 1. Open a terminal window.
 
