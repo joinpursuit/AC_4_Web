@@ -40,7 +40,7 @@ $ node -v
 7. Install Visual Studio Code by going to [https://code.visualstudio.com/](https://code.visualstudio.com/)
 And clicking on the download link for macOS.
 
-8. Drag the downloaded file into your `applications` folder to install it.
+8. Drag the downloaded file into your `applications` folder. A pop up will appear - click `authenticate`, then enter the user name and password for your machine.
 
 ## Logic Puzzles
 
