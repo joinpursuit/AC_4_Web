@@ -6,20 +6,20 @@
 
 ## Lessons
 
-0. [The Command Line](lessons/terminal.md)
-1. [Node](lessons/node.md)
-2. [Values, Types, Operators](lessons/values.md)
-2. [Variables](lessons/variables.md)
-3. [Conditionals](lessons/conditionals.md)
-4. [Functions and Scope](lessons/functions_i.md)
-5. [Loops](lessons/loops.md)
-6. [Strings I](lessons/strings_i.md)
-7. [Arrays I](lessons/arrays_i.md)
-8. [Objects I](lessons/objects_i.md)
-9. [Function Composition](lessons/functions_ii.md)
-10. [Callbacks](lessons/functions_iii.md)
-11. [User Input](lessons/user_input.md)
-11. [Factory Functions and `this`](lessons/objects_ii.md)
+0. [The Command Line](lessons/terminal/terminal.md)
+1. [Node](lessons/node/node.md)
+2. [Values, Types, Operators](lessons/values/values.md)
+2. [Variables](lessons/variables/variables.md)
+3. [Conditionals](lessons/conditionals/conditionals.md)
+4. [Functions and Scope](lessons/functions/functions_i.md)
+5. [Loops](lessons/lopps/loops.md)
+6. [Strings I](lessons/strings/strings_i.md)
+7. [Arrays I](lessons/arrays/arrays_i.md)
+8. [Objects I](lessons/objects/objects_i.md)
+9. [Function Composition](lessons/functions/functions_ii.md)
+10. [Callbacks](lessons/functions/functions_iii.md)
+11. [User Input](lessons/user_input/user_input.md)
+11. [Factory Functions and `this`](lessons/objects/objects_ii.md)
 
 ## Extras
 
