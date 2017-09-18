@@ -23,7 +23,6 @@ Click “Install” to download and install Xcode Command Line Tools.
 ```bash
 $ cd ~
 $ mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
-
 ```
 
 5. Enter
@@ -38,7 +37,10 @@ $ brew install node
 $ node -v
 ```
 
+7. Install Visual Studio Code by going to [https://code.visualstudio.com/](https://code.visualstudio.com/)
+And clicking on the download link for macOS.
 
+8. Drag the downloaded file into your `applications` folder to install it.
 
 ## Logic Puzzles
 
