@@ -2,7 +2,7 @@
 
 ## <b><u>Fundamentals</u></b>
 
-[Introduction](bridge/lessons/00_intro.md)
+[Introduction](lessons/00_intro.md)
 
 ## Lessons
 

@@ -1,21 +1,44 @@
-# Web Bridge Introduction
+# Access Code 4.1 Introdcution
 
 Hi Everyone. Welcome. We will start the day by installing [NodeJS 6.11.2](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com).
 
-## Slack
-### Setup Slack Account
-Slack is our less-formal, more immediate messaging/chat app. It should be used for quick short term communication and is not preferred for anything you would want to save long term.
+## Mac OS Instructions
 
-1. To sign up for slack go to this [link](https://join.slack.com/t/c4qbridge-webdays/shared_invite/MjI0ODM0MjMxNjIyLTE1MDIyMjUzODMtNTFhYzI5MTVlNg). 
-2. You will be prompted to enter your email address. Enter it and hit the green button.
-3. Check your email for the confirmation and click "Confirm Email".
-4. Enter your name and choose a user name.
-5. Create a password.
-6. You should be brought to the web app, ready to go!
-7. Download and install desktop client from http://slack.com
-8. Optionally install the mobile client.
+1. Open a terminal window.
 
-Here are some logic puzzles.
+2. Enter:
+
+```bash
+$ xcode-select --install
+```
+
+3. You will see an alert box:
+
+![devtools popup](assets/xcode_devtools.png)
+
+Click “Install” to download and install Xcode Command Line Tools.
+
+4. Enter:
+
+```bash
+$ cd ~
+$ mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+
+```
+
+5. Enter
+
+```bash
+$ brew install node
+```
+
+6. To check that node is installed, enter:
+
+```bash
+$ node -v
+```
+
+
 
 ## Logic Puzzles
 
