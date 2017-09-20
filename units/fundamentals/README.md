@@ -24,7 +24,8 @@
 ## Extras
 
 * [Tasks App](extras/tasks/tasks.md)
-* [Logic Puzzles](extras/logic_puzzles/logic_puzzles.md)
+* [Logic Puzzles I](extras/logic_puzzles/logic_puzzles_i.md)
+* [Logic Puzzles II](extras/logic_puzzles/logic_puzzles_ii.md)
 * [The Ternary Operator](extras/ternary_operator/ternary_operator.md)
 
 ## Goals
