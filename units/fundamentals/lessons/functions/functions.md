@@ -1,25 +1,33 @@
 # Functions & Scope
 
+## Sources
+
+* [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+* [Eloquent Javascript - Functions](http://eloquentjavascript.net/03_functions.html)
+
 ## Terms
 
-* function
-  * definition
-  * call
+* Function Definition
+* Function Call
+* *Function Expression* syntax
+* *Function Declaration* syntax
 
-* scope: global, local
+* Global variable scope
+* Local variable scope (function scope)
 
 ## Lesson
 
+### Function Expression
+
 Functions are at the core of JavaScript programming. Today we will begin to learn how to use them.
 
-
-We use functions to store code that we want to re-use. Let's write a function that doubles a number. We begin by writing the `function` keyword.
+We use functions to store code that we want to re-use. Let's write a function that doubles a number.
 
 ```js
 function (num) { return num + num }
 ```
 
-The function above defines `num` as a name for something it would expect as *input*. The input is always written between parentheses, and these are always followed by the function *function body*. The function body consists of an opening curly bracket, any number of lines of code, and a closing curly bracket. The `return` keyword states that the code to follow it will be the *output* of the function.
+The above syntax is called **function expression**. The function defines `num` as a name for something it would expect as *input*. The input is always written between parentheses, and these are always followed by the function *function body*. The function body consists of an opening curly bracket, any number of lines of code, and a closing curly bracket. The `return` keyword states that the code to follow it will be the *output* of the function.
 We can think of a function as a solid box that contains some machinery. The box has an opening on one side, where something can come in, and an opening at the other side, where something may come out. The names of the things that go in are called *parameters*. The function above, for example, defines one parameter called `num`. We call it `num`, and not `cat` or `giraffe`, in order to communicate that we are expecting a number as input.
 
 ### Functions as Values
@@ -95,11 +103,49 @@ sideEffect()
 console.log(myNumber)
 ```
 
-the function `sideEffect` above takes no arguments, and has a single side-effect, adding `1` to the value of `myNumber`.
+The function `sideEffect` above takes no arguments, and has a single side-effect, adding `1` to the value of the variable `myNumber`.
 
 > Ex. Call `sideEffect` multiple times, and then log myNumber. What is the result?
 > Ex. Put a call to the `sideEffects` function as an argument to `console.log`: ```js console.log(sideEffects())```. What is logged? Why?
 > Ex. Writing a function that produces side effects *and* has a return value.
+
+### Function shorthand syntax
+
+There is a shorter way to write `var dobule = function…`: start with the `function` keyworkd, followed by the function name.
+
+```js
+function double(num){
+  return num + 1
+}
+```
+
+
+The above syntax is called **function declaration**. `double` is a still a variable in both cases, one whose value is a function. 
+
+
+### Function Hoisting
+
+The only substantial difference is that function declarations are hoisted. This means that you can call a function before it is defined:
+
+```js
+console.log(sayHelloDec) // logs: [Function: sayHelloDec]
+sayHelloDec(); // logs "hello"
+
+function sayHelloDec() {
+  console.log('hello');
+}
+```
+
+A function defined with the expression syntax will be assigned to a variable, and any variable used before it is defined will have the value `undfined`
+
+```js
+console.log(sayHelloExp) // logs: undefined
+sayHelloExp(); // TypeError: sayHelloExp is not a function
+
+var sayHelloExp = function() {
+  console.log('hello');
+}
+```
 
 ### Funtions as Mini-Programs
 
@@ -113,7 +159,7 @@ function logPets(){
   pet = 'dog'
   console.log(pet)
 }
-// logNumbers will have the same effect every time we call it
+// logNumbers will do the same thing every time we call it
 logPets()
 logPets()
 ```
@@ -127,8 +173,8 @@ function hello(){
   var greeting = 'hello'
   console.log(greeting)
 }
-// the code below will produce an error
-console.log(greeting)
+
+console.log(greeting) // ReferenceError: greeting is not defined
 ```
 
 Variables declared outside a function are called `global` and they can be accessed and modified from any function.
@@ -142,8 +188,8 @@ function hello(){
   console.log(greeting)
 }
 hello()
-// will log hello
-console.log(greeting)
+
+console.log(greeting) // logs: 'hello'
 ```
 
 A commonly used term for this is **scope**: a variable inside a function has local scope, and a variables not inside any function has global scope. If we create a variable inside a function with the same name as a global variable - the function will only be aware of the local one. This, however, will not change the value of the global variable.
@@ -153,12 +199,11 @@ var greeting = 'hello'
 
 function hello(){
   var greeting = 'what\'s up?'
-  // will print "what's up?"
-  console.log(greeting)
+  console.log(greeting) // logs: 'what's up?'
 }
 
-// will print "hello"
-console.log(greeting)
+
+console.log(greeting) // logs: 'hello'
 ```
 
 ### Functions in English
@@ -175,7 +220,7 @@ var num2 = 3
 // adding num1 and num2
 var sum = add(num1, num2)
 
-console.log(sum)
+console.log(sum) // logs: 5
 ```
 
 Note that we are not changing the values of `num1` and `num2`.
@@ -207,13 +252,14 @@ Be careful when two function call each other. The following code will never stop
 
 ```js
 
-// Calls egg
+
 function chicken(){
+    // call egg
     egg()
 }
 
-// Calls chicken
 function egg(){
+    // call chicken
     chicken()
 }
 
@@ -221,16 +267,3 @@ egg()
 ```
 
 One way to imagine the code above is as a stack of functions calls - each time we call a new function, it gets put on the stack. The function is put out of the stack only when it is done running. In the code above, we keep piling `chicken` and `egg` functions, and never takes them off - until the computer runs out of memory.
-
-### Exercises
-
-1. Write a function that takes two numbers and returns the largest of the two. If the numbers are equal, the function should return the second one.
-2. Write a function that takes a number as input, and returns `true` if the number is even, and `false` if the number is odd.
-3. Write a function that takes a number as input, and returns a string representation of the number. For exaple:
-
-```js
-numberToString(123)
-// returns '123'
-```
-
-4. Write a function function that takes a boolean value as input, and returns a string representation of the input: either the string `'true'` or the string `'false'`.
