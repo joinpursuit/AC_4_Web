@@ -51,7 +51,7 @@ The input values we provide to a function are also called **arguments**. When yo
 ... return num + num
 ... }
 > double(5)
-25
+10
 ```
 
 When we write programs, however, we will want to use the output in some way. For example, we may want to log the output.
@@ -120,7 +120,7 @@ function double(num){
 ```
 
 
-The above syntax is called **function declaration**. `double` is a still a variable in both cases, one whose value is a function. 
+The above syntax is called **function declaration**. `double` is a still a variable in both cases, one whose value is a function.
 
 
 ### Function Hoisting
