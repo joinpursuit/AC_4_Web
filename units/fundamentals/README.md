@@ -13,9 +13,9 @@
 3. [Conditionals](lessons/conditionals/conditionals.md)
 4. [Functions and Scope](lessons/functions/functions.md)
 5. [Loops](lessons/loops/loops.md)
-6. [Strings I](lessons/strings/strings.md)
-7. [Arrays I](lessons/arrays/arrays.md)
-8. [Objects I](lessons/objects/objects.md)
+6. [Strings](lessons/strings/strings.md)
+7. [Arrays](lessons/arrays/arrays.md)
+8. [Objects](lessons/objects/objects.md)
 9. [Function Composition](lessons/function_composition/function_composition.md)
 10. [Callbacks](lessons/callbacks/callbacks.md)
 11. [User Input](lessons/user_input/user_input.md)
@@ -24,7 +24,8 @@
 ## Extras
 
 * [Tasks App](extras/tasks/tasks.md)
-* [Logic Puzzles](extras/logic_puzzles/logic_puzzles.md)
+* [Logic Puzzles I](extras/logic_puzzles/logic_puzzles_i.md)
+* [Logic Puzzles II](extras/logic_puzzles/logic_puzzles_ii.md)
 * [The Ternary Operator](extras/ternary_operator/ternary_operator.md)
 
 ## Goals
