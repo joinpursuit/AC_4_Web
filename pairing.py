@@ -33,8 +33,8 @@ def save_file(seating, fn):
         for i, day_seating in enumerate(seating):
             f.writerow(['Day %s' % (i + 1)])
             f.writerow([])
-            for pair in day_seating:
-                f.writerow(pair)
+            for j, pair in enumerate(day_seating):
+                f.writerow(['Table %s' % (j + 1)] + pair)
             f.writerow([])
 
 
