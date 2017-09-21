@@ -19,7 +19,7 @@
 9. [Function Composition](lessons/function_composition/function_composition.md)
 10. [Callbacks](lessons/callbacks/callbacks.md)
 11. [User Input](lessons/user_input/user_input.md)
-11. [Factory Functions and `this`](lessons/this/this.md)
+11. [Factory Functions](lessons/factory_functions/factory_functions.md)
 
 ## Extras
 
