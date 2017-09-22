@@ -12,4 +12,3 @@
 * Convert Celsius to Fahrenheit (*)
 * Return Early Pattern for Functions
 * Returning Boolean Values from Functions
-
