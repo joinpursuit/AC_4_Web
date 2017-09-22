@@ -156,6 +156,10 @@ name = 'jane'
 console.log(name[0].toUpperCase())
 ```
 
+---
+
+# Strings II
+
 ### Immutability
 
 If we want to capitalize the first letter of a string variable, we may naturaly want to do the following:
