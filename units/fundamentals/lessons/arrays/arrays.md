@@ -143,6 +143,8 @@ var arr = str.split('')
 // arr will be: ['h','e','l','l','o']
 ```
 
+# Arrays - II
+
 ### Array Equality Test
 
 When we were dealing with strings and numbers, we could compare them by simply using the `===` operator. With arrays this will not work as expected:
