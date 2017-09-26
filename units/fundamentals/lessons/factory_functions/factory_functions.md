@@ -8,7 +8,7 @@
 
 ## Lesson
 
-Often are often useful when combined with arrays. For example,  may want to create several we may want to create an array of objects, where each objects has the same properties. One such example is the films array from our first **Objects** lesson:
+Objects are often useful when combined with arrays. For example,  may want to create several we may want to create an array of objects, where each objects has the same properties. One such example is the films array from our first **Objects** lesson:
 
 ```js
 var films = [

@@ -7,3 +7,8 @@
 * Access Array Data with Indexes
 * Modify Array Data With Indexes
 * Stand in Line
+
+## Intermediate Algorithm Scripting
+
+* Sum All Odd Fibonacci Numbers (***)
+* Sum All Primes (***)
