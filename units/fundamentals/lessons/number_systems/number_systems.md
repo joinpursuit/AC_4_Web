@@ -2,7 +2,8 @@
 
 ## Links
 
-* [Computer Science Field Guide](http://csfieldguide.org.nz/en/chapters/data-representation.html)
+* [Computer Science Field Guide - Data Representation](http://csfieldguide.org.nz/en/chapters/data-representation.html)
+* [2ality - How numbers are encoded in JavaScript](http://2ality.com/2012/04/number-encoding.html)
 
 ## Vocabulary
 
@@ -63,18 +64,36 @@ As discussed earlier, computers can only store information using bits, which onl
 
 Binary works in a very similar way to Decimal, even though it might not initially seem that way. Because there are only 2 digits, this means that each digit is 2 times the value of the one immediately to the right.
 
-![alt text](base_2_calculator.png)
+![base-2-calculator](base_2_calculator.png)
 
 > Ex. Find the binary representations of 4, 7, 12, and 57.
 > Ex. What is the largest number you can make with the interactive? What is the smallest?
 
 Let's try and write the binary representations for the following decimal numbers, with the provided number of digits.
 
-* 101 with 7 bits is: 110 0101
-* 28 with 10 bits is: 00 0001 1100
-* 7 with 3 bits is: 111
-* 18 with 4 bits is: Impossible to represent (not enough bits)
-* 28232 with 16 bits is: 0110 1110 0100 1000
+* 101 with 7 bits
+* 28 with 10 bits
+* 7 with 3 bits is
+* 18 with 4 bits is
+* 28232 with 16 bits
+
+### What is a Byte
+
+Groups of 8 bits are so useful that they have their own name: a byte. Computer memory and disk space are usually divided up into bytes, and bigger values are stored using more than one byte. For example, two bytes (16 bits) are enough to store numbers from 0 to 65,535. Four bytes (32 bits) can store numbers up to 4,294,967,295. You can check these numbers by working out the place values of the bits. Every bit that's added will double the range of the number.
+
+### Numbers in Javascript
+
+JavaScript numbers are stored in a binary format, in 64 bits. These bits are allotted as follows: The fraction occupies bits 0 to 51, the exponent occupies bits 52 to 62, the sign occupies bit 63.
+
+![numbers in javascript](js_numbers.png)
+
+The components work as follows: If the sign bit is `0`, the number is positive, otherwise negative. Roughly, the fraction contains the digits of a number, while the exponent indicates where the point is.
+
+The largest positive integer (Whole number) we can represent with **n** (some arbitrary number) binary digits is **2<sup>n</sup> - 1**.
+Consider the maximum number with `3` digits: **111<sub>2</sub>** or **7**. If we add 1 to that number we get **1000<sub>2</sub>** or  **8**. That is, the 4th binary digit is equal to the deimal number `8`, which is equal to **2<sup>3</sup>**. So, taking **2<sup>3</sup>** and substracting **1** from it gives us **7**, and that is exactly the maximum number we can represent with `3` digits. Some more examples:
+
+* A binary number with one digit has a maximum value of **2<sup>1</sup> - 1 = 2 - 1 = 1**. That is the number **1<sub>2</sub>**
+* A binary number with two digits has a maximum value of **2<sup>2</sup> - 1 = 4 - 1 = 3**. That is the number **11<sub>2</sub>**.
 
 ### The Hexadecimal (Base 16) System
 

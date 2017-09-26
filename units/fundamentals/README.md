@@ -6,8 +6,8 @@
 
 ## Lessons
 
-0. [The Command Line](lessons/terminal/terminal.md)
-1. [Node](lessons/node/node.md)
+0.[The Command Line](lessons/terminal/terminal.md)
+1.[Node](lessons/node/node.md)
 2. [Values, Types, Operators](lessons/values/values.md)
 2. [Variables](lessons/variables/variables.md)
 3. [Conditionals](lessons/conditionals/conditionals.md)
@@ -26,6 +26,10 @@
 * [Tasks App](extras/tasks/tasks.md)
 * [Logic Puzzles I](extras/logic_puzzles/logic_puzzles_i.md)
 * [Logic Puzzles II](extras/logic_puzzles/logic_puzzles_ii.md)
+
+## DS&A
+
+* [Number Systems](lessons/number_systems/number_systems.md)
 
 ## TBD
 
