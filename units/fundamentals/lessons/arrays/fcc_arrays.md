@@ -10,5 +10,5 @@
 
 ## Intermediate Algorithm Scripting
 
-* Sum All Odd Fibonacci Numbers (***)
-* Sum All Primes (***)
+* [Sum All Odd Fibonacci Numbers](https://www.freecodecamp.org/challenges/sum-all-odd-fibonacci-numbers) (***)
+* [Sum All Primes](https://www.freecodecamp.org/challenges/sum-all-primes) (***)
