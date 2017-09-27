@@ -67,15 +67,17 @@ Binary works in a very similar way to Decimal, even though it might not initiall
 ![base-2-calculator](base_2_calculator.png)
 
 > Ex. Find the binary representations of 4, 7, 12, and 57.
-> Ex. What is the largest number you can make with the interactive? What is the smallest?
+> Ex. What is the largest number you can make with the above calculator? What is the smallest?
 
-Let's try and write the binary representations for the following decimal numbers, with the provided number of digits.
+Let's try and write the binary representations for the following decimal numbers, with the provided number of digits. In some of the cases below it will not be possible.
 
 * 101 with 7 bits
 * 28 with 10 bits
-* 7 with 3 bits is
-* 18 with 4 bits is
+* 7 with 3 bits
+* 18 with 4 bits
 * 28232 with 16 bits
+
+### Puzzle: Chess Board
 
 ### What is a Byte
 
