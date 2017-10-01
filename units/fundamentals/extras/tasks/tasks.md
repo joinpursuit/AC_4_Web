@@ -8,10 +8,10 @@
 
 Let's create a task list with everything we've learned so far. Our app will consist of a `task` array, where each element is a `task` object. Each `task` object will have two properties:
 
-1. `title`: a string.
-2. `completed`: a boolean.
+1.`title`: a string.
+2.`completed`: a boolean.
 
-Let's create a factory function to create a new `task` object.
+Let's create a factory function that returns a new `task` object.
 
 ```js
 function createTask(title, completed){
@@ -27,7 +27,7 @@ console.log(buyMilk)
 // will log: {title: 'buy milk', completed: 'false'}
 ```
 
-Alternatively, we can return an object literal, without assigning it to a variable:
+Alternatively, we can return an object literal right away:
 
 ```js
 function createTask(title, completed){
