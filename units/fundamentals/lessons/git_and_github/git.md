@@ -61,6 +61,7 @@ $ git add .
 ```
 
 Here the `.` tells Git to add all untracked files, even if in this case there’s only one.
+Now if we do `git status` again:
 
 ![001](screenshots/001.png)
 
