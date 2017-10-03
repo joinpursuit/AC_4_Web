@@ -253,3 +253,48 @@ Changes to be committed:
 
     renamed:    README.md -> README
 ```
+
+### Viewing Your Staged and Unstaged Changes: 
+
+`git diff` shows you the exact lines added and removed.
+
+Let’s say you edit and stage the README file again and then edit the CONTRIBUTING.md file without staging it. If you run your git status command, you once again see something like this:
+
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   README
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   CONTRIBUTING.md
+```
+
+To see what you’ve changed but not yet staged, type `git diff` with no other arguments:
+
+```bash
+$ git diff
+diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md
+index 8ebb991..643e24f 100644
+--- a/CONTRIBUTING.md
++++ b/CONTRIBUTING.md
+@@ -65,7 +65,8 @@
+```
+
+To see what you’ve staged that will go into your next commit, you can use `git diff --staged`:
+
+```bash
+$ git diff --staged
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+--- /dev/null
++++ b/README
+@@ -0,0 +1 @@
+```
