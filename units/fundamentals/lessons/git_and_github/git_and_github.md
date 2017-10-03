@@ -43,7 +43,7 @@ $ git clone <url>
 
 ![lifecycle](assets/lifecycle.png)
 
-#### Checking the Status of Your Files
+#### Checking the Status of Your Files: `git status`
 
 ```bash
 $ git status
@@ -80,7 +80,7 @@ Changes to be committed:
     new file:   README
 ```
 
-### Staging Modified Files
+### Staging Modified Files `git add`
 
 Modifying the file `CONTRIBUTING.md`
 
@@ -149,7 +149,7 @@ Changes to be committed:
     modified:   CONTRIBUTING.md
 ```
 
-### Ignoring Files: `.gitignore`
+### Ignoring Files: the `.gitignore` file
 
 The files ignored follow the patterns in `.gitignore`:
 
