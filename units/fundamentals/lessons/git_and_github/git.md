@@ -39,7 +39,20 @@ Initialized empty Git repository in  /home/lev/git-test/.git/
 
 ### Initial Commit
 
-![001](screenshots/001.png)
+```bash
+$ touch README.md
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
 
 We see here that the README.md file is “untracked”, which means Git doesn’t yet know about it. We can add it using the `git add` command:
 
@@ -49,17 +62,6 @@ $ git add .
 
 Here the `.` tells Git to add all untracked files, even if in this case there’s only one.
 
-```bash
-$ git status
-On branch master
-
-Initial commit
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-        new file:   README.md
-
-```
+![001](screenshots/001.png)
 
 
