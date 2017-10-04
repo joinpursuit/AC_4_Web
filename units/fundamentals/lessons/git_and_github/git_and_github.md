@@ -270,7 +270,7 @@ And `git push`:
 ```bash
 $ git push origin master
 Username for 'https://github.com': lizraeli
-Password for 'https://lizraeli@github.com': 
+Password for 'https://lizraeli@github.com':
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
@@ -299,3 +299,20 @@ Fast-forward
 ```
 
 Since there are no conflicts with local files, the local ones have been updated. We can see a list of the files changed (just one in this case) and a summary of the changes on the last line.
+
+### Git log
+
+The `git log` command can show the entire commit history of our repo. For each commit, it will show it's id, the author, the date, and the commit message. To limit the number of commits we can add the flag `-[number]`: this will show the porvided number of commits, from last to first.
+
+![011](screenshots/011.png)
+
+We can also format the output using `--pretty=format:` followed by some arguments. The following show all commits made in an easily readeable form.
+
+```markdown
+$ git log --pretty=format:"%h - %an, %ar : %s"
+9fbf058 - lizraeli, 34 minutes ago : added a link in readme to hello.js
+6254e59 - lizraeli, 70 minutes ago : added file hello.js
+ea24eb6 - lizraeli, 4 hours ago : Add a # tag
+092beb2 - lizraeli, 4 hours ago : add content to readme
+38aeeb2 - lizraeli, 5 hours ago : initialize
+```
