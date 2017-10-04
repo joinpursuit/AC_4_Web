@@ -20,6 +20,8 @@
 10. [Callbacks](lessons/callbacks/callbacks.md)
 11. [User Input](lessons/user_input/user_input.md)
 11. [Factory Functions](lessons/factory_functions/factory_functions.md)
+12. [Git and Github](lessons/git_and_github/git_and_github.md)
+13. [Date and Time](lessons/date_and_time/date_and_time.md)
 
 ## Projects
 
