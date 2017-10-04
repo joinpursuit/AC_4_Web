@@ -1,13 +1,5 @@
 # Date and Time in JavaScript
 
-## Terms
-
-* Modules
-* Require
-* Synchronous
-* Asynchronous
-* Threads
-
 ## References
 
 * [mdn - Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
