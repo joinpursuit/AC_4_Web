@@ -24,7 +24,7 @@
 3. Create a git repo. Connect your local repo to the remote one.
 4. Add the line `# hello there` at the top of `README.md`.
 5. Commit the new line with a commit message of your choice. Verify using `git log -p` that the change was committed as expected.
-6. Push your changes. On github, click on the commit to verify the changes.
+6. Push your changes: `git push origin master`. On github, click on the commit to verify the changes.
 
 ### Fourth Set
 
