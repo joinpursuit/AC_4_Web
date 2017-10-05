@@ -12,7 +12,7 @@
 
 ## Second Set
 
-1. Use touch to create an empty file called baz. What happens if you run `git commit -am "Add baz"`?
+1. Use touch to create an empty file called baz.
 2. Add baz to the staging area using `git add .`, then commit with the message `"Add bazz"`.
 3. Realizing there’s a typo in your commit message, change bazz to baz using `git commit --amend`.
 4. Run git log to get the id of the last commit, then view the diff using `git show <id>` to verify that the message was amended properly.
@@ -20,6 +20,8 @@
 ### Third Set
 
 1. The `git log` command shows only the commit messages, which makes for a compact display but isn’t particularly detailed. Verify by running `git log -p` that the `-p` option shows the full diffs represented by each commit.
+2. Create a file `README.md`, add and commit it.
+3. Create a git repo. Connect y commit messages, which makes for a compact display but isn’t particularly detailed. Verify by running `git log -p` that the `-p` option shows the full diffs represented by each commit.
 2. Create a file `README.md`, add and commit it.
 3. Create a git repo. Connect your local repo to the remote one.
 4. Add the line `# hello there` at the top of `README.md`.
@@ -36,6 +38,6 @@
 [official Git documentation](https://git-scm.com/).
 ```
 
-2. Commit your change with an appropriate message. You don’t have to run `git add`. Why not?
+2. Commit your change with an appropriate message. Why not?
 
 3. Push your change to GitHub. By refreshing your browser, confirm that the new line has been added to the rendered README. Click on the “official Git documentation” link to verify that it works.
