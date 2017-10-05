@@ -41,15 +41,15 @@ function createTask(title, completed){
 Now let's create an empty `taskArr` array, and use the `push` method to add the new `task` object to the array:
 
 ```js
-var tasks = []
+var taskArr = []
 
 var buyMilk = createTask('buy milk', false)
-tasks.push(buyMilk)
+taskArr.push(buyMilk)
 
 var cleanHouse = createTask('clean the house', false)
-tasks.push(cleanHouse)
+taskArr.push(cleanHouse)
 
-console.log(tasks)
+console.log(taskArr)
 
 // will log:
 // [ { title: 'buy milk', completed: false },
@@ -133,10 +133,10 @@ function toggleCompleted(index) {
 }
 ```
 
-We can now write a program that will add and toggle tasks based on a user's input. Let's begin by creating an empty `tasks` array.
+We can now write a program that will add and toggle tasks based on a user's input. Let's begin by creating an empty `tasksArr` array.
 
 ```js
-var tasks = []
+var tasksArr = []
 ```
 
 ### Adding Tasks
@@ -182,7 +182,7 @@ If the first element of the array is the string `'toggle'`, we will need to read
 ```js
 if (inputArr[0] === 'toggle') {
   var index = Number(inputArr[1])
-  if (tasks[index] === undefined){
+  if (tasksArr[index] === undefined){
     console.log('an element at that index does not exist')
   } else {
     toggleCompleted(index)
