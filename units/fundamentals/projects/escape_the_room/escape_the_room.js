@@ -142,9 +142,8 @@ RoomObject.prototype.interact = function (action) {
  * @constructor
  * @param  {RoomObject[]} objects
  */
-function Room(objects, exit) {
+function Room(objects) {
     this.objects = objects;
-    this.exit = exit;
 }
 
 /**
