@@ -150,15 +150,5 @@ console.log(charlie instanceof Dog) // => true
 
 An object created using a constructor may be considered an instance of its constructor. The constructor may be viewed as a blueprint for creating objects.
 
-### Dates
+### Prototype
 
-One object that requires the use of a constructor is the `Date` object. This constructor can be used in [different ways](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
-
-```js
-console.log(new Date());
-console.log(new Date(1980, 1, 1));
-console.log(new Date(2007, 2, 30, 8, 20, 30));
-```
-
-To see all different uses of the Date object and constructor, we may use a site such 
-When called without arguments,  the constructor creates a Date object for the current date and time.
