@@ -268,3 +268,8 @@ Rabbit.prototype.dance = function() {
 killerRabbit.dance();
 // → The killer rabbit dances a jig.
 ```
+
+### Quotes
+
+"If you add [a property] to the parent, the children will all get it. If a child already has one, it will use its own" - Aiden
+
