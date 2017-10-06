@@ -22,6 +22,8 @@
 11. [Factory Functions](lessons/factory_functions/factory_functions.md)
 12. [Git and Github](lessons/git_and_github/git_and_github.md)
 13. [Date and Time](lessons/date_and_time/date_and_time.md)
+14. [Regular Expression](lessons/regex/regex.md)
+15. [File I/O](lessons/file/file.md)
 
 ## Projects
 
