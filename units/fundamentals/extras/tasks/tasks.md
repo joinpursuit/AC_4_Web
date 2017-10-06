@@ -133,10 +133,10 @@ function toggleCompleted(index) {
 }
 ```
 
-We can now write a program that will add and toggle tasks based on a user's input. Let's begin by creating an empty `tasksArr` array.
+We can now write a program that will add and toggle tasks based on a user's input. Let's begin by creating an empty `taskArr` array.
 
 ```js
-var tasksArr = []
+var taskArr = []
 ```
 
 ### Adding Tasks
@@ -182,7 +182,7 @@ If the first element of the array is the string `'toggle'`, we will need to read
 ```js
 if (inputArr[0] === 'toggle') {
   var index = Number(inputArr[1])
-  if (tasksArr[index] === undefined){
+  if (taskArr[index] === undefined){
     console.log('an element at that index does not exist')
   } else {
     toggleCompleted(index)
