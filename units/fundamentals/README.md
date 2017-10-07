@@ -23,7 +23,7 @@
 14. [Factory Functions](lessons/factory_functions/factory_functions.md)
 15. [Date and Time](lessons/date_and_time/date_and_time.md)
 16. [Constructor Functions](lessons/constructor_functions/constructor_functions.md)
-17. [Filter, Map, Reduce](lessons/filter_map_reduce/filter_map_reduce.md)
+17. [Filter, Map, Reduce](lessons/map_filter_reduce/map_filter_reduce.md)
 18. [Regular Expression](lessons/regex/regex.md)
 19. [File I/O](lessons/file/file.md)
 
