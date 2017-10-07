@@ -231,7 +231,7 @@ Player.prototype.useItem = function (itemName, objectName) {
     }
 }
 
-function Game() {
+function Game(rooms) {
     this.currentRoomIndex = 0;
     this.rooms = rooms;
 }
