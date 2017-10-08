@@ -35,7 +35,7 @@ function findElem(arr, callback) {
 
 
 /**
- * Result
+ * Represents a Result of interacting with an object in the room
  * @constructor
  * @param {string} {description}
  * @param {string[]} [items]
@@ -46,7 +46,7 @@ function Result(description, items){
 }
 
 /**
- * RoomObject
+ * Represents a thing in the room
  * @constructor
  * @param  {string} name
  * @param  {string} description
@@ -63,7 +63,8 @@ function RoomObject(name, description, items, neededItems, actions) {
 
 
 /**
- * @function {getItems}
+ * Get the items in the RoomObject
+ * @function getItems
  * @return {string[]}
  */
 RoomObject.prototype.getItems = function () {
@@ -73,14 +74,16 @@ RoomObject.prototype.getItems = function () {
 };
 
 /**
- * @function {removeNeededItem}
+ * Remove all needed items
+ * @function removeNeededItem
  */
 RoomObject.prototype.removeNeededItems = function () {
     this.neededItems = [];
 };
 
 /**
- * @function {isItemNeeded} 
+ * Check if an item is needed for this RoomObject
+ * @function isItemNeeded
  * @param  {string} itemName
  * @return {boolean}
  */
@@ -89,7 +92,8 @@ RoomObject.prototype.isItemNeeded = function (item) {
 };
 
 /**
- * @function {useItem} 
+ * Try to use an item on this RoomObject
+ * @function useItem
  * @param  {string} item
  * @return {boolean}
  */
@@ -104,6 +108,7 @@ RoomObject.prototype.useItem = function(item) {
 }
 
 /**
+ * Check if there are any items in this RoomObject
  * @function hasItems
  * @return {boolean}
  */
@@ -112,6 +117,7 @@ RoomObject.prototype.hasItems = function(){
 }
 
 /**
+ * Check if any items are needed to interact with this RoomObject
  * @function hasItems
  * @return {boolean}
  */
@@ -120,6 +126,7 @@ RoomObject.prototype.needsItems = function(){
 }
 
 /**
+ * Try to interact with this RoomObject
  * @function interact
  * @return {Result}
  */
@@ -138,7 +145,7 @@ RoomObject.prototype.interact = function (action) {
 }
 
 /**
- * Room
+ * Represents a level in the game
  * @constructor
  * @param  {RoomObject[]} objects
  */
@@ -147,7 +154,8 @@ function Room(objects) {
 }
 
 /**
- * @function {getObject}
+ * Try to retrieve a RoomObject contained in this Room 
+ * @function getObject
  * @param  {string} objectName
  * @return {RoomObject | void}
  */
@@ -171,7 +179,7 @@ function Player(room) {
 }
 
 /**
- * @function {getItem}
+ * Try to get an item from the player's inventory
  * @param  {string} itemName
  * @return {string | void}
  */
@@ -184,7 +192,8 @@ Player.prototype.getItem = function (itemName) {
 }
 
 /**
- * @function {addItems}
+ * Add items to the player's inventory
+ * @function
  * @param  {string[]} items
  */
 Player.prototype.addItems = function (items) {
@@ -192,7 +201,7 @@ Player.prototype.addItems = function (items) {
 }
 
 /**
- * @function {examineObject}
+ * Try to interact with a RoomObject
  * @param  {string} objectName
  * @return {string}
  */
@@ -212,7 +221,7 @@ Player.prototype.interactWithObject = function (objectName, action) {
 }
 
 /**
- * @function {useItem} use item on object
+ * Try to use item on an RoomObject
  * @param  {string} itemName
  * @param  {string} objectName
  * @return {string}
@@ -231,15 +240,28 @@ Player.prototype.useItem = function (itemName, objectName) {
     }
 }
 
+/**
+ * Game
+ * @constructor
+ * @param  {Room[]} rooms
+ */
 function Game(rooms) {
     this.currentRoomIndex = 0;
     this.rooms = rooms;
 }
 
+/**
+ * Get the current room
+ * @return {Room}
+ */
 Game.prototype.getCurrentRoom = function(){
     return this.rooms[this.currentRoomIndex]
 }
 
+/**
+ * Set and return the next room
+ * @return {Room}
+ */
 Game.prototype.getNextRoom = function(){
     this.currentRoomIndex++;
     return this.rooms[this.currentRoomIndex]
