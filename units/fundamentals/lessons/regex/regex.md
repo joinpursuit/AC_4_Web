@@ -454,3 +454,13 @@ var anHtmlTag = /<.+?>/;
     ```
     var dates = ['01/01/2000', '12/31/1999', '02/29/2017'];
     ```
+
+10. Find and print all tags in this simple html:
+
+    ```
+    var html = '<html><head>'+
+               '<title>Simple</title>'+
+               '</head><body>'+
+               'Nothing to see here'+
+               '</body></html>';
+    ```
