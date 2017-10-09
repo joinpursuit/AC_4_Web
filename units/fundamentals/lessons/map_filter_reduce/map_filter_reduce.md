@@ -236,7 +236,7 @@ Array.prototype.reduce = function(func, initialValue) {
     }
 
     // Iterate through the array, feeding the current value and the result of
-    // the previous computation back into the function 
+    // the previous computation back into the function
     for (var i = 0; i < this.length; i++) {
         accumulator = func(accumulator, this[i])
     }
@@ -250,7 +250,7 @@ Let's use the reduce function to find the largest value in an array of numbers.
 ```js
 var ratings = [2,3,1,4,5];
 
-return ratings.reduce(function(acc, curr) {
+var largest = ratings.reduce(function(acc, curr) {
     if (acc > curr) {
         return acc;
     } else {
@@ -285,6 +285,13 @@ var sum = numbers.reduce(function(acc, num){
     return acc + num;
 })
 ```
+
+At `acc` will have to the value of the first element in the array, and `curr` will have the value of the second element in the array. Following this, `acc` will have the value returned by the previous invocation of the callback, and `curr` will have the value of the next element in the array.
+
+// acc = 2    curr = 3    return 2 + 3 -> 5
+// acc = 5    curr = 1    return 5 + 1 -> 6
+// acc = 6    curr = 4    return 6 + 4 -> 10
+// acc = 10   curr = 5    return 10 + 5 -> 15
 
 ### Map -> Reduce
 
