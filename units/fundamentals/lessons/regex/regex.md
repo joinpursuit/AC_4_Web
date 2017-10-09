@@ -1,13 +1,16 @@
 # Regular Expression
 
+
 ## Objectives
 
 Learn how to use regular expression to search, extract and replace in strings, efficiently.
+
 
 ## Helpful Links
 
 - [RegexONE](https://regexone.com/)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+
 
 ## Vocabulary
 
@@ -17,11 +20,13 @@ Learn how to use regular expression to search, extract and replace in strings, e
 * search
 * flags
 * replace
-* translate?
+* groups, nested groups
 
 ## Lesson
 
+
 ### Matching
+
 
 #### new RegExp and RegExp.exec
 
@@ -109,6 +114,7 @@ var pattern = /\./;
 // -> [ '.', index: 24, input: ... ]
 ```
 
+
 #### Ranges, exclusion and multiplicity
 
 Occasionally the dot character is too powerful as it matches any characters, in this case we can use the ranges. A range expression is in brackets, example `[aeiou]`. This will match any **one character** of the English vowels:
@@ -180,6 +186,7 @@ There are other shortcuts we can use, saving us lazy programmers from typing too
 * `\S` -- stands for *not* a space
 * `\w` -- stands for a word character: `[A-Za-z0-9_]`
 
+
 ### Match on start and end, boundaries
 
 * `^` -- matches on start of the string
@@ -249,6 +256,7 @@ var wordBoundary = /\b/;
 
 Notice how it preserves the whitespace between the words.
 
+
 ### Global, multiline, match-all, ignore case flags
 
 ```javascript
@@ -285,9 +293,7 @@ Other useful flags:
 
 ### All the matches and match groups
 
-Regular expressions allow us to not just match text but also to extract information for further processing. This is done by defining groups of characters and capturing them using the special parentheses ( and ) metacharacters. Any subpattern inside a pair of parentheses will be captured as a group. In practice, this can be used to extract information like phone numbers or emails from all sorts of data.
-
-Imagine for example that you had a command line tool to list all the image files you have in the cloud. You could then use a pattern such as `^(IMG\d+\.png)$` to capture and extract the full filename, but if you only wanted to capture the filename without the extension, you could use the pattern `^(IMG\d+)\.png$` which only captures the part before the period.
+Besides matching text we can use regular expressions to extract information for further processing. This is done by defining groups of characters and capturing them using the special parentheses `(` and `)` metacharacters. Any subpattern inside a pair of parentheses will be captured as a group. In practice, this can be used to extract information like phone numbers or emails from all sorts of data.
 
 ```javascript
 var ipAddress = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g;
@@ -309,28 +315,82 @@ var groups = '10.1.14.41'.match(ipAddressParts);
 groups[0]; // the whole match
 groups[1]; // the first byte
 // ...
-
 ```
 
+Groups can get modifiers just like single characters and ranges:
+
+```javascript
+var aSong = /tra (la ){3,}/;
+
+'tra la la la la lah'.match(aSong);
+// -> ['tra la la la la ', ...
+
+'tra la la'.match(aSong);  // too short
+// -> null
+```
 
 
 #### Nested matches
 
-When you are working with complex data, you can easily find yourself having to extract multiple layers of information, which can result in nested groups. Generally, the results of the captured groups are in the order in which they are defined (in order by open parenthesis).
-
-Take the example from the previous lesson, of capturing the filenames of all the image files you have in a list. If each of these image files had a sequential picture number in the filename, you could extract both the filename and the picture number using the same pattern by writing an expression like `^(IMG(\d+))\.png$` (using a nested parenthesis to capture the digits).
+For complex data, you can easily extract multiple layers of information, with nested groups. The results of the captured groups are in the order in which they are defined--in order by open parenthesis.
 
 The nested groups are read from left to right in the pattern, with the first capture group being the contents of the first parentheses group, etc.
 
-For the following strings, write an expression that matches and captures both the full date, as well as the year of the date.
+```javascript
+var dateAndYear = /(\w+ (\d+))/g;
 
+while (matches = dateAndYear.exec('Jan 1987\nMay 1969\nAug 2011')) {
+  console.log(matches)
+}
+// [ 'Jan 1987',
+//   'Jan 1987',
+//   '1987',
+//   index: 0,
+//   input: 'Jan 1987\nMay 1969\nAug 2011' ]
+// [ 'May 1969',
+//   'May 1969',
+//   '1969',
+//   index: 9,
+//   input: 'Jan 1987\nMay 1969\nAug 2011' ]
+// [ 'Aug 2011',
+//   'Aug 2011',
+//   '2011',
+//   index: 18,
+//   input: 'Jan 1987\nMay 1969\nAug 2011' ]
+```
+
+Notice how we use the `RegExp.exec()` return value truthiness to loop through until we get a `null` match, which being falsy, terminates the loop.
 
 
 ### The or `|` operator
 
-### Boundaries
+You can use the `|` (or) operator for defining alternative matches, you do this inside a group:
+
+```javascript
+var allDigits = /(zero|one|two|three|four|five|six|seven|eight|nine)/i;
+
+'Three little daffodils waving at me\nOne, two, three\nOne, two, three\nThree little daffodils waving at me'.match(allDigits);
+// -> ['Three', ...
+```
+
 
 ### Controlling greediness
+
+Greedy means match longest possible string. Lazy means match shortest possible string. By default all the expressions we wrote are greedy. We use `?` to mark a modifier as lazy.
+
+For example, the greedy `/h.+l/` matches `'hell'` in `'hello'` but the lazy `/h.+?l/` matches `'hel'`:
+
+```javascript
+var notAnHtmlTag = /<.+>/;
+var anHtmlTag = /<.+?>/;
+
+'<em>Hello World</em>'.match(notAnHtmlTag);
+// -> ['<em>Hello World</em>', ...
+
+'<em>Hello World</em>'.match(anHtmlTag);
+// -> ['<em>', ...
+```
+
 
 
 ## Exercises
@@ -387,4 +447,10 @@ For the following strings, write an expression that matches and captures both th
 
     ```
     var text = 'This is also an example';
+    ```
+
+9. For the following strings, write an expression that matches and captures both the full date, as well as the year of the date.
+
+    ```
+    var dates = ['01/01/2000', '12/31/1999', '02/29/2017'];
     ```
