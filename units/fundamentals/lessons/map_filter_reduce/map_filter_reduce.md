@@ -288,10 +288,12 @@ var sum = numbers.reduce(function(acc, num){
 
 At `acc` will have to the value of the first element in the array, and `curr` will have the value of the second element in the array. Following this, `acc` will have the value returned by the previous invocation of the callback, and `curr` will have the value of the next element in the array.
 
+```js
 // acc = 2    curr = 3    return 2 + 3 -> 5
 // acc = 5    curr = 1    return 5 + 1 -> 6
 // acc = 6    curr = 4    return 6 + 4 -> 10
 // acc = 10   curr = 5    return 10 + 5 -> 15
+```
 
 ### Map -> Reduce
 
