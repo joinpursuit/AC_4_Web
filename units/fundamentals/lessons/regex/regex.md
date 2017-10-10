@@ -181,7 +181,7 @@ aWord.exec('The text does has a few numbers. 1 exactly.');
 There are other shortcuts we can use, saving us lazy programmers from typing too much:
 
 * `\d` -- stands for a digit `[0-9]`
-* `\d` -- stands for *not* a digit
+* `\D` -- stands for *not* a digit
 * `\s` -- stands for a space (and space-like) character `[ \t\r\n\f]`
 * `\S` -- stands for *not* a space
 * `\w` -- stands for a word character: `[A-Za-z0-9_]`
