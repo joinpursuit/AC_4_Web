@@ -433,34 +433,34 @@ var anHtmlTag = /<.+?>/;
 
 7. Find the first word in the text:
 
-    ```
-    var text = 'This is an example.';
-    ```
+  ```
+  var text = 'This is an example.';
+  ```
 
 8. Find the last word in the text:
 
-    ```
-    var text = 'This is an example.';
-    ```
+  ```
+  var text = 'This is an example.';
+  ```
 
-    Note that does not include the full stop. Also should work on sentences without the full stop:
+  Note that does not include the full stop. Also should work on sentences without the full stop:
 
-    ```
-    var text = 'This is also an example';
-    ```
+  ```
+  var text = 'This is also an example';
+  ```
 
 9. For the following strings, write an expression that matches and captures both the full date, as well as the year of the date.
 
-    ```
-    var dates = ['01/01/2000', '12/31/1999', '02/29/2017'];
-    ```
+  ```
+  var dates = ['01/01/2000', '12/31/1999', '02/29/2017'];
+  ```
 
 10. Find and print all tags in this simple html:
 
-    ```
-    var html = '<html><head>'+
-               '<title>Simple</title>'+
-               '</head><body>'+
-               'Nothing to see here'+
-               '</body></html>';
-    ```
+  ```
+  var html = '<html><head>'+
+             '<title>Simple</title>'+
+             '</head><body>'+
+             'Nothing to see here'+
+             '</body></html>';
+  ```
