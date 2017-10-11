@@ -43,7 +43,7 @@ var text = 'I may not have been sure about what really did interest me, but I wa
 var pattern = /may/;
 
 pattern.exec(text);
-// -> [ 'what', index: 31, input: ... ]
+// -> [ 'may', index: 2, input: ... ]
 ```
 
 Return value is an array with the match. It has `index` and `input` properties. `index` is the location os the match (staring from 0). and `input` is the original text.
@@ -68,7 +68,7 @@ var text = 'I may not have been sure about what really did interest me, but I wa
 var pattern = /may/;
 
 text.match(pattern);
-// -> [ 'what', index: 31, input: ... ]
+// -> [ 'may', index: 2, input: ... ]
 ```
 
 Above code behaves identical to writing it as `pattern.exec(text)`
@@ -395,13 +395,13 @@ var anHtmlTag = /<.+?>/;
 
 ## Exercises
 
-1. Find the first three letter word in the text below:
+1. Find `the` in the text below:
 
   ```
   I looked up at the mass of signs and stars in the night sky and laid myself open for the first time to the benign indifference of the world.
   ```
 
-2. Find **ALL** the three letter words in the text below:
+2. Find **ALL** the definite articles (`the`) in the text below:
 
   ```
   I looked up at the mass of signs and stars in the night sky and laid myself open for the first time to the benign indifference of the world.
@@ -419,6 +419,8 @@ var anHtmlTag = /<.+?>/;
   There are 300,000,000 Americans, give or take.
   ```
 
+  Yes, it should be three hundred million.
+
 5. Find the first capitalized word in the text below:
 
   ```
@@ -430,6 +432,8 @@ var anHtmlTag = /<.+?>/;
   ```
   This is an example of a hexadecimal number: af00cce1. So is this: AF11. A dad is hex but a mom isn't.
   ```
+
+  Note: There are 6 of them!
 
 7. Find the first word in the text:
 
