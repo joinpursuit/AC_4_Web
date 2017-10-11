@@ -284,7 +284,7 @@ Usually when we talk about runtime, we talk about the *Average Case* runtime.  T
 Example:
 
 ```js
-function bestAverageAndWorstFunc(arr: [Int]) {
+function bestAverageAndWorstFunc(arr) {
     if (arr.length < 3 || arr[0] == 8675309) {
         return undefined;
     } else if (arr[0] + arr[1] === 24601) {
@@ -374,7 +374,7 @@ func exampleTwo(arr) {
 </details>
 
 ```js
-func exampleThree(arr: [Int]) -> Int {
+func exampleThree(arr) -> Int {
    var counter = 0
    for num in arr {
        if arr.contains(num+1) {
