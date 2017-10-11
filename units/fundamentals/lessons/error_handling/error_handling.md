@@ -232,6 +232,7 @@ tests.forEach(function(test){
     } catch (error) {
         console.log("--- Test Failed ---")
         console.log(error.message + " should be " + error.expected + " but is " + error.actual );
+        console.log(error.stack.split("\n")[1])
     }
 })
 ```
@@ -267,6 +268,7 @@ tests.forEach(function(test){
     } catch (error) {
         console.log("--- Test Failed ---")
         console.log(error.message + " should be " + error.expected + " but is " + error.actual );
+        console.log(error.stack.split("\n")[1])
         failed += 1;
     }
 })
@@ -332,7 +334,7 @@ Going forward, we will talk about much better ways to tests our code. We will us
 
 ### Exercise
 
-This is what a jest `expect` statemnt looks like:
+This is what a jest `expect` statement looks like:
 
 ```js
 var p1 = new Vector(1, 2);
