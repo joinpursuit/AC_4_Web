@@ -61,7 +61,7 @@ In this example, increasing the size of our array does increase how long it take
 </details>
 
 <details> 
-  <summary>What is the runtime? </summary>
+  <summary>What is the time complexity? </summary>
    O(n)
 </details>
 
@@ -162,7 +162,7 @@ Let's format the count of the array, number of print statements and the runtime.
 </details>
     
 <details>
-    <summary> What is the runtime? </summary>
+    <summary> What is the time complexity? </summary>
     O(n<sup>2</sup>)
 </details>
 
@@ -225,7 +225,7 @@ function exampleOne(arr, target) {
 ```
 
 <details>
-    <summary>What is the runtime of `exampleOne`?</summary>
+    <summary>what is the time complexity of `exampleOne`?</summary>
     O(n)
 </details>
 
@@ -243,7 +243,7 @@ func exampleTwo(arr) {
 ```
 
 <details>
-    <summary>What is the runtime of exampleTwo(arr:)?</summary>
+    <summary>what is the time complexity of exampleTwo(arr:)?</summary>
     O(1)
 </details>
 
@@ -265,7 +265,7 @@ function exampleThree(arr) {
 ```
 
 <details>
-    <summary>What is the runtime of `exampleThree`?</summary>
+    <summary>what is the time complexity of `exampleThree`?</summary>
     O(n<sup>2</sup>)
 </details>
 
@@ -460,7 +460,7 @@ function doStuff(arr) {
 ```
 
 <details>
-    <summary>What is the runtime of doStuff?</summary>
+    <summary>what is the time complexity of doStuff?</summary>
     O(n<sup>3</sup>)
 </details>
 
@@ -485,7 +485,7 @@ function doOtherStuff(arr) {
 ```
 
 <details>
-    <summary>What is the runtime of doOtherStuff?</summary>
+    <summary>what is the time complexity of doOtherStuff?</summary>
     O(n<sup>2</sup>)
 </details>
 
@@ -506,12 +506,12 @@ function bar(myArr) {
 ```
 
 <details>
-    <summary>What is the runtime of foo?</summary>
+    <summary>what is the time complexity of foo?</summary>
     O(n)
 </details>
 
 <details>
-    <summary> What is the runtime of bar? </summary>
+    <summary> what is the time complexity of bar? </summary>
     O(n<sup>2</sup>)
 </details>
 
@@ -543,7 +543,7 @@ function secondSmallest(myArr) {
 ```
 
 <details>
-    <summary> What is the runtime of secondSmallest </summary>
+    <summary> what is the time complexity of secondSmallest </summary>
     O(n)
 
     We have O(n) + O(n), but as n gets bigger and bigger, we only care about the highest order.
