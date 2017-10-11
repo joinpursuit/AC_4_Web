@@ -26,6 +26,7 @@
 17. [Filter, Map, Reduce](lessons/map_filter_reduce/map_filter_reduce.md)
 18. [Regular Expression](lessons/regex/regex.md)
 19. [File I/O](lessons/file/file.md)
+20. [Testing and Error Handling](lessons/error_handling/error_handling.md)
 
 ## Projects
 
@@ -39,6 +40,7 @@
 ## DS&A
 
 * [Number Systems](lessons/number_systems/number_systems.md)
+* [Big O](../dsa/big_o/big_o.md)
 
 ## TBD
 
