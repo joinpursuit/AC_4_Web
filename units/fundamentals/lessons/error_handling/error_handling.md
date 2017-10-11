@@ -4,6 +4,8 @@
 
 * [MDN - Control Flow and Error Handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 * [Eloquent Javascript - Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
+* [Node - Assert](https://nodejs.org/api/assert.html)
+* [Node - Errors](https://nodejs.org/api/errors.html)
 
 ## Lesson
 
@@ -324,4 +326,19 @@ runTests(tests)
 
 ### Going Forward
 
-In future lessons, we will talk about much better ways to tests our code. We will use testing libraries that great simplify writing and running tests. [Here is a small taste](https://repl.it/Ka5D/6).
+Going forward, we will talk about much better ways to tests our code. We will use testing libraries that great simplify writing and running tests. One such library is [jest](https://facebook.github.io/jest/).
+
+[Click here for an example of using jest](https://repl.it/Ka5D/8).
+
+### Exercise
+
+This is what a jest `expect` statemnt looks like:
+
+```js
+var p1 = new Vector(1, 2);
+
+expect(p1).toHaveProperty('x', 1);
+expect(p1).toHaveProperty('y', 2);
+```
+
+Can you think of a way of recreating this particular functionality?
