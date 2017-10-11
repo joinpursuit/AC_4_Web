@@ -443,12 +443,11 @@ As the count gets bigger and bigger, the only term that matters is the O(n<sup>2
 
 When we have a compound runtime, we only keep the ***most significent*** term.  In fact, the O in *Big O Notation* stands for "Order" because we care most about the "Biggest Order" that appears.  Order in this case is talking about the [order of the algebraic function](https://en.wikipedia.org/wiki/Order_of_a_polynomial) also called the [degree](https://en.wikipedia.org/wiki/Degree_of_a_polynomial).
 
-
 ## Compound Runtime Examples
 
 For the examples below, give the average case runtime
 
-### Example One:
+### Example One
 
 ```js
 function doStuff(arr) {
@@ -530,8 +529,6 @@ function secondSmallest(myArr) {
             minIndex = index;
         }
     })
-
-    var min = { value: myArr[0], index: 0 }
 
     var secondMin = min === myArr[0] ? myArr[1] : myArr[0]
 
