@@ -231,7 +231,7 @@ function exampleOne(arr, target) {
 
 <details>
     <summary> Explanation: </summary>
-    We might need to look at each of the n characters inside str.characters.  "n" here represents str.characters.count.  The more characters we have in our string, the longer it will take to find our target character
+    We might need to look at each of the n elements inside `arr`.  "n" here represents arr.length  The more elements we have in our array, the longer it will take to find our target element.
 </details>
 
 ```js
