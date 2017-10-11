@@ -28,7 +28,7 @@ function constantTime(arr) {
 
 Let's assume it takes 10 ms to print a string.
 
-|arr.count (n) | Runtime |
+|arr.length (n) | Runtime |
 |---|---|
 | 1 | 10 ms |
 | 10 | 10 ms |
@@ -46,7 +46,7 @@ function linearTime(arr) {
 }
 ```
 
-|arr.count (n) | Runtime |
+|arr.length (n) | Runtime |
 |---|---|
 | 1 | 10 ms |
 | 10 | 100 ms |
@@ -149,7 +149,7 @@ Our code will then print out each pair of names.  Here's are a few sample inputs
 Let's format the count of the array, number of print statements and the runtime.
 
 
-|arr.count (n) | Number of print statements | Runtime |
+|arr.length (n) | Number of print statements | Runtime |
 |---|---|---|
 | 1 | 1 | 10 ms |
 | 2 | 4 | 40 ms |
@@ -169,7 +169,7 @@ Let's format the count of the array, number of print statements and the runtime.
 
 We can then extrapolate to fill in the same chart we were using above.
 
-|arr.count (n) | Runtime |
+|arr.length (n) | Runtime |
 |---|---|
 | 1 | 10 ms |
 | 10 | 1000 ms = 1 s |
@@ -180,7 +180,7 @@ That gets slow fast!
 
 Let's put all the charts together:
 
-|arr.count (n) | Runtime: O(1) | Runtime: O(n) | Runtime: O(n<sup>2</sup>) |
+|arr.length (n) | Runtime: O(1) | Runtime: O(n) | Runtime: O(n<sup>2</sup>) |
 |---|---|---|---|
 | 1 | 10 ms | 10 ms |10 ms |
 | 10 | 10 ms | 100 ms | 1000 ms = 1 s |
@@ -429,7 +429,7 @@ function compoundRuntimes(arr) {
 
 Let's see how the runtime increases with count using our chart from above
 
-|arr.count (n) | Runtime: O(1) | Runtime: O(n) | Runtime: O(n<sup>2</sup>) | <details><summary>compoundRuntimes(arr:)</summary>Runtime: O(1) + O(n) + O(n<sup>2</sup>) |
+|arr.length (n) | Runtime: O(1) | Runtime: O(n) | Runtime: O(n<sup>2</sup>) | <details><summary>compoundRuntimes(arr:)</summary>Runtime: O(1) + O(n) + O(n<sup>2</sup>) |
 |---|---|---|---|---|
 | 1 | 10 ms | 10 ms |10 ms | 30 ms |
 | 10 | 10 ms | 100 ms | 1000 ms = 1 s | 1110 ms = 1.11 s |
