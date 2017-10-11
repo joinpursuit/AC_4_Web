@@ -288,8 +288,8 @@ function bestAverageAndWorstFunc(arr) {
     if (arr.length < 3 || arr[0] == 8675309) {
         return undefined;
     } else if (arr[0] + arr[1] === 24601) {
-        arr.forEach(elem) {
-            arr.forEach(elem) {
+        arr.forEach(elem1) {
+            arr.forEach(elem2) {
                 console.log("Gotcha!")
             }
         }
