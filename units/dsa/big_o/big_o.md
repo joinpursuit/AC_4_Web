@@ -258,7 +258,7 @@ func exampleTwo(arr) {
 function exampleThree(arr) {
    var counter = 0
    arr.forEach(function(num) {
-       if (arr.indexOf(elem) !== -1) {
+       if (arr.indexOf(num + 1) !== -1) {
            counter += 1
        }
    })
