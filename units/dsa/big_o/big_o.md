@@ -209,7 +209,7 @@ O(1) < O(log(n)) < O(n) < O(nlog(n)) < O(n<sup>2</sup>) < O(2<sup>n</sup>) < O(n
 The following graph is from [http://bigocheatsheet.com](http://bigocheatsheet.com) 
 ![From Big O Cheat Sheet](assets/big_o_chart.png)
 
-## Deriving Runtime 
+## Deriving Runtime
 
 We just saw an example of how to derive the runtime of a function.  Let's try it with some similar examples.
 
@@ -233,6 +233,7 @@ function exampleOne(arr, target) {
     <summary> Explanation: </summary>
     We might need to look at each of the n elements inside `arr`.  "n" here represents arr.length  The more elements we have in our array, the longer it will take to find our target element.
 </details>
+<br/>
 
 ```js
 func exampleTwo(arr) {
@@ -251,6 +252,7 @@ func exampleTwo(arr) {
     <summary>Explanation: </summary>
     No matter how big our array is, this will always print "Many printings" 1,000,000 times.  While this would take a really long time, it is always the ***same*** amount of time.  It will take a constant time to run this function and it is entirely independant of the count of arr.
 </details>
+<br/>
 
 ```js
 function exampleThree(arr) {
@@ -273,6 +275,7 @@ function exampleThree(arr) {
     <summary>Explanation: </summary>
     Our for loop goes over each of *n* Ints.  Then for each of those Ints, we run contains, which will go over each of *n* Ints.  We would then end up looking at *n<sup>2</sup>* Ints in total.
 </details>
+<br/>
 
 ## Worst Case, Average Case and Best Case
 
