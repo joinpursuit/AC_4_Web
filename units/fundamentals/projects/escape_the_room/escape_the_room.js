@@ -42,9 +42,14 @@ function findElem(arr, callback) {
  */
 function Result(description, items){
     this.description = description;
-    this.items = items || null;
+    if (items === undefined){
+        this.items = null
+    } else {
+        this.items = items
+    }
 }
 
+console.log(new Result("hello"))
 /**
  * Represents a thing in the room
  * @constructor
@@ -52,6 +57,7 @@ function Result(description, items){
  * @param  {string} description
  * @param  {string[]} items  
  * @param  {string[]} neededItems
+ * @param  {string[]} actions
  */
 function RoomObject(name, description, items, neededItems, actions) {
     this.name = name;
@@ -131,6 +137,8 @@ RoomObject.prototype.needsItems = function(){
  * @return {Result}
  */
 RoomObject.prototype.interact = function (action) {
+    // action = "jump"
+    // this.actions = ["open", "get", "check"]
     if (this.actions.indexOf(action) === -1){
         return new Result("cannot " + action + " " + this.name)
     } else if (this.needsItems()) {
@@ -206,6 +214,10 @@ Player.prototype.addItems = function (items) {
  * @return {string}
  */
 Player.prototype.interactWithObject = function (objectName, action) {
+    // objectName = "drawer"
+    // action = "open"
+
+    // 
     var object = this.currentRoom.getObject(objectName)
 
     if (object === undefined) {
@@ -291,7 +303,7 @@ function view(message) {
         "--Escape the room-- \n" + 
         "1. [action] [object] \n" + 
         "2. use [item] [object] \n" 
-
+    
     var objects =
         "--You See-- \n" + getObjectNames(room.objects) + "\n";
 
@@ -305,10 +317,14 @@ function view(message) {
 }
 
 function parseInput(words){
-    
+    // "open chest"
+    // words = ["open", "drawer"]
     if (words.length === 2){
+        // "open"
         var action = words[0].toLowerCase()
+        // "drawer"
         var objectName = words[1].toLowerCase();
+
         var message = player.interactWithObject(objectName, action)
         if (message === ESCAPE_MESSAGE){
             return "YOUR'E FREE"
@@ -341,16 +357,33 @@ rl.on('line', function (input) {
 });
 
 
-// Create an array of RoomObject objects
+// Create an array of RoomObjects
+var roomObjects = [
+    new RoomObject("Drawer", "This may contain useful items", ["scissors", "pencil", "cloth", "flashlight"], [], ["open", "get", "check"])
+]
 
-
-// Create an array of Room objects
-
+// Create an array of Rooms
+var rooms = [new Room(roomObjects)]
 
 // Create a new Game
+var game = new Game(rooms)
 
 // Create a new Player
+var player = new Player(rooms[0])
+/*
+Some clarifications: 
+A `Room` is a level in the game. 
+A `RoomObject` is something that is contained inside that level -
+ shelf, drawer, basement, attic, etc. 
+ 
 
+ `Item`s may be needed to interact with certain `RoomObject`s. 
+ 
+Items can be found when interacting with certain `RoomObject`s.
 
+A `Game` consists of a series of rooms. 
+For this assignment you only need to create a single room.
+ To enable multiple rooms you would need to make some changes to the code. 
+*/
 clear()
 console.log(view())

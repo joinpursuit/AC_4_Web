@@ -485,7 +485,7 @@ function doOtherStuff(arr) {
 ```
 
 <details>
-    <summary>What is the runtime of doOtherStuff(arr:)?</summary>
+    <summary>What is the runtime of doOtherStuff?</summary>
     O(n<sup>2</sup>)
 </details>
 
@@ -549,3 +549,11 @@ function secondSmallest(myArr) {
     We have O(n) + O(n), but as n gets bigger and bigger, we only care about the highest order.
 
 </details>
+
+### Questions
+
+1. So far looking for an element in an array has taken us `O(n)` time. If you know that the array is sorted, is there a way to have a faster lookup? What would be its time complexity? An example of a sorted array:
+
+```js
+var arr = [2, 4, 5, 10, 22, 120, 2480]
+```
