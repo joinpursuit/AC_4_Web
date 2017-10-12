@@ -17,4 +17,4 @@
 5. [Backend](units/backend/README.md)
    SQL, Sequelize, Full stack
 
-6. Capstone Project
+6. Capstone Project (Helen)
