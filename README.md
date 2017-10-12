@@ -18,3 +18,5 @@
    SQL, Sequelize, Full stack
 
 6. Capstone and more Stones
+
+   Carolina 
