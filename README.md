@@ -17,4 +17,6 @@
 5. [Backend](units/backend/README.md)
    SQL, Sequelize, Full stack
 
-6. Capstone
+6. Kapstone Kops
+
+Peter Lada
