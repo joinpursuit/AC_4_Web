@@ -4,7 +4,7 @@
 
 ## Instructions
 
-Create a small online survey with four questions of your own. Your survey should first collect the participant's details (name, address, gender, D.O.B., password, etc), followed by four questions to answer.
+Create a small online survey with four questions of your own. Your survey should first collect the participant's details, followed by four questions to answer.
 
 Ensure that your survey includes:
 
