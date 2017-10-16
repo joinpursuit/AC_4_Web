@@ -1,4 +1,4 @@
-# Project - Lists
+# Project - Lists - Recipe
 
 [Source: Coder](https://googlecreativelab.github.io/coder-projects/projects/perfect_recipe/)
 
@@ -11,7 +11,10 @@ Make a page about a favorite recipe. It should looke similar to this:
 Include the following:
 
 1. A main heading.
-2. An image.
-3. A description.
-4. An unordered list of ingerdients.
-5. An ordered list of directions.
+2. A description.
+3. An unordered list of ingerdients.
+4. An ordered list of directions.
+
+### Bonus
+
+* Add an image below the main heading

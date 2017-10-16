@@ -5,11 +5,11 @@
 1. [Fundamentals](units/fundamentals/README.md)
    JavaScript + Web Fundamentals
 
-2. [Deepdive](units/deepdive/README.md)
-   Advanced JavaScript + Node.js
-
-3. [HTML](units/html/README.md)
+2. [HTML](units/html/README.md)
    Basic Web Development: HTML, CSS, DOM, How the Internet Works
+
+3. [Deepdive](units/deepdive/README.md)
+   Advanced JavaScript + Node.js
 
 4. [Frontend](units/react/README.md)
    Routing, APIs and React
