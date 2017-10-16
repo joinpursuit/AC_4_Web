@@ -2,6 +2,10 @@
 
 ## <b><u>HTML</u></b>
 
+## Code Samples
+
+* [All Chapters](code_samples/code_samples.md)
+
 ## Projects
 
 0. [Getting Started](projects/getting_started/getting_started.md)
