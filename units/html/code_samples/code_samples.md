@@ -13,14 +13,18 @@ Book by by *John Ducket*
 7. [Chapter 7 - Forms](#ch7)
 8. [Chapter 8 - Extra Markup](#ch8)
 
-### Chapter 1 - Structure <a name="ch1"></a>
+<a name="ch1"></a>
+
+### Chapter 1 - Structure
 
 * [Example](http://www.htmlandcssbook.com/code-samples/chapter-01/example.html)
 * [Body, Head and Title](http://www.htmlandcssbook.com/code-samples/chapter-01/body-head-title.html)
 * [First Test](http://www.htmlandcssbook.com/code-samples/chapter-01/first-test.html)
 * [View Source](http://www.htmlandcssbook.com/code-samples/chapter-01/view-source.html)
 
-### Chapter 2 - Text <a name="ch2"></a>
+<a name="ch2"></a>
+
+### Chapter 2 - Text
 
 * [Headings](http://www.htmlandcssbook.com/code-samples/chapter-02/headings.html)
 * [Paragraphs](http://www.htmlandcssbook.com/code-samples/chapter-02/paragraphs.html)
@@ -41,7 +45,9 @@ Book by by *John Ducket*
 * [Strikethrough](http://www.htmlandcssbook.com/code-samples/chapter-02/strikethrough.html)
 * [Example](http://www.htmlandcssbook.com/code-samples/chapter-02/example.html)
 
-### Chapter 3 - Lists <a name="ch3"></a>
+<a name="ch3"></a>
+
+### Chapter 3 - Lists
 
 * [Ordered Lists](http://www.htmlandcssbook.com/code-samples/chapter-03/ordered-lists.html)
 * [Unordered Lists](http://www.htmlandcssbook.com/code-samples/chapter-03/unordered-lists.html)
@@ -49,7 +55,9 @@ Book by by *John Ducket*
 * [Nested Lists](http://www.htmlandcssbook.com/code-samples/chapter-03/nested-lists.html)
 * [Example](http://www.htmlandcssbook.com/code-samples/chapter-03/example.html)
 
-### Chapter 4 - Links <a name="ch4"></a>
+<a name="ch4"></a>
+
+### Chapter 4 - Links
 
 * [Writing Links](http://www.htmlandcssbook.com/code-samples/chapter-04/writing-links.html)
 * [Linking to Other Sites](http://www.htmlandcssbook.com/code-samples/chapter-04/linking-to-other-sites.html)
@@ -59,7 +67,9 @@ Book by by *John Ducket*
 * [Linking to a Specific Part](http://www.htmlandcssbook.com/code-samples/chapter-04/linking-to-a-specific-part.html)
 * [Example](http://www.htmlandcssbook.com/code-samples/chapter-04/example.html)
 
-### Chapter 5 - Images <a name="ch5"></a>
+<a name="ch5"></a>
+
+### Chapter 5 - Images
 
 * [Adding Images](http://www.htmlandcssbook.com/code-samples/chapter-05/adding-images.html)
 * [Height and Width of Images](http://www.htmlandcssbook.com/code-samples/chapter-05/height-and-width-of-images.html)
@@ -70,7 +80,9 @@ Book by by *John Ducket*
 * [Figure and Figure Caption](http://www.htmlandcssbook.com/code-samples/chapter-05/figure-and-figure-caption.html)
 * [Example](example.html)
 
-### Chapter 6 - Tables <a name="ch6"></a>
+<a name="ch6"></a>
+
+### Chapter 6 - Tables
 
 * [Basic Table Structure](http://www.htmlandcssbook.com/code-samples/chapter-06/basic-table-structure.html)
 * [Table Headings](http://www.htmlandcssbook.com/code-samples/chapter-06/table-headings.html)
@@ -81,7 +93,9 @@ Book by by *John Ducket*
 * [Border and Background](http://www.htmlandcssbook.com/code-samples/chapter-06/border-and-background.html)
 * [Example](http://www.htmlandcssbook.com/code-samples/chapter-06/example.html)
 
-### Chapter 7 - Forms <a name="ch7"></a>
+<a name="ch7"></a>
+
+### Chapter 7 - Forms
 
 * [Form Structure](http://www.htmlandcssbook.com/code-samples/chapter-07/form-structure.html)
 * [Text Input](http://www.htmlandcssbook.com/code-samples/chapter-07/text-input.html)
@@ -105,7 +119,9 @@ Book by by *John Ducket*
 * [HTML5 Placeholder](http://www.htmlandcssbook.com/code-samples/chapter-07/html5-placeholder.html)
 * [Example](http://www.htmlandcssbook.com/code-samples/chapter-07/example.html)
 
-### Chapter 8 - Extra Markup <a name="ch8"></a>
+<a name="ch8"></a>
+
+### Chapter 8 - Extra Markup
 
 * [Comments in HTML](http://www.htmlandcssbook.com/code-samples/chapter-08/comments-in-html.html)
 * [ID Attribute](http://www.htmlandcssbook.com/code-samples/chapter-08/id-attribute.html)
