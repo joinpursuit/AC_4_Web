@@ -1,4 +1,4 @@
-# Project - Tables - Structuring Planet Data
+# Project - Tables
 
 [Source: Wikiversity](https://en.wikiversity.org/wiki/Web_Design/HTML_Challenges)
 

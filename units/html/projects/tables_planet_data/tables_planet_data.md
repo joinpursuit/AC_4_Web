@@ -1,4 +1,4 @@
-# Project - Definition Lists
+# Project - Tables -  Structuring Planet Data
 
 [Source: Structuring Planet Data, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)
 
