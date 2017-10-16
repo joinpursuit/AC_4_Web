@@ -1,6 +1,6 @@
 # Examples from HTML & CSS 
 
-Book by by *John Ducket*
+A Book by *John Ducket*
 
 ## Contents
 
