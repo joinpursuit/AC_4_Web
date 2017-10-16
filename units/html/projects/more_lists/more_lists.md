@@ -22,3 +22,5 @@ A `nested` list is a list that contains another list. On the web, they're common
 
 Try recreating the nested list shown below. 
 Hint: To recreate the nested list from the image, you'll need to use the 'type' attribute on the UL or OL tags. Like the previous list, adding this attribute will make your code invalid, but we can correct it later by using CSS instead.
+
+![list_2](assets/list_2.jpg)
