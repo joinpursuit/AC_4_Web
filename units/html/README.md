@@ -8,7 +8,6 @@
 
 ## Projects
 
-0. [Getting Started](projects/getting_started/getting_started.md)
 1. [Paragraphs and Headings](projects/paragraphs_and_headings/paragraphs_and_headings.md)
 2. [Lists - Recipe](projects/lists/lists.md)
 3. [More Lists](projects/more_lists/more_lists.md)
