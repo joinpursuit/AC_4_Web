@@ -4,7 +4,7 @@
 
 ## Instructions
 
-Use any of the following [audio and video files](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) to complete this exercise.
+Use any of the following [audio and video files](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content), or any of your own, to complete this exercise.
 
 1. Save the audio and video files in a new directory on your computer.
 2. Create a new HTML file in the same directory, called `index.html`.
