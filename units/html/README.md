@@ -19,3 +19,4 @@
 9. [Tables - Structuring Planet Data](projects/tables_planet_data/tables_planet_data.md)
 10. [A Simple Form](projects/simple_form/simple_form.md)
 11. [Building a Form Structure](projects/form_structure/form_structure.md)
+12. [Embedding Video and Audio](projects/video_and_audio/video_and_audio.md)
