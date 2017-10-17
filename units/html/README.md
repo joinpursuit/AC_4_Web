@@ -22,3 +22,4 @@
 12. [Embedding Video and Audio](projects/video_and_audio/video_and_audio.md)
 13. [Your first CSS](projects/first_css/first_css.md)
 14. [Modern Mondorian](projects/modern_mondorian/modern_mondorian.md)
+15. [CSS: Simple Selectors](projects/css_simple_selectors/css_simple_selectors.md)
