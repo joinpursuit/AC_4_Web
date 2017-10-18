@@ -1,10 +1,10 @@
-# Exercise: Nested Lists
+# Exercise: Styling Lists
 
 [Source: Styling Lists, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 
 ## Instructions
 
-Use the following HTML:
+Using the following HTML:
 
 ```html
 <ul>
