@@ -25,3 +25,4 @@
 15. [CSS: Simple Selectors](projects/css_simple_selectors/css_simple_selectors.md)
 16. [Fundamental CSS Comprehension](projects/fundamental_css_comprehension/fundamental_css_comprehension.md)
 17. [Web Fonts](projects/web_fonts/web_fonts.md)
+18. [A Cool-Looking Box](projects/cool_box/cool_box.md)
