@@ -26,3 +26,4 @@
 16. [Fundamental CSS Comprehension](projects/fundamental_css_comprehension/fundamental_css_comprehension.md)
 17. [Web Fonts](projects/web_fonts/web_fonts.md)
 18. [A Cool-Looking Box](projects/cool_looking_box/cool_looking_box.md)
+19. [Styling a Nested List](projects/nested_list/nested_list.md)
