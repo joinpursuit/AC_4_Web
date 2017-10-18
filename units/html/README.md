@@ -23,4 +23,5 @@
 13. [Your first CSS](projects/first_css/first_css.md)
 14. [Modern Mondorian](projects/modern_mondorian/modern_mondorian.md)
 15. [CSS: Simple Selectors](projects/css_simple_selectors/css_simple_selectors.md)
-15. [Fundamental CSS Comprehension](projects/fundamental_css_comprehension/fundamental_css_comprehension.md)
+16. [Fundamental CSS Comprehension](projects/fundamental_css_comprehension/fundamental_css_comprehension.md)
+17. [Web Fonts](projects/web_fonts/web_fonts.md)
