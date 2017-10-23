@@ -1,6 +1,6 @@
 # Exercise: Web Fonts
 
-[Source: Web Fonts, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
+[Source: Web Fonts, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 
 ## Instructions
 
