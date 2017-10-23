@@ -23,7 +23,7 @@ We'd like you to style the provided [`<p>`](/en-US/docs/Web/HTML/Element/p "The 
 * The same color for the text; make it readable using a black text shadow.
 * A fairly subtle border radius.
 * A 1 pixel solid border with a color similar to the base color, but a slightly darker shade.
-* A linear semi-transparent black gradient that goes towards the top left corner. Make it completely transparent at the start, gradiating to around 0.2 opacity by 30% along, and remaining at the same color until the end.
+* A linear semi-transparent black gradient that goes towards the top left corner. **Bonus**: Make the gradient completely transparent at the start, gradiating to around 0.2 opacity by 30% along, and remaining at the same color until the end.
 * Multiple box shadows. Give it one standard box shadow to make the box look slightly raised off the page. The other two should be inset box shadows — a semi transparent white shadow near the top left and a semi transparent black shadow near the bottom right, to add to the nice raised 3D look of the box.
 
 ## Example
