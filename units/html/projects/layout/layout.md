@@ -28,7 +28,7 @@ Download the provided html and css files below and add the CSS to achieve the ex
 
 ```css
 li {
-  float: left;
+  display: inline;
 }
 ```
 
