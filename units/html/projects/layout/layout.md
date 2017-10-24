@@ -14,6 +14,9 @@ Download the provided html and css files below and add the CSS to achieve the ex
 
 ![image](assets/screenshot4.gif)
 
+- [html](assets/index.html)
+- [css](assets/index.css)
+
 ## Bonus
 
 - Add `hover` effects using media queries.
