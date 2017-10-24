@@ -30,3 +30,4 @@
 20. [CSS: Advances Selectors 1](projects/css_advanced_selectors_1/css_advanced_selectors_1.md)
 21. [More Forms](projects/more_forms/more_forms.md)
 22. [Advertisement](projects/advertisement/advertisement.md)
+23. [Layout](projects/layout/layout.md)
