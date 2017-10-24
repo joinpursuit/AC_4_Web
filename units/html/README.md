@@ -27,4 +27,4 @@
 17. [Web Fonts](projects/web_fonts/web_fonts.md)
 18. [A Cool-Looking Box](projects/cool_looking_box/cool_looking_box.md)
 19. [Styling Lists](projects/styling_lists/styling_lists.md)
-19. [CSS: Advances Selectors 1](projects/css_advanced_selectors_1/css_advanced_selectors_1.md)
+20. [CSS: Advances Selectors 1](projects/css_advanced_selectors_1/css_advanced_selectors_1.md)
