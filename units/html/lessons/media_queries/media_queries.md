@@ -46,6 +46,7 @@ Many media features are _range features_, which means they can be prefixed with 
  }
  ```
 
+> Ex. make a web page where the font size is `18px` on large screens and `12px` on small screens.
 
 ## Creating complex media queries
 
