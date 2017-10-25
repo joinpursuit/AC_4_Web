@@ -31,3 +31,4 @@
 21. [More Forms](projects/more_forms/more_forms.md)
 22. [Advertisement](projects/advertisement/advertisement.md)
 23. [Layout](projects/layout/layout.md)
+24. [Media Queries](projects/media_queries/media_queries.md)
