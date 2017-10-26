@@ -32,3 +32,5 @@
 22. [Advertisement](projects/advertisement/advertisement.md)
 23. [Layout](projects/layout/layout.md)
 24. [Media Queries](projects/media_queries/media_queries.md)
+25. [Combinators](projects/combinators/combinators.md)
+26. [z-index](projects/z-index/z-index.md)
