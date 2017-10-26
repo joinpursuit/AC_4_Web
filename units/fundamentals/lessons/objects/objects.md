@@ -221,7 +221,7 @@ Adding a new object to the array might be cumbersome:
   })
 ```
 
-We could make this process easier by creating a function `addFilm` that takes `name`, `director` and `released` as arguments.
+We could make this process easier by creating a function `addFilm` that takes `name`, `director` and `released` as parameters.
 
 ```javascript
   function addFilm(name, director, released){
