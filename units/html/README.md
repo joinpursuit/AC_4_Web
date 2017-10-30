@@ -6,6 +6,10 @@
 
 * [All Chapters](code_samples/code_samples.md)
 
+## Lessons
+
+* [DOM 1](lessons/dom_1/dom_1.md)
+
 ## Projects
 
 1. [Paragraphs and Headings](projects/paragraphs_and_headings/paragraphs_and_headings.md)
