@@ -18,9 +18,7 @@ user​ ​for​ ​a​ ​number.​ ​Use​ ​`​window.alert()​​` �
 
 4. Build​ ​an​ ​Element
 
-With​ ​the​ ​files​ `prompt-element.html`​ ​and​ ​`prompt-element.js`,​ ​ ​build​ ​a​ ​page​ ​with​ ​a​ ​centered​ ​`div​` ​that
-has​ ​an​ ​`id`​ ​attribute​ ​container​.​ ​Use​ `​window.prompt()​​` ​to​ ​ask​ ​the​ ​user​ ​to​ ​write​ ​an​ ​entire​ ​HTML
-element​ ​(opening​ ​tag,​ ​text,​ ​and​ ​closing​ ​tag),​ ​and​ ​change​ ​the​ ​container​ ​div​ ​to​ ​hold​ ​that​ ​tag.​ ​What happens​ ​when​ ​you​ ​use​ ​`.innerHTML​?​` ​What​ ​happens​ ​when​ ​you​ ​use​ `​.innerText​?`​ ​What
+With​ ​the​ ​files​ `prompt-element.html`​ ​and​ ​`prompt-element.js`,​ ​ ​build​ ​a​ ​page​ ​with​ ​a​ ​centered​ ​`div​` ​that has​ an attribute ​`id = "​container"`​.​ ​Use​ `​window.prompt()​​` ​to​ ​ask​ ​the​ ​user​ ​to​ ​write​ ​an​ ​entire​ ​HTML element​ ​(opening​ ​tag,​ ​text,​ ​and​ ​closing​ ​tag),​ ​and​ ​change​ ​the​ ​container​ ​div​ ​to​ ​hold​ ​that​ ​tag.​ ​What happens​ ​when​ ​you​ ​use​ ​`.innerHTML​​`? ​What​ ​happens​ ​when​ ​you​ ​use​ `​.innerText​`?​ ​What
 happens​ ​if​ ​the​ ​user​ ​types​ ​nested​ ​HTML​ ​elements?
 
 5. Update​ ​List​ ​Items
@@ -36,3 +34,41 @@ the​ ​text​ ​of​ ​the​ ​first​ ​list​ ​item.
 
 With​ ​the​ ​files​ `swap-list-items.html​` ​and​ `s​wap-list-items.js​`,​ ​build​ ​a​ ​page​ ​with​ ​four​ ​list​ ​items,​ ​each
 with​ ​an​ ​`id​` ​attribute​ ​`one`​,​ `​two`​,​ `​three​`,​ ​or​ `​four`​,​ ​and​ ​each​ ​with​ ​different​ ​text​ ​of​ ​your​ ​choosing.​ ​Use `window.prompt()​​` ​to​ ​query​ ​the​ ​user​ ​for​ ​an​ id ​--​ ​one,​ ​two,​ ​three,​ ​or​ ​four​ ​--​ ​and​ ​then​ ​prompt again​ ​for​ ​another​ ​id​ ​--​ ​one,​ ​two,​ ​three,​ ​or​ ​four.​ ​Use​ `document.getElementById()​​` ​to​ ​bind the​ ​list​ ​items​ ​specified​ ​by​ ​the​ ​prompts,​ ​and​ ​then​ ​swap​ ​the​ ​text​ ​of​ ​each​ ​list​ ​item​ ​with​ ​the​ ​text​ ​of the​ ​other​ ​list​ ​item.
+
+7. Prompt onclick
+
+With​ ​the​ ​files​ `prompt-click.html`​ ​and​ ​`prompt-click.js`,​ ​ ​build​ ​a​ ​page​ ​with:
+
+- a​ ​centered​ ​`div​` ​that has​ an attribute ​`id="​container"`​.​​
+- a centered `div` that has an attribute `id="input"`.
+- a button with id `btn`
+
+- Use​ the button `onclick` attribute. Whenever the user clicks on the button,​ ​change​ ​the​ ​container​ ​div​ ​to​ hold the user's input​.​ Try with both `textConent` and `innerHTML`.
+
+8. About Me
+
+Start with this HTML and save it as `about_me.html`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>About Me</title>
+</head>
+<body>
+    <h1>About Me</h1>
+
+    <ul>
+        <li>Nickname: <span id="nickname"></span> </li>
+        <li>Favorites: <span id="favorites"></span> </li>
+        <li>Hometown: <span id="hometown"></span> </li>
+    </ul>
+</body>
+</html>
+```
+
+- Add a script tag to the bottom of the HTML body.
+- (In the JavaScript) Replace each of the `span`s (nickname, favorites, hometown) with your own information.
+- (In the JavaScript) Change the body's style so it has a font-family of "Arial, sans-serif".
+- Bonus: (In Javascript) Create a new `img` element and set its `src` attribute to a picture of you. Append that element to the page.
