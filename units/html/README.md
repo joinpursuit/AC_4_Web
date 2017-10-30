@@ -10,6 +10,10 @@
 
 * [DOM 1](lessons/dom_1/dom_1.md)
 
+## Exercises
+
+* [DOM 1](exercises/dom_1/dom_1.md)
+
 ## Projects
 
 1. [Paragraphs and Headings](projects/paragraphs_and_headings/paragraphs_and_headings.md)
