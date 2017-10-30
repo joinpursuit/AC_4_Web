@@ -64,14 +64,12 @@ el.style.fontVariant​ = ​'small-caps'
 > Example:​ *Set​ ​Background​ ​Color​ ​with​ ​JavaScript*:
 > Build​ ​a​ ​page​ ​with​ ​four​ `​lorem​ ​ipsum`​ ​paragraphs.​ ​Use​ ​`document.querySelector()​​` ​and​ ​the
 `HTMLElement.style`​​ ​property​ ​to​ ​give​ ​a​ ​blue​ ​background​ ​to​ ​the​ ​body​ ​element.
-> You​ ​will​ ​need​ ​to​ ​nest​ ​your​ ​code​ ​in​ ​a​ ​callback​ ​to​ ​a​ `DOMContentLoaded`​​ ​event​ ​listener.
 
 ---
 
 > Example:​ ​*Every​ ​Other​ ​Thing​ ​is​ ​Purple*
 > Build​ ​a​ ​page​ ​with​ ​an​ ​unordered​ ​list​ ​of​ ​types​ ​of​ ​candy​ ​bars.​ ​In​ ​a​ ​separate​ ​JavaScript​ ​file,​ ​use `document.querySelectorAll()`​,​ ​a​ ​`for​ ​loop`,​ ​and​ ​the​ `​HTMLElement.style`​​ ​property​ ​to
 give​ ​purple​ ​text​ ​to​ ​every​ ​other​ ​list​ ​item.
-> You​ ​will​ ​need​ ​to​ ​nest​ ​your​ ​code​ ​in​ ​a​ ​callback​ ​to​ ​a​ `DOMContentLoaded`​​ ​event​ ​listener.
 
 ### Element.classList
 
@@ -92,4 +90,3 @@ paragraphs.​ ​Link​ ​to​ ​an​ ​external​ ​CSS​ ​file​ 
 text-align:​ ​center​,​ ​width:​ ​20em​,​ ​and​ ​margin:​ ​0​ ​auto`​.
 Use​ ​`document.querySelector()​​` ​to​ ​bind​ ​the​ ​body​ ​element,​ ​and​ ​then​ ​use `.classList.remove()`​​ ​and​ ​`.classList.add()`​​ ​to​ ​remove​ ​the​ `​fgPink​​` ​class​ ​from​ ​the
 body​ ​element,​ ​and​ ​add​ ​your​ ​classes​ ​for​ ​the​ ​other​ ​properties.
-You​ ​will​ ​need​ ​to​ ​nest​ ​your​ ​code​ ​in​ ​a​ ​callback​ ​to​ ​a​ `DOMContentLoaded​​` ​event​ ​listener.
