@@ -10,11 +10,14 @@
 
 * [DOM 1](lessons/dom_1/dom_1.md)
 * [DOM 2](lessons/dom_2/dom_2.md)
+* [Events](lessons/events/events.md)
 
 ## Exercises
 
 * [DOM 1](exercises/dom_1/dom_1.md)
 * [DOM 2](exercises/dom_2/dom_2.md)
+* [Events](exercises/events/events.md)
+
 
 ## Projects
 
