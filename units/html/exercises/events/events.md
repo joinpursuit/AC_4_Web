@@ -12,7 +12,7 @@ Also, the "submit" button should have the text "Reverse" instead of "Submit".
 
 Using the files *clicker.html* and *clicker.js*, build a blank web page with only a body element. (Of course you may still import your script.) If the user clicks on the left half of the page, use .style.backgroundColor to change the page's color to mediumaquamarine. If the user clicks on the right half of the page, change the page's color to peachpuff. HINT: Use window.innerHeight and window.innerWidth.
 
-## Echo-er 1
+## Echo-er
 
 1. Using the files *echo-er.html* and *echo-er.js*, build a page with an h1 element. Every time the user presses a key, the innerText of the h1 element should change to show what key was pressed.
 

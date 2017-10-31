@@ -1,6 +1,6 @@
 # Events 1
 
-## Objectives
+## Keywords
 
 * .addeventListener()
 * DOMContentLoaded
@@ -11,17 +11,12 @@
 
 ## External Resources
 
-[MDN - DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
-
-[MDN - EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-
-[MDN - Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)
-
-[MDN - Event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
-
-[MDN - keypress](https://developer.mozilla.org/en-US/docs/Web/Events/keypress)
-
-[MDN - click](https://developer.mozilla.org/en-US/docs/Web/Events/click)
+* [MDN - DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
+* [MDN - EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+* [MDN - Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+* [MDN - Event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+* [MDN - keypress](https://developer.mozilla.org/en-US/docs/Web/Events/keypress)
+* [MDN - click](https://developer.mozilla.org/en-US/docs/Web/Events/click)
 
 ## Lesson
 
@@ -37,11 +32,41 @@ An event *listener* is basically an infinite loop with a callback function, and 
 
 Every Element has the method `.addEventListener()` to hear event triggers. When the event is fired, the element will execute the callback function.
 
-The callback function automagically receives an argument that is typically given the parameter name *event*. This references the event object. The event objects contains many properties that are both general to all events and specific to the triggering event.
+The callback function automatically receives an argument that is typically given the parameter name *event*. This references the event object. The event objects contains many properties that are both general to all events and specific to the triggering event.
+
+### click
+
+The *clicked* event is fired when an element is clicked. We can
+
+```html
+<input type="button" value="Click me" id="btn">
+
+<script>
+  var btn = document.querySelector('#btn')
+  btn.addEventListener('click', function(event) {
+    // show event type, element and coordinates of the click
+    alert(event.type + " at " + event.currentTarget);
+    alert("Coordinates: " + event.clientX + ":" + event.clientY);
+  });
+</script>
+```
 
 ### **submit**
 
 The *submit* event is fired when a form is submitted.
+
+```html
+<form id="myForm">
+    name: <input type="text"><br>
+    <input type="submit" value="Submit">
+</form>
+<script>
+    let form = document.querySelector('form');
+    form.addEventListener('submit', function(event){
+        alert('form submitted');
+    })
+</script>
+```
 
 ### **.preventDefault()**
 
@@ -51,21 +76,7 @@ The *submit* event is fired when a form is submitted.
 
 Build a page with a form element that contains a text input field and a submit button. Use `.addEventListener('submit' …)`, and then `.preventDefault()` with the event, to prevent the page from refreshing when the user submits the form.
 
-### Now We Practice and Explore
-
-Now we know *all* of the basics of DOM manipulation:
-
-* selecting and binding page elements
-
-* listening for events
-
-* using JavaScript to manipulate the DOM according to events
-
-The most important thing we can do now is practice.
-
-### click, keypress, mousemove
-
-A plethora of events are available in the DOM. For today, we'll use click, keypress, and mousemove, which behave exactly as you would guess.
+### keypress, mousemove
 
 ### Example: Mouse Coordinate Tracker
 
