@@ -28,15 +28,14 @@ document.querySelector(selector)​​ ​will​ ​return​ ​a​ ​single
 
 ```js
 //​ ​bind​ ​the​ ​<body>​ ​element
-var​ ​body​ ​=​ ​document.querySelector('body');var​ ​content​ ​=
+var​ ​body​ ​=​ ​document.querySelector('body');
 //​ ​bind​ ​the​ ​element​ ​with​ ​id='content'
-document.querySelector('#content');
+var​ ​content​ ​= document.querySelector('#content');
 ```
 
 ### document.querySelectorAll()
 
-document.querySelectorAll(selector)​​ ​returns​ ​a​ ​NodeList​ ​object​ ​of​ ​all​ ​elements
-matching​ ​its​ ​argument,​ ​where​ ​its​ ​argument​ ​is​ ​the​ ​string​ ​equivalent​ ​to​ ​a​ ​CSS​ ​selector.
+document.querySelectorAll(selector)​​ ​returns​ ​a​ ​NodeList​ ​object​ ​of​ ​all​ ​elements matching​ ​its​ ​argument,​ ​where​ ​its​ ​argument​ ​is​ ​the​ ​string​ ​equivalent​ ​to​ ​a​ ​CSS​ ​selector.
 
 ```js
 //​ ​bind​ ​all​ ​elements​ ​with​ ​class​ ​'centered'
