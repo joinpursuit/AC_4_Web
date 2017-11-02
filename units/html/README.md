@@ -11,7 +11,7 @@
 * [DOM 1](lessons/dom_1/dom_1.md)
 * [DOM 2](lessons/dom_2/dom_2.md)
 * [Events](lessons/events/events.md)
-* [Events2](lessons/events_2/events_2.md)
+* [Events 2](lessons/events_2/events_2.md)
 * [Local Storage](lessons/local_storage/local_storage.md)
 
 ## Exercises
@@ -50,4 +50,4 @@
 24. [Media Queries](projects/media_queries/media_queries.md)
 25. [Combinators](projects/combinators/combinators.md)
 26. [z-index](projects/z-index/z-index.md)
-27. [Calcualtr](projects/calculator/calculator.md)
+27. [Calcualtor](projects/calculator/calculator.md)
