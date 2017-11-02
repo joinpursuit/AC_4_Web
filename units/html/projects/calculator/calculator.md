@@ -6,16 +6,22 @@ Use the following files as a starting point for a basic calculator web app:
 * [css](assets/calc.css)
 * [js](assets/calc.js)
 
-* Edit the files so that when the user click on one of the operator buttons  (`+`, `-`, `*`, and `/`) keys, the operator is displayed on the calculator.
+## Instructions
 
-* Edit the project so that clicking on an operator when one has just been clicked will do nothing.
+1. Edit the files so that when the user clicks on one of the operator buttons  (`+`, `-`, `*`, and `/`), the operator is displayed on the calculator.
 
-* Edit the project so that when the user clicks on the `=` button, the result of the calculation is displayed.
+2. When a user clicks on an operator, after one had just been clicked, nothing happens.
 
-* Edit​ ​​ _calc.js_ ​​​so​ ​that​ ​the​ `​C`​ ​button​ ​clears​ ​the​ ​text​ ​of​ ​​outputDiv​.
+E.g. If the user just clicked on `+`, and she then clicks on `*`, this has no effect.
 
-* Edit​ ​​ _calc.css_ ​​​so​ ​that​ ​the​ ​page​ ​uses​ ​a​ ​calculator-specific​ ​font​ ​like​ ​​Orbitron​.
+3. Edit the project so that when the user clicks on the `=` button, the result of the calculation is displayed. Use the provided `calculate` function.
 
-* Edit​ ​​ _calc.css_ ​ ​​so​ ​that​ ​the​ ​text​ ​of​ ​​outputDiv​​ ​is​ ​right-aligned.
+4. Edit​ ​​ _calc.js_ ​​​so​ ​that​ ​the​ `​C`​ ​button​ ​clears​ ​the​ ​text​ ​of​ ​​outputDiv​.
 
-* Generate​ ​a​ ​​favicon​​ ​and​ ​link​ ​to​ ​it​ ​from​ ​​ _calc.html_.
+5. Edit​ ​​ _calc.css_ ​​​so​ ​that​ ​the​ ​page​ ​uses​ ​a​ ​calculator-specific​ ​font​ ​like​ ​​Orbitron​.
+
+6. Edit​ ​​ _calc.css_ ​ ​​so​ ​that​ ​the​ ​text​ ​of​ ​​outputDiv​​ ​is​ ​right-aligned.
+
+7. Generate​ ​a​ ​​favicon​​ ​and​ ​link​ ​to​ ​it​ ​from​ ​​ _calc.html_.
+
+8. **bonus** set a maximum length to the input *and* output of the calculator.
