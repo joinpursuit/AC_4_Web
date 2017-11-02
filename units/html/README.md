@@ -12,6 +12,7 @@
 * [DOM 2](lessons/dom_2/dom_2.md)
 * [Events](lessons/events/events.md)
 * [Events2](lessons/events_2/events_2.md)
+* [Local Storage](lessons/local_storage/local_storage.md)
 
 ## Exercises
 
@@ -19,7 +20,7 @@
 * [DOM 2](exercises/dom_2/dom_2.md)
 * [Events](exercises/events/events.md)
 * [Events 2](exercises/events_2/events_2.md)
-
+* [Local Storage](exercises/local_storage/local_storage.md)
 
 ## Projects
 
