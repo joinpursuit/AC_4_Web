@@ -7,7 +7,7 @@ var operations = ['add','sub','mul','div']
 /**
  * @function calculate
  * @param  {string} mathExp {the expression to calculate}
- * @return {type} {the result of the calculation or NaN if it couldn't be done}
+ * @return {number} {the result of the calculation or NaN if it couldn't be done}
  */
 function calculate(mathExp){
     try {

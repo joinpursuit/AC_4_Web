@@ -14,9 +14,9 @@ Edit the project files to achieve the following:
 
 2. When the user clicks on the `=` button, the result of the calculation is displayed. Use the provided `calculate` function.
 
-3. When a user clicks on an operator, after one had just been clicked, nothing happens.
+3. When a user clicks on the same operator two or more times times, any click after the first has no effect.
 
-E.g. If the user just clicked on `+`, and she then clicks on `*`, the second click has no effect.
+E.g. If the user just clicked on `+`, and she then clicks on `+` again, the second click has no effect.
 
 4. When the user clicks on the `​C`​ ​button​, ​the​ ​display is cleared.
 
@@ -24,7 +24,7 @@ E.g. If the user just clicked on `+`, and she then clicks on `*`, the second cli
 
 6. Edit​ ​​ _calc.css_ ​ ​​so​ ​that​ ​the​ ​text​ ​of​ ​​outputDiv​​ ​is​ right-aligned.
 
-7. Edit _calc.css_ to display a different cursor when the mose hovers on any of the buttons.
+7. Edit _calc.css_ to display a different cursor when the mouse hovers on any of the buttons.
 
 7. Generate​ ​a​ ​​favicon​​ ​and​ ​link​ ​to​ ​it​ ​from​ ​​ _calc.html_.
 
