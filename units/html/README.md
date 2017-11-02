@@ -50,3 +50,4 @@
 24. [Media Queries](projects/media_queries/media_queries.md)
 25. [Combinators](projects/combinators/combinators.md)
 26. [z-index](projects/z-index/z-index.md)
+27. [Calcualtr](projects/calculator/calculator.md)
