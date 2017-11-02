@@ -1,11 +1,18 @@
 # Project: Basic ​Calculator
 
-At​ ​​[http://c4q.codyhess.com/hw6](http://c4q.codyhess.com/hw6)​,​ ​you will​ ​find​ ​three​ ​files:​ ​​ _calc.html_ ​,​ ​​ _calc.css_ ​,​ ​and​ ​​ _calc.js_ ​.
-Together,​ ​the​ ​files​ ​present​ ​an​ ​incomplete​ ​implementation​ ​of​ ​a​ ​basic​ ​calculator​ ​-- everything​ ​works​ ​but​ ​the​ ​**C**​ ​(clear)​ ​and​ ​`=​` ​(result)​ ​buttons.
+Use the following files as a starting point for a basic calculator web app:
 
-* Edit​ ​​ _calc.js_ ​ ​​so​ ​that​ ​the​ ​`=​` ​button​ ​replaces​ ​the​ ​text​ ​in​ ​​outputDiv​​ ​with​ ​the​ ​result​ ​of​ ​the calculated​ ​input.
+* [html](assets/calc.html)
+* [css](assets/calc.css)
+* [js](assets/calc.js)
 
-* Edit​ ​​ _calc.js_ ​​​so​ ​that​ ​the​ ​C​ ​button​ ​clears​ ​the​ ​text​ ​of​ ​​outputDiv​.
+* Edit the files so that when the user click on one of the operator buttons  (`+`, `-`, `*`, and `/`) keys, the operator is displayed on the calculator.
+
+* Edit the project so that clicking on an operator when one has just been clicked will do nothing.
+
+* Edit the project so that when the user clicks on the `=` button, the result of the calculation is displayed.
+
+* Edit​ ​​ _calc.js_ ​​​so​ ​that​ ​the​ `​C`​ ​button​ ​clears​ ​the​ ​text​ ​of​ ​​outputDiv​.
 
 * Edit​ ​​ _calc.css_ ​​​so​ ​that​ ​the​ ​page​ ​uses​ ​a​ ​calculator-specific​ ​font​ ​like​ ​​Orbitron​.
 

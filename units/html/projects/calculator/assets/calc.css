@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    font-size: 28px;
+    line-height: 1.6em;
+    font-family: monospace;
+  }
+  #calc {
+    width: 10em;
+    margin: 0 auto;
+    background-color: pink;
+    color: black;
+    border: 2px solid black;
+  }
+  #output {
+    height: 2em;
+    border-bottom: 1px solid black;
+    background-color: lightblue;
+  }
+  .row {
+    margin: 5px;
+  }
+  .key {
+    display: inline-block;
+    padding: 1%;
+    width: 15%;
+    height: 25%;
+    background-color: black;
+    color: pink;
+    text-align: center;
+  }

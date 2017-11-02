@@ -344,3 +344,15 @@ class Animal {
 let dog = new Animal('Pluto');
 dog.speak(); // 'Pluto makes a noise'
 ```
+
+The class definition is equivalent to the following in ES5:
+
+```js
+function Animal(name){
+    this.name = name;
+}
+
+Animal.prototype.speak = function(){
+    console.log(this.name + ' makes a noise.');
+}
+```
