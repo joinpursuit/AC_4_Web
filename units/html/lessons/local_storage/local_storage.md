@@ -17,9 +17,9 @@ The​ ​WWW​ ​is​ ​*stateless*​ ​by​ ​default​ ​--​ ​e
 
 `localStorage​​` ​is​ ​almost​ ​a​ ​plain​ ​old-fashioned​ ​JavaScript​ ​object.​ ​All​ ​data​ ​is​ ​stored​ ​as key-value​ ​pairs,​ ​but​ ​is​ ​accessed​ ​through​ ​the​ ​*getter*​ ​and​ *​setter*​ ​methods `window.localStorage.getItem()`​​ ​and​ `window.localStorage.setItem()​`.
 
-- `.getItem(k,v)​​` ​takes​ ​two​ ​arguments.​ ​The​ ​first​ ​argument​ ​is​ ​a​ ​key​ ​and​ ​the​ ​second argument​ ​is​ ​a​ ​value.​ ​The​ ​key​ ​will​ ​be​ ​used​ ​later​ ​to​ ​pull​ ​data​ ​back​ ​out​ ​of​ ​the​ ​storage object.
+- `.getItem(k)​​` ​takes​ ​two​ ​arguments.​ ​The​ ​first​ ​argument​ ​is​ ​a​ ​key​ ​and​ ​the​ ​second argument​ ​is​ ​a​ ​value.​ ​The​ ​key​ ​will​ ​be​ ​used​ ​later​ ​to​ ​pull​ ​data​ ​back​ ​out​ ​of​ ​the​ ​storage object.
 
-- `.setItem(k)​​` ​takes​ ​a​ ​single​ ​argument​ ​--​ ​a​ ​key​ ​--​ ​and​ ​returns​ ​the​ ​value​ ​associated​ ​with that​ ​key.
+- `.setItem(k, v)​​` ​takes​ ​a​ ​single​ ​argument​ ​--​ ​a​ ​key​ ​--​ ​and​ ​returns​ ​the​ ​value​ ​associated​ ​with that​ ​key.
 
 ### Example:​ ​Builder-Saver
 
