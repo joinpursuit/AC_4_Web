@@ -11,7 +11,7 @@ var operations = ['add','sub','mul','div']
  */
 function calculate(mathExp){
     try {
-       return eval(mathStr)
+       return eval(mathExp)
     } catch (e) {
        return NaN
     }
