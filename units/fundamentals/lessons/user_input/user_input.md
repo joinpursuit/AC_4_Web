@@ -11,7 +11,7 @@
 ## References
 
 * [What is a Thread](https://stackoverflow.com/questions/5201852/what-is-a-thread-really)
-* [Philib Roberts - JS Event Loop](https://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
+* [Philip Roberts - JS Event Loop](https://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
 * [Asynchronous vs Synchronous](https://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
 * [What does it mean that Javascript is Asynchronous](https://www.quora.com/What-does-it-mean-that-Javascript-is-asynchronous)
 
@@ -21,9 +21,11 @@
 
 Javascript is a single-threaded asynchronous language. Being single-threaded means that javascript can only do one thing at a time.  For example, if out code has an infinite loop, javascript will get stuck and never get to do anything else.
 
-During any given time the computer is executing multiple processes. Each process performs an indepent piece of work - such as running the operating system, communicating with devices, running a browser, etc. Within a process, we may have multiple threads - these are more tightly connected. Threads perform tasks that are related to the same job. Threads can also easily communicate with one another.
+During any given time the computer is executing multiple processes. Each process performs an independent piece of work - such as running the operating system, communicating with devices, running a browser, etc. Within a process, we may have multiple threads - these are more tightly connected. Threads perform tasks that are related to the same job. Threads can also easily communicate with one another.
 
-Being asynchronous means that javascript can do things like `setTimeOut` - a callback function will be called after a set amount of time, and meanwhile other code will continue being executed. But if javascript is single threaded, how can it keep a timer **and** run some code at the same time? These are clearly two separate tasks. The answer is that the timer gets offloaded to another thread that knows how to do the required work. So while the javascript code itself gets executed on one thread only, other threads are being used for certain time-consuming work. The threads are like workers that each knows how to do some pre-determined task: such as keeping time, making network calls, listening for user input, etc. When the timer reaches zero, the worker-thread will put the callback function in a **task queue** - when the javascript thread is not doing any other work, it will perform the next task in the queue. Javascript will only be able to pick up tasks from the queue when it's completely idle - when no code at all is being executed. If the javascript thread is stuck in an infinite loop, it will never become available to execute anything else.
+Being asynchronous means that javascript can do things like `setTimeOut` - a callback function will be called after a set amount of time, and meanwhile other code will continue being executed. But if javascript is single threaded, how can it keep a timer **and** run some code at the same time? These are clearly two separate tasks.
+
+The answer is that the timer gets offloaded to another thread that knows how to do the required work. So while the javascript code itself gets executed on one thread only, other threads are being used for certain time-consuming work. The threads are like workers that each knows how to do some pre-determined task: such as keeping time, making network calls, listening for user input, etc. When the timer reaches zero, the worker-thread will put the callback function in a **task queue** - when the javascript thread is not doing any other work, it will perform the next task in the queue. Javascript will only be able to pick up tasks from the queue when it's completely idle - when no code at all is being executed. If the javascript thread is stuck in an infinite loop, it will never become available to execute anything else.
 
 ## The Readline Module
 
