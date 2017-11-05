@@ -62,7 +62,7 @@ if (num > 2) {
 }
 ```
 
-If the condition evluates to `true`, the first block will be executed. If it evaluated to `false`, the second block will be executed. We can think of an `if` statement like choosing one of two detours:
+If the condition evaluates to `true`, the first block will be executed. If it evaluated to `false`, the second block will be executed. We can think of an `if` statement like choosing one of two detours:
 
 ![if statement diagram](assets/if.svg)
 
@@ -88,7 +88,7 @@ if (color === 'blue') {
 console.log('done checking')
 ```
 
-The above statement will be checked the conditions one at a time. First, the conditional statement following `if` will be checked. If it is false, the conditional statement following `else if` will be checked. If it is also false, the code block following  `else` will be executed. We can have as many `else if` statements as we like. For example, we may want to check if a number is equal to `1`, `2` or `3`:
+The above statement will be checked the conditions one at a time. First, the conditional statement following `if` will be checked. If it is false, the conditional statement following `else if` will be checked. If it is also false, the code block following `else` will be executed. We can have as many `else if` statements as we like. For example, we may want to check if a number is equal to `1`, `2` or `3`:
 
 ```js
 var num = 2
@@ -149,7 +149,7 @@ if (userAge > 18 && userAge < 45){
 }
 ```
 
-> How whould you write a conditional statement that outputs the same message if a user's age is either smaller than 18 **OR** larger than 45?
+> How would you write a conditional statement that outputs the same message if a user's age is either smaller than 18 **OR** larger than 45?
 
 ### Truthy and Falsy Values
 
