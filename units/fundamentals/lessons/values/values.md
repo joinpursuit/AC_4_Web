@@ -2,7 +2,7 @@
 
 ## Objectives
 
-Students will understand what values are in javascript. They will know some basic types of values (number, string, boolean, undefined) and how to check for types (`typeof`). They will understand what operators are and how to use them in conjunction with values to: peform arithmetics, modify string, compare boolean values. They will learn about expressions and order of evaluation.
+Students will understand what values are in javascript. They will know some basic types of values (number, string, boolean, undefined) and how to check for types (`typeof`). They will understand what operators are and how to use them in conjunction with values to: perform arithmetics, modify string, compare boolean values. They will learn about expressions and order of evaluation.
 
 ## Vocabulary
 
@@ -20,7 +20,7 @@ Students will understand what values are in javascript. They will know some basi
 * Microsoft: [JavaScript Fundamentals](https://docs.microsoft.com/en-us/scripting/javascript/javascript-fundamentals)
   * Data Types
   * Operators
-  * Operator Presedence
+  * Operator Precedence
 
 ## Lesson
 
@@ -48,7 +48,7 @@ We can do arithmetic operations using the  `+`, `-`, `*`, and `/` operators. We 
 10
 ```
 
-Another useful operator is `modulo`, the remainer operator.
+Another useful operator is `modulo`, the remainder operator.
 
 ```js
 > 24 % 12
@@ -57,7 +57,7 @@ Another useful operator is `modulo`, the remainer operator.
 
 ### Special Numbers
 
-Occasionaly we will come across special values that are of the number type, but do not look like numbers. Two of these are `Infinity` and `NaN` - <i> Not a Number</i>. For example, division of zero by zero has not defined value, and results in `NaN`:
+Occasionally, we will come across special values that are of the number type, but do not look like numbers. Two of these are `Infinity` and `NaN` - <i> Not a Number</i>. For example, division of zero by zero has not defined value, and results in `NaN`:
 
 ```js
 > 0 / 0
@@ -80,7 +80,7 @@ Strings are used to represent text. To create a string, write any text enclosed 
 'Hello there'
 ```
 
-The `+` Operator can be used to join two   strings together.
+The `+` Operator can be used to join two strings together.
 
 ```js
 > 'My name is Jo' + 'hn'
@@ -108,7 +108,7 @@ In contrast, `typeof` only takes one value. The `-` (minus) operator can also ta
 -8
 ```
 
-> note:  the left hand and right hand sides of an operator are called <b>operands</b>. We can say that the `-` and `typeof` operator take a single operand.
+> note:  the left hand and right hand sides of an operator are called <b>operands</b>. We can say that the `-` and `typeof`  operator take a single operand.
 
 ## <b>Booleans</b>
 
@@ -116,7 +116,7 @@ Boolean is a type that can only have one of two possible values: `true` or `fals
 
 ### Comparison Operators
 
-Comparison operators inlcude `===`, `>`, `<`. These do not make a statement about values, but rather test the relationship between them. The test returns one of the two boolean values.
+Comparison operators include `===`, `>`, `<`. These do not make a statement about values, but rather test the relationship between them. The test returns one of the two boolean values.
 
 ```js
 > 2 === 2
@@ -149,11 +149,11 @@ true
 false
 ```
 
-Javascript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `brroom`:
+Javascript knows what `true` and `false` means, but this is not the case for any arbitrary word. For example, attempting to evaluate `broom`:
 
 ```js
-> brroom
-ReferenceError: brroom is not defined
+> broom
+ReferenceError: broom is not defined
 ```
 
 We can also use `typeof` with boolean values:
@@ -185,7 +185,7 @@ We use the `&&` operator to test if two statements are <b>both</b> true. For exa
 > A: It will rain tomorrow.
 > B: It did not rain today.
 
-Each statment is either true or false, which corresponds to the boolean values in javascript. To check whether both are true, we would use `&&`.
+Each statement is either true or false, which corresponds to the boolean values in javascript. To check whether both are true, we would use `&&`.
 
 ```js
 > 1 === 1 && 2 === 2
@@ -206,7 +206,7 @@ The `&&` operator will evaluate to `true` only if both left-hand and right-hand 
 false
 ```
 
-We can write down all the possible results of an `&&` operator in a table. We use `A` and `B` to represent two expressions that are either trow or false. We write in each row a unique combination of the possible values of `A` and of `B`. Given those values, we write the result of providing `A` and `B` to the `&&` operator.  This is called a <b>truth-table</b>:
+We can write down all the possible results of an `&&` operator in a table. We use `A` and `B` to represent two expressions that are either true or false. We write in each row a unique combination of the possible values of `A` and of `B`. Given those values, we write the result of providing `A` and `B` to the `&&` operator.  This is called a <b>truth-table</b>:
 
 | A       | B             | A && B  |
 |:-------:|:-------------:| -----:  |
@@ -250,7 +250,7 @@ true
 
 ### Expressions
 
-All the code we've written in this lesson has consisted of <b>expressions</b>. An expression is anything that returns a value. `1 + 2` is an expression - it returns the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which returns the boolean value `true`. The proccess of producing a value from an expression is called <b>evaluation</b>. This process can be simple, as in the case of `1 + 2` (simply add the two numbers). But in some cases the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In the case of `1 + 2 + 3 + 4`, one and two will be added first, then their result will be added to `3`, etc. We will use the arrow  `->` as a symbol for <i>evaluates to</i>.
+All the code we've written in this lesson has consisted of <b>expressions</b>. An expression is anything that returns a value. `1 + 2` is an expression - it returns the value `3`. And `1 + 2 + 3 + 4` is also an expression, as well as `1 === 1`, which returns the boolean value `true`. The process of producing a value from an expression is called <b>evaluation</b>. This process can be simple, as in the case of `1 + 2` (simply add the two numbers). But in some cases the evaluation can take multiple steps. The computer can only perform operations on two values at a time. In the case of `1 + 2 + 3 + 4`, one and two will be added first, then their result will be added to `3`, etc. We will use the arrow  `->` as a symbol for <i>evaluates to</i>.
 
 * `1 + 2 + 3 + 4`
 * -> `3 + 3 + 4`
@@ -328,7 +328,7 @@ If the left-hand expression evaluates to false, the value in the right-hand side
 
 ### Operator Precedence
 
-This higher precendence operator is evaluated first:
+This higher precedence operator is evaluated first:
 
 [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 
