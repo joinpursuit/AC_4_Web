@@ -92,7 +92,7 @@ JavaScript numbers are stored in a binary format, in 64 bits. These bits are all
 The components work as follows: If the sign bit is `0`, the number is positive, otherwise negative. Roughly, the fraction contains the digits of a number, while the exponent indicates where the point is.
 
 The largest positive integer (Whole number) we can represent with **n** (some arbitrary number) binary digits is **2<sup>n</sup> - 1**.
-Consider the maximum number with `3` digits: **111<sub>2</sub>** or **7**. If we add 1 to that number we get **1000<sub>2</sub>** or  **8**. That is, the 4th binary digit is equal to the deimal number `8`, which is equal to **2<sup>3</sup>**. So, taking **2<sup>3</sup>** and substracting **1** from it gives us **7**, and that is exactly the maximum number we can represent with `3` digits. Some more examples:
+Consider the maximum number with `3` digits: **111<sub>2</sub>** or **7**. If we add 1 to that number we get **1000<sub>2</sub>** or  **8**. That is, the 4th binary digit is equal to the decimal number `8`, which is equal to **2<sup>3</sup>**. So, taking **2<sup>3</sup>** and subtracting **1** from it gives us **7**, and that is exactly the maximum number we can represent with `3` digits. Some more examples:
 
 * A binary number with one digit has a maximum value of **2<sup>1</sup> - 1 = 2 - 1 = 1**. That is the number **1<sub>2</sub>**
 * A binary number with two digits has a maximum value of **2<sup>2</sup> - 1 = 4 - 1 = 3**. That is the number **11<sub>2</sub>**.
