@@ -9,7 +9,7 @@
 
 ## Lesson
 
-The degree to which languages help you find mistakes varies. Some languages want to know the types of all your variables before even running a program, and will tell you right away when a type is used in a way that is not consistent. JavaScript considers types only when actually running the program, and even then, it allows you to do some things that don't make much sence, such as `var x = true * "giraffe"`.
+The degree to which languages help you find mistakes varies. Some languages want to know the types of all your variables before even running a program, and will tell you right away when a type is used in a way that is not consistent. JavaScript considers types only when actually running the program, and even then, it allows you to do some things that don't make much sense, such as `var x = true * "giraffe"`.
 
 There are some things that JavaScript does complain about. Writing a program that is not syntactically valid will immediately trigger an error. For example: `var x = ;` Other things will cause runtime errors, such as calling something that’s not a function:
 
@@ -31,7 +31,7 @@ console.log(students[4].name)
 // TypeError: Cannot read property 'name' of undefiend
 ```
 
-Often, nonesense code will produce a `NaN` or `undefined` value. The mistake will manifest itself after the bogus value has traveled through several functions. It might not trigger an error at all but silently cause the program’s output to be wrong. Finding the source of such mistakes can be difficult.
+Often, nonsense code will produce a `NaN` or `undefined` value. The mistake will manifest itself after the bogus value has traveled through several functions. It might not trigger an error at all but silently cause the program’s output to be wrong. Finding the source of such mistakes can be difficult.
 
 ### Strict Mode
 
@@ -49,7 +49,7 @@ function greet(name) {
 greet('Elon')
 ```
 
-Normally, when you forget to put `var` in front of your variable, as with `greetign` in the example, will creates a global variable and uses that. In strict mode, however, an there will be an error. There will not  be an error, however, when a global variable with that name already exists:
+Normally, when you forget to put `var` in front of your variable, as with `greeting` in the example, JavaScript will create a global variable and use that. In strict mode, however, there will be an error. There will not be an error, however, when a global variable with that name already exists:
 
 ```js
 "use strict";
@@ -65,7 +65,7 @@ function greet(name) {
 greet('Elon')
 ```
 
-Another change in strict mode is the hadling of the `this` keyword in functions that are not called as methods. (When functions *are* called as methods, `this` always point to the object that called that function). In non-strict mode, the following code result in an error:
+Another change in strict mode is the handling of the `this` keyword in functions that are not called as methods. (When functions *are* called as methods, `this` always points to the object that called that function). In non-strict mode, the following code results in an error:
 
 ```js
 function Person(name) {
@@ -77,7 +77,7 @@ console.log(p)
 // => undefined
 ```
 
-Since we forgot to use the `new` keyword, the function `Person` will not return anything (i.e. will return `undefined`). The function will not define a `this` object either, but there will be no error because in non-strict mode, `this` will point at the global object by default. In strict mode, `this` be undefined inside functions by default. So, the same code as above will produce an error,
+Since we forgot to use the `new` keyword, the function `Person` will not return anything (i.e. will return `undefined`). The function will not define a `this` object either, but there will be no error because in non-strict mode, `this` will point at the global object by default. In strict mode, `this` be undefined inside functions by default. So, the same code as above will produce an error.
 
 ```js
 "use strict";
@@ -123,7 +123,7 @@ We can write a function to test if the code above works correctly, using the nod
 
 #### assert.strictEqual(actual, expected[, message])
 
-It takes an actual value, an expacted value, and an optional message. If the actual and expected value are not strictly equal (i.e. `actual === expected` is `false`), then an error of type `AssertionError` will be thrown.
+It takes an actual value, an expected value, and an optional message. If the actual and expected value are not strictly equal (i.e. `actual === expected` is `false`), then an error of type `AssertionError` will be thrown.
 
 ```js
 var assert = require("assert");
@@ -174,7 +174,7 @@ try {
 
 ```
 
-The `AssertionError` object has three properties: `actual`, `expected`, and `message`. We can use only the `message` property to log a consice error for each test that fails:
+The `AssertionError` object has three properties: `actual`, `expected`, and `message`. We can use only the `message` property to log a concise error for each test that fails:
 
 ```js
 try {
