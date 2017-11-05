@@ -39,9 +39,9 @@ The `forEach` method lets us specify what we want to happen to each item in the 
 
 ### Array transformation
 
-To tranform one array into another, we apply a function to each item in the array and collect the results into a new array.
+To transform one array into another, we apply a function to each item in the array and collect the results into a new array.
 
-Given an array of film objects below, we can tranform it into an array of {id,title} pairs using `forEach`:
+Given an array of film objects below, we can transform it into an array of {id,title} pairs using `forEach`:
 
 ```js
 var films = [
@@ -109,7 +109,7 @@ The above is **not** be something we would usually want to do. Extending the bas
 
 ### Implementing the `map` function
 
-To make tranformations easier, let's implement a `map` method. `Map` takes a tranformation function as argument, applies it to each element in the source array, and returns the tranfromed array.
+To make transformations easier, let's implement a `map` method. `Map` takes a transformation function as argument, applies it to each element in the source array, and returns the transformed array.
 
 ```js
 Array.prototype.map = function(func) {
