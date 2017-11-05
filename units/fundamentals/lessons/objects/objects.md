@@ -3,7 +3,7 @@
 ## Objectives
 
 * Explain what an object in JavaScript is
-* Explain keys, values and properties of an objects
+* Explain keys, values and properties of an object
 * Create an object
 * Create and modify properties of an object
 * Iterate through an object
