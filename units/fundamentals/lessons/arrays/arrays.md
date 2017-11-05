@@ -14,7 +14,7 @@
 
 ## Lesson
 
-An array provides a convenient way to store a collection of things. Say we want to keep the numbers `2`, `3`, `5`, `7`, and `11` - all in one place. Instead of creating five separate variables we can crate an array to story all these values. To create an array, we use the `[` and `]` brackets, and in between put whatever values we need.
+An array provides a convenient way to store a collection of things. Say we want to keep the numbers `2`, `3`, `5`, `7`, and `11` - all in one place. Instead of creating five separate variables we can create an array to store all these values. To create an array, we use the `[` and `]` brackets, and in between put whatever values we need.
 
 ```js
 var arr = [2, 3, 5, 7, 11]
@@ -27,7 +27,7 @@ Arrays can be accessed like strings. They also have indexes and a `length` prope
 We can put any type of variables as elements of an array. We can even mix different types in a single array.
 
 ```js
-var animals = ['cat', 'dog', 'racoon']
+var animals = ['cat', 'dog', 'raccoon']
 var mixedArray = [2, 5, 'zebra']
 ```
 
@@ -106,7 +106,7 @@ arr.splice(1, 2, 'fish')
 // arr contains ['dog', 'fish', 'giraffe']
 ```
 
-`splice` **returns** an array containig the elements that were removed. The modification happens on the array that the method was called from.
+`splice` **returns** an array containing the elements that were removed. The modification happens on the array that the method was called from.
 
 ### Array --> String
 
@@ -158,7 +158,7 @@ console.log(arr1 === arr2)
 
 ### Array Variables as References
 
-Each array is like a container. In javascript,  even if two containers hold the same values, they are still not considered equal to each other. These containers are located somewhere in the computer's memory. A variable defined as an array holds the address in which the array is located. This means that if we have a variable `firstArr` and set another varaible `secondArr` to be equal to `firstArr`, they will both have the address for the same array. When we modify either `firstArr` or `secondArr`, the same array will be modified.
+Each array is like a container. In javascript,  even if two containers hold the same values, they are still not considered equal to each other. These containers are located somewhere in the computer's memory. A variable defined as an array holds the address in which the array is located. This means that if we have a variable `firstArr` and set another variable `secondArr` to be equal to `firstArr`, they will both have the address for the same array. When we modify either `firstArr` or `secondArr`, the same array will be modified.
 
 ```js
 var firstArr = ['cat', 'dog', 'mouse']
@@ -227,7 +227,7 @@ var newArr = removeFromArray(arr, 'cat')
 // newArr is ['dog', 'mouse']
 ```
 
-4. Write a functi4on that takes an array of numbers **and** a number as input, and returns a new array where each element is incremented by the number.
+4. Write a function that takes an array of numbers **and** a number as input, and returns a new array where each element is incremented by the number.
 
 ```js
 var arr = [2, 4, 6]
