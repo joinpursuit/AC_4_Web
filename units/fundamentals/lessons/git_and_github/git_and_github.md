@@ -14,7 +14,7 @@ A version control system (or VCS) provides an automatic way to track changes in 
 
 The most common way to use Git is via a command-line program called git, which lets us transform an ordinary folder into a repository (or repo for short) that enables us to track changes to our project.
 
-The easiest way to check for Git is to start a terminal window and use which6 at the command line to see if the git executable is already present:
+The easiest way to check for Git is to start a terminal window and use which at the command line to see if the git executable is already present:
 
 ```bash
 $ which git
@@ -155,7 +155,7 @@ As usual, we can see the changes represented by our addition using `git diff`:
 
 ### Push
 
-On the [github home page](https://github.com), click on the green **New Repository** button. In the next screen, give a name to the repository (`git-test`) and click on the green **Create Repository** button. In the following screen, copy the url under **Quick Setup**. It should look like `https://github.com/<user>/git-test.git`, where `<user>` is your username. Now run the following two commands, replacing `<url>` with the one you copied from the github website. Following the second command you may be prompted for you github username and password.
+On the [github home page](https://github.com), click on the green **New Repository** button. In the next screen, give a name to the repository (`git-test`) and click on the green **Create Repository** button. In the following screen, copy the url under **Quick Setup**. It should look like `https://github.com/<user>/git-test.git`, where `<user>` is your username. Now run the following two commands, replacing `<url>` with the one you copied from the github website. Following the second command you may be prompted for your github username and password.
 
 ```bash
 $ git remote add origin <url>
@@ -216,7 +216,7 @@ To https://github.com/lizraeli/git-test.git
    ea24eb6..6254e59  master -> master
 ```
 
-Refershing the page on github should show the new file, and clicking on the file will lead to a new screen where the file's code is rendered.
+Refreshing the page on github should show the new file, and clicking on the file will lead to a new screen where the file's code is rendered.
 
 ![009](screenshots/009.png)
 
@@ -302,11 +302,11 @@ Since there are no conflicts with local files, the local ones have been updated.
 
 ### Git log
 
-The `git log` command can show the entire commit history of our repo. For each commit, it will show it's id, the author, the date, and the commit message. To limit the number of commits we can add the flag `-[number]`: this will show the porvided number of commits, from last to first.
+The `git log` command can show the entire commit history of our repo. For each commit, it will show its id, the author, the date, and the commit message. To limit the number of commits we can add the flag `-[number]`: this will show the provided number of commits, from last to first.
 
 ![011](screenshots/011.png)
 
-We can also format the output using `--pretty=format:` followed by some arguments. The following show all commits made in an easily readeable form.
+We can also format the output using `--pretty=format:` followed by some arguments. The following show all commits made in an easily readable form.
 
 ```markdown
 $ git log --pretty=format:"%h - %an, %ar : %s"
