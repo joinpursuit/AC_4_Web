@@ -46,7 +46,7 @@ pattern.exec(text);
 // -> [ 'may', index: 2, input: ... ]
 ```
 
-Return value is an array with the match. It has `index` and `input` properties. `index` is the location os the match (staring from 0). and `input` is the original text.
+Return value is an array with the match. It has `index` and `input` properties. `index` is the location of the match (starting from 0). and `input` is the original text.
 
 ```javascript
 var text = 'The text does not have exwhyzee';
@@ -57,7 +57,7 @@ pattern.exec(text);
 // -> null
 ```
 
-It returns `null` if there is not match.
+It returns `null` if there is no match.
 
 
 #### String.match
@@ -286,7 +286,7 @@ var aDefiniteArticle = /\b[tT]he\b/g;
 
 Other useful flags:
 
-* `//i` -- ingore case, letters match bot lower and uppercases.
+* `//i` -- ignore case, letters match both lowercase and uppercase.
 * `//m` -- multiline, treat beginning and end characters (`^` and `$`) as working over multiple lines (i.e., match the beginning or end of each line (delimited by `\n` or `\r`), not only the very beginning or end of the whole input string)
 * `//u` -- unicode; treat pattern as a sequence of unicode code points
 
