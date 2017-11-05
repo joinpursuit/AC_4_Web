@@ -21,7 +21,7 @@
 
 ### Introduction
 
-In the previos lesson on loops, we have been dealing with a lot of numbers. That can get quite boring sometimes. Strings can provide a refreshing change. We have seen string values already. Just type a string value with either single or double quotes.
+In the previous lesson on loops, we have been dealing with a lot of numbers. That can get quite boring sometimes. Strings can provide a refreshing change. We have seen string values already. Just type a string value with either single or double quotes.
 
 <sup> A string value is also called a *string literal* </sup>
 
@@ -31,7 +31,7 @@ var sentence = 'I am a string!'
 console.log(sentence)
 ```
 
-A string is really a list of character. A character is either a letter, number, punctuation mark, or white space. There are also a some special characters, two of whice are quotation marks and new lines. If we are using single quotation marks, and want these inside our string, we must use a backslash (`\`). Say we want a string with the value: `so he said to me, 'hello there'`. We will need quotation marks for the outside, and inside we will use backslah - followed by a quotation mark:
+A string is really a list of character. A character is either a letter, number, punctuation mark, or white space. There are also a some special characters, two of which are quotation marks and new lines. If we are using single quotation marks, and want these inside our string, we must use a backslash (`\`). Say we want a string with the value: `so he said to me, 'hello there'`. We will need quotation marks for the outside, and inside we will use backslash - followed by a quotation mark:
 
 ```js
 var str = 'So he said to me, \' hello there \''
@@ -55,7 +55,7 @@ console.log(word[1])
 console.log(word[5])
 ```
 
-To see how many characters we have in a string, we can use the string length **propery**. For now, it is sufficient to think of a property as a magic thing that is a part of a variable. We access a property using a dot (**.**) followed by the property name. All string variables have a property called **length** that holds the number of characters in that string.
+To see how many characters we have in a string, we can use the string length **property**. For now, it is sufficient to think of a property as a magic thing that is a part of a variable. We access a property using a dot (**.**) followed by the property name. All string variables have a property called **length** that holds the number of characters in that string.
 
 ```js
 var myString = 'spring'
@@ -69,7 +69,7 @@ Here is an illustration of what a string looks like:
 
 ## Modifying Strings
 
-As in number variables, we can modify string variables after declaring them. We can add characters to the end of a string by using the `+` operator. This is called concatenation. The sorthand `+=` works the same for strings as it does for numbers.
+As in number variables, we can modify string variables after declaring them. We can add characters to the end of a string by using the `+` operator. This is called concatenation. The shorthand `+=` works the same for strings as it does for numbers.
 
 ```js
 var str = 'hello'
@@ -78,7 +78,7 @@ str += ' there'
 console.log(str)
 ```
 
-We can use concatenation inside a loop to keep adding stuff  to a string. For example, let's say we want to print all the numbers between **1** and **5**, in the same line, seperated by commas. We start by creating an empty string using `''` or `""`. We need javascript to know our variable is a string, otherwise it wouldn't know what do make of the `+` or `+=` operator.
+We can use concatenation inside a loop to keep adding stuff  to a string. For example, let's say we want to print all the numbers between **1** and **5**, in the same line, separated by commas. We start by creating an empty string using `''` or `""`. We need javascript to know our variable is a string, otherwise it wouldn't know what to make of the `+` or `+=` operator.
 
 ```js
 var str = ''
@@ -114,7 +114,7 @@ var str2 = 'animal'
 console.log(str2[5])
 ```
 
-Once we know the length, we simply substract `1` from it and get the last element. This is because strings start at index `0`. Since we have the string `length` property at hand, all we have to do is substract `1` from it, and use the result as the index we wish to access.
+Once we know the length, we simply subtract `1` from it and get the last element. This is because strings start at index `0`. Since we have the string `length` property at hand, all we have to do is subtract `1` from it, and use the result as the index we wish to access.
 
 ```js
 var str = 'dog'
@@ -162,7 +162,7 @@ console.log(name[0].toUpperCase())
 
 ### Immutability
 
-If we want to capitalize the first letter of a string variable, we may naturaly want to do the following:
+If we want to capitalize the first letter of a string variable, we may naturally want to do the following:
 
 ```js
 var name = 'jane'
@@ -172,7 +172,7 @@ name[0] = name[0].toUpperCase()
 console.log(name)
 ```
 
-However, it will not work as expected. There will not be an error, but name will still hold the value `'jane'`. This is because strings in javascript canot be modified. Variable types that cannot be changed are called `immutable` (can't be mutated - more on this term in later lessons).
+However, it will not work as expected. There will not be an error, but name will still hold the value `'jane'`. This is because strings in javascript cannot be modified. Variable types that cannot be changed are called `immutable` (can't be mutated - more on this term in later lessons).
 
 ### Slice
 
