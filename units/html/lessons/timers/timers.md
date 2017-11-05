@@ -22,7 +22,7 @@ this​ ​way,​ ​you​ ​can​ ​delay​ ​the​ ​execution​ ​
 
 ## Example: PranknForm
 
-With​ ​the​ ​file​ ​​_exPrank.html_ ​,​ ​build​ ​a​ ​form​ ​with​ ​a​ ​single​ ​text​ ​input​ ​and​ ​an​ ​empty​ ​paragraph element.​ ​When​ ​the​ ​user​ ​submits​ ​the​ ​form,​ ​the​ ​paragraph's​ ​​`.innerText`​​ ​should​ ​read, *"You​ ​typed:​ ​I​ ​hate​ ​marshmallows!"*
+With​ ​the​ ​file​ ​​ _exPrank.html_ ​,​ ​build​ ​a​ ​form​ ​with​ ​a​ ​single​ ​text​ ​input​ ​and​ ​an​ ​empty​ ​paragraph element.​ ​When​ ​the​ ​user​ ​submits​ ​the​ ​form,​ ​the​ ​paragraph's​ ​​`.innerText`​​ ​should​ ​read, *"You​ ​typed:​ ​I​ ​hate​ ​marshmallows!"*
 
 After​ ​ 1000 ​ ​milliseconds,​ ​the​ ​paragraph's​ ​​`.innerText`​​ ​should​ ​change​ ​to​ ​read,​ *​"JK,​ ​you
 typed:​ ​"*,​ followed by the ​user's​ ​actual​ ​input.
