@@ -26,7 +26,7 @@ This program isn't much fun to write, and it isn't very practical either. What i
 
 ## The `while` loop
 
-Now you are hopefully convinced that loops can be a good idea. Our first loops is the **while** loop. It is similar to the **if** statement, in that we will check if some condition is true. Unlike the **if** statement, we will execute the code block following the while loop again and again, as long as the condition is true. Whenever we reach the bottom of the code block, we go right back up and check the condition again.
+Now you are hopefully convinced that loops can be a good idea. Our first loop is the **while** loop. It is similar to the **if** statement, in that we will check if some condition is true. Unlike the **if** statement, we will execute the code block following the while loop again and again, as long as the condition is true. Whenever we reach the bottom of the code block, we go right back up and check the condition again.
 
 ```js
 var num = 1
@@ -35,7 +35,7 @@ while (num <= 10) {
 }
 ```
 
-If you try to run the code above, the number `1` will be logged repeatedly. Eventually, your computer will freeze or you will see an error massage. This is because we are repeatedly checking if the value of `num` is smaller than 10. If it is smaller, we log the value of `num`, and check again. Since the value of `num` never changes, we just keep logging `1`, until the computer runs out of memory. To fix this, we need to change the value of `num` inside the code block. In this instance, we will increase the value by `1` every time.
+If you try to run the code above, the number `1` will be logged repeatedly. Eventually, your computer will freeze or you will see an error message. This is because we are repeatedly checking if the value of `num` is smaller than 10. If it is smaller, we log the value of `num`, and check again. Since the value of `num` never changes, we just keep logging `1`, until the computer runs out of memory. To fix this, we need to change the value of `num` inside the code block. In this instance, we will increase the value by `1` every time.
 
 ```js
 var num = 1
@@ -60,7 +60,7 @@ while (num < 10) {
 
 ### The `for` loop
 
-Another kind of loop, the `for` loop, is just a condensed version of the while loop. With the for loop we create a variable, check a condition, and change the variables value, all in one line.
+Another kind of loop, the `for` loop, is just a condensed version of the while loop. With the for loop we create a variable, check a condition, and change the variable's value, all in one line.
 
 ```js
 for (var num = 1; num < 10; num += 1) {
@@ -155,7 +155,7 @@ for (var i = 50; i >= 5; i -= 5){
 * Write a function that takes a number as an argument and logs all the numbers, descending, between the number and 1.
 * Write a a function that takes a number `num` as an argument, and iterates over all numbers from 0 to `num`. For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
 * Write a function that takes a number `num` as an argument and iterates over all numbers from 0 to `num`. For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18")
-* USe the `assignGrade` function from unit 4 (fuctions). Create a loop that will iterate over the numbers from `60` to `100`. For each number, it will call `assignGrade` with that number as an argument.
+* Use the `assignGrade` function from unit 4 (functions). Create a loop that will iterate over the numbers from `60` to `100`. For each number, it will call `assignGrade` with that number as an argument.
 
 ### Bonus
 
