@@ -111,7 +111,7 @@ The function `sideEffect` above takes no arguments, and has a single side-effect
 
 ### Function shorthand syntax
 
-There is a shorter way to write `var dobule = function…`: start with the `function` keyworkd, followed by the function name.
+There is a shorter way to write `var dobule = function…`: start with the `function` keyword, followed by the function name.
 
 ```js
 function double(num){
@@ -136,7 +136,7 @@ function sayHelloDec() {
 }
 ```
 
-A function defined with the expression syntax will be assigned to a variable, and any variable used before it is defined will have the value `undfined`
+A function defined with the expression syntax will be assigned to a variable, and any variable used before it is defined will have the value `undefined`
 
 ```js
 console.log(sayHelloExp) // logs: undefined
@@ -147,7 +147,7 @@ var sayHelloExp = function() {
 }
 ```
 
-### Funtions as Mini-Programs
+### Functions as Mini-Programs
 
 A function is like a mini-program inside our main program. Whenever the code inside it is done running, we return to the line from which we called the function. A variable defined inside a function will be forgotten when the function is done running. Every time we call the function `logPets` below, the variables will be created anew.
 
