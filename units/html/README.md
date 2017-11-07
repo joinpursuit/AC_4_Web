@@ -1,4 +1,4 @@
-# <b>Access Code 4.1</b>
+# <b>Access Code 4.1 & 4.2</b>
 
 ## <b><u>HTML & CSS</u></b>
 
@@ -14,6 +14,7 @@
 * [Events 2](lessons/events_2/events_2.md)
 * [Local Storage](lessons/local_storage/local_storage.md)
 * [Timers](lessons/timers/timers.md)
+* [AJAX 1](lessons/ajax_i/ajax_i.md)
 
 ## Exercises
 
