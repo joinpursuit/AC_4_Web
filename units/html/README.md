@@ -14,6 +14,7 @@
 * [Events 2](lessons/events_2/events_2.md)
 * [Local Storage](lessons/local_storage/local_storage.md)
 * [Timers](lessons/timers/timers.md)
+* [Fetch](lessons/fetch/fetch.md)
 
 ## Exercises
 
