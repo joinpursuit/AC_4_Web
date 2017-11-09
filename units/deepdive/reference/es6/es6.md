@@ -190,6 +190,42 @@ animals.map(animal => animal.length); // [3, 3, 6, 5]
 
 #### No separte `this`
 
+A functions declared with the `function` keyword defines its own `this` value (a new object in the case of a constructor, `undefined` in strict mode function calls, the base object if the function is called as an "object method", etc.)
+
+Consider the following object:
+
+```js
+var person = {
+  name: 'Chris'
+  age: 0
+}
+
+person.growUp = function(){
+  var that = this;
+
+  // the callaback to set interval will not have access to the person object's `this`.
+  setInterval(function growUp() {
+    // The callback refers to the `that` variable of which
+    // the value is the expected object.
+    that.age++;
+  }, 1000);
+}
+```
+
+An arrow function does not have its own this; the this value of the enclosing execution context is used. Thus, in the following code, the this within the function that is passed to setInterval has the same value as this in the enclosing function:
+
+```js
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| properly refers to the person object
+  }, 1000);
+}
+
+var p = new Person();
+```
+
 <a name="for-of"></a>
 
 ### From `forEach` to `for...of`
