@@ -92,7 +92,7 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
 
 ### Challenge: Create a Module
 
-Create a module with functions that you think would be useful to have when building various different apps. Try to think of functions that you find yourself using in different exercises, projects, code wars problems, etc. For example, would a `createRandomNumber` function be useful to have in multiple different apps?What about an `sumAll` function that returns the sum of all the numbers in an array.
+Create a module with functions that you think would be useful to have when building various different apps. Try to think of functions that you find yourself using in different exercises, projects, code wars problems, etc. For example, would a `getRandomElem` function be useful to have in multiple different apps?
 
 #### Example
 
@@ -103,21 +103,20 @@ Here's an example of the beggining of a 'useful array methods' module. The goal 
 ```js
 module.exports = {
   // returns the first element of the array
-  head: function(arr){
+  first(arr) {
     return arr[0];
   }
   // returns the array minus the first item
-  tail: function(arr) {
+  tail(arr) {
     return arr.slice(1);
   },
-  // returns the sum of a all the numbers in an array
-  sumAll: function(arr) {
-    return arr.filter(elem => typeof elem === "number")
-              .reduce((sum, curr) => sum + curr, 0)
-  }
-  // returns a random value from the array
-  randomElem: function(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+  // returns the last element of the array
+  last(arr) {
+    return arr[arr.length - 1]
+  },
+  // returns the sum of array elements
+  sum(arr) {
+    return arr.reduce((sum, curr) => sum + curr)
   }
 }
 ```
