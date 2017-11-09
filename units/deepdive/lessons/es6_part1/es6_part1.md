@@ -11,7 +11,7 @@
 
 ### About ECMAScript 6 (ES6)
 
-JavaScript (a.k.a ECMAScript) is designed by a committee called TC39 (Ecma Technical Committee 39). Among the members of TC39 are all major browser vendors (Google for Chrome, Mozilla for Firefox, Microsoft for IE and Edge, Apple for Safari).
+JavaScript (a.k.a. ECMAScript) is designed by a committee called TC39 (Ecma Technical Committee 39). Among the members of TC39 are all major browser vendors (Google for Chrome, Mozilla for Firefox, Microsoft for IE and Edge, Apple for Safari).
 
 #### Writing ES6 in Browsers
 
@@ -19,13 +19,13 @@ Upgrading our javascript code is challenging:
 
 * Some very old code exists on the web. Removing support for old features would result in many websites breaking. Therefore, new javascript versions add features, but nothing is removed.
 
-* We want our code to run on all browsers. Also, many users have old versions of browsers. If we want to use ES6 (or later versions) in our code, we only two options:
-1. We can either wait until no one in our target audience uses a non-ES6 engine anymore.
+* We want our code to run on all browsers. Also, many users have old versions of browsers. If we want to use ES6 (or later versions) in our code, we have two options:
+1. We can wait until no one in our target audience uses a non-ES6 engine anymore.
 2. We can compile ES6+ to ES5 and use it now. This will be discussed later on.
 
 #### ES6 in Node
 
-* Since node runs on the developers machine, we do not depent on browsers or users. To support much of ES6, the developer simply needs to upgrade their node version of node. [Check node.green for a compatibility table](http://node.green/).
+* Since node runs on the developer's machine, we do not depend on browsers or users. To support much of ES6, the developer simply needs to upgrade their version of node. [Check node.green for a compatibility table](http://node.green/).
 
 #### ES2015
 
