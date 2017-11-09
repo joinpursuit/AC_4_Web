@@ -46,7 +46,7 @@ square(5); //returns 25
 - Import the `string-module` into the `main.js` file and try calling and logging the functions from `string-module`.
 - Can you also import the `string-module` into the `math-module` and use it in there? Or vice versa?
 
-### Modular Files By Extension
+### Modular: Files By Extension
 
 The following is a code for an program that takes a user's input of a folder and an extension, and lists all the files in that folder that have the given extension.
 
@@ -85,3 +85,39 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
   - the folder
   - the extension
   - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the erro. Otherwise, it loges the list, with each element in a separate line. 
+
+### Challenge: Create a Module
+
+Create a module with functions that you think would be useful to have when building various different apps. Try to think of functions that you find yourself using in different exercises, projects, code wars problems, etc. For example, would a `createRandomNumber` function be useful to have in multiple different apps?What about an `sumAll` function that returns the sum of all the numbers in an array.
+
+#### Example
+
+Here's an example of the beggining of a 'useful array methods' module. The goal would be to continue adding a bunch of other useful array methods (that don't already exist in JavaScript) to this module, so we could easily import them all into any of our projects.
+
+'Useful array methods' is an example of a theme for a module, but you could choose any theme that you think would be personally useful.
+
+```js
+module.exports = {
+  // returns the first element of the array
+  head: function(arr){
+    return arr[0];
+  }
+  // returns the array minus the first item
+  tail: function(arr) {
+    return arr.slice(1);
+  },
+  // returns the sum of a all the numbers in an array
+  sumAll: function(arr) {
+    return arr.filter(elem => typeof elem === "number")
+              .reduce((sum, curr) => sum + curr, 0)
+  }
+  // returns a random value from the array
+  randomElem: function(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+}
+```
+
+#### Test it
+
+Try importing your module into some of your other projects. Can you successfully use your module functions with your pre-existing code?
