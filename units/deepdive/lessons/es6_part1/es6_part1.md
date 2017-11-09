@@ -202,7 +202,7 @@ person.growUp = function(){
   var that = this;
 
   // the callaback to set interval will not have access to the person object's `this`.
-  setInterval(function growUp() {
+  setInterval(function() {
     // The callback refers to the `that` variable of which
     // the value is the expected object.
     that.age++;
@@ -224,14 +224,45 @@ function Person(){
 var p = new Person();
 ```
 
+### Method Definitions
 
-#### Template Literals
+* source: [Method definitions by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+
+ES6 introduces a shorter syntax for method definitions when createing objects. It is a shorthand for a function assigned to the method's name.
+
+Given the following code in ES5:
+
+```js
+var dog = {
+  bark: function() {
+    /* code */
+  },
+  speak: function(words) {
+    console.log('the dog says: ', words)
+  }
+};
+```
+
+You can now write:
+
+```js
+let dog = {
+  bark() {
+    /* code */
+  },
+  speak(words) {
+    console.log('the dog says: ', words)
+  }
+};
+```
+
+### Template Literals
 
 * [Source: Template literals, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 Template literals allow you to easily create multi-line strings and to use [string interpolation](https://en.wikipedia.org/wiki/String_interpolation) (see below).
 
-##### Multi-line strings
+#### Multi-line strings
 
 Any new line characters are part of the template literal. Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
@@ -268,7 +299,7 @@ const HTML = `
     </html>`;
 ```
 
-##### Embedding Expressions in Strings
+#### Embedding Expressions in Strings
 
 In order to embed expressions within normal strings, you would use the following syntax:
 
