@@ -149,3 +149,7 @@ fs.readFile('README.md', 'utf8', (err, text) => {
 })
 console.log('not read the file yet');
 ```
+
+### Exercises
+
+- [Node `fs` Module Exercises](../../exercises/node_fs_module/node_fs_module.md)

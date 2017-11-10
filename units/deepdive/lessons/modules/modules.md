@@ -91,8 +91,8 @@ module.exports.multiply = (a, b) => a * b;
 
 ## Exercises
 
-- [Node.js Module Exercises](node-module-exercises.md)
+- [Node.js Module Exercises](../../exercises/modules/modules.md)
 
-## Challenge Project
+## Project
 
-- [Create a module](create-a-module.md)
+- [ASCII Text](../../projects/modules/modules.md)

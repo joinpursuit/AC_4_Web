@@ -19,4 +19,5 @@
 
 ## Projects
 
-1. [NPM - ASCII Text](projects/npm/npm.md)
+1. [Make Your Own Module](projects/modules/modules/,d)
+2. [NPM - ASCII Text](projects/npm/npm.md)

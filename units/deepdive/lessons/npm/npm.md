@@ -21,3 +21,11 @@ Let's check out a few npm packages:
 ## package.json file
 
 The `package.json` file is automatically created when you run the  `npm init` command. The `package.json` file basically just keeps track of all of the node modules that you've installed. When you run the `npm install` command with the special `-s` character (which stands for 'save') those modules will automatically be saved in your `packge.json` file.
+
+## Exercises
+
+* [NPM Exercises](../../exercises/npm/npm.md)
+
+## Project
+
+* [Create a module](../../projects/npm/npm.md)
