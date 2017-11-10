@@ -232,7 +232,7 @@ var p = new Person();
 
 * source: [Method definitions by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 
-ES6 introduces a shorter syntax for method definitions when createing objects. It is a shorthand for a function assigned to the method's name.
+ES6 introduces a **shorter syntax** for method definitions when creating objects. It is a shorthand for a function assigned to the method's name.
 
 Given the following code in ES5:
 
@@ -264,7 +264,7 @@ let dog = {
 
 * [Source: Template literals, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
-Template literals allow you to easily create multi-line strings and to use [string interpolation](https://en.wikipedia.org/wiki/String_interpolation) (see below).
+**Template literals** allow you to easily create multi-line strings and to use [string interpolation](https://en.wikipedia.org/wiki/String_interpolation) (see below).
 
 #### Multi-line strings
 
@@ -305,7 +305,7 @@ const HTML = `
 
 #### Embedding Expressions in Strings
 
-In order to embed expressions within normal strings, you would use the following syntax:
+In order to **embed expressions** within normal strings, you would use the following syntax:
 
 ```js
 var a = 5;
