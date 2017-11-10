@@ -6,7 +6,7 @@
 
 1. [ES6, Part 1](lessons/es6_part1/es6_part1.md)
 2. [Node `fs` Module](lessons/node_fs_module/node_fs_module.md)
-3. [Node Modules: Imports and Exports](lesson/modules/modules.md)
+3. [Node Modules: Imports and Exports](lessons/modules/modules.md)
 4. [NPM](lessons/npm/npm.md)
 5. [Node `http` Module](lessons/node_fs_module/node_http_module.md)
 
@@ -19,5 +19,5 @@
 
 ## Projects
 
-1. [Make Your Own Module](projects/modules/modules/,d)
+1. [Make Your Own Module](projects/modules/modules.md)
 2. [NPM - ASCII Text](projects/npm/npm.md)
