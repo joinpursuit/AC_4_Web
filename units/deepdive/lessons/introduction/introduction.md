@@ -8,30 +8,30 @@
 
 ## Objective
 
-* Students will gain familiarity with what Express is and how it fits in with Node, what functionality it provides, and the main building blocks of an Express application.
+* Students will gain familiarity with what **Express** is and how it fits in with Node, what functionality it provides, and the main building blocks of an Express application.
 
 ## Lesson
 
-In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application.
+In this first Express article we answer the questions "**What is Node?**" and "**What is Express?**", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application.
 
 ## Web Servers and HTTP
 
 * [MDN: Client-Server overview](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview) by mozilla contributors
 
-Web browsers communicate with [web servers](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
+Web browsers communicate with [web servers](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an **HTTP Request** to the server.
 
 This request includes:
 
-* A URL identifying the target server and resource (e.g. an HTML file, a particular data point on the server, or a tool to run).
-* A method that defines the required action (for example, to get a file or to save or update some data). The different methods/verbs and their associated actions are listed below:
+* A **URL** identifying the target server and resource (e.g. an HTML file, a particular data point on the server, or a tool to run).
+* A **method** that defines the required action (for example, to get a file or to save or update some data). The different methods/verbs and their associated actions are listed below:
   * `GET`: Get a specific resource (e.g. an HTML file containing information about a product, or a list of products).
   * `POST`: Create a new resource (e.g. add a new article to a wiki, add a new contact to a database).
-* Additional information can be encoded with the request (for example, HTML form data). Information can be encoded as:
-  * URL parameters: `GET` requests encode data in the URL sent to the server by adding name/value pairs onto the end of it — for example `https://www.google.com/search?q=dogs` You always have a question mark (`?`) separating the rest of the URL from the URL parameters, an equals sign (`=`) separating each name from its associated value, and an ampersand (`&`) separating each pair: `http://mysite.com?name=Fred&age=11`. URL parameters are inherently "insecure" as they can be changed by users and then resubmitted. As a result URL parameters/`GET` requests are not used for requests that update data on the server.
+* Additional **information** can be encoded with the request (for example, HTML form data). Information can be encoded as:
+  * URL parameters: `GET` requests encode data in the URL sent to the server by adding **name/value pairs** onto the end of it — for example `https://www.google.com/search?q=dogs` You always have a question mark (`?`) separating the rest of the URL from the URL parameters, an equals sign (`=`) separating each name from its associated value, and an ampersand (`&`) separating each pair: `http://mysite.com?name=Fred&age=11`. URL parameters are inherently "insecure" as they can be changed by users and then resubmitted. As a result URL parameters/`GET` requests are not used for requests that update data on the server.
   * `POST` data. `POST` requests add new resources, the data for which is encoded within the request body.
-  * Client-side cookies. Cookies contain session data about the client, including keys that the server can use to determine their logged in status and permissions/accesses to resources.
+  * Client-side cookies. **Cookies** contain session data about the client, including keys that the server can use to determine their logged in status and permissions/accesses to resources.
 
-Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP Response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g. "`200 OK`" for success, "`404 Not Found`" if the resource cannot be found, "`403 Forbidden`" if the user isn't authorised to see the resource, etc). The body of a successful response to a `GET` request would contain the requested resource.
+Web **servers** wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP Response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g. "`200 OK`" for success, "`404 Not Found`" if the resource cannot be found, "`403 Forbidden`" if the user isn't authorized to see the resource, etc). The body of a successful response to a `GET` request would contain the requested resource.
 
 When an HTML page is returned it is rendered by the web browser. As part of processing the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS pages), and will send separate HTTP Requests to download these files.
 
@@ -44,7 +44,7 @@ Example: Chrome Devtools network tab for [eloquentjavascript.net](http://eloquen
 
 [Node](https://nodejs.org/) (or NodeJS) is an open-source, cross-platform, runtime environment that allows developers to create server-side tools and applications in [JavaScript](/en-US/docs/Glossary/JavaScript). It is intended for use outside of a browser context (i.e. running directly on a computer). Node the does not have browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.
 
-You can easily create a simple web server to respond to any request using just the Node HTTP module, as shown below. This will create a server and listen HTTP requests on URL `http://127.0.0.1:8000/`; when a request is received, it will send a plain-text response `"Hello World"`.
+You can easily create a simple web server to respond to any request using just the Node HTTP module, as shown below. This will **create a server** and listen for HTTP requests on the URL `http://127.0.0.1:8000/`. When a request is received, it will send a plain-text response `"Hello World"`.
 
 ```js
 // Load HTTP module
@@ -66,13 +66,13 @@ server.listen(8000);
 console.log('Server running at http://127.0.0.1:8000/');
 ```
 
-Other common web-development tasks are not directly supported by Node itself. If you want to add specific handling for different HTTP verbs (e.g. `GET`, `POST`), separately handle requests at different URL paths ("routes"), serve static files, or use templates to dynamically create the response, then you will need to write the code yourself, or you can avoid reinventing the wheel and use a web framework!
+Other common web-development tasks are not directly supported by Node itself. If you want to add specific handling for different HTTP verbs (e.g. `GET`, `POST`), separately handle requests at different URL paths ("routes"), serve static files, or use templates to dynamically create the response, then you will need to write the code yourself, or you can avoid reinventing the wheel and use a **web framework**!
 
 [Express](https://expressjs.com/) is the most popular _Node_ web framework, and is the underlying library for a number of other popular [Node web frameworks](https://expressjs.com/en/resources/frameworks.html). It provides ways to:
 
-* Write handlers for requests with different HTTP verbs at different URL paths (routes).
-* Set common web application settings like the port to use for connecting.
-* Add additional request processing "middleware" at any point within the request handling pipeline (e.g. middleware for user authentication).
+* Write **handlers** for requests with different HTTP verbs at different URL paths (routes).
+* Set common web application **settings** like the port to use for connecting.
+* Add additional request processing "**middleware**" at any point within the request handling pipeline (e.g. middleware for user authentication).
 
 While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](http://expressjs.com/en/resources/middleware.html) (along with a list of some popular 3rd party packages).
 
