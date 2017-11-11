@@ -115,7 +115,7 @@ fs.rmdir('another-new-repo', (err, data) => {
 *Renaming files and folders:*
 
 ```js
-fs.rename('new-file-2.txt', 'not-a-new-file.txt');
+fs.rename('not-a-new-file.txt', 'new-file-2.txt');
 ```
 
 *Watching files:*
