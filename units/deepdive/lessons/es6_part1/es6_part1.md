@@ -181,7 +181,15 @@ const getEvens = (arr) => {
 }
 ```
 
-Which can be boiled down even further. Since the code within the function consists of an expression and nothig else, we can remove the curly braces and the return statement, and the expression will become the function's return value.
+Which can be boiled down even further. When the code within the function boils down to a single value, we can remove the curly braces and the `return` keyword, and the expression will become the function's return value. Consider the following simple example:
+
+```js
+const add = (a, b) => a + b;
+
+const double = num => num + num;
+```
+
+Both `a + b` and `num + num` evaluate to a singule value. So in both cases we can omit the curly braces and the `return` keyword. In the `getEvens` function, `arr.filter` will return a single value - an array. That array will then become the return value of `getEvens`.
 
 ```js
 const getEvens = arr =>
