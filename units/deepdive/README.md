@@ -8,7 +8,7 @@
 2. [Node `fs` Module](lessons/node_fs_module/node_fs_module.md)
 3. [Node Modules: Imports and Exports](lessons/modules/modules.md)
 4. [NPM](lessons/npm/npm.md)
-5. [Node `http` Module](lessons/node_fs_module/node_http_module.md)
+5. [Node `http` Module](lessons/node_http_module/node_http_module.md)
 
 ## Exercises
 

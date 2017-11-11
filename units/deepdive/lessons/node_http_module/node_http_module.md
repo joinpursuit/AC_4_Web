@@ -12,24 +12,34 @@
 - [HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 - [HTTP Headers for Dummies](http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
 - [What is TCP/IP and How Does It Make the Internet Work?](http://www.hostingadvice.com/blog/tcpip-make-internet-work/)
-- [Software Developer's Gudie to HTTP](http://odetocode.com/articles/743.aspx)
+- [Software Developer's Guide to HTTP](http://odetocode.com/articles/743.aspx)
 
 ## The `http` module
 
-The `http` module lets you interact with the web. It lets you do things like make requests to websites and get code and/or data in return, and create a simple web server to host your own web apps.
+The `http` module allow you to interact with the web. Using the `http` module, you do things like:
+
+- make requests to websites and get code and/or data in return.
+- create a simple web server to host your own web apps.
 
 Here is an example of a simple server built using the `http` module:
 
 ```js
-var http = require("http");
-var server = http.createServer((request, response) => {
-  response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("Hello world");
-  response.end();
+const http = require('http');
+
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
 });
 
-server.listen(8000);
+server.listen(port, hostname, () => {
+  console.log(`Server running at on http://localhost:${port}`);
+});
 ```
+
+Create a file named `app.js` with the code above. Run the server using `node app.js` and navigate to http://localhost:3000. You should now see the text `"Hello World"` in your browser.
 
 ## Headers, Methods, and URL
 

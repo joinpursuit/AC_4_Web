@@ -181,7 +181,7 @@ const getEvens = (arr) => {
 }
 ```
 
-Which can be boiled down even further:
+Which can be boiled down even further. Since the code within the function consists of an expression and nothig else, we can remove the curly braces and the return statement, and the expression will become the function's return value.
 
 ```js
 const getEvens = arr =>
@@ -217,11 +217,11 @@ person.growUp = function(){
 An arrow function **does not** have its own this; the this value of the enclosing execution context is used. Thus, in the following code, the this within the function that is passed to setInterval has the same value as this in the enclosing function:
 
 ```js
-function Person(){
-  this.age = 0;
+person.growUp = function(){
 
   setInterval(() => {
-    this.age++; // |this| properly refers to the person object
+    // `this` properly refers to the person object
+    this.age++;
   }, 1000);
 }
 
@@ -322,7 +322,6 @@ var b = 10;
 console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 // "Fifteen is 15 and not 20."
 ```
-
 
 ### Exercises
 

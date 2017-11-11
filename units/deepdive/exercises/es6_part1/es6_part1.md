@@ -145,4 +145,3 @@ countOddsAndEvens([11, 2, 36, 4, 15]);
 countOddsAndEvens([1, 2, 3, 4, 5, 5, 99, 101]);  
 // returns {odds: 6, evens: 2}
 ```
-
