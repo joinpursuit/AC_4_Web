@@ -125,10 +125,6 @@ The `response.end` method can also be used to send data.
 response.end("end of response");
 ```
 
-### Node `http` Server
-
-Let's put the above pieces together to make a simple node http server. It will respond to any request with the string `"Hello, World!"`. We will use the `http.createServer` method, which takes as argument a callback function that will be invoked every time the server receives a request.
-
 ### Port Number
 
 Finally,  we start the server using the `server.listen` command and specifying the port number (the address of the process that will run the server). Recall the chrome network tab - the server's ip and the port are separated by a semicolon.
@@ -145,21 +141,6 @@ The number specified after the semicolon is the *port number*. If not specified,
 
 1. Try entering a different port number following eloquent javascript's url.
 2. Find the port number for goolge.com and enter it following the google url.
-
-#### Starting a node server
-
-Below is an example of simple node server. Once the server is running, you can access it by entering `http://localhost:8000/` in your browser.
-
-```js
-const http = require('http');
-const server = http.createServer((req, res) => {
-  res.writeHead(200,  { 'Content-Type': 'text/plain' });
-  res.send('Hello, World!\n')
-  res.end();
-});
-
-server.listen(8000);
-```
 
 ### Exercises
 
