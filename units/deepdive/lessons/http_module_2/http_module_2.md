@@ -3,7 +3,7 @@
 ## Resources
 
 * [Node.js Foundation: Anatomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)
-* [Node.js URL](https://nodejs.org/api/url.html#url_url)
+* [Node.js URL module](https://nodejs.org/api/url.html#url_url)
 * [Node.js http message url](https://nodejs.org/api/http.html#http_message_url)
 * [MDN: NodeJS Without A Framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework)
 * [Wikipedia: Query Strings](https://en.wikipedia.org/wiki/Query_string)
@@ -33,24 +33,19 @@ Following the question mark is `q=dogs` where `q` signifies the query, and `dogs
 
 ## The `url` module
 
-The request object in the callback for `http.createServer` has a `url` property that contains the url string after the domain name (`/`) - if any. If the user typed `www.mynodewebsite.com/dogs` the request's `url` property will be `'/dogs'`. If the user typed `www.mynodewebsite.com` the request's `url` property will be `/`.  We can parse the url using a module called `url`, which contains a `parse` method:
+The request object in the callback for `http.createServer` has a `url` property that contains the url string after the domain name (`/`) - if any. If the user typed `www.mynodewebsite.com/dogs` the request's `url` property will be `'/dogs'`. If the user typed `www.mynodewebsite.com` the request's `url` property will be `/`.
 
-```js
-const urlParser = require('url');
+### Url Parameters
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200,  { 'Content-Type': 'text/plain' });
-  const parsedUrl = urlParser.parse(req.url, true);
-  ...
-```
+We can parse the url to get an easier access to its parameters. We do this using a module called `url`, which contains a `parse` method:
 
 This will provide us with an object with helpful properties.
 
 For example, in the node console, type:
 
-```js
-> const urlParser = require('url')
-> urlParser.parse('/search?q=dogs')
+```bash
+> const url = require('url')
+> url.parse('/search?q=dogs')
 Url {
   protocol: null,
   slashes: null,
@@ -68,7 +63,7 @@ Url {
 
 As we see above, everything prior to the `?` was assigned to the `pathname` property, and everything following it was assigned to the `query` property.
 
-Documentation on the `url` module can be found [here](https://nodejs.org/api/url.html#url_url);
+Full Documentation on the `url` module can be found [here](https://nodejs.org/api/url.html#url_url);
 
 ### Exercises
 
