@@ -144,4 +144,4 @@ The number specified after the semicolon is the *port number*. If not specified,
 
 ### Exercises
 
-- [HTTP Part 1 - exercises](../../exercises/http_part_1/http_part_1.md)
+- [HTTP Part 1 - exercises](../../exercises/http_module_1/http_module_1.md)

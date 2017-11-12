@@ -72,4 +72,4 @@ Documentation on the `url` module can be found [here](https://nodejs.org/api/url
 
 ### Exercises
 
-* [HTTP Part 2 - exercises](../../exercises/http_part_2/http_part_2.md)
+* [HTTP Part 2 - exercises](../../exercises/http_module_2/http_module_2.md)
