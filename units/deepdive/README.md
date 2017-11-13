@@ -11,6 +11,8 @@
 5. [How The Internet Works, Part 1](lessons/internet_part1/internet_part1.md)
 6. [Node `http` Module - Part 1](lessons/http_module_1/http_module_1.md)
 6. [Node `http` Module - Part 2](lessons/http_module_2/http_module_2.md)
+7. [Express - Part 1](lessons/express_1/express_1.md)
+8. [Express - Part 2](lessons/express_2/express_2.md)
 
 ## Exercises
 
@@ -20,7 +22,7 @@
 4. [NPM](exercises/npm/npm.md)
 5. [Node `http` Module - Part 1](exercises/http_module_1/http_module_1.md)
 6. [Node `http` Module - Part 2](exercises/http_module_2/http_module_2.md)
-
+7. [Express - Part 2](exercises/express_2/express_2.md)
 
 ## Projects
 
