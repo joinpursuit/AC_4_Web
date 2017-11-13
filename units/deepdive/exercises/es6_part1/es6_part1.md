@@ -81,8 +81,8 @@ Write a function called `stringsToNums ` that takes an array of strings, convert
 Examples:
 
 ```js
-stringToNums(["4", "3", "9"]); //returns [4,3,9]
-stringToNums(["1", "22", "7"]); //returns [1,22,7]
+stringsToNums(["4", "3", "9"]); //returns [4,3,9]
+stringsToNums(["1", "22", "7"]); //returns [1,22,7]
 ```
 
 ### Q8. first-letter-uppercase-map
