@@ -63,13 +63,11 @@ Write a function called `forEach` that takes in two arguments: an array and a fu
 Example:
 
 ```javascript
-forEach(arr, log); // logs 1, 2, 3, 4, 5
-
 var arr = [1,2,3,4,5];
-
-function log(val) {
-  console.log(val);
-}
+forEach(arr, (elem) => {
+  console.log(elem)
+});
+// logs 1, 2, 3, 4, 5
 ```
 
 ### Q6. map-triple-array
@@ -103,11 +101,8 @@ Example:
 ```javascript
 var arr = [1, 2, 3, 4, 5];
 
-function double(num) {
-  return num * 2;
-}
 
-map(arr, double); // returns [ 2, 4, 6, 8, 10 ]
+map(arr, num => num * 2); // returns [ 2, 4, 6, 8, 10 ]
 ```
 
 ### Q10. reduce-sum
