@@ -10,7 +10,7 @@ Remember, go straight to Grandma's house," _'s mother cautioned.  "Don't dawdle 
 "Don't worry, mommy," said _, "I'll be careful.
 ```
 
-The function takes a string `name` as an argument, and returns a new string that contains the above exerpt, except that every instance of the underscore is replaced with `name`. Use an arrow function and template literals.
+The function takes a string `name` as an argument, and returns a new string that contains the above excerpt, except that every instance of the underscore is replaced with `name`. Use an arrow function and template literals.
 
 Example:
 
@@ -32,13 +32,13 @@ Write a function that uses the [`forEach`](http://www.w3schools.com/jsref/jsref_
 
 ### Q2. simple-filter
 
-Write a function called `greaterThan10` that uses the `filter` to filter an array and only return numbers that are greater than 10. The function should take an array of numbers as an argument.
+Write a function called `greaterThan10` that uses the `filter` method to filter an array and only return numbers that are greater than 10. The function should take an array of numbers as an argument.
 
 Examples:
 
 ```js
-greaterThan10([1,2,3,11,12,13]); //returns [11,12,13]
-greaterThan10([11,2,3,1,22,4,33]); //returns [11,22,33]
+greaterThan10([1, 2, 3, 11, 12, 13]); //returns [11,12,13]
+greaterThan10([11, 2, 3, 1, 22, 4, 33]); //returns [11,22,33]
 ```
 
 ### Q3. simple-filter-2
@@ -48,13 +48,13 @@ Write a function called `filterEvens` that uses the `filter` method to filter an
 Examples:
 
 ```js
-filterEvens([1,2,3,11,12,13]); //returns [2,12]
-filterEvens([22,2,31,110,6,13]); //returns [22,2,110,6]
+filterEvens([1, 2, 3, 11, 12, 13]); //returns [2,12]
+filterEvens([22, 2, 31, 110, 6, 13]); //returns [22,2,110,6]
 ```
 
 ### Q4. forEach-sum
 
-Write a function called `forEachSum` that takes in an array of numbers as an argument and returns a sum of the array. The function should use the `forEach` array method and should NOT use  `for` loop or `while` loop.
+Write a function called `forEachSum` that takes in an array of numbers as an argument and returns the sum of the array. The function should use the `forEach` array method and should NOT use a `for` loop or `while` loop.
 
 ### Q5. implement-forEach
 
@@ -96,7 +96,7 @@ Expected Output : 'The Quick Brown Fox'
 
 ### Q9. implement-map
 
-Write a function called `map` that takes in two arguments: an array and a function. `map` should apply the passed in function to every memeber of the array, and return a new array with the results.
+Write a function called `map` that takes in two arguments: an array and a function. `map` should apply the passed in function to every member of the array, and return a new array with the results.
 
 Example:
 
@@ -117,8 +117,8 @@ Write a function called `sum` that uses the `reduce` method to sum up an array o
 Examples:
 
 ```js
-sum([1,2,3,4,5]); //returns 15
-sum([6,7,7]); //returns 20
+sum([1, 2, 3, 4, 5]); //returns 15
+sum([6, 7, 7]); //returns 20
 ```
 
 ### Q11. reduce-min

@@ -15,12 +15,12 @@
 
 Express is a server-side web framework for nodeJS.
 
-Server-side web frameworks are software frameworks that make it easier to write, maintain and scale web applications. They provide tools and libraries that simplify common web development tasks, including:
+Server-side web frameworks are software that make it easier to write, maintain and scale web applications. They provide tools and libraries that simplify common web development tasks, including:
 
-* routing URLs to appropriate handlers.
-* interacting with databases.
-* supporting sessions and user authorization.
-* formatting output (e.g. HTML, JSON, XML).
+* Routing URLs to appropriate handlers (e.g. showing you cats when you're on mysite.com/cats and dogs when you're on mysite.com/dogs).
+* Interacting with databases to save and sort data on the server side.
+* Supporting sessions and user authorization  (e.g. logging you in, keeping you logged in, and keeping your password and identity safe).
+* Formatting output (e.g. HTML, JSON, XML).
 * Improving security against web attacks.
 
 ### Getting Started with Express

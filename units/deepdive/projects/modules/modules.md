@@ -6,7 +6,7 @@ Create a module with functions that you think would be useful to have when build
 
 ### Example
 
-Here's an example of the beggining of a 'useful array methods' module. The goal would be to continue adding a bunch of other useful array methods (that don't already exist in JavaScript) to this module, so we could easily import them all into any of our projects.
+Here's an example of the beginning of a 'useful array methods' module. The goal would be to continue adding a bunch of other useful array methods (that don't already exist in JavaScript) to this module, so we could easily import them all into any of our projects.
 
 'Useful array methods' is an example of a theme for a module, but you could choose any theme that you think would be personally useful.
 
