@@ -31,7 +31,7 @@ Upgrading our javascript code is **challenging**:
 
 The official name of ES6 is ES2015, but ES6 is the name that people know and use.
 
-After ES6, ECMAScript editions are created via a new process and a yearly release cycle. So - ES7 is ES2016, ES8 os ES2017, etc.
+After ES6, ECMAScript editions are created via a new process and a yearly release cycle. So - ES7 is ES2016, ES8 is ES2017, etc.
 
 #### ES5 -> ES6
 
@@ -189,7 +189,7 @@ const add = (a, b) => a + b;
 const double = num => num + num;
 ```
 
-Both `a + b` and `num + num` evaluate to a singule value. So in both cases we can omit the curly braces and the `return` keyword. In the `getEvens` function, `arr.filter` will return a single value - an array. That array will then become the return value of `getEvens`.
+Both `a + b` and `num + num` evaluate to a single value. So in both cases we can omit the curly braces and the `return` keyword. In the `getEvens` function, `arr.filter` will return a single value - an array. That array will then become the return value of `getEvens`.
 
 ```js
 const getEvens = arr =>
@@ -198,7 +198,7 @@ const getEvens = arr =>
 
 Note that a function declared with `const` or `let` is **not hoisted**. Also, be mindful of the length of each line in your code.
 
-#### No separte `this`
+#### No separate `this`
 
 A functions declared with the `function` keyword defines its own `this` value (a new object in the case of a constructor, `undefined` in strict mode function calls, the base object if the function is called as an "object method", etc.)
 
