@@ -3,7 +3,7 @@
 ## Resources
 
 * [Express - Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
-* [nodemon](https://github.com/remy/nodemon/)
+* [Express - Routing](https://expressjs.com/en/guide/routing.html)
 * [mogran](https://github.com/expressjs/morgan)
 
 ## Lesson
