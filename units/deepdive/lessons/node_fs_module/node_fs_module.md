@@ -11,7 +11,7 @@
 
 `process` is a global object in node.js that gives you helpful information about what your program or script is doing behind the scenes.
 
-The `process` object has a lot of properties but the one we will focus on is `process.argv`. The `process.argv` property returns an array of all the arguments you type into the command line in your you run a script.
+The `process` object has a lot of properties but the one we will focus on is `process.argv`. The `process.argv` property returns an array of all the arguments you type into the command line when you run a script.
 
 For example, if you create a `main.js` file that just contains the following code:
 
@@ -29,14 +29,14 @@ The following would be logged to the console. The first two element of the array
 
 ```js
 [ '/usr/local/bin/node',
-  '/home/lev/AC_4.1/main.js' ]
+  '/home/lev/AC_4.1/main.js',
   'hello',
   'world' ]
 ```
 
 ## Intro to core node.js modules
 
-Node.js comes prepacked with several of built-in modules. These include:
+Node.js comes prepackaged with several of built-in modules. These include:
 
 - `fs` for manipulating the file system
 - `path` for parsing and dealing with file paths

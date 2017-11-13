@@ -4,7 +4,7 @@
 
 Create a server with a route will take  `'rock'`, `'paper'`, or `'scissors'` as the first parameter in its path. The API will return a JSON object with the results of a single "Rock, Paper, Scissors" match against a computer opponent.
 
-Example: `localhost:8000/rock` will (radomly) result in one of three cases:
+Example: `localhost:8000/rock` will (randomly) result in one of three cases:
 
 1. `{"user":"rock","ai":"rock","result":"tie"}`
 2. `{"user":"rock","ai":"paper","result":"lose"}`

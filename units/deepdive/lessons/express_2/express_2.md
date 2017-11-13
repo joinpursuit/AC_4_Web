@@ -16,7 +16,7 @@ There are a number dependencies that we will be using when created express apps.
 
 #### `morgan` (Logger)
 
- One such dependency is [morgan](https://github.com/expressjs/morgan). Once installed and set up, mogan will log all incoming requests to the console. To install morgan, we run the following in the command line:
+ One such dependency is [morgan](https://github.com/expressjs/morgan). Once installed and set up, morgan will log all incoming requests to the console. To install morgan, we run the following in the command line:
 
 ```bash
 npm install --save morgan

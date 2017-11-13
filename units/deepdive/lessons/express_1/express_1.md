@@ -15,12 +15,12 @@
 
 Express is a server-side web framework for nodeJS.
 
-Server-side web frameworks are software frameworks that make it easier to write, maintain and scale web applications. They provide tools and libraries that simplify common web development tasks, including:
+Server-side web frameworks are software that make it easier to write, maintain and scale web applications. They provide tools and libraries that simplify common web development tasks, including:
 
-* routing URLs to appropriate handlers.
-* interacting with databases.
-* supporting sessions and user authorization.
-* formatting output (e.g. HTML, JSON, XML).
+* Routing URLs to appropriate handlers (e.g. showing you cats when you're on mysite.com/cats and dogs when you're on mysite.com/dogs).
+* Interacting with databases to save and sort data on the server side.
+* Supporting sessions and user authorization  (e.g. logging you in, keeping you logged in, and keeping your password and identity safe).
+* Formatting output (e.g. HTML, JSON, XML).
 * Improving security against web attacks.
 
 ### Getting Started with Express
@@ -86,17 +86,17 @@ The dependencies section of our **package.json** will now appear at the end of t
 4. We create a file named **index.js** in the root of the *myapp* application directory. In this file we import `express` and start a minimal web server:
 
 ```js
-const express = require('express')
-const app = express()
-const port = 8000;
+const express = require('express') // import express
+const app = express() // create an express server
+const port = 8000; // we will use this later
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-})
+}) // routes the '/' URL path to produce a response of 'Hello World!'
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-})
+}) // asks our server to listen for requests on port 8000, logging to the console to confirm that things are working
 ```
 
 The code above a minimal "HelloWorld" Express web application. This imports the "express" module and uses it to create a server (`app`) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
@@ -113,7 +113,9 @@ Example app listening on port 8000
 
 ### Nodemon - Automatic Server Restarts
 
-We will use [nodemon](https://github.com/remy/nodemon) while we develop our node/express apps. Nodemon will monitor the files in our app directory, and automatically restart the server on any file change. This means that we will not have to manually close the server process (`<ctrl>+c`) and restart the server. To install nodemon:
+We will use [nodemon](https://github.com/remy/nodemon) while we develop our node/express apps. Nodemon will monitor the files in our app directory and automatically restart the server on any file change. If we didn't do this, we'd have to manually close the server process (`<ctrl>+c`) and restart the server every time we wanted our changes to be reflected in the browser.
+
+To install nodemon:
 
 ```bash
 npm install --save-dev nodemon
@@ -121,7 +123,7 @@ npm install --save-dev nodemon
 
 We use `--save-dev` because nodemon is only needed for development purposes. Once our server is running in the real world we will no longer want it to restart automatically.
 
-Finally we will add a `start` script in  `pacakge.json`:
+Finally we will add a `start` script in  `package.json`:
 
 ```json
 {
