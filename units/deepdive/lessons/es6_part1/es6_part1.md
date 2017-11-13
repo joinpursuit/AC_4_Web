@@ -144,11 +144,11 @@ var animals = [
 
 animals.map(function(animal) {
   return animal.length;
-}); // [3, 3, 6, 5]
+}); // [3, 3, 7, 5]
 
 animals.map((animal) => {
   return animal.length;
-}); // [3, 3, 6, 5]
+}); // [3, 3, 7, 5]
 
 animals.map(animal => animal.length); // [3, 3, 6, 5]
 ```
