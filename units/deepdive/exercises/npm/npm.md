@@ -4,7 +4,7 @@
 
 ### Setup
 
-- In a new folder `tryChalk`, create an `app.js` file.
+- In a new folder `trychalk`, create an `app.js` file.
 - In the command line, enter `npm init`, which will begin setting up a `package.json` file. Keep on pressing `<enter>` until it stops asking questions. You should now see a `package.json` file in your folder.
 - Enter `npm install --save chalk`. This will install the `chalk` module.
   - In your `package.json`, under `dependecies`, you should see `chalk` followed by a version number.
