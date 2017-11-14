@@ -77,8 +77,9 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
 
 - Do not take any input from the user (i.e. remove lines that make use of the `process` object).
 - Wrap the code in a function that takes as arguments a folder name, an extension, and a callback function.
+- Change the `forEach` method call to `filter`: instead of logging the files, return a new array that contains only the files with the desired extension. Save the array to a new variable.
 - If there is an error while reading the folder, invoke the callback with the error.
-- Otherwise, invoke the callback at the bottom of the function with two arguments: `null` and the list of files.
+- Otherwise, invoke the callback at the bottom of the `readDir` function with two arguments: `null` and the filtered file array.
 - Export the function using `module.exports`.
 
 2. In `main.js` do the following:
@@ -88,4 +89,4 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
 - invoke the function with the following arguments:
   - the folder
   - the extension
-  - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the erro. Otherwise, it loges the list, with each element in a separate line.
+  - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the error. Otherwise, it logs the list, with each element in a separate line.
