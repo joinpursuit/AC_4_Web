@@ -15,7 +15,6 @@
 8. [Express - Part 2](lessons/express_2/express_2.md)
 9. [Serving static resources]
 
-
 ## Exercises
 
 1. [ES6, Part 1](exercises/es6_part1/es6_part1.md)
