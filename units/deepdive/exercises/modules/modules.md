@@ -85,7 +85,7 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
 
 - Import the function from `filterFiles.js` as `filterFilesFn`.
 - Read the input for folder and extension from the user (using the `process` object).
-- invoke the function with the following arguments:
+- Invoke the function with the following arguments:
   - the folder
   - the extension
-  - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the erro. Otherwise, it loges the list, with each element in a separate line.
+  - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the error. Otherwise, it logs the list, with each element in a separate line.
