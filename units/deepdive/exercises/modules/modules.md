@@ -46,7 +46,7 @@ square(5); //returns 25
 - Import the `string-module` into the `main.js` file and try calling and logging the functions from `string-module`.
 - Can you also import the `string-module` into the `math-module` and use it in there? Or vice versa?
 
-### Modular: Files By Extension
+### Challenge - Modular: Files By Extension
 
 The following is a code for an program that takes a user's input of a folder and an extension, and lists all the files in that folder that have the given extension.
 
