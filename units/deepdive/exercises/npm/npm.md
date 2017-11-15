@@ -17,7 +17,7 @@
 1. Write a function called `helloBlue` that will console.log the string 'Hello world' in blue.
 2. Write a function called `helloRed` that will console.log the string 'Hello world' in red.
 3. Write a function called `stringToColor`. It should take two arguments: a string and a color. The function should log the string to the console in the given color. For example, `stringToColor('this is a test', 'red')` woll log  `"this is a test` in red.
-4. Write a function called `evensBlueOddsYellow` that takes a string as an argument. It should log all even-indexed words in blue and all odd-indexed words in yellow. For example, `evensBlueOddsYellow('this is a test')` will log `'this'` in yellow, `'is'` in blue, `'a'` in yellow, and `'test'` in blue.
+4. Write a function called `evensBlueOddsYellow` that takes a string as an argument. It should log all even words in blue and all odd words in yellow. For example, `evensBlueOddsYellow('this is a test')` will log `'this'` in yellow, `'is'` in blue, `'a'` in yellow, and `'test'` in blue.
 5. Write a function called `angryText` that takes a string as an argument. It should log that string in red, underlined, and bold capital letters.
 6. Write a function called `backgroundCyan` that takes a string as an argument, and logs that string in white font color and cyan background-color (check the chalk documentation to see how to change background colors).
 7. Write a function called `boldFirstUnderlineLast` that takes a string as an argument and logs the string, with the first word in bold and the last word underlined.
