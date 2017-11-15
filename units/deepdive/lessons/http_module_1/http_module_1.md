@@ -140,7 +140,7 @@ Try to navigate to the following addres in your browser:
 The number specified after the semicolon is the *port number*. If not specified, it is automatically discovered and assigned.
 
 1. Try entering a different port number following eloquent javascript's url.
-2. Find the port number for goolge.com and enter it following the google url.
+2. Find the port number for google.com and enter it following the google url.
 
 ### Exercises
 
