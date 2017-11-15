@@ -56,7 +56,7 @@ const fs = require('fs');
 
 ### Reading files
 
-The `readFile` method takes as arguments a file name, optionally the encoding (use `utf8` for text files) and a callback function to execute once the file has been read. If no encoding is sepcified, the raw binary data of the file will be returned.
+The `readFile` method takes as arguments a filename, optionally the encoding (use `utf8` for text files) and a callback function to execute once the file has been read. If no encoding is specified, the raw binary data of the file will be returned.
 
 ```js
 fs.readFile('new-file-2.txt', function(err, data) {
@@ -132,7 +132,7 @@ fs.watch('new-file.txt', (eventType, filename) => {
 
 ## Sync vs Async
 
-A lot of `fs` methods come in two flavors - async, and sync. Most node methods are executed asynchronosly by default. Sync blocks execution - no other code will be executed until the operation is completed. Async (which stands for asynchronous) means that execution is not blocked. Javascript will continue to the next code and the callback will be invoked later.
+A lot of `fs` methods come in two flavors - async, and sync. Most node methods are executed asynchronously by default. Sync blocks execution - no other code will be executed until the operation is completed. Async (which stands for asynchronous) means that execution is not blocked. Javascript will continue to the next code and the callback will be invoked later.
 
 Synchronously read a file:
 
