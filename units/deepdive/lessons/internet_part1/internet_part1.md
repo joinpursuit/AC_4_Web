@@ -71,7 +71,7 @@ When you type a web address into your browser:
 
 ### Exercise
 
-Using your browser's dev tool's network tab, find the ip addressess of the following websites.
+Using your browser's dev tool's network tab, find the ip addresses of the following websites.
 
 **Note**: some large websites may have more than a single `ip` address.
 
