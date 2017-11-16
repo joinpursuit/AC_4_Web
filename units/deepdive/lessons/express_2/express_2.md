@@ -12,11 +12,11 @@ This lesson assumes you have a minimal working express server.
 
 ### Development dependencies
 
-There are a number dependencies that we will be using when created express apps.
+There are a number of dependencies (e.g. modules) that we'll use to create express apps.
 
 #### `morgan` (Logger)
 
- One such dependency is [morgan](https://github.com/expressjs/morgan). Once installed and set up, morgan will log all incoming requests to the console. To install morgan, we run the following in the command line:
+ One such dependency is [morgan](https://github.com/expressjs/morgan). Once installed and set up, morgan will log all incoming HTTP requests to the console. To install morgan, we run the following in the command line:
 
 ```bash
 npm install --save morgan
@@ -62,7 +62,7 @@ Express is built on the idea of **middleware** (more on this in future lessons).
 
 #### Activity
 
-Start the express app navigate to `localhost:8000`. What do you see in the terminal window?
+Start the express app and navigate to `localhost:8000`. What do you see in the terminal window?
 
 ### Routing
 
