@@ -2,7 +2,7 @@
 
 ## Basic Routing
 
-- Create an `html` page and call it `page2.html`. Add an `h1` tag into it that says `Welcome to Page 2`. Now create a `server-4.js` file that will serve up the `index.html` page if you go to `localhost:3000/`, and will server the `page2.html` page if you go to `localhost:3000/page-2`
+- Create an `html` page and call it `page2.html`. Add an `h1` tag into it that says `Welcome to Page 2`. Now create a `server-4.js` file that will serve up the `index.html` page if you go to `localhost:3000/`, and will serve the `page2.html` page if you go to `localhost:3000/page-2`
 - Add an `a` tag to your `index.html` page, and give the `a` tag an `href` attribute of `href="/page-2"`. Add a similar `a` tag to your `page2.html` file that links back to `index.html`. Reload your `server-4.js` and check to make sure your links work
 - Try adding 1-2 more HTML pages and adding links to each html page that lets you navigate to any page from any page. Create a `server-5.js` file that serves up all of your html pages.
 
