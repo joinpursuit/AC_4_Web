@@ -46,8 +46,8 @@ var poem = '’Twas brillig, and the slithy toves \n      Did gyre and gimble in
 
 ### Watch Me
 
-- create a file called `watch-me.txt` that is initially empty. Create another empty file called `new-text.txt`. Use `fs.watch` so that whenever you add new text to the `watch-me.txt` file, that text is automatically also added to the `new-text.txt` file (you can manually open up the `watch-me.txt` file and add new text to it to test this out)
-- create a JavaScript file that lets you enter a filename and some text into the command line in your terminal. The he script should create a new file that contains the text you entered. For example, the following command should create a new file called 'new-file.txt' that contains the text 'this is a test' (hint: use `process.argv`):
+- create a file called `watch-me.txt` that is initially empty. Create another empty file called `new-text.txt`. Use `fs.watch` so that whenever you add new text to the `watch-me.txt` file, the `new-text.txt` file will automatically get the same content  (you can manually open up the `watch-me.txt` file and add new text to it to test this out)
+- create a JavaScript file that lets you enter a filename and some text into the command line in your terminal. The script should create a new file that contains the text you entered. For example, the following command should create a new file called 'new-file.txt' that contains the text 'this is a test' (hint: use `process.argv`):
 
 ```bash
 node script.js new-file.txt this is a test

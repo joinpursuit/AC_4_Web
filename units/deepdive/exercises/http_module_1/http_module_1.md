@@ -25,4 +25,4 @@
 </html>
 ```
 
-Create a `server-3.js` that imports `template.js` and invokes the imported function to serve up the above html.
+Create a `server-4.js` that imports `template.js` and invokes the imported function to serve up the above html.

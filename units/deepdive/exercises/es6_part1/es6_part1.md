@@ -54,22 +54,20 @@ filterEvens([22, 2, 31, 110, 6, 13]); //returns [22,2,110,6]
 
 ### Q4. forEach-sum
 
-Write a function called `forEachSum` that takes in an array of numbers as an argument and returns the sum of the array. The function should use the `forEach` array method and should NOT use a `for` loop or `while` loop.
+Write a function called `forEachSum` that takes an array of numbers as an argument and returns the sum of the array. The function should use the `forEach` array method and should NOT use a `for` loop or `while` loop.
 
 ### Q5. implement-forEach
 
-Write a function called `forEach` that takes in two arguments: an array and a function. `forEach` should apply the passed in function to every member of the array. It should not return anything.
+Write a function called `forEach` that takes two arguments: an array and a function. `forEach` should apply the function to every element of the array. It should not return anything.
 
 Example:
 
 ```javascript
-forEach(arr, log); // logs 1, 2, 3, 4, 5
-
 var arr = [1,2,3,4,5];
-
-function log(val) {
-  console.log(val);
-}
+forEach(arr, (elem) => {
+  console.log(elem)
+});
+// logs 1, 2, 3, 4, 5
 ```
 
 ### Q6. map-triple-array
@@ -83,31 +81,28 @@ Write a function called `stringsToNums ` that takes an array of strings, convert
 Examples:
 
 ```js
-stringToNums(["4", "3", "9"]); //returns [4,3,9]
-stringToNums(["1", "22", "7"]); //returns [1,22,7]
+stringsToNums(["4", "3", "9"]); //returns [4,3,9]
+stringsToNums(["1", "22", "7"]); //returns [1,22,7]
 ```
 
 ### Q8. first-letter-uppercase-map
 
-Write a function that takes a string as a parameter and converts the first letter of each word of the string to upper case. However, do not use a `for` loop, `while` loop, or `forEach`.
+Write a function that takes a string as a parameter and converts the first letter of each word of the string to upper case. Do not use a `for` loop, `while` loop, or `forEach`.
 
 Example string : 'the quick brown fox'
 Expected Output : 'The Quick Brown Fox'
 
 ### Q9. implement-map
 
-Write a function called `map` that takes in two arguments: an array and a function. `map` should apply the passed in function to every member of the array, and return a new array with the results.
+Write a function called `map` that takes two arguments: an array and a function. `map` should apply the function to every member of the array, and return a new array with the results.
 
 Example:
 
 ```javascript
 var arr = [1, 2, 3, 4, 5];
 
-function double(num) {
-  return num * 2;
-}
 
-map(arr, double); // returns [ 2, 4, 6, 8, 10 ]
+map(arr, num => num * 2); // returns [ 2, 4, 6, 8, 10 ]
 ```
 
 ### Q10. reduce-sum
@@ -135,13 +130,13 @@ reduceMin([10, 0, 100, 1, -100, 20, 33]); //returns -100
 
 ### Q12. count-odds-and-evens
 
-Write a function named `countOddsAndEvens` that takes an array of numbers as argument. Then function should return an object that has two properties: `odds` and `evens`, that contain the number of odd numbers in the array, and the number of the even numbers in the array, respectively. Use the `reduce` method. Do not use a `for` loop, `while` loop, or `forEach`.
+Write a function named `countOddsAndEvens` that takes an array of numbers as argument. The function should return an object that has two properties: `odds` - the number of odd numbers in the array, and `events` - the number of the even numbers in the array. Use the `reduce` method. Do not use a `for` loop, `while` loop, or `forEach`.
 
 Examples:
 
 ```javascript
 countOddsAndEvens([11, 2, 36, 4, 15]);
 // returns {odds: 2, evens: 3}
-countOddsAndEvens([1, 2, 3, 4, 5, 5, 99, 101]);  
+countOddsAndEvens([1, 2, 3, 4, 5, 5, 99, 101]);
 // returns {odds: 6, evens: 2}
 ```

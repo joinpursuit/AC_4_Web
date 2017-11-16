@@ -58,7 +58,7 @@ function createFilm(name, director, released){
 var myFilm = createFilm('The Truman Show', 'Peter Weir', 1998)
 ```
 
-A variable that is defined within a function is created anew every time the function is called. When we get to the end of a function, the varaiables that have been created within it are forgotten. We can, however, return a variable that was created inside a function. The variable itself will be forgotten, but its value will be assigned to a variable that lives outside the function. So, in the above example, we are assigning the value of the `film` variable from inside the function to the `myFilm` variable outside the function.
+A variable that is defined within a function is created anew every time the function is called. When we get to the end of a function, the variables that have been created within it are forgotten. We can, however, return a variable that was created inside a function. The variable itself will be forgotten, but its value will be assigned to a variable that lives outside the function. So, in the above example, we are assigning the value of the `film` variable from inside the function to the `myFilm` variable outside the function.
 
 An advantage of a factory functions is that we can insure that each object will have the same properties. This will make it easier to with an array of objects later on. In our films example, when we only use the `createFilm` function to add new films to the films array, we can then create a function to get the film title for any film in the array.
 
