@@ -66,7 +66,7 @@ Start the express app and navigate to `localhost:8000`. What do you see in the t
 
 ### Routing
 
-In express, we simply need to enter the different routes (= URLs) to which we want our app needs to respond. Initially, we defined just one route in our app:
+In express, we simply need to enter the different routes (= URLs) our app should respond to. Initially, we defined just one route in our app:
 
 ```js
 app.get('/', (req, res) => {
@@ -74,7 +74,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-This is the route when the user simply types the url as is (i.e. `localhost:8000`). Here is how we would add a route for when the user types the url `localhost:8000/cats` and `locahost:8000/dogs`
+This is the route when the user types the url as-is (i.e. `localhost:8000`). Here is how we would add routes for when the user types the urls `localhost:8000/cats` and `locahost:8000/dogs`
 
 ```js
 app.get('/cats', (req, res) => {
