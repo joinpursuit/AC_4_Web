@@ -10,7 +10,7 @@ Example: `localhost:8000/rock` will (randomly) result in one of three cases:
 2. `{"user":"rock","ai":"paper","result":"lose"}`
 3. `{"user":"rock","ai":"scissors","result":"win"}`
 
-## Calcualtor API - Four Routes
+## Calculator API - Four Routes
 
 Create and express server that works as a basic calculator API.
 
@@ -31,7 +31,7 @@ For example, if the users navigates to `http://localhost:8000/add/2/4`, the resp
 
 * If the user navigates to any other route, respond with an explanatory message about your API.
 
-## Calcualtor API - One Route
+## Calculator API - One Route
 
 Convert your calculator API to take the operator as a parameter as well. Now you will only need one route. If the operator is not valid, send an appropriate response like `"the operator is not supported"`.
 
