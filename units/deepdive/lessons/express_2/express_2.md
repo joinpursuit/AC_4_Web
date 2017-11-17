@@ -4,7 +4,7 @@
 
 * [Express - Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
 * [Express - Routing](https://expressjs.com/en/guide/routing.html)
-* [mogran](https://github.com/expressjs/morgan)
+* [morgan](https://github.com/expressjs/morgan)
 
 ## Lesson
 
