@@ -13,7 +13,7 @@
 6. [Node `http` Module - Part 2](lessons/http_module_2/http_module_2.md)
 7. [Express - Part 1](lessons/express_1/express_1.md)
 8. [Express - Part 2](lessons/express_2/express_2.md)
-9. [Serving static resources]
+9. [Post Requests](lessons/post_requests/post_requests.md)
 
 ## Exercises
 
