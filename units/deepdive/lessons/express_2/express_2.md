@@ -46,7 +46,7 @@ To use morgan in our app, we do the following in `index.js`
 
 ```js
 // create "middleware"
-const logger = require('morgan')
+const morgan = require('morgan')
 const express = require('express')
 const port = 8000;
 
