@@ -25,6 +25,7 @@
 6. [Node `http` Module - Part 2](exercises/http_module_2/http_module_2.md)
 7. [Express - Part 2](exercises/express_2/express_2.md)
 8. [Express - Bonus](exercises/express_2/express_bonus.md)
+9. [Post Requests](exercises/post_requests/post_requests.md)
 
 ## Projects
 
