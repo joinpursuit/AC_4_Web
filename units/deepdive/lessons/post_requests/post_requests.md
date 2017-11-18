@@ -79,24 +79,20 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 ### Which one to use
 
 1. If you need to get publicly available informtion, use the `GET` method.
-1. If you need to send a password (or any other sensitive data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
-2. If you want to change the value of any data stored  on the server, use the `POST` method.
-
-### On the server side: retrieving the data
-
-Whichever HTTP method you choose, the server receives a string that will be parsed in order to get the data as a list of key/value pairs.
+2. If you need to send a password (or any other sensitive data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
+3. If you want to change the value of data stored on the server (based on input from the request) use the `POST` method.
 
 ### Handling Post Requests in Express
 
-In order to handle post requests in express, you will need to install the [body-parser module](https://github.com/expressjs/body-parser). The body parser provides an easy way for getting the contents of a request's body.
+In order to handle `post` requests in express, you will need to install the [body-parser module](https://github.com/expressjs/body-parser). The body parser provides an easy way for getting the contents of a request's body.
 
-First, we will install it with npm:
+First, install it with npm:
 
 ```bash
 npm install --save body-parser
 ```
 
-Then we will `require` it in our javascript server file, and add tell express to `use` the body parser:
+Then we will `require` it in our javascript server file, and tell express to `use` the body parser:
 
 ```js
 var express = require('express')
@@ -113,9 +109,9 @@ app.use(bodyParser.json())
 
 Above, `app.use` is called twice because there are two ways to encode the body of a post request. Don't worry about this detail for now.
 
-After express has been instructed to use the body parser, the body of every request will be available in the `body` property.
+After express had been instructed to use the body parser, the body of every request will be available in the request `body` property.
 
-Below is a simple example where the request's body is sent back to the client. We use the `app.post` method to exclusively handle _post_ requests. In order to send an object back to the client, we first need to convert it into a JSON string. The `res.json` method will convert javascript to json and send it as a response.
+Below is a simple example where the request's body is simply sent back to the client. We use the `app.post` method to exclusively handle _post_ requests. We use the `res.json` method to convert the body object to a json string and send it as a response.
 
 ```js
 var express = require('express')
@@ -130,7 +126,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.post('/moods', function (req, res) {
+app.post('/moods', (req, res) => {
   console.log(req.body)
   res.json(req.body)
 })
@@ -140,18 +136,18 @@ app.listen(port, () => {
 })
 ```
 
-Once we've started the express server, we can try sending a `post` request using postman.
+Once we've the express server, we can send a `post` request using postman.
 
 ![postman screenshot](assets/postman_screenshot.png)
 
 * Make sure to choose `POST` in the request type dropdown.
-* Type `localhost:3000/moods` as the request url.
+* Insert `localhost:3000/moods` as the request url.
 * Switch to the `Body` tab, and choose `x-www-form-urlencoded` in the radio buttons.
-* Now you may begin typing key-value pairs that the request body will consist of.
+* Now you can begin insert key-value pairs that the request body will consist of.
   * key: `name`, value: `Loona`
   * key: `mood`, value:
   `sleepy`
-* Click on the `send` button. You should see the response in the text area below:
+* Click on the `send` button. You should see the response in the text area:
 
 ```text
 {"name":"loona","mood":"sleepy"}
@@ -159,34 +155,36 @@ Once we've started the express server, we can try sending a `post` request using
 
 ### Persisting Data
 
-We will now use a simple method to save data on the server side. Whenever our server gets a `post` request to log in, it will append the username to a text file.
+Let's try and the request body on the server. Whenever our server gets a `post` request, it will append the name and mood to a text file.
 
 ```js
 const fs = require('fs')
 
 app.post('/moods', function (req, res) {
   console.log(req.body)
-  res.setHeader('Content-Type', 'text/plain')
-  fs.appendFile('moods.txt', req.body.username + '\n', (err) => {
+  const nameAndMood = req.body.name + ' ' + req.body.mood;
+  fs.appendFile('moods.txt', nameAndMood + '\n', (err) => {
     if (err) throw err;
     console.log('appended to file');
-    res.json(req.body)
+    res.send('success')
   });
 })
 ```
 
-Note that if the request body doesn't have a `name`, the word `undefined` will be appended to the file. We can fix that, and send an appropriate resonse if there is no username:
+Note that if the request body doesn't have a `name` or `mood`, the word `undefined` will be appended to the file. We can fix that, and send an appropriate resonse if there is no name or mood:
 
 ```js
 app.post('/moods', function (req, res) {
   console.log(req.body)
 
-  if (!req.body.name) {
-    res.send('please specify a name')
+  if (!req.body.name || !req.body.mood) {
+    res.send('please specify a name and mood')
   } else {
-    fs.appendFile('moods.txt', req.body.name + '\n', (err) => {
+    const nameAndMood = req.body.name + ' ' + req.body.mood ;
+
+    fs.appendFile('moods.txt', nameAndMood + '\n', (err) => {
       if (err) throw err;
-      console.log('The name was appended to the file!');
+      console.log('appended to file');
       res.json(req.body)
     });
   }
@@ -227,7 +225,7 @@ Note that this is not valid json (and not valid javascript either). and attempti
   2. Add the new name-mood object from `req.body` into the array.
   3. Save the array into the `moods.json` file, overwriting the existing content.
 
-Note that we will to save the data successfully as json, we will need to read the content into memory, add the new username-password object, and overwrite the existing file - *every time*. As long as our json file is small this will be fine performance-wise.
+Note that we will to save the data successfully as json, we will need to read the content into memory, add the new name-mood object, and overwrite the existing file - *every time*. As long as our json file is small this will be fine performance-wise.
 
 To avoid repetetive code, we will create a function called `writeFile`, that takes as arguments a filename, the data to write, and the response object. The function writes the data to the file (overwriting any existing data), and sends an appropriate response. We use the `return` statement to finish the function execution early. The returned value will not be used anywhere.
 
@@ -242,14 +240,14 @@ const writeFile = (filename, data, res) => {
 }
 ```
 
-Now we will write the rest of the code:
+Now let's write the rest of the code:
 
 ```js
 const moodsFile = 'moods.json';
 
 app.post('/moods', function (req, res) {
   if (!req.body.name || !req.body.mood) {
-    res.send('please specify a username and password')
+    res.send('please specify a name and a mood')
   } else {
     fs.readFile(moodsFile, 'utf8', (err, data) => {
       if (err) {
@@ -262,7 +260,7 @@ app.post('/moods', function (req, res) {
       }
       // Parsing the file into an array
       const moodsArr = JSON.parse(data);
-      // using the ES6 spread operator to create a new array
+      // using the ES6 spread operator to take all elements from the array
       const jsonArr = JSON.stringify([...moodsArr, req.body])
       writeFile(moodsFile, jsonArr, res)
     })
@@ -270,7 +268,7 @@ app.post('/moods', function (req, res) {
 })
 ```
 
-Finally, let us send the log of username-passwords to the client on a get request to `moods`:
+Finally, let us send the log of names and moods to the client on a get request to `moods`:
 
 ```js
 app.get('/moods', (req, res) => {
