@@ -6,7 +6,7 @@ source: [Sending and Receiving Form Data by Mozilla Contirbutors](https://develo
 
 The [HTTP protocol](/en-US/docs/HTTP "/en-US/docs/HTTP") provides several ways to perform a request. The most common of these are the `GET` method and the `POST` method.
 
-To understand the difference between those two methods, let's step back and examine how HTTP works. Each time you want to reach a resource on the Web, the browser sends a request to some several. An HTTP request consists of two parts: a header that contains a the url and information about the browser, and a body that can contain additional information.
+To understand the difference between those two methods, let's step back and examine how HTTP works. Each time you want to reach a resource on the Web, the browser sends an HTTP request to some server. An HTTP request consists of two parts: a header that contains a the url and information about the browser, and a body that can contain additional information.
 
 ### The GET method
 
@@ -107,7 +107,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 ```
 
-Above, `app.use` is called twice because there are two ways to encode the body of a post request. Don't worry about this detail for now.
+Above, `app.use` is called twice because there are two ways to encode the body of a `post` request. Don't worry about this detail for now.
 
 After express had been instructed to use the body parser, the body of every request will be available in the request `body` property.
 
@@ -217,7 +217,7 @@ After we have saved two or more name-mood objects, our json file will look like 
 {"name":"Loona","mood":"sleepy"}{"name":"Whiskers","mood":"hungry"}
 ```
 
-Note that this is not valid json (and not valid javascript either). and attempting to `JSON.parse` it will result in an error. Valid json will look like a javascript array of objects. In order to achieve that, we will need to perform some steps on every post request:
+Note that this is not valid json (and not valid javascript either). and attempting to `JSON.parse` it will result in an error. Valid json will look like a javascript array of objects. In order to achieve that, we will need to perform some steps on every `post` request:
 
 * If a `moods.json` file does not exists, create a new array with the `req.body` as its only element. `JSON.stringify` the array and save it to `moods.json`
 * If a `moods.json` file already exists:
@@ -268,7 +268,7 @@ app.post('/moods', function (req, res) {
 })
 ```
 
-Finally, let us send the log of names and moods to the client on a get request to `moods`:
+Finally, let's send the log of names and moods to the client on a `get` request to _moods_:
 
 ```js
 app.get('/moods', (req, res) => {
