@@ -8,8 +8,8 @@
 ## Resources
 
 - [MDN: What is a Web Server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- [Anataomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)
-- [Write Your First Node.hs HTTP Server](http://blog.modulus.io/build-your-first-http-server-in-nodejs)
+- [Anatomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)
+- [Write Your First Node.js HTTP Server](http://blog.modulus.io/build-your-first-http-server-in-nodejs)
 - [HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 - [HTTP Headers for Dummies](http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
 - [What is TCP/IP and How Does It Make the Internet Work?](http://www.hostingadvice.com/blog/tcpip-make-internet-work/)
@@ -133,7 +133,7 @@ Finally,  we start the server using the `server.listen` command and specifying t
 
 #### Activity 2
 
-Try to navigate to the following addres in your browser:
+Try to navigate to the following address in your browser:
 
 `http://eloquentjavascript.net:80`
 
