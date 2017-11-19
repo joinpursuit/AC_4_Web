@@ -174,20 +174,17 @@ app.post('/moods', function (req, res) {
 Note that if the request body doesn't have a `name` or `mood`, the word `undefined` will be appended to the file. We can fix that, and send an appropriate resonse if there is no name or mood:
 
 ```js
-app.post('/moods', function (req, res) {
-  console.log(req.body)
-
+app.post('/moods', (req, res) => {
   if (!req.body.name || !req.body.mood) {
-    res.send('please specify a name and mood')
-  } else {
-    const nameAndMood = req.body.name + ' ' + req.body.mood ;
-
-    fs.appendFile('moods.txt', nameAndMood + '\n', (err) => {
-      if (err) throw err;
-      console.log('appended to file');
-      res.json(req.body)
-    });
+    return res.send('please specify a name and mood')
   }
+
+  const nameAndMood = req.body.name + ' ' + req.body.mood;
+  fs.appendFile('moods.txt', nameAndMood + '\n', (err) => {
+    if (err) { throw err };
+    console.log('appended to file');
+    res.json(req.body)
+  });
 })
 ```
 
@@ -196,18 +193,16 @@ app.post('/moods', function (req, res) {
 We can store complex data in the JSON format. We first call the `JSON.stringify` method on the variable we want to save, and append the resulting string to a file. Note that the code below will not work as expected - we will discuss the problem below.
 
 ```js
-app.post('/moods', function (req, res) {
-  console.log(req.body)
-
+app.post('/moods', (req, res) => {
   if (!req.body.name || !req.body.mood) {
-    res.send('please specify a name and a mood')
-  } else {
-    fs.appendFile('users.json', JSON.stringify(req.body), (err) => {
-      if (err) throw err;
-      console.log('Appended to the file!');
-      res.json(req.body)
-    });
+    return res.send('please specify a name and a mood')
   }
+
+  fs.appendFile('users.json', JSON.stringify(req.body), (err) => {
+    if (err) { throw err };
+    console.log('Appended to the file!');
+    res.json(req.body)
+  });
 })
 ```
 
@@ -247,24 +242,24 @@ const moodsFile = 'moods.json';
 
 app.post('/moods', function (req, res) {
   if (!req.body.name || !req.body.mood) {
-    res.send('please specify a name and a mood')
-  } else {
-    fs.readFile(moodsFile, 'utf8', (err, data) => {
-      if (err) {
-        // Check if the file does not exist
-        if (err.code === 'ENOENT') {
-          const jsonArr = JSON.stringify([req.body])
-          return writeFile(moodsFile, jsonArr, res)
-        }
-        return res.send(err)
-      }
-      // Parsing the file into an array
-      const moodsArr = JSON.parse(data);
-      // using the ES6 spread operator to take all elements from the array
-      const jsonArr = JSON.stringify([...moodsArr, req.body])
-      writeFile(moodsFile, jsonArr, res)
-    })
+    return res.send('please specify a name and a mood')
   }
+
+  fs.readFile(moodsFile, 'utf8', (err, data) => {
+    if (err) {
+      // Check if the file does not exist
+      if (err.code === 'ENOENT') {
+        const jsonArr = JSON.stringify([req.body])
+        return writeFile(moodsFile, jsonArr, res)
+      }
+      return res.send(err)
+    }
+    // Parsing the file into an array
+    const moodsArr = JSON.parse(data);
+    // using the ES6 spread operator to take all elements from the array
+    const jsonArr = JSON.stringify([...moodsArr, req.body])
+    writeFile(moodsFile, jsonArr, res)
+  })
 })
 ```
 
@@ -275,7 +270,7 @@ app.get('/moods', (req, res) => {
   fs.readFile(moodsFile, 'utf8', (err, data) => {
     if (err) {
       return res.send(err)
-    }
+    };
     res.send(data)
   })
 })
