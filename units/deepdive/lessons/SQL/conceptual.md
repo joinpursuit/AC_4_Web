@@ -2,11 +2,9 @@
 
 **Resources**
 
-[Literally the Wikipedia entry for databases](https://en.wikipedia.org/wiki/Database)
-
-[How websites work with databases](https://developer.mozilla.org/en-US/docs/Learn/Drafts/How_websites_work_with_databases)
-
-[SQL in Simple English](http://www.codecoffee.com/articles/sql1.html)
+* [Literally the Wikipedia entry for databases](https://en.wikipedia.org/wiki/Database)
+* [How websites work with databases](https://developer.mozilla.org/en-US/docs/Learn/Drafts/How_websites_work_with_databases)
+* [SQL in Simple English](http://www.codecoffee.com/articles/sql1.html)
 
 ## Why do we need databases?
 
