@@ -14,6 +14,7 @@
 7. [Express - Part 1](lessons/express_1/express_1.md)
 8. [Express - Part 2](lessons/express_2/express_2.md)
 9. [Post Requests](lessons/post_requests/post_requests.md)
+10. [Databases](lessons/SQL/conceptual.md)
 
 ## Exercises
 
