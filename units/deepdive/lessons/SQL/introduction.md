@@ -7,6 +7,7 @@
 * [How to install Postgres on Linux](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
 * [Mac Postgres app](https://postgresapp.com/)
 * [PSequel (Database Visualizer for Mac)](http://www.psequel.com/)
+* [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
 ## Pulling It All Together
 
@@ -37,3 +38,60 @@ saved on the frontend, we'll have to query our database. So, under the hood,
 the interaction might go like this:
 
 **User** -> *HTTP Request* -> **Our Server** -> *Database Query* -> **Our Database**
+
+This flow is also important if, say, our user wants to leave a review. In order
+for other users to see that review, we will have to save the review to our database.
+That review, of course, will have the proper associations to the restaurant,
+so when other users bring up the restaurant our database will send that user's
+review.
+
+More on Postgres (for example, how to incorporate it into our previously-stateless
+Express apps) later!
+
+## Advanced SQL- Joins
+
+A quick refresher—databases, at their core, are made up of tables. Those tables
+can point to one another by way of *foreign keys*. For example, in a database of
+teachers in a school district, each teacher might have a column indicating their
+`school_id`. These integers would point to IDs in a `schools` table. That way,
+we can query the `teachers` table for teachers that come from a particular school.
+
+This method of querying presents a problem. Database queries are expensive operations.
+In the modern web, querying a database is frequently a computational *bottleneck*,
+which simply means it's one of the more time-consuming actions our apps can perform.
+This means, if we want to query for information across multiple tables, it doesn't
+make sense for us to send multiple queries to our database.
+
+Enter **joins**.
+
+Joins are a way for us to grab information from two tables at once. Think of them
+as a way to grab all of the information that you'll find relevant from each table.
+This presents opportunities and problems, which is why different types of joins
+prove useful.
+
+Take a look at the article in the Resources section, [A Visual Understanding of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/).
+Here, you'll find the different types of joins, which I'll list below:
+
+* `INNER JOIN`
+* `FULL OUTER JOIN`
+* `LEFT OUTER JOIN`
+* `CROSS JOIN`
+
+There's a `RIGHT OUTER JOIN`, too, which works the same way as `LEFT OUTER JOIN`.
+Largely, we'll want to be doing the first three types of joins. Don't worry about
+`CROSS JOIN` for now.
+
+In order to produce nice, orderly data, you'll want to join `ON` particular
+columns. To use our earlier example, let's say you wanted to get the school's name
+next to the teacher. You could do something like this:
+
+```sql
+SELECT fname, lname
+FROM teachers
+INNER JOIN schools
+ON teachers.school_id = schools.id
+```
+
+This would produce a list of teachers with their corresponding schools next to their
+names. It would only include teachers that have `school_id`s that correspond to
+entries in the `schools` table-that's what our `INNER JOIN` is doing.
