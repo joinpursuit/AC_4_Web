@@ -28,3 +28,31 @@ To connect with `psql`, double click a database. To connect directly from the co
 ## Linux
 
 [Postgres on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
+
+1. Install
+
+```
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+```
+
+2. Run `psql` as postgres user:
+
+```
+sudo -u postgres psql
+```
+
+3. Create a new user, matching you login user:
+
+```
+sudo -u postgres createuser --interactive
+
+Enter name of role to add: <yourloginhere>
+Shall the new role be a superuser? (y/n) y
+```
+
+4. Create a new database:
+
+```
+sudo -u postgres createdb <yourloginhere>
+```
