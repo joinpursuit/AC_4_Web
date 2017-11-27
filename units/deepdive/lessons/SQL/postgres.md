@@ -31,28 +31,55 @@ To connect with `psql`, double click a database. To connect directly from the co
 
 1. Install
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
 ```
 
-2. Run `psql` as postgres user:
+2. Start the `psql` service:
 
+```bash
+sudo service postgresql start
 ```
+
+
+3. Run `psql` as postgres user:
+
+```bash
 sudo -u postgres psql
 ```
 
-3. Create a new user, matching you login user:
+4. Create a new user, matching your login user (c4q):
 
-```
+```bash
 sudo -u postgres createuser --interactive
 
-Enter name of role to add: <yourloginhere>
+Enter name of role to add: c4q
 Shall the new role be a superuser? (y/n) y
 ```
 
-4. Create a new database:
+5. Create a new database:
 
+```bash
+sudo -u postgres createdb c4q
 ```
-sudo -u postgres createdb <yourloginhere>
+
+6. Install pgAdmin3:
+
+```bash
+sudo apt-get install pgadmin3
 ```
+
+7. Start pgadmin through the command line
+
+```bash
+pgadmin3
+```
+
+Or through start menu -> run program -> pgadmin3
+
+8. Click on the plug symbol (`add a connection to a server`)
+
+1. Enter `db` for name
+2. Enter the postgres username (`c4q`) for `username`
+3. Click on the `ok` button.
