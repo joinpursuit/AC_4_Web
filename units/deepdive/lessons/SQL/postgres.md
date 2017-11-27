@@ -15,11 +15,11 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
 
 ### PostgreSQL server running on your Mac with these default settings:
 
-Host: `localhost`
-Port: `5432`
-User: your system user name
-Database: same as user
-Password: none
+Host: `localhost`<br>
+Port: `5432`<br>
+User: your system user name<br>
+Database: same as user<br>
+Password: none<br>
 Connection URL: `postgresql://localhost`
 
 To connect with `psql`, double click a database. To connect directly from the command line, type `psql`.
