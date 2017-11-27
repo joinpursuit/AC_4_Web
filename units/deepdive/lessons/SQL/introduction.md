@@ -122,3 +122,5 @@ Without an OUTER JOIN, we'd never see Steve Leavitt. That's because his `school_
 is NULL. Keep this in mind!
 
 [**Exercises**](../../exercises/SQL/introduction.md)
+
+[**Project**](../../projects/SQL/introduction.md)
