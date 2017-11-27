@@ -121,4 +121,4 @@ show up. We might get something like this:
 Without an OUTER JOIN, we'd never see Steve Leavitt. That's because his `school_id`
 is NULL. Keep this in mind!
 
-[**Exercises**](exercises/SQL/introduction.md)
+[**Exercises**](../../exercises/SQL/introduction.md)
