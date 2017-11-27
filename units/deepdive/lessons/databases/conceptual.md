@@ -97,3 +97,5 @@ FROM
 WHERE
   conditions
 ```
+
+[**Exercises**](../../exercises/databases/databases.md)

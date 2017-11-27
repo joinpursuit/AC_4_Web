@@ -17,6 +17,7 @@
 10. [Databases](lessons/databases/conceptual.md)
 11. [Set up Postgres](lessons/SQL/postgres.md)
 12. [SQL, Postgres, and Joins](lessons/SQL/introduction.md)
+13. [Self Joins and Aggregate Functions](lessons/SQL/self_joins.md)
 
 ## Exercises
 
@@ -31,6 +32,7 @@
 9. [Post Requests](exercises/post_requests/post_requests.md)
 9. [Databases](exercises/databases/databases.md)
 10. [SQL, Postgres, and Joins](exercises/SQL/introduction.md)
+11. [Self Joins and Aggregate Functions](exercises/SQL/self_joins.md)
 
 ## Projects
 
