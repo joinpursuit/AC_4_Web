@@ -61,12 +61,12 @@ The `readFile` method takes as arguments a filename, optionally the encoding (us
 ```js
 fs.readFile('new-file-2.txt', function(err, data) {
   if (err) throw err;
-  console.log(data);
+  console.log(data.toString());
 });
 
 fs.readFile('new-file-2.txt', 'utf8', function(err, data) {
   if (err) throw err;
-  console.log(data.toString());
+  console.log(data);
 });
 ```
 
