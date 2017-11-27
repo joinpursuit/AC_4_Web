@@ -198,7 +198,7 @@ app.post('/moods', (req, res) => {
     return res.send('please specify a name and a mood')
   }
 
-  fs.appendFile('users.json', JSON.stringify(req.body), (err) => {
+  fs.appendFile('moods.json', JSON.stringify(req.body), (err) => {
     if (err) { throw err };
     console.log('Appended to the file!');
     res.json(req.body)
