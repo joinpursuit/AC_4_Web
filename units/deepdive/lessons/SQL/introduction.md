@@ -114,5 +114,6 @@ show up. We might get something like this:
 |1|James|Simpson|12|12|Lapham Elementary|
 |2|Rita|May|12|12|Lapham Elementary|
 |3|Godfrey|Paterson|14|14|O'Keeffe Middle School|
-|4|Eva|Orton|16|16|East High School|
-|5|Patricia|Clark|12|12|Lapham Elementary|
+|3|Steve|Leavitt||||
+|5|Eva|Orton|16|16|East High School|
+|6|Patricia|Clark|12|12|Lapham Elementary|
