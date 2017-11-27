@@ -13,9 +13,9 @@ be a little bit tricky to wrap your head around. So, let's learn about what
 self JOINs are by thinking about why we'd need them.
 
 Consider the following problem. We have a table of `employees`. Some employees
-are managed by other employees. Now, we could make a separate table called `managers`,
-but this seems inefficient—since managers are employees also, their data would
-be duplicated across tables. You can imagine the headaches this would cause if,
+are managed by other employees. Now, we could make a separate table called
+`managers`, but this seems inefficient—since managers are employees also, their data
+would be duplicated across tables. You can imagine the headaches this would cause if,
 say, you had 20,000 employees, or if you didn't structure your queries properly!
 
 There's another solution. We can add a column in our `employees` table called
