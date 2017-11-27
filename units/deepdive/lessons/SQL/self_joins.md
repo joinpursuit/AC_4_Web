@@ -34,4 +34,23 @@ Based on your reading of this table, who is John Ramos' manager? Who is Will
 Randall's?
 
 We can determine this by performing a self JOIN. Self JOINs are exactly like
-they sound—we perform a JOIN on a table with itself.
+they sound—we perform a JOIN on a table with itself. Think of it as joining
+two copies of the same table. In this case, it'd look like this:
+
+```sql
+SELECT team_member.name, manager.name
+FROM employees AS team_member
+INNER JOIN employees AS manager ON manager.id = team_member.manager_id;
+```
+
+As Kat Stapleton is an executive with no manager, our INNER JOIN will
+ensure that she's not listed under `team_member`.
+
+Our output will look something like this:
+
+| team_member   | manager       |
+| ------------- | ------------- |
+|John Ramos|Kat Stapleton|
+|Lisa Frank|Kat Stapleton|
+|Will Randall|Lisa Frank|
+|Wanda Rupert|John Ramos|
