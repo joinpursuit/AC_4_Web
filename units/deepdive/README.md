@@ -14,7 +14,8 @@
 7. [Express - Part 1](lessons/express_1/express_1.md)
 8. [Express - Part 2](lessons/express_2/express_2.md)
 9. [Post Requests](lessons/post_requests/post_requests.md)
-10. [Databases](lessons/SQL/conceptual.md)
+10. [Databases](lessons/databases/conceptual.md)
+11. [SQL, Postgres, and Joins](lessons/SQL/introduction.md)
 
 ## Exercises
 
@@ -27,6 +28,8 @@
 7. [Express - Part 2](exercises/express_2/express_2.md)
 8. [Express - Bonus](exercises/express_2/express_bonus.md)
 9. [Post Requests](exercises/post_requests/post_requests.md)
+9. [Databases](exercises/databases/databases.md)
+10. [SQL, Postgres, and Joins](exercises/SQL/introduction.md)
 
 ## Projects
 

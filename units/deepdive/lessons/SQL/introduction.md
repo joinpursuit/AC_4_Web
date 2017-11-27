@@ -8,6 +8,7 @@
 * [Mac Postgres app](https://postgresapp.com/)
 * [PSequel (Database Visualizer for Mac)](http://www.psequel.com/)
 * [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+* [Wikipedia Entry for NULL](https://en.wikipedia.org/wiki/Null_%28SQL%29)
 
 ## Pulling It All Together
 
@@ -95,3 +96,23 @@ ON teachers.school_id = schools.id
 This would produce a list of teachers with their corresponding schools next to their
 names. It would only include teachers that have `school_id`s that correspond to
 entries in the `schools` table-that's what our `INNER JOIN` is doing.
+
+## NULL- When Nothing is Important
+
+So, what's the real difference between "outer" and "inner" joins?
+
+The answer has something to do with NULL. NULL is SQL's way of saying that
+a piece of data does not exist in the database. INNER JOINs hate NULL values.
+In our above example, if a teacher didn't have a `school_id` (i.e. if it was
+NULL), it wouldn't show up in our response.
+
+However, if we did a FULL OUTER JOIN, teachers without a `school_id` would
+show up. We might get something like this:
+
+| id            | fname          | lname  | school_id | id  | name  |
+| ------------- | ------------- | ----- | --------- | ----- | --------- |
+|1|James|Simpson|12|12|Lapham Elementary|
+|2|Rita|May|12|12|Lapham Elementary|
+|3|Godfrey|Paterson|14|14|O'Keeffe Middle School|
+|4|Eva|Orton|16|16|East High School|
+|5|Patricia|Clark|12|12|Lapham Elementary|
