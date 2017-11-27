@@ -27,5 +27,24 @@ client you have, it should look something like this:
 
 ## Challenge 2
 
-Look around, and try to map out the associations between the different tables.
+Look around and try to map out the associations between the different tables.
 Write them down in your text file.
+
+## Challenge 3
+
+In the console or in your Postgres client's "Query" interface, perform the following
+requests. Write them down in your text file.
+
+* Something fishy is going on with employee number 6. We aren't sure where his
+orders are going. Using the `orders` table, find the American cities that
+`employeeid` 6 is shipping to.
+
+* Some of our suppliers are taking a while to send new products to us. Find out
+the names of the `suppliers` with `products` with less than 10 units in stock.
+**Hint**: Use a JOIN!
+
+* Management is wondering which product categories they should be looking to
+find new products for. Therefore, they need information about which categories
+have the most discontinued products. Request the `categoryname` of categories
+with more than 10 discontinued products. **Hint**: This is a golden opportunity
+to familiarize yourself with GROUP BY and HAVING!
