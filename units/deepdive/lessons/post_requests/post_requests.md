@@ -201,7 +201,7 @@ app.post('/moods', (req, res) => {
   fs.appendFile('moods.json', JSON.stringify(req.body), (err) => {
     if (err) { throw err };
     console.log('Appended to the file!');
-    res.json(req.body)
+    res.send('success')
   });
 })
 ```
