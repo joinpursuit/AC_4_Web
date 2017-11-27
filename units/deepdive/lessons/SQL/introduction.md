@@ -117,3 +117,8 @@ show up. We might get something like this:
 |3|Steve|Leavitt||||
 |5|Eva|Orton|16|16|East High School|
 |6|Patricia|Clark|12|12|Lapham Elementary|
+
+Without an OUTER JOIN, we'd never see Steve Leavitt. That's because his `school_id`
+is NULL. Keep this in mind!
+
+[**Exercises**](exercises/SQL/introduction.md)

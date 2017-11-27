@@ -78,7 +78,7 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 
 ### Which one to use
 
-1. If you need to get publicly available informtion, use the `GET` method.
+1. If you need to get publicly available information, use the `GET` method.
 2. If you need to send a password (or any other sensitive data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
 3. If you want to change the value of data stored on the server (based on input from the request) use the `POST` method.
 
