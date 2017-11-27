@@ -7,6 +7,7 @@
 1. Download, Move to Applications folder and Double Click
 2. Click "Initialize" to create a new server
 3. Configure your $PATH to use the included command line tools:
+
 `sudo mkdir -p /etc/paths.d &&
 echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
 
@@ -14,14 +15,14 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
 
 ### PostgreSQL server running on your Mac with these default settings:
 
-Host	| localhost
-Port	| 5432
-User	| your system user name
-Database	| same as user
-Password	| none
-Connection URL	| postgresql://localhost
+Host: `localhost`
+Port: `5432`
+User: your system user name
+Database: same as user
+Password: none
+Connection URL: `postgresql://localhost`
 
-To connect with psql, double click a database. To connect directly from the command line, type psql. If you’d rather use a graphical client, see below.
+To connect with `psql`, double click a database. To connect directly from the command line, type `psql`.
 
 
 ## Linux
