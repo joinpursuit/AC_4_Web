@@ -54,3 +54,51 @@ Our output will look something like this:
 |Lisa Frank|Kat Stapleton|
 |Will Randall|Lisa Frank|
 |Wanda Rupert|John Ramos|
+
+*A note on "AS"*—remember, you aren't the only one reading your code!
+AS lets you name your output columns descriptively and ensures that your
+SQL requests and responses are clear and readable.
+
+## Math
+
+COUNT, MAX, MIN, SUM, and AVG should be fairly self-explanatory. These are
+called **aggregate functions** in SQL and allow you to parse information
+numerically.
+
+However, if you've played around with these before, you might have noticed an
+error message with the description `aggregate functions are not allowed in WHERE`.
+This is because the WHERE clause in SQL doesn't support these kinds of functions.
+
+Instead, you'll have to use...
+
+## GROUP BY and HAVING
+
+GROUP BY and HAVING frequently work together, and nearly always work with
+aggregate functions. This is because when you aggregate information, you're
+squishing (aggregating) a column together. If you want to extract aggregates
+based on different parameters, you have to GROUP BY those parameters.
+
+Picture it sort of like a slinky. Let's say you had a list of customers, each
+with the country they're from in another column. Let's say you wanted to count
+the number of customers per country.
+
+First, you push the customer data together by way of the COUNT aggregate function.
+Your slinky is completely compressed. Then, you begin to tease out data again
+by grouping it by country. This separates the COUNT sum into country-specific counts.
+Your slinky has bounced out again.
+
+HAVING, in this case, imitates WHERE. If you wanted to, say, only list countries
+with more than 5 customers, you could add that as a stipulation to HAVING.
+This is like taking a pair of wirecutters to your slinky. Not recommended in real
+life, but pretty useful in SQL.
+
+The resulting query (with credit to W3 Schools) looks something like this:
+
+```sql
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+```
+
+[Exercises](../../exercises/SQL/self_joins.md)
