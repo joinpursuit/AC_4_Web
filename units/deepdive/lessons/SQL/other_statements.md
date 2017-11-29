@@ -47,7 +47,35 @@ review a few to make sure we get it:
 Alright, at this point, you should have all the tools to put together a complete
 Express app, with a SQL database and everything!
 
-But how? What does an Express app with an SQL database look like? How do we
+But how? What does an Express app with a SQL database look like? How do we
 integrate our SQL queries into JavaScript?
 
-Great questions.
+Great questions. In order to parse SQL in our Express apps, we're going to use
+a module called pg-promise. Pg-promise connects to our database and produces
+an object, which we'll assign to a variable called `db`.
+
+Once we have this object, the world is our oyster. We can use the methods
+packaged into pg-promise to interact with our SQL database. Like so:
+
+```javascript
+function getAllPuppies(req, res, next) {
+  db.any('select * from pups')
+    .then(function (data) {
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Retrieved ALL puppies'
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+}
+```
+
+Let's slow down and look closely at the above function. We have the method `any`,
+which we're giving a string-formatted SQL request as an argument. True to its name,
+pg-promise returns a Promise object from this method. We can then utilize the `.then`
+method (remember Promises?) to send a response to the client once we fetch the
+data from our database server. We then use `.catch` to handle any errors.
