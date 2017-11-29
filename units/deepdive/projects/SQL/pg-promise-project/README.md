@@ -59,6 +59,6 @@ After pressing `<enter>` you should see something similar to the following in yo
   * `delete`, `/api/puppies/:id`, `removePuppy`
     - Test this in the terminal using:
     
-    ```bash
-    curl -X DELETE http://127.0.0.1:3000/api/puppies/1
-    ```
+      ```bash
+      curl -X DELETE http://127.0.0.1:3000/api/puppies/1
+      ```
