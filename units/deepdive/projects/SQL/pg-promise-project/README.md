@@ -62,3 +62,5 @@ After pressing `<enter>` you should see something similar to the following in yo
       ```bash
       curl -X DELETE http://127.0.0.1:3000/api/puppies/1
       ```
+      
+**HINT: Your pg-promise functions should look similar to `getAllPuppies`. Remember to export and require these functions appropriately!**
