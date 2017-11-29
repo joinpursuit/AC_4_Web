@@ -18,6 +18,8 @@
 11. [Set up Postgres](lessons/SQL/postgres.md)
 12. [SQL, Postgres, and Joins](lessons/SQL/introduction.md)
 13. [Self Joins and Aggregate Functions](lessons/SQL/self_joins.md)
+14. []
+15. [Pug 1](lessons/pug_1/pug_1.md)
 
 ## Exercises
 

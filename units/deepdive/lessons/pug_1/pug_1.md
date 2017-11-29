@@ -11,41 +11,28 @@
 
 ## Introduction to Web Template Engines
 
-One problem with writing html for web content is that we have to hardcode information. Take for example a website that displays a list of recipes, where each recipe consists of a header, an image, a list of ingerdients and a list of steps.
+One problem with writing html for web content is that we have to hardcode information. Take for example a website that displays a list of puppies, where each puppy has a name, breed, age, gender, and a url for an image.
 
 ![recipe list screenshot](assets/screenshot_1.png)
 
-Below is the HTML for a single recipe:
+Below is the HTML for a single puppy:
 
 ```html
 <div class="ui fluid card">
   <div class="content">
-    <a class="header" href="recipes/id/1">Crock Pot Roast</a>
-    <img class="ui medium image" src="http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg" alt="image"/>
-    <h3 class="meta">Ingredients</h3>
-    <div class="description">
-        <ol class="ui ordered list">
-            <li class="item">1 beef roast</li>
-            <li class="item">1 package brown gravy mix</li>
-            <li class="item">1 package dried Italian salad dressing mix</li>
-            <li class="item">1 package dry ranch dressing mix</li>
-            <li class="item">1/2 cup water</li>
-        </ol>
-    </div>
-    <h3 class="meta">Steps</h3>
-    <div class="description">
-        <ul class="ui bulleted list">
-            <li class="item">Place beef roast in crock pot.</li>
-            <li class="item">Mix the dried mixes together in a bowl and sprinkle over the roast.</li>
-            <li class="item">Pour the water around the roast.</li>
-            <li class="item">Cook on low for 7-9 hours.</li>
-        </ul>
-    </div>
+      <a class="header" href="/puppies/1">Tyler</a>
+      <img class="ui medium image" src="http://www.petsworld.in/blog/wp-content/uploads/2015/03/How-To-Make-Your-Puppy-Gain-Weight.jpg" alt="image"/>
+      <div class="meta">breed</div>
+      <div class="description">Retrieved</div>
+      <div class="meta">sex: </div>
+      <div class="description">M</div>
+      <div class="meta">age:</div>
+      <div class="description">3</div>
   </div>
 </div>
 ```
 
-What we want, instead of writing the html by hand, is a way to generate it. We want to be able to get the recipe data from a database or `JSON` file, and use that data to generate our html.
+What we want is a way to generate this html from existing data. We want to be able to get the recipe data from a database or `JSON` file, and use that data to create our html.
 
 It is possible to do the above in pure javasascript. Once we have the recipe data as an array of objects:
 
@@ -53,31 +40,20 @@ It is possible to do the above in pure javasascript. Once we have the recipe dat
 [
   {
     id: 1,
-    name: "Crock Pot Roast",
-    ingredients: [
-      "1 beef roast",
-      "1 package brown gravy mix",
-      "1 package dried Italian salad dressing mix",
-      "1 package dry ranch dressing mix",
-      "1/2 cup water"
-    ],
-    steps: [
-      "Place beef roast in crock pot.",
-      "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-      "Pour the water around the roast.",
-      "Cook on low for 7-9 hours."
-    ],
-    imageURL: "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg"
+    name: "Tyler",
+    breed: "Retriever",
+    sex: "M",
+    age: 3,
+    imageURL: "http://www.petsworld.in/blog/wp-content/uploads/2015/03/How-To-Make-Your-Puppy-Gain-Weight.jpg"
   },
   {
     id: 2,
-    name: "Roasted Asparagus",
-    ingredients: [
-      "1 lb  asparagus",
-      "1 1/2 tbsp olive oil",
-      "1/2 tsp kosher salt"
-    ],
-    ...
+    name: "Snuffles",
+    breed: "Labrador",
+    sex: "F",
+    age: 2,
+    imageURL: "https://www.labradortraininghq.com/wp-content/uploads/2014/02/how-to-crate-train-a-puppy-happy-lab-1.jpg"
+  }
 ```
 
 We can loop over it and use _DOM_ methods such as `createElement` and `appendChild` to create the corresponding html.
@@ -118,6 +94,14 @@ html(lang="en")
       h2 Hello #{name}
 ```
 
+### Online Tester
+
+We will use the online pug rendering tool: [http://pug.surge.sh/](http://pug.surge.sh/)
+
+Try copying and pasting the code above int the _pug_ textarea:
+
+![online render screenshot](assets/screenshot_2.png)
+
 ### Template syntax
 
 The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.
@@ -152,6 +136,12 @@ Which will lead the client to receive the following HTML:
 </body>
 
 </html>
+```
+
+Using the online render tool, we will instead supply data in a json format into the middle textarea:
+
+```json
+{ "name" : "Mike" }
 ```
 
 ### Setting Up Pug with Express
@@ -224,9 +214,5 @@ app.listen(port, () => {
 ```
 
 > Ex. Create an express server that will listen to the route `/:name` and generate a pug template with a greeting for the given name.
-
-### Iteration in Pug
-
-Pug has it'w  
 
 
