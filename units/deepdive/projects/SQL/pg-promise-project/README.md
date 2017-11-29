@@ -51,8 +51,9 @@ After pressing `<enter>` you should see something similar to the following in yo
     - Test this in the terminal using:
     
     ```bash
-    curl -X PUT --data "name=Hunter&breed=annoying&age=33&sex=m" \
-http://127.0.0.1:3000/api/puppies/1
+    
+    curl -X PUT --data "name=Hunter&breed=annoying&age=33&sex=m" \ http://127.0.0.1:3000/api/puppies/1
+    
     ```
     
   * `delete`, `/api/puppies/:id`, `removePuppy`
