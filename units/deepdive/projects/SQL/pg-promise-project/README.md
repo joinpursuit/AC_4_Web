@@ -46,7 +46,7 @@ After pressing `<enter>` you should see something similar to the following in yo
       
       ```
       
-    (Feel free to use different values if you don't want to make an annoying puppy named Whisky.)
+    - (Feel free to use different values if you don't want to make an annoying puppy named Whisky.)
   * `put`, `/api/puppies/:id`, `updatePuppy`
     - Test this in the terminal using:
     
