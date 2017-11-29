@@ -41,8 +41,9 @@ After pressing `<enter>` you should see something similar to the following in yo
     - Test this in the terminal using:
     
       ```bash
-      curl --data "name=Whisky&breed=annoying&age=3&sex=f" \
-http://127.0.0.1:3000/api/puppies
+      
+      curl --data "name=Whisky&breed=annoying&age=3&sex=f" \ http://127.0.0.1:3000/api/puppies
+      
       ```
       
     (Feel free to use different values if you don't want to make an annoying puppy named Whisky.)
