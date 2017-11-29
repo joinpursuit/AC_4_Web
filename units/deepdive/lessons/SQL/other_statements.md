@@ -1,4 +1,6 @@
-# Other Postgres Statements
+# Integrating Express and Postgres
+
+## Other Postgres Statements
 
 Take a look at the `northwind.sql` file in the "Projects" section for this unit.
 This file, to refresh your memory, *seeds* a database with tables and data.
@@ -30,8 +32,22 @@ review a few to make sure we get it:
 * `INSERT INTO _ VALUES _`
   - This allows you to seed your tables with data. Arguments line up 1:1
   with columns.
+* `UPDATE _`
+  - This updates existing values in a table.
+* `DELETE FROM _`
+  - This allows you to delete rows from a table.
 * `ALTER TABLE...` etc.
   - This allows you to create associations between different tables. Remember
   that this has to happen on both ends—both the table containing the foreign
   reference and the primary table being referenced have to have this association
   established.
+
+## pg-promise and Express App Structuring
+
+Alright, at this point, you should have all the tools to put together a complete
+Express app, with a SQL database and everything!
+
+But how? What does an Express app with an SQL database look like? How do we
+integrate our SQL queries into JavaScript?
+
+Great questions.
