@@ -58,6 +58,10 @@ Once we have this object, the world is our oyster. We can use the methods
 packaged into pg-promise to interact with our SQL database. Like so:
 
 ```javascript
+const pgp = require('pg-promise')({});
+
+const db = pgp("postgres://localhost/puppies");
+
 function getAllPuppies() {
   return db.any('select * from pups')
 }
