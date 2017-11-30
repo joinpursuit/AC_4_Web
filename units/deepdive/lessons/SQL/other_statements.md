@@ -58,8 +58,24 @@ Once we have this object, the world is our oyster. We can use the methods
 packaged into pg-promise to interact with our SQL database. Like so:
 
 ```javascript
-function getAllPuppies(req, res, next) {
-  db.any('select * from pups')
+function getAllPuppies() {
+  return db.any('select * from pups')
+}
+
+...
+
+module.exports = {
+  getAllPuppies: getAllPuppies
+};
+```
+
+```javascript
+var express = require('express');
+var router = express.Router();
+var db = require('../db/queries');
+
+router.get('/', (req, res, next) => {
+  db.getAllPuppies()
     .then(function (data) {
       res.status(200)
         .json({
@@ -71,11 +87,36 @@ function getAllPuppies(req, res, next) {
     .catch(function (err) {
       return next(err);
     });
-}
+  }
+);
 ```
 
 Let's slow down and look closely at the above function. We have the method `any`,
 which we're giving a string-formatted SQL request as an argument. True to its name,
-pg-promise returns a Promise object from this method. We can then utilize the `.then`
-method (remember Promises?) to send a response to the client once we fetch the
-data from our database server. We then use `.catch` to handle any errors.
+pg-promise returns a Promise object from this method. So, `getAllPuppies()` returns a Promise of... all the puppies!
+
+We can then utilize the `.then` method (remember Promises?) to send a response to
+the client in our `router.get` function once we fetch the data from our database
+server. We then use `.catch` to handle any errors.
+
+Those of you who are following me might notice that a) literally the only new thing
+we're introducing here is the `db.any` method. You might also think, "okay, so true
+to its name, that function gets anything. But what about getting one thing? Or
+creating something? Or deleting?"
+
+Well, we've got methods for that, all bundled into pg-promise. Here they are:
+
+* Any
+  - Expects 0 - infinity rows.
+* One
+  - Expects a single row. Useful for creating one new row or requesting one row.
+* Many
+  - Expects one or more rows.
+* None
+  - Expects no rows.
+* Result
+  - Returns the original object when resolved. Useful for getting information
+    about, for example, elements you're deleting).
+
+Take a look at today's [**project**]() to get a sense of how to put all of this
+together in Express!
