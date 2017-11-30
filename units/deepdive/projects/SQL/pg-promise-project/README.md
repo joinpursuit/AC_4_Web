@@ -43,16 +43,13 @@ After pressing `<enter>` you should see something similar to the following in yo
 * `put`, `/puppies/:id`, `updatePuppy`
   * Test this in the terminal using:
 
-    ```bash
-
-    curl -X PUT --data "name=Hunter&breed=annoying&age=33&sex=m" \ http://127.0.0.1:3000/api/puppies/1
-    ```
+    ![put request](screenshots/put_request.png?raw=true)
 
 * `delete`, `/api/puppies/:id`, `removePuppy`
-  * Test this in the terminal using:
+  * Test using postman:
 
-    ```bash
-    curl -X DELETE http://127.0.0.1:3000/api/puppies/1
-    ```
+  ![delete request](screenshots/delete_request.png?raw=true)
+
+  
 
 **HINT: Your pg-promise functions should look similar to `getAllPuppies`. Remember to export and require these functions appropriately!**
