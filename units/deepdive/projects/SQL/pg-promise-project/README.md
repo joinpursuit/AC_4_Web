@@ -30,7 +30,7 @@ After pressing `<enter>` you should see something similar to the following in yo
 
 4. Start the server with `npm start`. This will start the express server with `nodemon`.
 
-5. Navigate to `http://localhost:3000/api/puppies/` in your browser. Notice what shows up in the console as well as what you can see in the browser.
+5. Navigate to `http://localhost:3000/puppies/` in your browser. Notice what shows up in the console as well as what you can see in the browser.
 
 6. Take a look at `/db/queries.js` in the text editor of your choice. Notice the function `getAllPuppies`. Now, look at `routes/index.js`. Notice how these two files worked together to a) query your database using the pg-promise function `any` and the proper SQL query and b) route the result to the proper URL.
 
