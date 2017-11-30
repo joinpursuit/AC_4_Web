@@ -113,7 +113,7 @@ Well, we've got methods for that, all bundled into pg-promise. Here they are:
 * Any
   - Expects 0 - infinity rows.
 * One
-  - Expects a single row. Useful for creating one new row or requesting one row.
+  - Expects a single row.
 * Many
   - Expects one or more rows.
 * None
