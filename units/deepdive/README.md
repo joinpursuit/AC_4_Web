@@ -18,7 +18,7 @@
 11. [Set up Postgres](lessons/SQL/postgres.md)
 12. [SQL, Postgres, and Joins](lessons/SQL/introduction.md)
 13. [Self Joins and Aggregate Functions](lessons/SQL/self_joins.md)
-14. []
+14. [SQL and Express](lessons/SQL/other_statements.md)
 15. [Pug 1](lessons/pug_1/pug_1.md)
 
 ## Exercises
@@ -41,3 +41,4 @@
 1. [Make Your Own Module](projects/modules/modules.md)
 2. [NPM - ASCII Text](projects/npm/npm.md)
 3. [SQL and Postgres](projects/SQL/introduction.md)
+4. [SQL and Express](projects/SQL/pg-promise-project)

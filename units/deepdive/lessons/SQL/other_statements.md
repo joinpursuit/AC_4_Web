@@ -118,5 +118,5 @@ Well, we've got methods for that, all bundled into pg-promise. Here they are:
   - Returns the original object when resolved. Useful for getting information
     about, for example, elements you're deleting).
 
-Take a look at today's [**project**]() to get a sense of how to put all of this
-together in Express!
+Take a look at today's [**project**](../../projects/SQL/pg-promise-project) to get
+a sense of how to put all of this together in Express!
