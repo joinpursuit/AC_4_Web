@@ -29,7 +29,7 @@ Below is the HTML for a single puppy:
       <div class="meta">age:</div>
       <div class="description">3</div>
   </div>
-</div>
+</div>no
 ```
 
 What we want is a way to generate this html from existing data. We want to be able to get the recipe data from a database or `JSON` file, and use that data to create our html.
@@ -81,13 +81,13 @@ We will be using [Pug](https://pugjs.org/api/getting-started.html) (formerly kno
 
 Different template languages use different approaches for defining the layout and marking variables — some use HTML to define the layout while, others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in a line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements.
 
-Here is an example of a simple pug template:
+Here is an example of a [simple pug template](http://pug.surge.sh/index.html#hello):
 
 ```pug
 doctype html
 html(lang="en")
   head
-    title Best Page Evrrr
+    title Hello World
   body
     h1 Pug - node template engine
     div(class="container")
@@ -96,9 +96,9 @@ html(lang="en")
 
 ### Online Tester
 
-We will use the online pug rendering tool: [http://pug.surge.sh/](http://pug.surge.sh/)
+We will be using the online pug testing tool: [http://pug.surge.sh/](http://pug.surge.sh/)
 
-Try copying and pasting the code above int the _pug_ textarea:
+Most examples link to it directly.
 
 ![online render screenshot](assets/screenshot_2.png?raw=true)
 
@@ -125,7 +125,7 @@ Which will lead the client to receive the following HTML:
 <html lang="en">
 
 <head>
-  <title>Best Page Evrrr</title>
+  <title>Hello</title>
 </head>
 
 <body>
@@ -217,9 +217,19 @@ app.listen(port, () => {
 
 ### Passing objects
 
-We can pass larger pieces of information to a pug template. Given the arrays of puppies above,  we can pass each puppy object
+We can pass larger pieces of information to a pug template. Given the arrays of puppies above,  we can pass each puppy object, eg:
 
-As a variable to a pug template.
+```js
+{
+  id: 1,
+  name: "Tyler",
+  breed: "Retriever",
+  sex: "M",
+  age: 3
+}
+```
+
+As a variable to a [pug template](file:///home/lev/Desktop/pug-repl/index.html#puppy).
 
 ```pug
 div(class='ui fluid')
@@ -231,7 +241,13 @@ div(class='ui fluid')
       div age: #{age}
 ```
 
-![pug object variable](assets/screenshot_3.png?raw=true)
+Ex. Create an express server with a route `/puppy/:id` that renders the puppy with the given id. Use the following array:
+
+```js
+[{ id: 1, name: 'Goliath', breed: 'Westie', sex: 'M', age: 2},
+{ id: 2, name: 'Agatha' breed: 'Scnauzer', sex: 'F', age: 1},
+{ id: 3, name: 'Furry McShedpants', breed: 'Pomeranian', sex: 'M', age: 4}, { id: 4, name: 'Splenda', breed: 'Maltese', sex: 'F', age: 2}]
+```
 
 Ex. Create a pug template that renders a student object. Send the rendered template on a GET request to `/`.
 
@@ -243,3 +259,5 @@ const students = {
   grade: 95
 }
 ```
+
+### Iteration

@@ -10,6 +10,12 @@ To allow the server to connect to your database, you will need to modify the fol
 
 ![pg_hba screenshot](screenshots/pg_hba.png)
 
+Once the file is saved with the changes, restart postgres using the following command:
+
+```bash
+sudo /etc/init.d/postgresql restart
+```
+
 The number - **`9.5`** is the Postgres version and may vary. Consult your instructor for help. If you do not make this change, the server will **not** be able to connect to your Postgres database.
 
 ## Instructions
