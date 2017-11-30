@@ -38,18 +38,18 @@ After pressing `<enter>` you should see something similar to the following in yo
 * `get`, `/puppies/:id`, `getSinglePuppy`
 * `post`, `/puppies`, `createPuppy`
   * Test using postman:
+
   ![post request](screenshots/post_request.png?raw=true)
+
   * (Feel free to use different values if you don't want to make an annoying puppy named Whisky.)
 * `put`, `/puppies/:id`, `updatePuppy`
-  * Test this in the terminal using:
+  * Test using postman:
 
-    ![put request](screenshots/put_request.png?raw=true)
+  ![put request](screenshots/put_request.png?raw=true)
 
 * `delete`, `/api/puppies/:id`, `removePuppy`
   * Test using postman:
 
   ![delete request](screenshots/delete_request.png?raw=true)
-
-  
 
 **HINT: Your pg-promise functions should look similar to `getAllPuppies`. Remember to export and require these functions appropriately!**
