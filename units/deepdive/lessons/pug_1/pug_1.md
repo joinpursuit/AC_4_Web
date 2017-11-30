@@ -13,7 +13,7 @@
 
 One problem with writing html for web content is that we have to hardcode information. Take for example a website that displays a list of puppies, where each puppy has a name, breed, age, gender, and a url for an image.
 
-![recipe list screenshot](assets/screenshot_1.png)
+![recipe list screenshot](assets/screenshot_1.png?raw=true)
 
 Below is the HTML for a single puppy:
 
@@ -100,7 +100,7 @@ We will use the online pug rendering tool: [http://pug.surge.sh/](http://pug.sur
 
 Try copying and pasting the code above int the _pug_ textarea:
 
-![online render screenshot](assets/screenshot_2.png)
+![online render screenshot](assets/screenshot_2.png?raw=true)
 
 ### Template syntax
 
@@ -195,7 +195,7 @@ Now we can create a `views/` folder and inside it the mentioned above `hello.pug
 
 Your folder structure should look like this:
 
-![folder structure](assets/dir_structure.png)
+![folder structure](assets/dir_structure.png?raw=true)
 
 Now we can add the code in `index.js` for express to start a server and render the template.
 
@@ -215,4 +215,31 @@ app.listen(port, () => {
 
 > Ex. Create an express server that will listen to the route `/:name` and generate a pug template with a greeting for the given name.
 
+### Passing objects
 
+We can pass larger pieces of information to a pug template. Given the arrays of puppies above,  we can pass each puppy object
+
+As a variable to a pug template.
+
+```pug
+div(class='ui fluid')
+    div(class='content')
+      a(class='header') #{name}
+      img(src=imageurl, alt="image")
+      div breed #{breed}
+      div sex: #{sex}
+      div age: #{age}
+```
+
+![pug object variable](assets/screenshot_3.png?raw=true)
+
+Ex. Create a pug template that renders a student object. Send the rendered template on a GET request to `/`.
+
+```js
+const students = {
+  firstName: 'Maggie',
+  lastName: 'Mo',
+  topic: 'Physics',
+  grade: 95
+}
+```
