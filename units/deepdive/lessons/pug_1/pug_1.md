@@ -81,7 +81,7 @@ We will be using [Pug](https://pugjs.org/api/getting-started.html) (formerly kno
 
 Different template languages use different approaches for defining the layout and marking variables — some use HTML to define the layout while, others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in a line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements.
 
-Here is an example of a [simple pug template](http://pug.surge.sh/index.html#hello):
+Here is an example of a [simple pug template](http://pug.surge.sh/#hello):
 
 ```pug
 doctype html
@@ -229,7 +229,7 @@ We can pass larger pieces of information to a pug template. Given the arrays of 
 }
 ```
 
-As a variable to a [pug template](file:///home/lev/Desktop/pug-repl/index.html#puppy).
+As a variable to a [pug template](pug.surge.sh/index.html#puppy).
 
 ```pug
 div(class='ui fluid')
@@ -261,3 +261,18 @@ const students = {
 ```
 
 ### Iteration
+
+Pug has a unique syntax for iteration. We can pass an array as argument to a pug template:
+
+```js
+['dog', 'cat', 'giraffe']
+```
+
+And use pug to [construct a list](pug.surge.sh/#iteration):
+
+```pug
+ul
+  each animal in animals
+    li #{animal}
+```
+
