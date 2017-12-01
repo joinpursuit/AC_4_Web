@@ -222,7 +222,7 @@ app.listen(port, () => {
 We can pass larger pieces of information to a pug template. Given the arrays of puppies above,  we can pass each puppy object, eg:
 
 ```js
-{
+const puppy = {
   id: 1,
   name: "Tyler",
   breed: "Retriever",
@@ -236,11 +236,11 @@ As a variable to a [pug template](http://pug.surge.sh/#puppy).
 ```pug
 div(class='ui fluid')
     div(class='content')
-      a(class='header') #{name}
+      a(class='header') #{puppy.name}
       img(src=imageurl, alt="image")
-      div breed #{breed}
-      div sex: #{sex}
-      div age: #{age}
+      div breed #{puppy.breed}
+      div sex: #{puppy.sex}
+      div age: #{puppy.age}
 ```
 
 Ex. Create an express server with a route `/puppy/:id` that renders the puppy with the given id. Use the following array:
