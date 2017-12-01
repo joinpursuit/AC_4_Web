@@ -236,11 +236,11 @@ As a variable to a [pug template](http://pug.surge.sh/#puppy).
 ```pug
 div(class='ui fluid')
     div(class='content')
-      a(class='header') #{puppy.name}
+      a(class='header') #{name}
       img(src=imageurl, alt="image")
-      div breed #{puppy.breed}
-      div sex: #{puppy.sex}
-      div age: #{puppy.age}
+      div breed #{breed}
+      div sex: #{sex}
+      div age: #{age}
 ```
 
 Ex. Create an express server with a route `/puppy/:id` that renders the puppy with the given id. Use the following array:
