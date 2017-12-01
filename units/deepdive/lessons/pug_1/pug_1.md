@@ -231,7 +231,7 @@ We can pass larger pieces of information to a pug template. Given the arrays of 
 }
 ```
 
-As a variable to a [pug template](pug.surge.sh/index.html#puppy).
+As a variable to a [pug template](http://pug.surge.sh/#puppy).
 
 ```pug
 div(class='ui fluid')
@@ -270,7 +270,7 @@ Pug has a unique syntax for iteration. We can pass an array as argument to a pug
 ['dog', 'cat', 'giraffe']
 ```
 
-And use pug to [construct a list](pug.surge.sh/#iteration):
+And use pug to [construct a list](http://pug.surge.sh/#iteration):
 
 ```pug
 ul
@@ -293,7 +293,7 @@ Given the following array of nobel laureates:
 ]
 ```
 
-We can write the [following pug template](http://pug.surge.sh/#object_iteration):
+We can write the [following pug template](http://pug.surge.sh/#object+iteration):
 
 ```pug
 ul
@@ -311,5 +311,4 @@ Some Standout features of pug that we haven't covered today are:
 * [inheritance](https://pugjs.org/language/inheritance.html)
 * [code](https://pugjs.org/language/code.html)
 
-The above make pug more complex, but also far more powerful.
-
+These make pug more complex, but also more powerful.

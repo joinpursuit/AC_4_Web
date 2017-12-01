@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  h1 Puppies
+  +puppyList(puppies)
+
+mixin puppyList(puppies) 
+  include puppyCard.pug
+  each puppy in puppies
+    +puppyCard(puppy)

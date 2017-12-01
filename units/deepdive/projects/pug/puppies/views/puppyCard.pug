@@ -1,0 +1,16 @@
+
+mixin puppyCard(puppy)
+  //- Setting default values using ES6 object destructuring
+  - const { id = 0, name = "", breed = "", age = 0, sex = "", imageurl = "" } = puppy;
+  - console.log(puppy)
+  div(class='ui fluid card')
+    div(class='content')
+      a(class='header' href=`/puppies/${id}`) #{name}
+      img(class='ui medium image' src=imageurl, alt="image")
+      div(class='meta') breed
+      div(class='description') #{breed}
+      div(class='meta') sex: 
+      div(class='description') #{sex}
+      div(class='meta') age:
+      div(class='description') #{age}
+  
