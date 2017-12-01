@@ -247,7 +247,7 @@ Ex. Create an express server with a route `/puppy/:id` that renders the puppy wi
 
 ```js
 [{ id: 1, name: 'Goliath', breed: 'Westie', sex: 'M', age: 2},
-{ id: 2, name: 'Agatha' breed: 'Scnauzer', sex: 'F', age: 1},
+{ id: 2, name: 'Agatha', breed: 'Scnauzer', sex: 'F', age: 1},
 { id: 3, name: 'Furry McShedpants', breed: 'Pomeranian', sex: 'M', age: 4}, { id: 4, name: 'Splenda', breed: 'Maltese', sex: 'F', age: 2}]
 ```
 
