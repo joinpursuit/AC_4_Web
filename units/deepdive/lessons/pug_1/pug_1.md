@@ -243,23 +243,12 @@ div(class='ui fluid')
       div age: #{age}
 ```
 
-Ex. Create an express server with a route `/puppy/:id` that renders the puppy with the given id. Use the following array:
+Ex. Create an express server with a route `/puppies/:id` that renders the puppy with the given id. Use the following array:
 
 ```js
 [{ id: 1, name: 'Goliath', breed: 'Westie', sex: 'M', age: 2},
 { id: 2, name: 'Agatha', breed: 'Scnauzer', sex: 'F', age: 1},
 { id: 3, name: 'Furry McShedpants', breed: 'Pomeranian', sex: 'M', age: 4}, { id: 4, name: 'Splenda', breed: 'Maltese', sex: 'F', age: 2}]
-```
-
-Ex. Create a pug template that renders a student object. Send the rendered template on a GET request to `/`.
-
-```js
-const students = {
-  firstName: 'Maggie',
-  lastName: 'Mo',
-  topic: 'Physics',
-  grade: 95
-}
 ```
 
 ### Iteration
@@ -293,7 +282,7 @@ Given the following array of nobel laureates:
 ]
 ```
 
-We can write the [following pug template](http://pug.surge.sh/#object+iteration):
+We can write the [following pug template](http://pug.surge.sh/#object_iteration):
 
 ```pug
 ul
@@ -301,6 +290,14 @@ ul
     li
       div First name: #{ laureate.firstName }
       div Last Name: #{ laureate.lastName }
+```
+
+> Ex. Given the array of puppies from before, build a pug template `puppyList.pug` that will render the entire array of puppies.
+
+```js
+app.get('/puppies', (req, res) => {
+  ...
+})
 ```
 
 ### Going farther
