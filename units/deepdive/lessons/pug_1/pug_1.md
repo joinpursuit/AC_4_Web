@@ -94,11 +94,13 @@ html(lang="en")
       h2 Hello #{name}
 ```
 
-### Online Tester
+### Online Editor
 
-We will be using the online pug testing tool: [http://pug.surge.sh/](http://pug.surge.sh/)
+We will be using the online pug testing tool: [http://pug.surge.sh/](http://pug.surge.sh/).
 
-Most examples link to it directly.
+While in `express` we pass javascript values as variables to pug,  the online tool relies on JSON data.
+
+Most of the examples in the lesson link to it directly.
 
 ![online render screenshot](assets/screenshot_2.png?raw=true)
 
@@ -275,4 +277,39 @@ ul
   each animal in animals
     li #{animal}
 ```
+
+### Iterating over arrays of objects
+
+It is equally possible to iterate over arrays that contain objects.
+
+Given the following array of nobel laureates:
+
+```js
+[
+ { firstName: "Hendrik Antoon", lastName: "Lorentz" },
+ { firstName: "Pieter", lastName: "Zeeman" },
+ { firstName: "Antoine Henri", lastName: "Becquerel"},
+ { firstName: "Marie", lastName: "Curie, née Sklodowska"}
+]
+```
+
+We can write the [following pug template](http://pug.surge.sh/#object_iteration):
+
+```pug
+ul
+  each laureate in laureates
+    li
+      div First name: #{ laureate.firstName }
+      div Last Name: #{ laureate.lastName }
+```
+
+### Going farther
+
+Some Standout features of pug that we haven't covered today are:
+
+* [mixins](https://pugjs.org/language/mixins.html)
+* [inheritance](https://pugjs.org/language/inheritance.html)
+* [code](https://pugjs.org/language/code.html)
+
+The above make pug more complex, but also far more powerful.
 
