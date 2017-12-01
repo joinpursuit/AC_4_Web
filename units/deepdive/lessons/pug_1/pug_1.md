@@ -274,7 +274,7 @@ It is equally possible to iterate over arrays that contain objects.
 Given the following array of nobel laureates:
 
 ```js
-const laureateArr = [
+const laureates = [
  { firstName: "Hendrik Antoon", lastName: "Lorentz" },
  { firstName: "Pieter", lastName: "Zeeman" },
  { firstName: "Antoine Henri", lastName: "Becquerel"},
@@ -295,7 +295,7 @@ ul
 To render the array in javascript, we would need to provide an object with a key `laureates` and the array as the value.
 
 ```js
-res.render('laureates', {laureates: laureateArr})
+res.render('laureates', {laureates: laureates})
 ```
 
 > Ex. Given the array of puppies from before, build a pug template `puppyList.pug` that will render the entire array of puppies.
