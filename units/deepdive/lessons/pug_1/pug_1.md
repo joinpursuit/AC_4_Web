@@ -34,7 +34,7 @@ Below is the HTML for a single puppy:
 
 What we want is a way to generate this html from existing data. We want to be able to get the recipe data from a database or `JSON` file, and use that data to create our html.
 
-It is possible to do the above in pure javasascript. Once we have the recipe data as an array of objects:
+It is possible to do the above in pure javascript. Once we have the recipe data as an array of objects:
 
 ```js
 [
@@ -74,7 +74,7 @@ const createHTML = (name) => `
 
 Web templates are more like the latter approach, but provide additional benefits over template literals.
 
-A template engine is similar to a programming lanuage - each engine has its own syntax
+A template engine is similar to a programming language - each engine has its own syntax
 Template engines generates html from _template_ files.  Templates file define the layout of an HTML document, with variables  where data to be inserted at a later point. (when the template is _rendered_).
 
 We will be using [Pug](https://pugjs.org/api/getting-started.html) (formerly known as _Jade_) for our templates.
