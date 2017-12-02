@@ -231,16 +231,20 @@ const puppy = {
 }
 ```
 
-As a variable to a [pug template](http://pug.surge.sh/#puppy).
+As a variable to a [pug template](http://pug.surge.sh/#puppy) called `puppy.pug`.
+
+```js
+res.render('puppy', { puppy: puppy })
+```
 
 ```pug
 div(class='ui fluid')
     div(class='content')
-      a(class='header') #{name}
+      a(class='header') #{puppy.name}
       img(src=imageurl, alt="image")
-      div breed #{breed}
-      div sex: #{sex}
-      div age: #{age}
+      div breed #{puppy.breed}
+      div sex: #{puppy.sex}
+      div age: #{puppy.age}
 ```
 
 Ex. Create an express server with a route `/puppies/:id` that renders the puppy with the given id. Use the following array:
