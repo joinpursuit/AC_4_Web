@@ -20,6 +20,7 @@
 13. [Self Joins and Aggregate Functions](lessons/SQL/self_joins.md)
 14. [SQL and Express](lessons/SQL/other_statements.md)
 15. [Pug 1](lessons/pug_1/pug_1.md)
+16. [Pug 2](lessons/pug_1/pug_1.md)
 
 ## Exercises
 
