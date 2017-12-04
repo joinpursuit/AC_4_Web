@@ -1,4 +1,4 @@
-# The Pug Template Engine - Part 1
+# The Pug Template Engine - Part 2
 
 ## Resources
 
