@@ -1,6 +1,6 @@
 # Practice Assignment 1
 
-## Keyowrds
+## Keywords
 
 * AJAX
 * Fetch / XMLHTTPRequest
