@@ -2,10 +2,10 @@
 
 ## Keyowrds
 
-* ajax
-* fetch / xmlhttprequest
+* AJAX
+* Fetch / XMLHTTPRequest
 * Object.keys
-* event listeners
+* Event Listeners
 
 ## Instructions
 
@@ -15,9 +15,9 @@ Create a filterable list of emojis using the following emoji dictionary: [https:
 
 ### Level 1
 
-When the document loads, make an ajax request (using fetch or XMLHTTPRequest) to the url above to get all the emojis.  The response will be an object in which each key is the name of an emoji, and each value is the emoji's url. Parse the response to display the emoji names and images like in the screenshot above.
+When the document loads, make an AJAX request (using Fetch or XMLHTTPRequest) to the URL above to get all the emojis.  The response will be an object where each key is the name of an emoji and each value is the emoji's URL. Parse the response to display the emoji names and images like in the screenshot above.
 
-**hint**: you may use `Object.keys` to get an array of al the property names contained within an object.
+**hint**: you may use `Object.keys` to get an array of all the property names contained within an object.
 You could then use the property names to access the values.
 
 ### Level 2
