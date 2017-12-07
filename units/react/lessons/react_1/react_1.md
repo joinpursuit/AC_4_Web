@@ -4,8 +4,9 @@
 
 * [Classes - mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 * [React - Official Website](https://reactjs.org/)
-* [Rendering Elements - Official Website](https://reactjs.org/docs/rendering-elements.html)
-* [React.Component - Official Website](https://reactjs.org/docs/react-component.html)
+* [Rendering Elements - React Docs](https://reactjs.org/docs/rendering-elements.html)
+* [React.Component - React Docs](https://reactjs.org/docs/react-component.html)
+* [Handling Events - React Docs](https://reactjs.org/docs/handling-events.html)
 * [CodeSanbox - An online code editor for React](https://codesandbox.io)
 
 ## Lesson
