@@ -103,7 +103,9 @@ In React, we define classes, but we do not need to instantiate them (i.e. no use
 
 For the time being, we will be using an online code editor for React called [Code Sandbox](https://codesandbox.io/). Later on we will learn how to set up React locally. To save your work in the online editor, you will need to sign in with github.
 
-Note that the files for the current project are avaialbe in the menu to the left. These may also avaialbe as tabs, although the tabs may be closed. To keep a tab open, click on a file from the left-side menu and then press `<ctrl> + <s>`.
+The files for the current project are avaialbe in the menu to the left. These may also avaialbe as tabs, although the tabs may be closed. To keep a tab open, click on a file from the left-side menu and then press `<ctrl> + <s>`.
+
+**Most of the titles to follow link to code examples in the sandbox.**
 
 ### [Our first React Example](https://codesandbox.io/s/5zqmz1l7rk)
 
