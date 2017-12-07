@@ -10,9 +10,13 @@ Create a react component that will compare the password of two input fields. Sto
 
 As the user inserts input into the password fields, display a message below the password to indicate if these are identical or not.
 
+### Bonus
+
+Add a `clear` button that will clear both password fields.
+
 ## Font Size
 
-Create a react component that will display the first two verses of a poem by Luis Carrol:
+Create a react component called `Reader` that will display the first two verses of the following poem:
 
 ```text
 You are old, Father William (Carroll)
@@ -26,6 +30,8 @@ Do you think, at your age, it is right?”
 But now that I’m perfectly sure I have none,
 Why, I do it again and again.”
 ```
+
+Define the poem outside the class, and pass it the text as a prop.
 
 Use a `<pre>` tag to display the poem in your `render` function. In your html file, define three css classes under a `<style>` tag:
 
