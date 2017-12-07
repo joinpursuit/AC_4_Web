@@ -245,7 +245,6 @@ As is the case with functions, each component can also accept arguments. The arg
 
 ### [Our First Props](https://codesandbox.io/s/21q40zrn6j)
 
-
 To pass an argument (i.e. prop) to a react component, we do the following:
 
 ```jsx
@@ -262,13 +261,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1> Hello {this.props.firstName}</h1>
+        <h1>
+          Hello {this.props.firstName}
+        </h1>
         ...
       </div>
     )
   }
 }
 ```
+
+Note that to access a javascript value from within JSX, we enclose that value with curly braces (`{...}`).
 
 ### `state`
 
@@ -297,7 +300,7 @@ Following the definition of the `state` property, we use it as usual:
     return (
       <div>
         <h1> Hello {this.state.firstName} </h1>
-        <div className='myClass'> 
+        <div className='myClass'>
           I am a stateful react component
         </div>
       </div>
