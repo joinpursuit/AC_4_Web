@@ -195,7 +195,9 @@ React.createElement(
 
 The html-looking syntax is called [JSX](https://reactjs.org/docs/jsx-in-depth.html). exists for the convenience of developers, as it is much easier to both read and write then the long-hand `createElement` syntax.
 
-As we can already see in the example above the first difference between JSX and html syntax. In JSX we write `className` instead of `class`. The reason for this is that JSX eventually becomes javascript, and `class` is a reserved keyword in javascript (along with `var`, `let`, `function`, etc.). So for most html keywords that have the potential to conflict with javascript, therese is a similar-but-different JSX syntax.
+As we can already see in the example above the first difference between JSX and html syntax.
+
+* In JSX we write `className` instead of `class`. The reason for this is that JSX eventually becomes javascript, and `class` is a reserved keyword in javascript (along with `var`, `let`, `function`, etc.). So for most html keywords that have the potential to conflict with javascript, therese is a similar-but-different JSX syntax.
 
 #### Activity: ReactDom.render generates html
 
@@ -239,6 +241,10 @@ ReactDom.render(
 ```
 
 When we render a component in this fashion, what react will do is take all the JSX elements defined within the component's `render` function. So, we can think about each component as a function that returns some JSX elements.
+
+### JSX Closing Tags
+
+In JSX, every element must have a closing tag. When it comes do tags like `div` and `p` - this behavior is the same as in HTML. However, in cases when there is no separate closing tag, we need to close the element with `/>` and not just with `>`.
 
 ### `props`
 
@@ -360,18 +366,4 @@ Note that react is quite efficient at rendering and re-rendering. Even though th
 > Ex. Inspect the html of the rendered elements. As you click on the button, note which parts of the page get re-rendered (they will momentarily flash in blue).
 
 ![counter screenshot](assets/counter.png?raw=true)
-
-### Exercises
-
-#### Counter 1
-
-Create a react component with two buttons - plus (`+`) and minus (`-`), and the text `The count is _`. The count should start at `0`. Every time the `+` button is clicked, add `1` to the count. Every time the `-` button is clicked, subtract `1` from the count. Use the component's `state` to keep track of the count.
-
-#### Counter 2
-
-Add a `reset` button that will set the count to `0`.
-
-#### Counter 3
-
-Add a `random` button that will set the count to a whole random number between `1` and `10`.
 
