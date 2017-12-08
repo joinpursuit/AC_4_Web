@@ -177,7 +177,7 @@ We have seen `require` statements before when working with Node. Some recent dev
 
 #### ReactDom.render and HTML in JS
 
-While `ReacDom.render` looks like a regular function call, something truly weird seems to be happening inside of it. Namely, the first argument looks like an html tag.
+While `ReactDom.render` looks like a regular function call, something truly weird seems to be happening inside of it. Namely, the first argument looks like an html tag.
 
 ```jsx
 ReactDom.render(
@@ -288,7 +288,7 @@ A component can also have its own variables. All of a component's variables must
 
 ### [Our First Stateful Component](https://codesandbox.io/s/2wvoll9wvr)
 
-Note that since we are defining a `constructor` function on class that extends another class, we must include a call to `super` in oreder for the parent component to work:
+Note that since we are defining a `constructor` function on class that extends another class, we must include a call to `super` in order for the parent component to work:
 
 ```jsx
 class App extends React.Component {
@@ -310,7 +310,7 @@ Following the definition of the `state` property, we use it as usual:
       <div>
         <h1> Hello {this.state.firstName} </h1>
         <div className='myClass'>
-          I am a stateful react component
+          I am a stateful React component
         </div>
       </div>
     )
@@ -320,7 +320,7 @@ Following the definition of the `state` property, we use it as usual:
 
 ### [Changing State](https://codesandbox.io/s/qk902r2ymw)
 
-In react, the state of a component changes in response to events. Events are typically trigerred in response to (user) actions. For example, we may want to have a component with a button, and a counter that displays how many times the button was clicked. In our component's render function, we set the state with a `count` variable.
+In React, the state of a component changes in response to events. Events are typically triggered in response to (user) actions. For example, we may want to have a component with a button and a counter that displays how many times the button was clicked. In our component's constructor function, we set the state with a `count` variable.
 
 ```jsx
 class Counter extends React.Component {
@@ -347,23 +347,23 @@ Note two important points:
 
 #### Point #1:  Method Syntax
 
-The syntax of the method looks different than usual. We could have define the method like this:
+The syntax of this method looks different than usual. We could have define the method like this:
 
 ```jsx
-  handlClick(){
+  handleClick(){
     ...
   }
 ```
 
-but definining it as `hadleClick = () => {...}` ensures it will be bound properly to the `Counter` class. Recally some issues we had with the `this` keyword being lost or pointing at the wrong thing. This (recent) syntax is a simple solution to that problem. We will discuss this issue in depth in later lessons. Meanwhile, remember the following: if you want a function that uses the `this` keyword and will be called in response to an event, define it with the syntax we have used here.
+but defining it as `handleClick = () => {...}` ensures it will be bound properly to the `Counter` class. Recall some issues we had with the `this` keyword being lost or pointing at the wrong thing. This (recent) syntax is a simple solution to that problem. We will discuss this issue in depth in later lessons. Meanwhile, remember the following: if you want a function that uses the `this` keyword and will be called in response to an event, define it with the syntax we have used here.
 
 #### Point #2: Using `setState`
 
-In react, we never change `state` directly, but only through the `setState` function. This function is defined in the `React.Component` we always extends, and accepts a single argument: an object with the parts of the state that we want to change. If our component had other propeties to the `state` object other than `count`, these would remain unchanged in our example, since we are passing an object with only a `count` property. Once the `setState` method has changed the state of our component, it will automatically call the `render` function. This way, the latest information from `state` - in this case the count, will always appear to the user.
+In React, we never change `state` directly, but only through the `setState` function. This function is defined in the `React.Component` class we always extend, and accepts a single argument: an object with the parts of the state that we want to change. If our component had other properties to the `state` object other than `count`, these would remain unchanged in our example, since we are passing an object with only a `count` property. Once the `setState` method has changed the state of our component, it will automatically call the `render` function. This way, the latest information from `state`- in this case the count- will always appear to the user.
 
 #### Activity: Rerendering Efficiently
 
-Note that react is quite efficient at rendering and re-rendering. Even though the `render` function is called on every change to `state`, react would only modify the parts of the html that have changed.
+Note that React is quite efficient at rendering and re-rendering. Even though the `render` function is called on every change to `state`, React would only modify the parts of the HTML that have changed.
 
 > Ex. Inspect the html of the rendered elements. As you click on the button, note which parts of the page get re-rendered (they will momentarily flash in blue).
 
