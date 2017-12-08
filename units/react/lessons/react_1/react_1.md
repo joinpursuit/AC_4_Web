@@ -48,9 +48,9 @@ class Animal {
   }
 }
 
-let myDog = new Animal('Loona')
+let myDog = new Animal('Luna')
 myDog.speak('woof')
-// => 'Loona says "woof"'
+// => 'Luna says "woof"'
 ```
 
 The `class` combines the constructor function and the prototype methods. The constructor is the lowercase `constructor` and will be invoked whenever we create a new object using the class. The other methods will be automatically be added to the common prototype.
