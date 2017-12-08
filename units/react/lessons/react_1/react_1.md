@@ -30,9 +30,9 @@ Animal.prototype.speak = function(words) {
   return `${this.name} says "${words}"`;
 }
 
-let dog = new Animal('Loona')
+let dog = new Animal('Luna')
 dog.speak('woof')
-// => 'Loona says "woof"'
+// => 'Luna says "woof"'
 ```
 
 Here is the corresponding `class` definition:
@@ -75,9 +75,9 @@ class Dog extends Animal {
 
 let myDog = new Dog('Loona')
 myDog.speak('haha!')
-// => 'Loona says "haha!"'
+// => 'Luna says "haha!"'
 myDog.bark()
-// => 'Loona barks.'
+// => 'Luna barks.'
 ```
 
 When extending a `class`, we always need to call `super` with the arguments the _parent_ class consturctor was expecting. Above, `super` function calls the constructor for the `Animal` class with the provided name. We may omit both `super` and `consturctor` entirely if we do _not_ need to add anything to the consturctor:
