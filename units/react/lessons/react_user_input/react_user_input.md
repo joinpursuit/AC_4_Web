@@ -8,7 +8,7 @@
 
 In the last lesson we have seen different uses of a text input in react. We can apply similar principles to other common form components.
 
-#### [Likes Ice Cream](https://codesandbox.io/s/kwvqk2l405)
+#### Select: [Likes Ice Cream](https://codesandbox.io/s/kwvqk2l405)
 
 Let's say that we want to ask the users if they likes ice cream.
 
@@ -35,7 +35,7 @@ We will then define a method called `handleLikesIceCream` that will change the `
   }
 ```
 
-Finally, we will first create the `<select>` element with two `<option>`s, `yes!` and `nope`. 
+Finally, we will create the `<select>` element with two `<option>`s, `yes!` and `nope`.
 
 ```jsx
 render() {
@@ -51,10 +51,9 @@ render() {
         ...
 ```
 
-Note that the above is a controlled element. When the user chooses an option, the `handleLikesIceCream` function will be called, changing the corresponding state property `likesIceCream`. Once we call the `setState` function, react will change the state, and then call the component's render function. This will give the `select` element its new value from the state.
+Note that the above is a controlled element. When the user chooses an option, the `handleLikesIceCream` function will be called, changing the corresponding state property `likesIceCream`. Once we call the `setState` function, react will change the state, and then call the component's `render` function. This will give the `select` element its new value from the state.
 
-We may want to render something based on the user's choice in the select input. For example, if the like ice cream, we may write, `"great!"`, and if the don't we will write `"go home!"`.
-In react this is called conditional rendering, and is freqently done in the following manner:
+We may want to render something based on the user's choice in the `select` input. For example, if the user likes ice cream, we will write `"great!"`, and if they don't we will write `"go home!"`. In react this is called _conditional rendering_, and is freqently done in the following manner:
 
 ```jsx
       ...
@@ -65,11 +64,11 @@ In react this is called conditional rendering, and is freqently done in the foll
       ...
 ```
 
-Note that the above ternary condition will alway return one of two options. This means that at any point in our component, either "Great" or "Go Home" will be rendered.
+Note that the above ternary condition will alway return one of two options. This means that at any point either "Great" or "Go Home" will be rendered.
 
 #### Activity
 
-Replace the conditional render above with a text input for the user's favorite ice cream flavor.
+Replace the text `"Great!"` in the conditional render above with a text input for the user's favorite ice cream flavor.
 
 ### [Favorite Color](https://codesandbox.io/s/0xnx34po8n)
 
@@ -92,7 +91,7 @@ Next, we will write a `handleColorSelect` function:
 ```jsx
   handleColorSelect = e => {
     this.setState({
-      name: e.target.value
+      favoriteColor: e.target.value
     })
   };
 ```
