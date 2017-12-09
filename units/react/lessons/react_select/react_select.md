@@ -129,13 +129,15 @@ First, we will create a component called `Select` this component will take as `p
 class Select extends React.Component {
   render() {
     const { values, selectedValue, handleSelect } = this.props
+    // Using the es6 spread operator to create a new array
+    const displayValues = ['', ...values]
 
     return (
       <select
         value={selectedValue}
         onChange={handleSelect}
       >
-        {values.map(val =>
+        {displayValues.map(val =>
           <option value={val}>{val}</option>)}
       </select>
     )
@@ -143,7 +145,11 @@ class Select extends React.Component {
 }
 ```
 
-Note that the component above has no `state`. It is entirely depended on the arguments provided to it as `props`. We indend for a another, _parent component_, to render it. That parent component will keep in its own `state` the selected value.
+Note that the component above has no `state`. It is entirely depended on the arguments provided to it as `props`. We indend for a another, _parent component_, to render this component. That parent component will keep in its own `state` the selected value.
+
+Also note that we create a new array called `displayValues` (using the [es6 spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)). This array has an extra first value - the empty string. This way, when the `Select` component is initially rendered, there will be no value selected.
+
+### Rewriting `ColorSelect`
 
 Now let's rewrite the `ColorSelect` component. We wil change it's name to `App` - the customary name for the top-level (or _root_) component in react. The constructor function will stay the same, as will the `handleColorSelect`. Only the render function will change:
 

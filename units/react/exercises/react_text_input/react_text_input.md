@@ -14,7 +14,7 @@ As the user inserts input into the password fields, display a message below the 
 
 Add a `clear` button that will clear both password fields.
 
-## Font Size
+## Reader
 
 Create a react component called `Reader` that will display the first two verses of the following poem:
 
