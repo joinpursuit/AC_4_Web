@@ -112,4 +112,4 @@ Finally, in the render function, we will write the `select` tag as usual, but ge
           </select>
 ```
 
-Note above that we _map_ each color in the array to a `JSX` tag with value and text equal to the color. We are in essence creating an array of JSX elements. Recat know how to handle such a JSX array and will render the html correctly.
+Note above that we _map_ each color in the array to a `JSX` tag, with value and text equal to the value of the color. React knows how to handle the resulting array of JSX elements will render it to html.
