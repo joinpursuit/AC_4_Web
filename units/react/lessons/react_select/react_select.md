@@ -93,7 +93,7 @@ Next, we will write a `handleColorSelect` function:
 ```jsx
   handleColorSelect = e => {
     this.setState({
-      favoriteColor: e.target.value
+      favoriteColor: e.target.options[e.target.selectedIndex].value
     })
   };
 ```
