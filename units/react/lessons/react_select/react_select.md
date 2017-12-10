@@ -32,7 +32,7 @@ We will then define a method called `handleLikesIceCream` that will change the `
 ```jsx
   handleLikesIceCream = e => {
     this.setState({
-      likesIceCream: e.target.value
+      likesIceCream: e.target.options[e.target.selectedIndex].value
     })
   }
 ```
