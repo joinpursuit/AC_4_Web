@@ -6,7 +6,7 @@
 
 ## Lesson
 
-One of react's strengths is in handling dynamic ui. One such case is when the html changes based on user input.
+One of React's strengths is in handling dynamic UI. One such case is when the HTML changes based on user input.
 
 ### [Greeter v1](https://codesandbox.io/s/lx4m5w4k7z)
 
@@ -62,7 +62,7 @@ The `handleInputChange` function is passed the input event as an argument. It th
 
 #### Activity: Inspecting the DOM
 
-Inspect the generated html and find the rendered DOM elements. You should be able to see the following:
+Inspect the generated HTML and find the rendered DOM elements. You should be able to see the following:
 
 ![Greeter v1 Screenshot](assets/greeter_v1.png)
 
@@ -70,7 +70,7 @@ Note which DOM elements get re-rendered when you insert an input.
 
 ### (Un)Controlled Input
 
-In the example above, we allowed the HTML input field to behave in its default way. Every html input field is interactive, as it keeps track of its own "state", where the state consists of the user's input to that field. We can, instead, give our react component control over the input field.
+In the example above, we allowed the HTML input field to behave in its default way. Every HTML input field is interactive, as it keeps track of its own "state," where the state consists of the user's input to that field. We can, instead, give our React component control over the input field.
 
 ### [Greeter v2](https://codesandbox.io/s/xp15yr6x2z)
 
@@ -110,7 +110,7 @@ Try to comment the following in the `render` function.
   };
 ```
 
-Now you try to insert your name, you will notice that the input field doesn't change. Compare the html DOM when the line above is commented and uncommented, and try to answer why the input value is not changing.
+Now, if you try to insert your name, you will notice that the input field doesn't change. Compare the HTML DOM when the line above is commented and uncommented, and try to answer why the input value is not changing.
 
 ### [Clearing the Input](https://codesandbox.io/s/9y3qx7k5jo)
 
@@ -147,11 +147,11 @@ render() {
       ...
 ```
 
-Now, whenver we click on the `clear` button, both the input field and the greeting will be cleared.
+Now, whenever we click on the `clear` button, both the input field and the greeting will be cleared.
 
 ### [Validating Input](https://codesandbox.io/s/p5rrx26ln0)
 
-We can also validate the user input using controlled input fields. LEt's say we would like to get a username that is between `3` and `8` characters long. We will define the `state` with two variables:
+We can also validate the user input using controlled input fields. Let's say we would like to get a username that is between `3` and `8` characters long. We will define the `state` with two variables:
 
 ```jsx
   ...
