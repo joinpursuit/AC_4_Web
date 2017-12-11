@@ -258,7 +258,7 @@ To pass an argument (i.e. prop) to a react component, we do the following:
 
 ```jsx
 ReactDom.render(
-  <App firstName='Loona'/>,
+  <App firstName='Luna'/>,
   ...
 );
 ```
