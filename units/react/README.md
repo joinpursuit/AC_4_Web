@@ -8,7 +8,8 @@
 2. [React - Text Input](lessons/react_text_input/react_text_input.md)
 3. [React - `select`s](lessons/react_select/react_select.md)
 4. [React - `checkbox`es](lessons/react_checkbox/react_checkbox.md)
-5. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
+5. [React - Radio Buttons](lessons/react_radio_buttons/react_radio_buttons.md)
+6. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
 
 ## Exercises
 
