@@ -52,7 +52,7 @@ const port = 8000;
 
 const app = express()
 
-app.use(morgan('dev'))
+app.use(logger('dev'))
 
 ...
 
