@@ -48,3 +48,7 @@ Use a `<pre>` tag to display the poem in your `render` function. In your html fi
 ```
 
 Above the poem, include a text input titled `fontSize` which will display the value of a state property with the same name. Set it initially to the string `'small'`. Whenever the `render` function is called, check if `fontSize` has one of the values `small`, `medium` or `large`. If it does, assign the appropriate class to the `pre` tag that displays the poem. If the value of `fontSize` is something else, assign the class `small` to the `pre` tag.
+
+## Celsius - Fahrenheit
+
+Create a component with two input fields, one for temperature in fahrenheit and one for temperature in celsius. Whenever one of the fields is changed, the other should change accordingly. I.e. if the fahrenheit is changed, the celsius will be updated. If the celsius is changed, the fahrenheit will be updated.
