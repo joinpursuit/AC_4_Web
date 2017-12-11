@@ -14,7 +14,6 @@ Create a component that will render a list with three items and three correspond
 
 **hint**: You may store the number of chosen items in a separate property in the component's `state`. Then you can update that property in the `handleCheckBoxChange` function.
 
-
 ### Select All
 
 Create a react component that will three options and three corresponding checkboxes. Above these, add two buttons:
@@ -23,8 +22,6 @@ Create a react component that will three options and three corresponding checkbo
 * `select none`: will uncheck all checkboxes.
 
 ![select all none](assets/select_all_none.png)
-
-
 
 ### Cats, Dogs, or Neither
 
