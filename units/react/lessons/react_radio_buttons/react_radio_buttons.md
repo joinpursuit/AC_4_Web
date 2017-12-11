@@ -130,3 +130,5 @@ And that's it. Now to add another radio button, all we have to do is add another
 
 1. Add three animal of your choice to the `animals` array.
 2. Change the caption: `do you prefer ________ ` to dynamically display the animal names, based on the `animals` array.  **hint**: use an array method.
+
+The result for `2` will not be perfect: we may want to have "or ____" instead of a comma at the end, as in: `"cats, dogs or giraffes"` instead of `"cats, dogs, giraffes"`. You will get to try and make that happen during to todays exercises.
