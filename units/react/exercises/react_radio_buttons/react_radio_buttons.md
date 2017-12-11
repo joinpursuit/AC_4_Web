@@ -6,6 +6,25 @@ Modify the `Reader` component from the text input lesson to display radio button
 
 ![radio reader](assets/radio_reader.png?raw=true)
 
+Use the following [inline styles](https://www.reactenlightenment.com/react-jsx/5.6.html) instead of those in the `html` document:
+
+```js
+const fontSizes = {
+  small: {
+    fontSize: "12px"
+  },
+  medium: {
+    fontSize: "14px"
+  },
+  large: {
+    fontSize: "16px"
+  },
+  humongous: {
+    fontSize: "48px"
+  }
+};
+```
+
 ## arrToNames
 
 Craete a `arrToNames` function that will take an array of strings, such as `['cats', 'dogs', 'giraffes']` and return a single string where:
