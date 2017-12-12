@@ -8,11 +8,11 @@
 
 ### Lesson
 
-In the last lesson we have seen different uses of a text input in react. We can apply similar principles to other common form components.
+In the last lesson we have seen different uses of text input in React. We can apply similar principles to other common form components.
 
 #### Select: [Likes Ice Cream](https://codesandbox.io/s/kwvqk2l405)
 
-Let's say that we want to ask the users if they likes ice cream.
+Let's say that we want to ask the users if they like ice cream.
 
 We will define our state to have a `likesIceCream` property, which we will initially set to the string `"yes"`.
 
@@ -37,7 +37,7 @@ We will then define a method called `handleLikesIceCream` that will change the `
   }
 ```
 
-Finally, we will create the `<select>` element with two `<option>`s, `yes!` and `nope`.
+Finally, we will create a `<select>` element with two `<option>`s, `yes!` and `nope`.
 
 ```jsx
 render() {
@@ -53,9 +53,9 @@ render() {
         ...
 ```
 
-Note that the above is a controlled element. When the user chooses an option, the `handleLikesIceCream` function will be called, changing the corresponding state property `likesIceCream`. Once we call the `setState` function, react will change the state, and then call the component's `render` function. This will give the `select` element its new value from the state.
+Note that the above is a controlled element. When the user chooses an option, the `handleLikesIceCream` function will be called, changing the corresponding state property `likesIceCream`. Once we call the `setState` function, React will change the state, and then call the component's `render` function. This will give the `select` element its new value from the state.
 
-We may want to render something based on the user's choice in the `select` input. For example, if the user likes ice cream, we will write `"great!"`, and if they don't we will write `"go home!"`. In react this is called _conditional rendering_, and is freqently done in the following manner:
+We may want to render something based on the user's choice in the `select` input. For example, if the user likes ice cream, we will write `"great!"`, and if they don't, we will write `"go home!"`. In React, this is called _conditional rendering_, and is freqently done in the following manner:
 
 ```jsx
       ...
@@ -66,7 +66,7 @@ We may want to render something based on the user's choice in the `select` input
       ...
 ```
 
-Note that the above ternary condition will alway return one of two options. This means that at any point either "Great" or "Go Home" will be rendered.
+Note that the above ternary condition will always return one of two options. This means that at any point either "Great" or "Go Home" will be rendered.
 
 #### Activity
 
