@@ -2,7 +2,7 @@
 
 ## Ordering Pizza
 
-Create a react `PizzaOrder` component with two select elements - one for crust (thick or thin) and one for cheese (mozzarella, chedar, colby, provolone). If the user has selected both a crust and a cheese (i.e. the selected values are not empty strings), display an order summary:
+Create a React `PizzaOrder` component with two `select` elements - one for crust (thick or thin) and one for cheese (mozzarella, cheddar, colby, provolone). If the user has selected both a crust and a cheese (i.e. the selected values are not empty strings), display an order summary:
 
 ![order summary](assets/order_summary.png)
 
@@ -12,7 +12,7 @@ If the user did not select a crust and a cheese, display the message: 'please se
 
 ## Reader v2
 
-Create a react component called `Reader` that will display the first two verses of the following poem:
+Create a React component called `Reader` that will display the first two verses of the following poem:
 
 ```text
 You are old, Father William (Carroll)
@@ -27,9 +27,9 @@ But now that I’m perfectly sure I have none,
 Why, I do it again and again.”
 ```
 
-Define the poem outside the class, and pass it the text as a prop.
+Define the poem outside the class, and pass in the text as a prop.
 
-Use a `<pre>` tag to display the poem in your `render` function. In your html file, define three css classes under a `<style>` tag:
+Use a `<pre>` tag to display the poem in your `render` function. In your HTML file, define three CSS classes under a `<style>` tag:
 
 ```css
   .small {
@@ -43,7 +43,10 @@ Use a `<pre>` tag to display the poem in your `render` function. In your html fi
   }
 ```
 
-Define your `state` with `fontClass` property initially set to `small`. Also define an array in your class with the string values `small`, `medium` and `large`.
-In your `render` function,  include a `select` element above the poem with the possible values `small`, `medium` and `large`. Assign the `fontClass` as the `className` for `pre` element that contains the poem. When the user change the choice in the `select`, the class assigned to the `pre` element should change as well.
+Define your `state` with `fontClass` property initially set to `small`. Also define an array in your class with the string values `small`, `medium`, and `large`.
+
+In your `render` function,  include a `select` element above the poem with the possible values `small`, `medium` and `large`. 
+
+Assign the `fontClass` as the `className` for the `pre` element that contains the poem. When the user change the choice in the `select`, the class assigned to the `pre` element should change as well.
 
 ![reader](assets/reader.png)
