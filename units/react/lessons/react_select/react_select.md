@@ -8,7 +8,7 @@
 
 ### Lesson
 
-In the last lesson we have seen different uses of text input in React. We can apply similar principles to other common form components.
+In previous lessons we have seen different uses of text input in React. We can apply similar principles to other common form components.
 
 #### Select: [Likes Ice Cream](https://codesandbox.io/s/kwvqk2l405)
 
