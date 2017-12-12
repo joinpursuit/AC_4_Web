@@ -29,7 +29,7 @@ const fontSizes = {
 
 Create an `arrToNames` function that will take an array of strings, such as `['cats', 'dogs', 'giraffes']` and return a single string where:
 
-* All values until the last one are separted by commas.
+* All values until the last one are separated by commas.
 * The second to last and the last are value are separated as follows: `" ___, or ___ "`
 
 For example:
