@@ -55,7 +55,7 @@ render() {
 
 Note that the above is a controlled element. When the user chooses an option, the `handleLikesIceCream` function will be called, changing the corresponding state property `likesIceCream`. Once we call the `setState` function, React will change the state, and then call the component's `render` function. This will give the `select` element its new value from the state.
 
-We may want to render something based on the user's choice in the `select` input. For example, if the user likes ice cream, we will write `"great!"`, and if they don't, we will write `"go home!"`. In React, this is called _conditional rendering_, and is freqently done in the following manner:
+We may want to render something based on the user's choice in the `select` input. For example, if the user likes ice cream, we will write `"great!"`, and if they don't, we will write `"go home!"`. In React, this is called _conditional rendering_, and is frequently done in the following manner:
 
 ```jsx
       ...
@@ -70,7 +70,7 @@ Note that the above ternary condition will always return one of two options. Thi
 
 #### Activity
 
-Replace the text `"Great!"` in the conditional render above with a text input for the user's favorite ice cream flavor.
+Replace the text `"Great!"` in the conditional render above with a text input for the user's favorite icecream flavor.
 
 ### [Favorite Color](https://codesandbox.io/s/0xnx34po8n)
 
@@ -117,7 +117,7 @@ Note above that we _map_ each color in the array to a `JSX` tag, with value and 
 
 ### [Extracting Components](https://codesandbox.io/s/1yp3k5w1q7)
 
-One of the ideas popularized by React is that of having multiple re-usable components. There is still a single top component - the one we pass to `ReactDom.render` as argument. But that component can render other components, which can in turn render other components, etc. Let's apply this idea to the `ColorSelect` component we have just created.
+One of the ideas popularized by React is that of having multiple reusable components. There is still a single top component - the one we pass to `ReactDom.render` as argument. But that component can render other components, which can in turn render other components, etc. Let's apply this idea to the `ColorSelect` component we have just created.
 
 First, we will create a component called `Select` this component will take as `props`:
 
@@ -145,13 +145,13 @@ class Select extends React.Component {
 }
 ```
 
-Note that the component above has no `state`. It is entirely depended on the arguments provided to it as `props`. We indend for a another, _parent component_, to render this component. That parent component will keep in its own `state` the selected value.
+Note that the component above has no `state`. It is entirely dependent on the arguments provided to it as `props`. We intend for another _parent component_ to render this component. That parent component will keep in its own `state` the selected value.
 
 Also note that we create a new array called `displayValues` (using the [es6 spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)). This array has an extra first value - the empty string. This way, when the `Select` component is initially rendered, there will be no value selected.
 
 ### Rewriting `ColorSelect`
 
-Now let's rewrite the `ColorSelect` component. We wil change it's name to `App` - the customary name for the top-level (or _root_) component in react. The constructor function will stay the same, as will the `handleColorSelect`. Only the render function will change:
+Now let's rewrite the `ColorSelect` component. We will change its name to `App` - the customary name for the top-level (or _root_) component in react. The constructor function will stay the same, as will the `handleColorSelect`. Only the render function will change:
 
 ```jsx
   render() {
