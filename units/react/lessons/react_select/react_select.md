@@ -74,7 +74,7 @@ Replace the text `"Great!"` in the conditional render above with a text input fo
 
 ### [Favorite Color](https://codesandbox.io/s/0xnx34po8n)
 
-In this example we have a `select`  component with multiple options. We are asking the user for their favorite color. We could hand code as many lines of `<option>` tags as needed, but this has a number of disatvantages. Mainly, we want to be able to display options based on existing data. For example, we may have an array of possible colors. In react components, we may define such array directly as property of the component (not of the state - since the colors array itself is not dynamic, what changes is only the choice of color),
+In this example we have a `select`  component with multiple options. We are asking the user for their favorite color. We could hand code as many lines of `<option>` tags as needed, but this has a number of disadvantages. Mainly, we want to be able to display options based on existing data. For example, we may have an array of possible colors. In React components, we may define such array directly as property of the component (not of the state - since the colors array itself is not dynamic, what changes is only the choice of color).
 
 ```jsx
  constructor() {
@@ -117,13 +117,13 @@ Note above that we _map_ each color in the array to a `JSX` tag, with value and 
 
 ### [Extracting Components](https://codesandbox.io/s/1yp3k5w1q7)
 
-One of the ideas popularized by react is that of having multiple re-usable components. There is still a single top component - the one we pass to `ReactDom.render` as argument. But that component can render other components, which can in turn render other components, etc. Let's apply this idea to the `ColorSelect` component we have just created.
+One of the ideas popularized by React is that of having multiple re-usable components. There is still a single top component - the one we pass to `ReactDom.render` as argument. But that component can render other components, which can in turn render other components, etc. Let's apply this idea to the `ColorSelect` component we have just created.
 
 First, we will create a component called `Select` this component will take as `props`:
 
 1. An array of values to render as `option`s
 2. The current selected value
-3. A function to call when the user chooses a new option.
+3. A function to call when the user chooses a new option
 
 ```jsx
 class Select extends React.Component {
@@ -176,7 +176,7 @@ The `render` function now renders the `Select` component. When a new option is c
 
 ### [More `select`s](https://codesandbox.io/s/jny7l72m35)
 
-Now that we have a generic `Select` component, we can easily render more select elements from our `App` components. Say we want to ask the user for choose his/her favorite animal from a list. We will first add an `animals` array to the `App` consturctor function:
+Now that we have a generic `Select` component, we can easily render more select elements from our `App` components. Say we want to ask the user for choose his/her favorite animal from a list. We will first add an `animals` array to the `App` constructor function:
 
 ```jsx
   constructor() {
