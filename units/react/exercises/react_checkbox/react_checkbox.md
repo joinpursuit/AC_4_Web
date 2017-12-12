@@ -16,7 +16,7 @@ Create a component that will render a list with three items and three correspond
 
 ### Select All
 
-Create a react component that will three options and three corresponding checkboxes. Above these, add two buttons:
+Create a React component that will display three options and three corresponding checkboxes. Above these, add two buttons:
 
 * `select all`: will check all checkboxes.
 * `select none`: will uncheck all checkboxes.
@@ -25,11 +25,11 @@ Create a react component that will three options and three corresponding checkbo
 
 ### Cats, Dogs, or Neither
 
-Create a react component that will three items and three corresponding checkboxes:
+Create a React component that will display three items and three corresponding checkboxes:
 
 ![cats dogs or neither](assets/cats_dogs_neither.png)
 
- If the user checks `neither`, both `cats` and `dogs` checkboxes will be automatically unchecked. If the user checks `cats` or `dogs`, the `neither` checkbox will be automatically unchekced.
+ If the user checks `neither`, both the `cats` and `dogs` checkboxes will be automatically unchecked. If the user checks `cats` or `dogs`, the `neither` checkbox will be automatically unchecked.
 
  **bonus** use the `disabled` attribute to disable the `cats` and `dogs` checkboxes when `neither` is checked.
 
