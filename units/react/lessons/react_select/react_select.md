@@ -32,7 +32,7 @@ We will then define a method called `handleLikesIceCream` that will change the `
 ```jsx
   handleLikesIceCream = e => {
     this.setState({
-      likesIceCream: e.target.options[e.target.selectedIndex].value
+      likesIceCream: e.target.value
     })
   }
 ```
@@ -93,7 +93,7 @@ Next, we will write a `handleColorSelect` function:
 ```jsx
   handleColorSelect = e => {
     this.setState({
-      favoriteColor: e.target.options[e.target.selectedIndex].value
+      favoriteColor: e.target.value
     })
   };
 ```
