@@ -35,8 +35,8 @@ We will use the [Dog API](https://dog.ceo/dog-api/). We will be making AJAX `GET
 
 ```JSON
 {
-  status: "success",
-  message: "https://dog.ceo/api/img/bulldog-french/n02108915_618.jpg"
+  "status": "success",
+  "message": "https://dog.ceo/api/img/bulldog-french/n02108915_618.jpg"
 }
 ```
 
@@ -143,4 +143,3 @@ Later on we will deal with errors in a more elegant way, so that both  the user 
 * try and change the `url` for the axios `get` method by adding an `s` at the end.
 
 ### Dog Breeds
-
