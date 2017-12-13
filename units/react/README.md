@@ -9,7 +9,8 @@
 3. [React - `select`s](lessons/react_select/react_select.md)
 4. [React - `checkbox`es](lessons/react_checkbox/react_checkbox.md)
 5. [React - Radio Buttons](lessons/react_radio_buttons/react_radio_buttons.md)
-6. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
+6. [React - AJAX 1](lessons/react_ajax_1/react_ajax_1.md)
+7. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
 
 ## Exercises
 
