@@ -27,22 +27,22 @@ const fontSizes = {
 
 ## arrToNames
 
-Craete a `arrToNames` function that will take an array of strings, such as `['cats', 'dogs', 'giraffes']` and return a single string where:
+Create an `arrToNames` function that will take an array of strings, such as `['cats', 'dogs', 'giraffes']` and return a single string where:
 
-* All values until the last one are separted by commas.
-* The one to last and the last are separated with `" ___ or ___ "`
+* All values until the last one are separated by commas.
+* The second to last and the last are value are separated as follows: `" ___, or ___ "`
 
 For example:
 
 ```js
 const animals = ['cats', 'dogs', 'giraffes']
 arrToNames(animals)
-// cats, dogs, giraffes
+// cats, dogs, or giraffes
 ```
 
 ### Two radio groups
 
-* Create a react component with two radio groups: one for the user to select their preferred animal, and one for the user to select their preferred color.
+* Create a React component with two radio groups: one for the user to select their preferred animal, and one for the user to select their preferred color.
 * Add a submit button that will be enabled only if the user selected both an animal and a color. When the button is clicked, alert the user with their choice of animal and color.
 
 ### Advanced: Radio Group Component

@@ -2,11 +2,11 @@
 
 ## Reverser
 
-Create a react component with an input field and a paragraph. The paragraph will always display the reverse of the user input in the input field.
+Create a React component with an input field and a paragraph. The paragraph will always display the reverse of the user input in the input field.
 
 ## Identical Passwords
 
-Create a react component that will compare the password of two input fields. Store in your state three properties: `password1`, `password2`, and `samePassword`. The password values should initially be an empty string, and the value for `samePassword` should be true.
+Create a React component that will compare the password of two input fields. Store in your state three properties: `password1`, `password2`, and `samePassword`. The password values should initially be an empty string, and the value for `samePassword` should be true.
 
 As the user inserts input into the password fields, display a message below the password to indicate if these are identical or not.
 
@@ -16,7 +16,7 @@ Add a `clear` button that will clear both password fields.
 
 ## Reader
 
-Create a react component called `Reader` that will display the first two verses of the following poem:
+Create a React component called `Reader` that will display the first two verses of the following poem:
 
 ```text
 You are old, Father William (Carroll)

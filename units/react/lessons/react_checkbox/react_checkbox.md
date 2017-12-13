@@ -10,7 +10,7 @@
 
 ### [Not a Robot](https://codesandbox.io/s/m4y7xkxrl9)
 
-Let's make a simple react component to check whether the user is a robot. If the checkbox is checked, If the checkbox is checked, a button titled `proceed` will be displayed. We will begin by writing a constructor function with a single boolean property `notARobot`, initially set to `false`.
+Let's make a simple react component to check whether the user is a robot. If the checkbox is checked, a button titled `proceed` will be displayed. We will begin by writing a constructor function with a single boolean property `notARobot`, initially set to `false`.
 
 ```jsx
   constructor() {
@@ -21,7 +21,7 @@ Let's make a simple react component to check whether the user is a robot. If the
   }
 ```
 
-Now we will write a render with a `checkbox` JSX element:
+Now, we will write a render function with a `checkbox` JSX element:
 
 ```jsx
  render() {
@@ -51,11 +51,11 @@ Here is one way to implement that function:
   }
 ```
 
-The above looks similar to the `handle______` functions we have been writing before. Except that we are using the `target`s checked boolean property instead of the value.
+The above looks similar to the `handle______` functions we have been writing before, except that we're using the `target`'s `checked` boolean property instead of the value.
 
 ### Computed Property Names
 
-If we wish to have many checkboxes in our page, there is a shortcut that allows us to write a single `handleCheckboxChange` function that will work for all of them:
+If we wish to have many checkboxes in our page, there's a shortcut that allows us to write a single `handleCheckboxChange` function that will work for all of them:
 
 ```jsx
   handleCheckboxChange = (e) => {
@@ -108,7 +108,7 @@ render() {
             name='favColor'
             values={this.colors}
             selectedValue={favColor}
-            handleSelect={this.hadnleSelect}
+            handleSelect={this.handleSelect}
           />
         </p>
         <p>
@@ -149,13 +149,13 @@ class Select extends React.Component {
 
 ### [Cat and Pizza](https://codesandbox.io/s/p3852k2k2m)
 
-Let's go back to checkboxes and use them for something fun. We will make a component that renders two questions, each with it's own checkbox:
+Let's go back to checkboxes and use them for something fun. We will make a component that renders two questions, each with its own checkbox:
 
 ![cat pizza unchecked](assets/cat_pizza_unchecked.png)
 
 If the user checks the first box, an image of a pizza will be displayed. If the user checks the second box, an image of a cat will be displayed. If the user checks both boxes, an image of a cat eating a pizza will be displayed.
 
-Starting with the consturctor, we will assign two boolean values to our state: `likesPizza` and `likesCats`.
+Starting with the constructor, we will assign two boolean values to our state: `likesPizza` and `likesCats`.
 
 ```jsx
  constructor() {
@@ -168,7 +168,7 @@ Starting with the consturctor, we will assign two boolean values to our state: `
   }
 ```
 
-We will then create the `handleCheckBoxChange` function using computed property name:
+We will then create the `handleCheckBoxChange` function using our computed property names:
 
 ```jsx
  handleCheckBoxChange = e => {
@@ -207,7 +207,7 @@ render() {
       ...
 ```
 
-So far there is nothing unexpected. Now to render the image, we will need a conditional of some sort. We could use a nested ternary:
+So far, there is nothing unexpected. Now, to render the image, we will need a conditional of some sort. We could use a nested ternary:
 
 ```jsx
   { likesCats && likesPizza ?
@@ -219,7 +219,7 @@ So far there is nothing unexpected. Now to render the image, we will need a cond
         : ''}
 ```
 
-But the above code can be hard to read quickly get out of hand. When a piece of code in the `render` function seems to complicated for its own good, that is a good sign we need another component.
+But the above code can be hard to read, and can quickly get out of hand. When a piece of code in the `render` function seems too complicated for its own good, that is a good sign we need another component.
 
 #### Functional Components
 
@@ -233,7 +233,7 @@ const ShowImage = props => {
 }
 ```
 
-If you think the above looks like a function - you are right. In react this is called a . This kind of component can have no state of it's own. It simply takes some props as arguments, and returns some `JSX` elements. Here is the code for this component:
+If you think the above looks like a function - you are right. In React this is called a **functional component**. This kind of component has no state of its own. It simply takes some props as arguments and returns some `JSX` elements. Here is the code for this component:
 
 ```jsx
 const ShowImage = props => {
@@ -269,7 +269,7 @@ const ShowImage = props => {
 };
 ```
 
-Above we check all 4 possible cases for the two boolean values, and return an image accoringly. Note that we are also defining the in a new way: as a javascript object:
+Above we check all 4 possible cases for the two boolean values and return an image accordingly. Note that we are also defining the styling in a new way: as a JavaScript object:
 
 ```jsx
 const imgStyle = {
@@ -277,9 +277,9 @@ const imgStyle = {
 };
 ```
 
-We will discuss the different options of styling in react in future lessons.
+We will discuss the different options of styling in React in future lessons.
 
-Since `ShowImage` is still a react component, we will place it as usual in the `App` component's `render` function:
+Since `ShowImage` is still a React component, we will place it as usual in the `App` component's `render` function:
 
 ```jsx
   ...
@@ -291,4 +291,4 @@ Since `ShowImage` is still a react component, we will place it as usual in the `
 
 ### Activity
 
-Create three arrays of image urls: one for cats, one for pizza, and one for cat's eating pizza. In the `ShowImage` component above - for each conditional, return a random image from the corresponding array.
+Create three arrays of image URLs: one for cats, one for pizza, and one for cats eating pizza. In the `ShowImage` component above, for each conditional, return a random image from the corresponding array.

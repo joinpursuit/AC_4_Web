@@ -8,13 +8,13 @@
 
 ## Lesson
 
-A radio button allows the user to choose only one of a predefined set of options. While in essence not much different from a `select`, radio buttons have a visual advantage in that all options are seen at once. In html and JSX, radio buttons are grouped based on the `name` attribute - from any number of radio buttons with the same name, only one can be selected at a time.
+A radio button allows the user to choose only one of a predefined set of options. While in essence not too different from a `select`, radio buttons have a visual advantage in that all options are seen at once. In HTML and JSX, radio buttons are grouped based on the `name` attribute - when several buttons have the same name attribute, only one can be selected at a time.
 
-In React, we usually want to have _controlled_ radio buttons (i.e. to keep the selected value in sync with the state). To do this, we need to define the `checked` boolean attribute and an `onChange` function for each radio button.
+In React, we usually want to have _controlled_ radio buttons (i.e. where we keep the selected value in sync with the state). To do this, we need to define the `checked` boolean attribute and an `onChange` function for each radio button.
 
 ### [Cats, Dogs or Giraffes](https://codesandbox.io/s/2z50371kyj)
 
-Let's make a group of radio buttons to get the user's preffered animal between cats, dogs and giraffes. We will start by setting the state with a single variable - `prefAnimal` that we will use to keep track of the user's preferred animal.
+Let's make a group of radio buttons to get the user's preferred animal between cats, dogs and giraffes. We will start by setting the state with a single variable - `prefAnimal` that we will use to keep track of the user's preferred animal.
 
 ```jsx
   constructor() {
@@ -54,7 +54,7 @@ Next we define the `render` function with three radio buttons. Here is the code 
   ...
 ```
 
-Note that both radio buttons have the same `name` attribute - `prefAnimal`, and that it is _identical_ to the proprety name in the state. To see which one is checked we simply compare the value of state property `prefAnimal` to the value of the current radio button. Since `prefAnimal` can only have one value at a time, only one of the button will be checked. Finally, the `onChange` attribute points to the same function:
+Note that both radio buttons have the same `name` attribute - `prefAnimal`, and that it is _identical_ to the property name in the state. To see which one is checked we simply compare the value of state property `prefAnimal` to the value of the current radio button. Since `prefAnimal` can only have one value at a time, only one of the buttons will be checked. Finally, the `onChange` attribute points to the same function:
 
 ```jsx
   handleRadioChange = e => {
@@ -64,7 +64,7 @@ Note that both radio buttons have the same `name` attribute - `prefAnimal`, and 
   };
 ```
 
-We are using the _computed property names_ es6 feature here, like we in the previous lesson. The name of the property will be evaluates in real time. If we add a second group of radio buttons, we can assign to them the same `onChange` method.
+We are using the _computed property names_ es6 feature here, like we in the previous lesson. The name of the property will be evaluated in real time. If we add a second group of radio buttons, we can assign to them the same `onChange` method.
 
 To the third radio button, we simply replicate the second one, changing the label & the value, and altering the `checked` attribute.
 
@@ -93,7 +93,9 @@ Add another radio button with an animal of your choice.
 
 ### [Radio Buttons from Array](https://codesandbox.io/s/4qxj11v3w0)
 
-Rather then hardcoding the values for each radio button, we may want to generate radio buttons for an array. Let's rewrite the previous example using this approach. First, we will define an `animals` array in the components constructor function:
+Rather then hard-coding the values for each radio button, we may want to generate radio buttons for an array. Imagine why we might do this: It's possible that we might be passing animals to a component as props. These animals might be different depending on different conditions. In that case, we would want to render accurate buttons regardless of animal. We want our component to have flexibility.
+
+Let's rewrite the previous example using this approach. First, we will define an `animals` array in the component's constructor function:
 
 ```jsx
   constructor() {
@@ -106,7 +108,7 @@ Rather then hardcoding the values for each radio button, we may want to generate
   }
 ```
 
-Then, in the render function, we will iterate over the array, maping each element to a radio button.
+Then, in the render function, we will iterate over the array, mapping each element to a radio button.
 
 ```jsx
   <p> Do you prefer cats, dogs or giraffes? </p>
@@ -124,11 +126,11 @@ Then, in the render function, we will iterate over the array, maping each elemen
   ))}
 ```
 
-And that's it. Now to add another radio button, all we have to do is add another animal to the `animals` array.
+And that's it. Now, to add another radio button, all we have to do is add another animal to the `animals` array.
 
 #### Activity 2
 
-1. Add three animal of your choice to the `animals` array.
-2. Change the caption: `do you prefer ________ ` to dynamically display the animal names, based on the `animals` array.  **hint**: use an array method.
+1. Add three animals of your choice to the `animals` array.
+2. Change the caption: `do you prefer ________ ` to dynamically display the animal names based on the `animals` array.  **hint**: use an array method.
 
-The result for `2` will not be perfect: we may want to have "or ____" instead of a comma at the end, as in: `"cats, dogs or giraffes"` instead of `"cats, dogs, giraffes"`. You will get to try and make that happen during to todays exercises.
+The result for `2` will not be perfect: We may want to have "or ____" instead of a comma at the end, as in: `"cats, dogs or giraffes"` instead of `"cats, dogs, giraffes"`. You will get to try and make that happen during today's exercises.
