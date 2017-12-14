@@ -8,11 +8,11 @@
 
 ## Lesson
 
-The true power of react lies in it's ability to leverage javascript. So far we have been dealing mostly with primitive values: string and numbers. The real magic begins to happens when we introduce objects and arrays into the React world.
+The true power of react lies in its ability to leverage javascript. So far we have been dealing mostly with primitive values: string and numbers. The real magic begins to happen when we introduce objects and arrays into the React world.
 
 ### [Fruit Shop](https://codesandbox.io/s/jp7z2oolrw)
 
-Say that we want to create an item list and shopping cart for a simple fruit shop. The store has three items: apples, oranges and pears. We will start with assigning each item to an object with a name and an id. Note that each id correspnds to the index of the item in the array. We will also create a state with a single variable `cart` set to an empty array
+Say that we want to create an item list and shopping cart for a simple fruit shop. The store has three items: apples, oranges and pears. We will start with assigning each item to an object with a name and an id. Note that each id corresponds to the index of the item in the array. We will also create a state with a single variable `cart` set to an empty array
 
 ```js
 class App extends React.Component {
@@ -55,7 +55,7 @@ function(){
 }
 ```
 
-Which is an anonymous function that will call `hadnleClick` with `id` as an argument. Note that we cannot simply write `{handleClick(id)}` because this will call the function immediately and return whatever that function returns.
+Which is an anonymous function that will call `handleClick` with `id` as an argument. Note that we cannot simply write `{handleClick(id)}` because this will call the function immediately and return whatever that function returns.
 
 Now let's return to the `App` component and begin writing the `render` function:
 
@@ -139,7 +139,7 @@ And the heavy lifting is done.
 
 #### Showing the cart
 
-The last piece of our app is the showing the cart items. We will first define a `CartItem` component:
+The last piece of our app is showing the cart items. We will first define a `CartItem` component:
 
 ```jsx
 const CartItem = props => {
@@ -168,4 +168,4 @@ Now, in the `App` component's `render` function, we will map each element from `
     ...
 ```
 
-And for now, our app is done. Of course, there is much additional functionality we could introduce (prices, removing items from the cart, etc.). However, if you are able to understand all the moving parts of the current app, you are quite close to becoming profficient in React.
+And for now, our app is done. Of course, there is much additional functionality we could introduce (prices, removing items from the cart, etc.). However, if you are able to understand all the moving parts of the current app, you are quite close to becoming proficient in React.
