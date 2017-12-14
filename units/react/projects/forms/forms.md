@@ -28,6 +28,10 @@ This is a lot of stuff to manage, so we've put together a [skeleton](https://cod
 
 Notice that the functional components are defined differently. One is an ES6 class and the other one is simply a JavaScript function. These work **identically** on the JSX side, but you might find that you have to refer to your props a bit differently inside the component itself. Try both ways and figure out what works best for you.
 
+### Bonus
+
+Your form probably looks pretty bad. Style it!
+
 ### Notes On Questions
 
 * Unless the answer to your question irrevocably changes your app from the ground up, try to answer design questions yourself. For example, are you going to render instructions after the user submits if they (for example) change their email? Or are you going to disable the inputs? You decide.
