@@ -31,7 +31,7 @@ class App extends React.Component {
   ...
 ```
 
-First we want to render each item on a separate line, along with an `add to cart` button. We will start this time with creating a functional component called `Item`, that will represent a single item to display:
+First we want to render each item on a separate line, along with an `add to cart` button. We will start by creating a functional component called `Item` that will represent a single item to display:
 
 ```jsx
 const Item = props => {
@@ -47,7 +47,7 @@ const Item = props => {
 };
 ```
 
-We expect each item to take three arguments as `props`: the name and id from the array, an a `handleClick` function. What we are passing to `onClick` is a function to be invoked at a later point. Note the syntax inside onClick: `{() => handleClick(id)}`. This is equivalent to:
+We expect each item to take three arguments as `props`: the name and id from the array (one and two), an a `handleClick` function (three). What we are passing to `onClick` is a function to be invoked at a later point. Note the syntax inside onClick: `{() => handleClick(id)}`. This is equivalent to:
 
 ```js
 function(){
@@ -84,9 +84,9 @@ Above we are mapping each element in the `items` array to an `Item` component, p
 
 ![item list](assets/item_list.png)
 
-Now let's turn to the `handleClick` function, where most of the heavy lifting happens. As we've seen before, the `handleClick` function takes the item id as an argument. It will then need to check if an item with that id is already in the cart: if it is, the quantity of the item in the cart will be increased. If it isn't, will add a new element to the cart with the item's `name` and `id`, and a quantity of `1`.
+Now let's turn to the `handleClick` function, where most of the heavy lifting happens. As we've seen before, the `handleClick` function takes the item id as an argument. It will then need to check if an item with that id is already in the cart: if it is, the quantity of the item in the cart will be increased. If it isn't, we'll add a new element to the cart with the item's `name`, `id`, and a quantity of `1`.
 
-First we will take the `cart` from `state`, and make a copy of it. In react we will try to avoid modifying the existing state, for reasons that will become clear later on.
+First, we will take the `cart` from `state` and make a copy of it. In React we will try to avoid modifying the existing state, for reasons that will become clear later on.
 
 ```jsx
 handleClick = id => {
@@ -96,14 +96,14 @@ handleClick = id => {
     ...
 ```
 
-Next we will check if an item with the given `id` is already in the cart:
+Next, we will check if an item with the given `id` is already in the cart:
 
 ```jsx
     // Trying to find index in cart
     const index = cart.findIndex(item => item.id === id);
 ```
 
-The `findIndex` function will return either the index of the found item, or `-1` if the item was not found. Next we will deal with the case that the item was not found:
+The `findIndex` function will return either the index of the found item or `-1` if the item was not found. Next, we will deal with the case that the item was not found:
 
 ```jsx
     if (index === -1) {
