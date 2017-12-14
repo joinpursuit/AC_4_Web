@@ -55,7 +55,7 @@ const axios = require("axios");
 To get started with the random dog pictures project, we will define a state with a single property `imgURL`:
 
 ```jsx
-class App extends React.Componeant {
+class App extends React.Component {
   constructor() {
     super();
 
