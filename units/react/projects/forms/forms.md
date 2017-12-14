@@ -9,7 +9,7 @@
 
 Today, we're going to synthesize everything we learned about forms, inputs, and validation this week. We're going to be making a form that asks users for their e-mails and some personal information. At the end of the day, it's gonna look like this:
 
-![finished](finished.png)
+![finished](done.png)
 
 Let's back up and go through the user experience of this form, item by item. We have:
 
