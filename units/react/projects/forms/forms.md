@@ -28,7 +28,7 @@ This is a lot of stuff to manage, so we've put together a [skeleton](https://cod
 
 Notice that the functional components are defined differently. One is an ES6 class and the other one is simply a JavaScript function. These work **identically** on the JSX side, but you might find that you have to refer to your props a bit differently inside the component itself. Try both ways and figure out what works best for you.
 
-## Notes On Questions
+### Notes On Questions
 
 * Unless the answer to your question irrevocably changes your app from the ground up, try to answer design questions yourself. For example, are you going to render instructions after the user submits if they (for example) change their email? Or are you going to disable the inputs? You decide.
 * If you come across a bug, please make sure you do your due diligence of Googling the problem before you come to us. After you search, if you still can't figure it out, try to come up with specific questions about the problem, or tell us what you speculate the issue is. This helps us understand where you're at and resolve things quicker.
