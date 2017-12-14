@@ -51,7 +51,7 @@ Create a stateless `RadioGroup` component that will render a group of radio butt
 
 * `name`
 * `values`
-* `selectedValues`
+* `selectedValue`
 * `handleChange`
 
 Test this component by rendering it from the `App` component from the previous exercise or from the lesson.
