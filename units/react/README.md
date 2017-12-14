@@ -19,3 +19,7 @@
 3. [React - Selects](exercises/react_select/react_select.md)
 4. [React - `checkbox`es](exercises/react_checkbox/react_checkbox.md)
 5. [React - Radio Buttons](exercises/react_radio_buttons/react_radio_buttons.md)
+
+## Projects
+
+1. [Forms](projects/forms/forms.md)
