@@ -32,7 +32,7 @@ In order for us to have favorite images, images need an ID, themselves- and, lo,
 
 Do you see where I'm going here?
 
-Create a React component with a `state` that keeps track of favorited images. Provide a button for a user to request a random image, a button for that user to favorite the current image, and a list below the image of the stored favorites in your state.
+Create a React component with a `state` that keeps track of favorited images. Provide a button for a user to request a random image, a button for that user to favorite the current image, and, below the image, a list of the stored favorites in your state.
 
 That list should be comprised of links. When the user clicks a link, it should trigger an API request for that specific image and re-render the component.
 
