@@ -142,4 +142,4 @@ Later on, we will deal with errors in a more public way, so that the user can kn
 
 * Try and change the `url` for the Axios `get` method by adding an `s` at the end.
 
-[Exercises](/../exercises/ajax/dogs_by_breed.md)
+[Exercises](/../master/units/react/exercises/ajax/dogs_by_breed.md)
