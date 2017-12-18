@@ -28,8 +28,12 @@ This API is a bit more full-featured than the Dog API. You'll notice that there 
 
 For example, there's the ability to set, and get, favorite images. These favorites can be connected to the API key itself, for private use, or they can be connected to what the API calls a `sub_id`, which is a parameter provided so that you can have multiple users on your site storing favorites independently.
 
-In order for us to have favorite images, images need an ID- and, lo, they do.
+In order for us to have favorite images, images need an ID, themselves- and, lo, they do.
 
 Do you see where I'm going here?
 
 Create a React component with a `state` that keeps track of favorited images. Provide a button for a user to request a random image, a button for that user to favorite the current image, and a list below the image of the stored favorites in your state.
+
+That list should be comprised of links. When the user clicks a link, it should trigger an API request for that specific image and re-render the component.
+
+**Note: There is no need, currently, to store favorite images anywhere on the client side. The API stores favorites by itself. Play around with the API's responses (!!console_log!!) to figure out where, and how, those favorites are stored.**
