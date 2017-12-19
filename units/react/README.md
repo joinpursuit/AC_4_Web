@@ -20,6 +20,7 @@
 4. [React - `checkbox`es](exercises/react_checkbox/react_checkbox.md)
 5. [React - Radio Buttons](exercises/react_radio_buttons/react_radio_buttons.md)
 6. [React - AJAX](exercises/ajax/dogs_by_breed.md)
+7. [React - Final Exercises](exercises/objects_and_arrays)
 
 ## Projects
 
