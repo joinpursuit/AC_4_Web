@@ -1,4 +1,7 @@
-# Todos - Lesson 1
+# React Todos - Lesson 1
+
+* [React Todos v1 - CodeSandbox](https://codesandbox.io/s/2o4yn03m1n)
+* [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 
 ## Lesson
 
@@ -17,7 +20,7 @@ As illustrated above, we have `TodoApp` as our top-level component. `TodoApp` re
 
 The division into components will help us as we add additional functionality to our app.
 
-### `TodoApp`
+### [TodoApp](https://codesandbox.io/s/2o4yn03m1n)
 
 We will start by creating the top-level component we will call `TodoApp`. This component will have a state consisting of two properties:
 

@@ -11,6 +11,7 @@
 5. [React - Radio Buttons](lessons/react_radio_buttons/react_radio_buttons.md)
 6. [React - AJAX 1](lessons/react_ajax_1/react_ajax_1.md)
 7. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
+8. [React - Todos v1](lessons/react_todos_1/react_todos_1.md)
 
 ## Exercises
 
@@ -21,6 +22,7 @@
 5. [React - Radio Buttons](exercises/react_radio_buttons/react_radio_buttons.md)
 6. [React - AJAX](exercises/ajax/dogs_by_breed.md)
 7. [React - Final Exercises](exercises/objects_and_arrays)
+8. [React- Todos](exercises/react_todos_1/react_todos_1.md)
 
 ## Projects
 

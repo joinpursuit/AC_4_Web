@@ -1,9 +1,10 @@
 # React Todos 2
 
+* [Todos v2 - CodeSandbox](https://codesandbox.io/s/2pw303631n)
+
 ## Lesson
 
-
-## Todos v2: Toggle Completed
+### [Todos v2: Toggle Completed](https://codesandbox.io/s/2pw303631n)
 
 Let's build on the virst version of our app and add a boolean `completed` property that the user can toggle for each of our todos.
 
