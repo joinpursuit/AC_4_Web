@@ -16,3 +16,5 @@ Repeat the `make a select` exercise above, this time adding a radio button to a 
 ## Double Trouble
 
 Create two todos in one app. This means two inputs and two todo lists.  One should have a heading `super important` and the other just `important`.
+
+One solution to the above is very simple, but it involves letting each todo list completely manage it's own state. Alternatively, consider how you would keep track of both todo lists in the same component. One solution to this type of problems in react are state management libraries such as [redux](https://redux.js.org/), which we will cover in the next unit.
