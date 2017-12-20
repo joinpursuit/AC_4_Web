@@ -12,6 +12,8 @@
 6. [React - AJAX 1](lessons/react_ajax_1/react_ajax_1.md)
 7. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
 8. [React - Todos v1](lessons/react_todos_1/react_todos_1.md)
+9. [React - Todos v1](lessons/react_todos_2/react_todos_2.md)
+
 
 ## Exercises
 
@@ -23,6 +25,7 @@
 6. [React - AJAX](exercises/ajax/dogs_by_breed.md)
 7. [React - Final Exercises](exercises/objects_and_arrays)
 8. [React- Todos](exercises/react_todos_1/react_todos_1.md)
+8. [React- Todos 2](exercises/react_todos_2/react_todos_2.md)
 
 ## Projects
 
