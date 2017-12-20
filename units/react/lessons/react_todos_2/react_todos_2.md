@@ -112,6 +112,33 @@ const Todo = ({ todo, toggleCompleted }) => {
 
 Note the above: `() => toggleCompleted(id)` is an anonymous function, equivalent to: `() => { toggleCompleted(id) } ` and in turn to `function(){toggleCompleted(id)}`. For each of our `Todo`s, we create an anonymous function. When the `Todo` is clicked, the anonymous function will be invoked, in turn calling `toggleCompleted` with the `Todo`'s `id`. Note that we cannon simply write: `onClick={toggleCompleted(id)}`, as that will call the function immediatelly. What we need to pass is the function definition or function name, that will be invoked later on.
 
+### The `completed` classNAme
+
+Finally, to create the `line-through` effect, we define a css class `li.completed`:
+
+```css
+li.completed {
+  text-decoration: line-through;
+}
+```
+
+add the css class conditionally to each `Todo`.
+
+```jsx
+const Todo = ({ todo, toggleCompleted }) => {
+  const { id, text, completed } = todo;
+  const className = completed ? "completed" : "";
+
+  return (
+    <li className={className} onClick={() => toggleCompleted(id)}>
+      {text}
+    </li>
+  );
+};
+```
+
+
+
 ### Optional: Advanced Topics
 
 #### Closures: The Function Remembers
