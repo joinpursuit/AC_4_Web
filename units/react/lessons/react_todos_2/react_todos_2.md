@@ -112,6 +112,31 @@ const Todo = ({ todo, toggleCompleted }) => {
 
 Note the above: `() => toggleCompleted(id)` is an anonymous function, equivalent to: `() => { toggleCompleted(id) } ` and in turn to `function(){toggleCompleted(id)}`. For each of our `Todo`s, we create an anonymous function. When the `Todo` is clicked, the anonymous function will be invoked, in turn calling `toggleCompleted` with the `Todo`'s `id`. Note that we cannon simply write: `onClick={toggleCompleted(id)}`, as that will call the function immediatelly. What we need to pass is the function definition or function name, that will be invoked later on.
 
+Alternatively, we can redefine the `onClick` function inside the `TodoList` component:
+
+```jsx
+const TodoList = ({ todos, toggleCompleted }) => (
+  <ul>
+    {todos.map(todo => <Todo todo={todo} toggleCompleted={() => toggleCompleted(todo.id)} />)}
+  </ul>
+);
+```
+
+And keep our `Todo` component simpler:
+
+```jsx
+const Todo = ({ todo, toggleCompleted }) => {
+  const { text, completed } = todo;
+  const className = completed ? "completed" : "";
+
+  return (
+    <li className={className} onClick={toggleCompleted}>
+      {text}
+    </li>
+  );
+};
+```
+
 ### The `completed` classNAme
 
 Finally, to create the `line-through` effect, we define a css class `li.completed`:
@@ -136,8 +161,6 @@ const Todo = ({ todo, toggleCompleted }) => {
   );
 };
 ```
-
-
 
 ### Optional: Advanced Topics
 
@@ -177,18 +200,19 @@ createNumLogger(2)()
 // the number is: 2
 ```
 
-What we were doing with our react `Todo` is similar to the above, except that:
+What we were doing with our react `Todo` is similar to the above. However, note the following:
 
-* We had as initial data an array of todos.
+* Our enclosing function is the `Todo` component itself.
+* Our enclosed function is the `onClick`.
 * Instead of logging the number, we are calling a different function, one that was defined in `TodoApp`.
 
-And an array of numbers:
+Also, in our react app we had an array of `Todo` components. Given an array of numbers
 
 ```js
 const numbers = [1, 2, 3, 4]
 ```
 
-We may now map over the above array, create an array of `logNumber` functions:
+We can iterate over the array, creating an array of `logNumber` functions:
 
 ```js
 const numLoggers = numbers.map(num => createNumLogger(num));
@@ -198,6 +222,10 @@ numLoggers; // (4) [f, f, f, f]
 We can now invoke any of the functions in our numLoggers array:
 
 ```js
+numLoggers[0]()
+// the number is: 1
 numLoggers[1]()
 // the number is: 2
+numLoggers[2]()
+// the number is: 3
 ```
