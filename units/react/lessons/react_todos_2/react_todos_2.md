@@ -6,7 +6,7 @@
 
 ### [Todos v2: Toggle Completed](https://codesandbox.io/s/2pw303631n)
 
-Let's build on the virst version of our app and add a boolean `completed` property that the user can toggle for each of our todos.
+Let's build on the first version of our app and add a boolean `completed` property that the user can toggle for each of our todos.
 
 First, let's modify the `newTodo` object that we are creating in the `addTodo` method of the `TodoApp` component:
 
@@ -137,7 +137,7 @@ const Todo = ({ todo, toggleCompleted }) => {
 };
 ```
 
-### The `completed` classNAme
+### The `completed` className
 
 Finally, to create the `line-through` effect, we define a css class `li.completed`:
 
