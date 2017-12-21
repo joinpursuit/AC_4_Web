@@ -4,7 +4,7 @@
 
 ## Lessons
 
-1. [React 1](lessons/react_1/react_1.md)
+1. [React - Intro](lessons/react_1/react_1.md)
 2. [React - Text Input](lessons/react_text_input/react_text_input.md)
 3. [React - `select`s](lessons/react_select/react_select.md)
 4. [React - `checkbox`es](lessons/react_checkbox/react_checkbox.md)
@@ -17,15 +17,15 @@
 
 ## Exercises
 
-1. [React 1](exercises/react_1/react_1.md)
+1. [React - Intro](exercises/react_1/react_1.md)
 2. [React - Text Input](exercises/react_text_input/react_text_input.md)
 3. [React - Selects](exercises/react_select/react_select.md)
 4. [React - `checkbox`es](exercises/react_checkbox/react_checkbox.md)
 5. [React - Radio Buttons](exercises/react_radio_buttons/react_radio_buttons.md)
 6. [React - AJAX](exercises/ajax/dogs_by_breed.md)
 7. [React - Final Exercises](exercises/objects_and_arrays)
-8. [React- Todos](exercises/react_todos_1/react_todos_1.md)
-8. [React- Todos 2](exercises/react_todos_2/react_todos_2.md)
+8. [React - Todos](exercises/react_todos_1/react_todos_1.md)
+8. [React - Todos 2](exercises/react_todos_2/react_todos_2.md)
 
 ## Projects
 
