@@ -13,7 +13,7 @@
 7. [React - Objects and Arrays](lessons/objects_and_arrays/objects_and_arrays.md)
 8. [React - Todos v1](lessons/react_todos_1/react_todos_1.md)
 9. [React - Todos v2](lessons/react_todos_2/react_todos_2.md)
-
+10. [React Router 1](lessons/react_router_1/react_router_1.md)
 
 ## Exercises
 
@@ -25,8 +25,9 @@
 6. [React - AJAX](exercises/ajax/dogs_by_breed.md)
 7. [React - Final Exercises](exercises/objects_and_arrays)
 8. [React - Todos](exercises/react_todos_1/react_todos_1.md)
-8. [React - Todos 2](exercises/react_todos_2/react_todos_2.md)
+9. [React - Todos 2](exercises/react_todos_2/react_todos_2.md)
 
 ## Projects
 
 1. [Forms](projects/forms/forms.md)
+2. [React Router - 1](projects/react_router_1/react_router_1.md)
