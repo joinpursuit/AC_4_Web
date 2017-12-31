@@ -18,20 +18,13 @@ Today we will learn about client-side routing in React. Client-side routing work
 
 We will start with an example of a simple personal website (click on the title to navigate to the live-code version). This web app consists of several files:
 
-```ANSCI
-.
-|-- About.js
-|-- Skills.js
-|-- Welcome.js
-|-- index.html
-|-- index.js
-```
+![project structure + dependencies](assets/project_structure.png?raw=true)
 
 Out of these `About.js`, `Skills.js` and `Welcome.js` are stateless components, each representing a "page" in the website. `index.js` is where the routing logic happens.
 
 Note that we are also adding `react-router-dom` as a dependency to our project view the NPM packages:
 
-![project structure + dependencies](assets/project_structure.png?raw=true)
+![dependencies](assets/dependecies.png?raw=true)
 
 In addition to importing the `React` library and the `render` function from the `react-dom` library, we are importing `BrowserRouter`, `Route` and `Link` from `react-router-dom`:
 
