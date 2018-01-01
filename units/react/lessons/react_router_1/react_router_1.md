@@ -12,7 +12,7 @@
 
 ## Lesson
 
-Today we will learn about client-side routing in React. Client-side routing works in a similar fashion to server-side routing (as we've seen in express), except that it works within the browser. In React, client-side routing is most frequently implemented using a library called [React Router](https://reacttraining.com/react-router/).
+Today we will learn about client-side routing in React. Client-side routing works in a similar fashion to server-side routing (as we've seen in Express), except that it works within the browser. In React, client-side routing is most frequently implemented using a library called [React Router](https://reacttraining.com/react-router/).
 
 ### [Personal Website](https://codesandbox.io/s/1r165o97o7)
 
@@ -57,7 +57,7 @@ const double = n => n * n;
 double(add(2, 1) /* => 3 */); // => 6
 ```
 
-In react, we compose components by nesting one within the other. The value returned by the nested (or _child_) component's render function will be passed as a prop to the _parent_ component. Let's see it in action in the [following example](https://codesandbox.io/s/pk7wn5vvoj).
+In React, we compose components by nesting one within the other. The value returned by the nested (or _child_) component's render function will be passed as a prop to the _parent_ component. Let's see it in action in the [following example](https://codesandbox.io/s/pk7wn5vvoj).
 
 ### [Fancy Border](https://codesandbox.io/s/pk7wn5vvoj)
 
@@ -168,7 +168,7 @@ Note that each route gets as props a string for `path` and a React component for
 
 ### Matching a path and `exact`
 
-The default matching algorithm for `path`s will match not only complete strings but also partial ones. This means that `<Route path="/a" component={MyComponent}/>` will render `MyComponent` if the url is any string that starts with the letter `a`, such as `"about"`. This will immediately be problematic in case of the home route `/`, since this will match any other route (all routes start with `/`). In our example, we provided the `exact` keyword as a prop to the `Route` for `/` in order to only match if the route is exactly `/`:
+The default matching algorithm for `path`s will match not only complete strings but also partial ones. This means that `<Route path="/a" component={MyComponent}/>` will render `MyComponent` if the URL is any string that starts with the letter `a`, such as `"about"`. This will immediately be problematic in case of the home route `/`, since this will match any other route (all routes start with `/`). In our example, we provided the `exact` keyword as a prop to the `Route` for `/` in order to only match if the route is exactly `/`:
 
 ```jsx
 <Route exact path="/" component={Welcome} />
