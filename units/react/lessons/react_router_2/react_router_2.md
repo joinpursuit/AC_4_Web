@@ -101,7 +101,7 @@ Despite it's brevitiy, it is still preferrable to keep this component sepearate.
 
 As you've probably noticed, there are three files (contains three separate components) inside the `Pets` directory, but only `Pets.js` of them gets rendered directly from the `App.js`. This component has two roles:
 
-##### Role 1. Rendering the routes that follow `/pets`: `/` and `/:id`.
+##### Role 1. Rendering the routes that follow `/pets`: `/` (`/pets/`) and `/:id` (`/pets/:id`)
 
 Note that we are using the full route every time, even from within the `Pets` component:
 
