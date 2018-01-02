@@ -14,6 +14,7 @@
 8. [React - Todos v1](lessons/react_todos_1/react_todos_1.md)
 9. [React - Todos v2](lessons/react_todos_2/react_todos_2.md)
 10. [React Router 1](lessons/react_router_1/react_router_1.md)
+11. [React Router 2](lessons/react_router_2/react_router_2.md)
 
 ## Exercises
 
