@@ -53,8 +53,8 @@ Component composition is similar to function composition, in which the output of
 
 ```js
 const add = (n1, n2) => n1 + n2;
-const double = n => n * n;
-double(add(2, 1) /* => 3 */); // => 6
+const square = n => n * n;
+square(add(2, 1) /* => 3 */); // => 9
 ```
 
 In React, we compose components by nesting one within the other. The value returned by the nested (or _child_) component's render function will be passed as a prop to the _parent_ component. Let's see it in action in the [following example](https://codesandbox.io/s/pk7wn5vvoj).
