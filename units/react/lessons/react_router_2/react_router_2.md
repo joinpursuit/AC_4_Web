@@ -1,5 +1,7 @@
 # React Router 1
 
+* [My Pets' Website - CodeSandbox](https://codesandbox.io/s/8yq0ly3708)
+
 ## Lesson
 
 In this lesson we will expand react-router to more complex use-cases.
@@ -22,16 +24,15 @@ First, Note the folder structure:
 
 <pre>
 
-- components
-  - Pets
-    + Pets.js
-    + Pet.js
-    + PetList.js
-  - App.js
-  - Home.js
+- Pets
+  + Pets.js
+  + Pet.js
+  + PetList.js
+  + petAPI.js
++ App.js
++ Home.js
 + index.js
 + index.html
-+ petAPI.js
 
 </pre>
 
@@ -57,7 +58,7 @@ render(
 
 As you can see above, this file's only purpose is to call `ReactDom`'s _render_ function, providing it the `App` component nested within the `BrowserRouter` component.
 
-#### `Components/App.js`
+#### `App.js`
 
 The `App.js` component is responsible for rendering the navigation bar and for the initial routing. As we will see, when using react-dom-router the routing functionality is often spread between different components.
 
@@ -78,7 +79,7 @@ import { Link, Switch, Route } from "react-router-dom";
 
 If we wish that only one of multiple routes will be rendered, we may do so using the `Switch` component provided by the `react-router-dom` library. The `Switch` component will "pick" only one of the child `Route` components to render - whichever one matches the url first. This means that unless we provide the exact keyword for the Route where the `path` is `/`, it will always match (since react-router does partial matching) and none of the other components would ever be rendered. Another solution would be to proivde the Route with that path last. However, it is better to be explicit regardless of `Route` placement and provide the `exact` attribute either way.
 
-#### `Components/Home.js`
+#### `Home.js`
 
 In `App.js`, the component for the `/` route will be rendered by default, or when _Home_ in the navbar is clicked. This component is only a few lines long:
 
@@ -96,7 +97,7 @@ export default Home;
 
 Despite it's brevitiy, it is still preferrable to keep this component sepearate. This will make the project easier to maintain as it grows, since we may decide to add more content to this component later on.
 
-#### `Components/Pets/Pets.js`
+#### `Pets/Pets.js`
 
 As you've probably noticed, there are three files (contains three separate components) inside the `Pets` directory, but only `Pets.js` of them gets rendered directly from the `App.js`. This component has two roles:
 
@@ -175,7 +176,7 @@ If the returned `pet` is undefined, we return a `div` element with a message `"c
 
 The other route - `/pets`, is simpler, in that we do not need any params from the url. The `renderPetList` function is defined as if no arguments are passed to it. In fact, the `props` argument will still be passed to, but `props.match.params` will be an empty object, as there are no params to the `url`. So in the case we ignore the passed in `props` entirely. All we to do is fetch all the pets from our `petAPI` and render a `PetList` component with the pets as a prop.
 
-#### `Components/Pets/PetList.js`
+#### `Pets/PetList.js`
 
 While the `Pets` component does most of the heavy lifting, both the `Pet` and `PetList` are more like the simple stateless components we've seen before. The only difference is that we're using the `Link` component from `react-router-dom`:
 
@@ -195,7 +196,7 @@ const PetList = ({ pets }) => (
 
 Abovem the `PetList` component iterates over the `pets` array given to it as a prop, and for each displays a link to it with the pet's `id` and `name` as text. Of course, the `url` itself requires some knowledge on our part: we know that the `Pets` component defines the route for a single pet as `/pets/:id`.
 
-#### `Components/Pets/Pet.js`
+#### `Pets/Pet.js`
 
 Finally, the `Pet` component takes a `props` object with `name` and `species` as input, displays a header with the name and another header with the species. It also includes a `Link` back to `/pets`.
 
