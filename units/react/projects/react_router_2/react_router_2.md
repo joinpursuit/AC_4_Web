@@ -10,4 +10,8 @@ Create a website of your favorite movies. The page must include a navbar with at
 
 ## Level 2: Genres
 
-Add a genre propety for each movie, which will be an array of strings. Each movie should have one or more genre. Add a navbar link to a `Genres` page. On that page, put a `select` element with all the genres from all the movies. When a genre get selected, display a list of `Link`s to all the movies of that genre.
+Add a genre propety for each movie, which a string. Add a navbar link to a `Genres` page. On that page, put a `select` element with all the genres from all the movies. When a genre get selected, display a list of `Link`s to all the movies of that genre.
+
+## Level 3: Genre Lists
+
+Change the genre propety to be an array of strings, so that each movie can have one or more genres. When a genre is selected on the `Genres` pages display a `Link` to all movies that have that genre as an element in their `genres` array.
