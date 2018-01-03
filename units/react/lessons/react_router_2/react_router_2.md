@@ -1,6 +1,7 @@
 # React Router 2
 
 * [My Pets' Website - CodeSandbox](https://codesandbox.io/s/8yq0ly3708)
+* [A Simple React Router Tutorial - Paul Sherman](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf]
 
 ## Lesson
 
