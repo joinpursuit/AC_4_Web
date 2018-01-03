@@ -5,13 +5,13 @@
 
 ## Lesson
 
-In this lesson we will expand react-router to more complex use-cases.
+In this lesson we will expand react-router to more complex use cases.
 
 ### Recap
 
-In the previous lesson we leared about the following react components, provided to us by the `react-router-dom` library:
+In the previous lesson we learned about the following React components, provided to us by the `react-router-dom` library:
 
-* `Link` - works in a similar fashion to the `<a>` element, exepct that it does not trigger a page reload.
+* `Link` - works in a similar fashion to the `<a>` element, except that it does not trigger a page reload.
 * `Route`
   * When providing a string for the `path` prop and a React component for the `component` prop: the component will be rendered if the current `url` matches the provided `path`.
   * The above will be true for partial matches (i.e. path `/a` would be a match for url `/apple`) unless with the `exact` keyword is provided as a prop.
@@ -19,9 +19,9 @@ In the previous lesson we leared about the following react components, provided 
 
 ### [My Pets' Website](https://codesandbox.io/s/8yq0ly3708)
 
-In this lesson we will explore further routing concepts through the _My Pets' Website_ example.
+In this lesson we will explore more routing concepts through the _My Pets' Website_ example.
 
-First, Note the folder structure:
+First, note the folder structure:
 
 <pre>
 
@@ -37,7 +37,7 @@ First, Note the folder structure:
 
 </pre>
 
-As we go through this project step-by-step, both the location and the purpose of each file will begin to make sense.
+As we go through this project step by step, both the location and the purpose of each file will begin to make sense.
 
 #### `index.js`
 
@@ -88,7 +88,7 @@ import { Link, Switch, Route } from "react-router-dom";
 
 #### Exclusive Routing using `<Switch>`
 
-If we want that only one of multiple `Route`s will be rendered, we can do so using the `Switch` component, provided by the `react-router-dom` library. The `Switch` component will _pick_ only one of the child `Route` components - whichever one matches the url first. For our `App` component, unless we provide the `exact` keyword for the Route where the `path` is `/`, it will always match (because of partial matching) and none of the other components would ever be rendered. It is possible to put the `Route` with that path last. However, it is better to be explicit regardless of the `Route` order and provide the `exact` attribute either way.
+If we want only one of multiple `Route`s to be rendered, we can use the `Switch` component provided by the `react-router-dom` library. The `Switch` component will _pick_ only one of the child `Route` components - whichever one matches the url first. For our `App` component, unless we provide the `exact` keyword for the Route where the `path` is `/`, it will always match (because of partial matching) and none of the other components would ever be rendered. It is possible to put the `Route` with that path last. However, it is better to be explicit regardless of the `Route` order and provide the `exact` attribute either way.
 
 #### `Home.js`
 
@@ -106,9 +106,9 @@ const Home = () => (
 export default Home;
 ```
 
-Despite it's brevitiy, it is still preferrable to keep this component sepearate. This will make the project easier to maintain as it grows, since we may decide to add more content to this component later on.
+Despite its brevity, it is still preferable to keep this component separate. This will make the project easier to maintain as it grows, since we may decide to add more content to this component later on.
 
-The second `Route` from `App` will render the `Pets` component if the url matches the `/pets` path.
+The second `Route` from `App` will render the `Pets` component if the URL matches the `/pets` path.
 
 #### `Pets/Pets.js`
 
@@ -146,7 +146,7 @@ const pets = [
 ]
 ```
 
-Where each object represents a pet, with an `id`, a `name` and a `species`. This file exports two methods that allow accessing the array:
+Where each object represents a pet, with an `id`, a `name` and a `species`. This file exports two methods that allow us to access the array:
 
 ```js
 const getAll = () => pets;
@@ -158,9 +158,9 @@ The `getAll` method returns all the pets, and the `getOne` method returns a sing
 
 #### `Pets.js`: `renderPet`
 
-Going back to the `Pets` component, you will notice that each `Route` has a `render` prop instead of a `component` prop. While the `component` prop will result in rendering a Component, the `render` prop will result in invoking the provided function. As is the case with the `component` prop, this functon will be called if the provided `path` matches the url.
+Going back to the `Pets` component, you will notice that each `Route` has a `render` prop instead of a `component` prop. While the `component` prop will result in rendering a Component, the `render` prop will result in invoking the provided function. As is the case with the `component` prop, this function will be called if the provided `path` matches the url.
 
-The function provided to `render` will be automatically passed a `props` object as an argument. The most important piece of this `props` object is the `match.params` property, which is an object that contains any parameters contained in the url. In the case of the `/pets/:id` route, we need to acces the `props.match.params.id` property in order to access the `id` of the pet that needs to be rendered.
+The function provided to `render` will be automatically passed a `props` object as an argument. The most important piece of this `props` object is the `match.params` property, which is an object that contains any parameters contained in the url. In the case of the `/pets/:id` route, we need to access the `props.match.params.id` property in order to access the `id` of the pet that needs to be rendered.
 
 ```jsx
   renderPet = props => {
@@ -170,7 +170,7 @@ The function provided to `render` will be automatically passed a `props` object 
    ...
 ```
 
-Once we have the `id`, we use the `petAPI` to get the pet with this id. As there is not guaranty that a pet will be found (the user is able to enter any random id in the address bar) - the returned value may be `undefined`:
+Once we have the `id`, we use the `petAPI` to get the pet with this id. As there is no guarantee that a pet will be found (the user is able to enter any random id in the address bar) - the returned value may be `undefined`:
 
 ```jsx
 renderPet = props => {
@@ -184,11 +184,11 @@ renderPet = props => {
 };
 ```
 
-If the returned value is `undefined`, we render a `div` element with a message `"could not find pet"`. Otherwsie - if the pet _was_ found, we render a `Pet` component with the pet's name and species as _props_.
+If the returned value is `undefined`, we render a `div` element with a message `"could not find pet"`. Otherwise, if the pet _was_ found, we render a `Pet` component with the pet's name and species as _props_.
 
 #### `Pets.js`: `renderPetList`
 
-The other route - `/pets`, is simpler in that we do not need any params from the url. Even though the `renderPetList` function is defined as if no arguments are passed to it, the `props` argument will still be passed. But `props.match.params` will be an empty object, since there are no params to the `url`. So in this case we ignore the passed-in `props` completely. All we need to do is fetch all the pets from our `petAPI` and render a `PetList` component with the pets as a prop.
+The other route - `/pets` - is simpler in that we do not need any params from the URL. Even though the `renderPetList` function is defined as if no arguments are passed to it, the `props` argument will still be passed. But `props.match.params` will be an empty object, since there are no params to the `url`. So in this case we ignore the passed-in `props` completely. All we need to do is fetch all the pets from our `petAPI` and render a `PetList` component with the pets as a prop.
 
 ```jsx
 renderPetList = () => {
@@ -241,4 +241,4 @@ Even though there is no page reload when we click on a link render by a `Link` c
 * We matching the `/pets` route, which renders the `Pets` component.
 * Inside the `Pets` component, we match the `/pets/:id` route, calling the `renderPet` function.
 * This function gets the pet's id via `props.match.params`, fetches the `pet` object via the `petAPI`, and renders the `Pet` component.
-* The `Pet` componet displays headers with the pet's name and species.
+* The `Pet` component displays headers with the pet's name and species.
