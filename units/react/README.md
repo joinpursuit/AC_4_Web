@@ -27,8 +27,10 @@
 7. [React - Final Exercises](exercises/objects_and_arrays)
 8. [React - Todos](exercises/react_todos_1/react_todos_1.md)
 9. [React - Todos 2](exercises/react_todos_2/react_todos_2.md)
+10. [React Router 2](exercises/react_router_2/react_router_2.md)
 
 ## Projects
 
 1. [Forms](projects/forms/forms.md)
-2. [React Router - 1](projects/react_router_1/react_router_1.md)
+2. [React Router 1](projects/react_router_1/react_router_1.md)
+3. [React Router 2](projects/react_router_2/react_router_2.md)
