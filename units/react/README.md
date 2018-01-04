@@ -15,6 +15,7 @@
 9. [React - Todos v2](lessons/react_todos_2/react_todos_2.md)
 10. [React Router 1](lessons/react_router_1/react_router_1.md)
 11. [React Router 2](lessons/react_router_2/react_router_2.md)
+12. [React Routes and State](lessons/react_routes_and_state/react_routes_and_state.md)
 
 ## Exercises
 
@@ -34,3 +35,4 @@
 1. [Forms](projects/forms/forms.md)
 2. [React Router 1](projects/react_router_1/react_router_1.md)
 3. [React Router 2](projects/react_router_2/react_router_2.md)
+4. [React Routes and State](projects/react_routes_and_state/react_routes_and_state.md)
