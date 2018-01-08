@@ -24,5 +24,5 @@ A few other requirements and things to consider:
 
 * How can you use state and API calls to your advantage here?
 * Once you've got one working, create a few different routes with different Mad Libs stories.
-* Finally, create a route that uses lifecycle methods to automatically fill in the blanks when the page loads.
-
+* Create a route that uses lifecycle methods to automatically fill in the blanks when the page loads.
+* Finally, create a route where the user inputs their own words first (without rendering the story). Then, when they submit their words, the story should populate properly and display to the user. This is just classic Mad Libs.
