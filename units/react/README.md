@@ -38,3 +38,4 @@
 2. [React Router 1](projects/react_router_1/react_router_1.md)
 3. [React Router 2](projects/react_router_2/react_router_2.md)
 4. [React Routes and State](projects/react_routes_and_state/react_routes_and_state.md)
+5. [React Review](projects/react_review/react_review.md)
