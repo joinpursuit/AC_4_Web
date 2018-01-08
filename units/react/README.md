@@ -16,6 +16,7 @@
 10. [React Router 1](lessons/react_router_1/react_router_1.md)
 11. [React Router 2](lessons/react_router_2/react_router_2.md)
 12. [React Routes and State](lessons/react_routes_and_state/react_routes_and_state.md)
+13. [React Router and AJAX](lessons/react_router_and_ajax/react_router_and_ajax.md)
 
 ## Exercises
 
