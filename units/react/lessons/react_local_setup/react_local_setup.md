@@ -1,12 +1,11 @@
 # React - Setting Up and Deploying
 
 * [create-react-app](https://github.com/facebookincubator/create-react-app)
-* [Netlify](https://www.netlify.com/)
 * [CodeSandbox](https://codesandbox.io/)
 
 ## Lesson
 
-In this lesson we will learn how to set up React locally, and how to deploy (i.e. _publish_) it using a static (frontend only) hosting provider.
+In this lesson you will learn how to set up React locally.
 
 ### [create-react-app](https://github.com/facebookincubator/create-react-app)
 
@@ -81,7 +80,7 @@ The project will be initially set up with three pacakges as dependecies: `react`
 
 While we have already been using `react` and `react-dom`, you likely have not seen `react-scripts` before. This is the package that enables React to run locally. There is a lot going on behind the curtain of `react-scripts` which we will explore at a later time. For now, note that `npm start` actually executes `react-scripts start`. We will also be using the `build` script later on.
 
-### Installing Additional Pacakges
+### Installing Additional Packages
 
 Use the `npm install` command to install additional packages. For example, to install `react-router-dom`:
 
@@ -95,6 +94,42 @@ Once the installation is complete, you should be able to see the package under `
 
 Projects are downloaded from CodeSandbox as a single `zip` file. These can be extracted and run in the same way as the projects set up using `create-react-app`. The only difference is that projects downloaded from CodeSandbox will not have the dependencies installed. So after extracting a downloaded project, you will first need to navigate to that project's folder and run `npm install`. This will install the `react`, `react-dom`, `react-scripts` and also any pacakges you have added as dependencies in CodeSandbox. Once installation is complete, you can continue working on the project in the same way as with one set-up with `create-react-app`.
 
-### Deploying (i.e. publishing) Your Site
+### The Bundle
 
-Now that you have a s
+While developing the app, we use `import` statements, but these are not currently supported by any browser. In fact, when you execute the command `npm start`, the entire code of your app is _bundled_ together into a single `.js` file. You can see this file (called `bundle.js`) in the browser's developer tools under the sources tab:
+
+![devtools bundle](assets/devtools_bundle.png?raw=true)
+
+While the development server is running, the bundle will be rebuilt when you save changes to nearly any of your files.
+
+The contents of `bundle.js` will look unfamiliar. In fact the bundling process can involve several additional steps to simply putting all the code in one file. For one, we have been using both `JSX` code, and other modern javascript code that is not yet supported by any browser. To achieve browser compatibility, the code from your project is translated (or _transpiled_) into `es5`. We will discuss the bundling process in greater depth in the future.
+
+### Source Mapping
+
+Fortunately, the code in the `bundle.js` file is mapped back to our react code. This means that we can step through and debug react code as if it were actually running in the browser. Under the sources tab, you will also find the root directory of your project.
+
+> Activity: Setting breakpoints in a react component.
+
+### Setting Up For Production
+
+The `bundle.js` file created by the development server is temporary, and will not be available once the server is stopped. To deploy (i.e. publish) an app, we will need to run the `build` command:
+
+```bash
+npm run build
+```
+
+You should see the message: `Creating an optimized production build...`. When the process is done, a `build` directory will be available in the root of the project, which will include following files (along with some others):
+
+```bash
+- static/
+| - css/
+| | - main.[...].css
+| | - main.[...].css.map
+| - js/
+| | - main.[...].js
+| | - main.[...].js.map
+- index.html
+- favicon.ico
+```
+
+The `build` folder contains a single `html` file, which links to a single `.js` file and a single `.css` file.
