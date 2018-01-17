@@ -44,11 +44,11 @@ This is basically **the same thing** as running two apps at once. One that retur
 
 What does this mean? Well, it means we `npm start` twice to start this app up - once in the 'client' folder, and once in our main folder. If we query the port for our Express app (not React!), we get plain JSON - just like any other API. Take a look in Postman:
 
-![screenshot](./screen1.png)
+![screenshot](./screen1.jpg)
 
 This is what our *backend routing* gives us when we query the route '/users'. This is our frontend:
 
-![screenshot](./screen2.png)
+![screenshot](./screen2.jpg)
 
 Same data, different package. That's what our frontend routing does for us.
 
