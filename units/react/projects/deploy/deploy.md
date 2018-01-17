@@ -41,7 +41,13 @@ Click on the first option to the left: `github`. You should see your github user
 
 ![nelify 2](assets/netlify_2.png?raw=true)
 
-Keep everything as-is and click on the `Deploy Site` button in the bottom of the window. You should now see this:
+Make sure of the following:
+
+* **Branch to Deploy** is `master`
+* **Build Command** is `npm run build`
+* **Publish Directory** is `build`
+
+Click on the `Deploy Site` button in the bottom of the window. You should now see this:
 
 ![nelify 3](assets/netlify_3.png?raw=true)
 
