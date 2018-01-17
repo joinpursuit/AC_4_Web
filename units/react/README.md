@@ -17,7 +17,7 @@
 11. [React Router 2](lessons/react_router_2/react_router_2.md)
 12. [React Routes and State](lessons/react_routes_and_state/react_routes_and_state.md)
 13. [React Router and AJAX](lessons/react_router_and_ajax/react_router_and_ajax.md)
-14. [React - Setting Up and Deploying](lessons/react_local_setup/react_local_setup.md)
+14. [React - Local Set Up](lessons/react_local_setup/react_local_setup.md)
 
 ## Exercises
 

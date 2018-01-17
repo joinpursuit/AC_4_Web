@@ -1,4 +1,4 @@
-# React - Setting Up and Deploying
+# React - Local Set Up
 
 * [create-react-app](https://github.com/facebookincubator/create-react-app)
 * [CodeSandbox](https://codesandbox.io/)
