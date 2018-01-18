@@ -1,5 +1,8 @@
 # Express, Postgres, and React
 
+### Resources
+* [Create React App with Express backend](https://daveceddia.com/create-react-app-express-backend/) - Don't rely on this for everything. He doesn't use SQL servers - instead, he just sends some boilerplate JSON. But this is the idea, and it's a great starting point.
+
 Today, we'll finally be building a full stack app, tip to toe. This is a little scary and a little difficult to get your head around at first - it is for everyone. Bear with us, brush up on your SQL and Express, and don't forget React - we'll be bringing all of that knowledge to bear today.
 
 ## Postgres issues?
@@ -53,3 +56,53 @@ This is what our *backend routing* gives us when we query the route '/users'. Th
 Same data, different package. That's what our frontend routing does for us.
 
 At this point, you might be asking: How? How is data passed around, and how is it finally rendered for our user?
+
+I'm glad you asked. Let's take a look at our backend routing first.
+
+## SQL, Express, and Backend Routing
+
+In the 'db' file, you can see we're using good old Postgres and pg-promise. We're structuring our database with one table and one column - `users` and `username`, respectively, and we're seeding it with a few common names. Our functions in `queries.js` are no different from when we created an API using Express - take `getAllUsers` as an example:
+
+```js
+function getAllUsers(req, res, next) {
+  db.any('select * from users')
+    .then(function (data) {
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Retrieved ALL users'
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+}
+```
+
+We're grabbing all of our users using pg-promise, then sending in the response (`res`) a status of 200 (all good) and JSON. In that JSON, we're putting the data that corresponds to the product of our SQL query (coming back to you yet?). Then we're sending it out.
+
+Where, you ask? Take a look at our 'routes' folder, under 'users'. Right there, you'll see where we're calling our database. This is, actually, all we need to do on the database side of things.
+
+## React and Frontend Routing
+
+Meanwhile, way over on port `3000`, our React app is running, unaware of anything going on on the Express side. How do we fetch that data so that it appears on our frontend?
+
+If you've done AJAX requests using React lifecycle methods, this should be familiar to you. We are using `componentDidMount`, and because of the proxy setting we added to our `package.json` file, our React app knows to send our fetch request to our Express server. Take a look at that:
+
+```js
+componentDidMount() {
+  fetch('/users')
+    .then(res => res.json())
+    .then((users) => {
+      let data = users.data;
+      this.setState({ users: data })}
+    );
+}
+```
+
+Even though, normally, our fetch request wouldn't know where to go without a full URL (and would probably default to the React server's port), our proxy sends it right to `http://localhost:3100/users`, which grabs the JSON response from our Express server.
+
+Let's take a look at our React routing now. Observe that even though the component that we're calling `componentDidMount` from is `http://localhost:3000/users`, we're actually sending requests to two routes on two servers when we render the component. We're pinging our React route to get our JSX template and JavaScript logic, and we're pinging our Express route to get the data to fill it in from our database.
+
+And that's about it! With the React skills you've gained and the Express/SQL skills you'll reclaim, you're in a great position to start building full-stack apps. Yay!
