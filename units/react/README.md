@@ -43,3 +43,4 @@
 5. [React Review](projects/react_review/react_review.md)
 6. [Deploying A Site](projects/deploy/deploy.md)
 7. [React, Sequel, and Express](projects/react_fullstack/react_fullstack.md)
+8. [React, Sequel, and Express 2](projects/react_fullstack/react_fullstack_2.md)
