@@ -6,7 +6,7 @@ This has limitations, but generally, works pretty well. It's used almost exclusi
 
 Here's how you might implement it in an Express project.
 
-First, install Sequelite by opening your terminal and typing `npm install -g sequelite3`. Next, install an easier way to access the database (think pg-promise) by npm installing, in your app, `better-sqlite3`.
+First, install Sequelite by opening your terminal and typing `npm install -g sqlite3`. Next, install an easier way to access the database (think pg-promise) by npm installing, in your app, `better-sqlite3`.
 
 Then, `cd` down to your 'db' folder and type `sequelite3 {database name}.db`. This will create an empty Sequelite database in your 'db' folder - it should be visible in your files.
 

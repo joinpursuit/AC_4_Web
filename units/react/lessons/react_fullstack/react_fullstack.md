@@ -9,7 +9,7 @@ Today, we'll finally be building a full stack app, tip to toe. This is a little 
 
 The database integration part of these notes assumes you have an instance of Postgres running.
 
-We know that some of you are still having trouble setting up Postgres on your computers. Don't worry about that for right now. We'll help you set up Sequelite on your machine. It's a little less powerful, but way easier and very popular, so don't feel like you're getting short-changed. We'll make sure everyone has a Postgres server running by hackathon.
+We know that some of you are still having trouble setting up Postgres on your computers. Don't worry about that for right now. We'll help you set up Sequelite on your machine, and if you're still having issues, we made a little [tutorial](./sqlite_tutorial.md). It's a little less powerful, but way easier and very popular, so don't feel like you're getting short-changed. We'll make sure everyone has a Postgres server running by hackathon.
 
 With that out of the way, **let's get started**.
 
@@ -106,3 +106,5 @@ Even though, normally, our fetch request wouldn't know where to go without a ful
 Let's take a look at our React routing now. Observe that even though the component that we're calling `componentDidMount` from is `http://localhost:3000/users`, we're actually sending requests to two routes on two servers when we render the component. We're pinging our React route to get our JSX template and JavaScript logic, and we're pinging our Express route to get the data to fill it in from our database.
 
 And that's about it! With the React skills you've gained and the Express/SQL skills you'll reclaim, you're in a great position to start building full-stack apps. Yay!
+
+[**Project**](../../projects/react_fullstack/react_fullstack.md)

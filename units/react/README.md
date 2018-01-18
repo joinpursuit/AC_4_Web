@@ -18,6 +18,7 @@
 12. [React Routes and State](lessons/react_routes_and_state/react_routes_and_state.md)
 13. [React Router and AJAX](lessons/react_router_and_ajax/react_router_and_ajax.md)
 14. [React - Local Set Up](lessons/react_local_setup/react_local_setup.md)
+15. [React, Sequel, and Express](lessons/react_fullstack/react_fullstack.md)
 
 ## Exercises
 
@@ -41,3 +42,4 @@
 4. [React Routes and State](projects/react_routes_and_state/react_routes_and_state.md)
 5. [React Review](projects/react_review/react_review.md)
 6. [Deploying A Site](projects/deploy/deploy.md)
+7. [React, Sequel, and Express](projects/react_fullstack/react_fullstack.md)
