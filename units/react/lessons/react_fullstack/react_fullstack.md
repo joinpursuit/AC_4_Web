@@ -9,7 +9,7 @@ Today, we'll finally be building a full stack app, tip to toe. This is a little 
 
 The database integration part of these notes assumes you have an instance of Postgres running.
 
-We know that some of you are still having trouble setting up Postgres on your computers. Don't worry about that for right now. Refer to our tutorial here to set up Sequelite on your machine. It's a little less powerful, but way easier and very popular, so don't feel like you're getting short-changed. We'll make sure everyone has a Postgres server running by hackathon.
+We know that some of you are still having trouble setting up Postgres on your computers. Don't worry about that for right now. We'll help you set up Sequelite on your machine. It's a little less powerful, but way easier and very popular, so don't feel like you're getting short-changed. We'll make sure everyone has a Postgres server running by hackathon.
 
 With that out of the way, **let's get started**.
 
