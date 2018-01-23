@@ -4,6 +4,7 @@
 
 * [Redux - Official Site](https://redux.js.org/)
 * [Leveling Up With React: Redux - CSS Tricks](https://css-tricks.com/learning-react-redux/)
+* [Question: How to choose between Redux's store and React's state? github redux repo](https://github.com/reactjs/redux/issues/1287)
 
 ## Lesson
 
@@ -43,7 +44,9 @@ The benefits of Redux are apparent in a scenario such as the above. With redux, 
 
 Note that while the store is a the root of our app, we can think of it as communicating directly with certain components. These components - `RandomDog` and `DogBreeds` - communicate with the store using _actions_. Actions are javascript objects that have at the very least a `type` property, which is a string describing what the action does. The `"SET_IMAGE_URL"` action from `RandomDog` also contains a string with the image url, and the `"SET_DOG_BREEDS"` action from `DogBreeds` also contains an array with the dog breeds. The store will use the action type to determine what needs to be changed. Once a change is made, the app will be re-rendered from the root `App` component all the way down. We say that an action is _dispatched_ when it is send from a component to the store.
 
-Adding a favorites functionality to the redux app may involve adding a `favorites` property to the store, and possibly two actions: `"ADD_TWO_FAVORITES"` and `"REMOVE_FROM_FAVORITES"`. We will discuss the implementation details in further lectures.
+Adding a _favorites_ functionality to the redux app may involve adding a `favorites` property to the store, and possibly two actions: `"ADD_TWO_FAVORITES"` and `"REMOVE_FROM_FAVORITES"`. We will discuss the implementation details in further lectures.
+
+Redux does not force us to put _all_ of our state in the store. For example, if a component has a search bar that we don't need available globally, we can keep the search input in the state of that component. It is up to us to decide how much of the state we want to put in the global store. There is a great discussion on this point in the [redux github repo](https://github.com/reactjs/redux/issues/1287).
 
 > Ex. Using the knowledge you have so far, create a diagram of the favorite movies app without redux, and another diagram with redux
 
