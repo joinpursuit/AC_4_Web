@@ -3,6 +3,7 @@
 ## Links
 
 * [Redux - Official Site](https://redux.js.org/)
+* [React Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
 * [Leveling Up With React: Redux - CSS Tricks](https://css-tricks.com/learning-react-redux/)
 * [Question: How to choose between Redux's store and React's state? github redux repo](https://github.com/reactjs/redux/issues/1287)
 
