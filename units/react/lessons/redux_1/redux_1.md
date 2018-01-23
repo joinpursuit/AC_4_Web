@@ -63,7 +63,7 @@ We start with the traditional counter app. This `src/` folder of the app has the
 - components/
 | - Counter.js
 - containers/
-| - Counter.js
+| - CounterContainer.js
 - reducers/
 | - count.js
 | - index.js
@@ -106,7 +106,7 @@ This object will be the global state in our store. When an action is dispathched
 { count: 1 }
 ```
 
-The combined reducers are imported in `index.js` as `reducer` and used to create the redux store with the provided `createStore` function. To set up the store to work with react a component provided by the `react-redux` library `<Provider>` is set at the the root of the app in `ReactDom.render`, taking the initial `App` component as a child. The `App` component renders the `CounterContainer`, imported from `containers/Counter.js`. `CounterContainer` is the component that actively connects to the redux store and dispatches actions to it. It receives as props from the store both a `dispatch` function and the `count`. It renders the `Counter` componet from `components/Counter`, which is a simple functional component. To connect `CounterContainer` to the store, we use the `connect` method provided by the `react-redux` library. The use of this method will look strange. In practice it is often used differently. We will discuss this in more detail in later lessons.
+The combined reducers are imported in `index.js` as `reducer` and used to create the redux store with the provided `createStore` function. To set up the store to work with react a component provided by the `react-redux` library `<Provider>` is set at the the root of the app in `ReactDom.render`, taking the initial `App` component as a child. The `App` component renders the `CounterContainer`, imported from `containers/CounterContainer.js`. `CounterContainer` is the component that actively connects to the redux store and dispatches actions to it. It receives as props from the store both a `dispatch` function and the `count`. It renders the `Counter` componet from `components/Counter`, which is a simple functional component. To connect `CounterContainer` to the store, we use the `connect` method provided by the `react-redux` library. The use of this method will look strange. In practice it is often used differently. We will discuss this in more detail in later lessons.
 
 ## Exercises
 
