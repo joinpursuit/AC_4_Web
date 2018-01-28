@@ -20,8 +20,8 @@ with passord 'e10adc3949ba59abbe56e057f20f883e'?
 In this directory is a SQLite database stored in
 the file _unsaltedusers.db_. All of the passwords are
 stored as SHA256 encryptions. The directory also
-contains a file _babyrainbow.json_. Use
-_babyrainbow.json_ to find the user with the plaintext
+contains a file _rainbowtable.js_. Use
+_rainbowtable.js_ to find the user with the plaintext
 password '123456'.
 
 The sample database and rainbow table are small enough
