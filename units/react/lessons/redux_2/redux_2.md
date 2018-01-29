@@ -1,10 +1,17 @@
 # Redux 2 - Redux Without React
 
+* [redux](https://redux.js.org/)
+* Examples:
+  * [Plain JS Counter](https://repl.it/@lizraeli/Redux-JS-Counter)
+  * [HTML + JS Counter](https://repl.it/@lizraeli/redux-html-js-counter)
+  * [HTML + JS Todos](https://repl.it/@lizraeli/redux-html-js-todos)
+  * [HTML + JS Todos with Visiblity Filter](https://repl.it/@lizraeli/redux-html-js-todos-w-filter)
+
 ## Lesson
 
 In the previous lesson we discussed the motivation behind having a library such as Redux to manage the state of our React application. But Redux is _not_ exclusively tied to React. In fact, when incorporating Redux into a React app, we will use two separate libraries: [Redux](https://redux.js.org/) and [React Redux](https://github.com/reactjs/react-redux). In this lesson we will use the Redux library with plain JavaScript and HTML. This may help understand the unique concepts that Redux introduces, before we dive into a full-fledged React + Redux app.
 
-### [Plain JS Counter](https://repl.it/@lizraeli/Redux-Javascript-Counter)
+### [Plain JS Counter](https://repl.it/@lizraeli/Redux-JS-Counter)
 
 We start with a basic counter, without any HTML representation. The code is split into section, each one denoted with a title (e.g. `/* reducers */`). The sections here are:
 
@@ -64,13 +71,11 @@ The current more compelx example has the following HTML:
 
 * constants
 * _helper_ functions: the new section. The function here will be discussed in the following sections.
-* reducers: we still have a single reducer. Now our initial state is the default value of an empty array of todos. The possible action types are `ADD_TODO` and `TOGGLE_COMPLETED`. Note that the reducer does _not_ change the state directly, but instead returns a new state. The `ADD_TODO` case creates a new todo array by copying all the existing todos (using the array spread operator), and adding the new one at the end. The `TOGGLE_COMPLETED` case create a new array in which all the todos but one will be the same. The todos with the relevant `id` will have a flipped `completed` field. When writing React code, this would usually be done by calling the spread operator on the `todo` object:
+* reducers: we still have a single reducer. Now our initial state is the default value of an empty array of todos. The possible action types are `ADD_TODO` and `TOGGLE_COMPLETED`. Note that the reducer does _not_ change the state directly, but instead returns a new state. The `ADD_TODO` case creates a new todo array by copying all the existing todos (using the array spread operator), and adding the new one at the end. The `TOGGLE_COMPLETED` case create a new array in which all the todos but one will be the same. The todos with the relevant `id` will have a flipped `completed` field. This can be done by calling the spread operator on the `todo` object:
 
 ```js
 return { ...todo, completed: !todo.completed };
 ```
-
-Unfortunatelly, the spread operator is not yet natively supported in most browsers (the array spread operator _is_ supported, for the most part). When writing code that will run directly in the browser, we use a method called `Object.assign` that achieves the same result.
 
 * **action creators** - both action creators take arguments. The `toggleCompleted` action creator takes the `id` of the `todo` we want to toggle. The `addTodo` action creator takes the text of the `todo` we want to add, and returns an object with the propertyies::
 
@@ -82,3 +87,49 @@ Unfortunatelly, the spread operator is not yet natively supported in most browse
 * **render** - this is more complex then before. Every time the `render` function is called, to current `todos` array will be fetched from the store's state. The `ul` will be emptied, and then recreated from the array. If we were using React, it would have done a more efficient job of simply replacing the `li`s that changed, rather then replacing the entire list every time.
 
 > Ex. Add a `clear completed` button that will remove all elements from the todos array where the value of `completed` is `true`.
+
+### [HTML + JS Todos with Visiblity Filter](https://repl.it/@lizraeli/redux-html-js-todos-w-filter)
+
+This example extends the previous todos app with a visiblity filter. The HTML looks like this:
+
+```html
+<body>
+
+  <form id="todo-form">
+    <input minlength="3" id="todoInput" type="text" required>
+    <button type="submit"> submit </button>
+  </form>
+
+  <p>
+    show
+    <select id="visibility-options">
+      <option value="SHOW_ALL">all</option>
+      <option value="SHOW_COMPLETED">completed</option>
+      <option value="SHOW_ACTIVE">active</option>
+    </select>
+  </p>
+
+  <ul id="todos"></ul>
+
+  <script src="index.js"></script>
+</body>
+```
+
+Adding a visiblity filter to the todo app requires extending the functionality of redux. We need to keep in our state both the todos array and the current visibility filter. This means that the state will be an object with two properties. The way we set up redux to handle this is by:
+
+* Creating a separate reducer for each property of the state. So now, in addition to the `todosReducer`, we have a `visibilityFilterReducer`.
+* Combining the reducers into a single reducer using a the redux [combineReducers](https://redux.js.org/docs/recipes/reducers/UsingCombineReducers.html) method.
+
+Now our state will be an object with the properties `todos` and `visibilityFilter`. Every time an option is chosen from the visility select element, we will dispatch an action of type `SET_VISIBILITY_FILTER`. This will cause redux store to create a new state, by calling each of the reducers, one after the other. The `todos` reducer will return the exisiting array - this is the default case, when the action type is not `"ADD_TODO"` or `"TOGGLE_COMPLETED"`. The `visibilityFilter` reducer will set the new `visibilityFilter` based on the action `filter` property. Every time the render function is called, we will filter the `todos` array based on the visibility filter.
+
+When an action of type `"ADD_TODO"` or `"TOGGLE_COMPLETED"` is dispatched, the visibility filter will return the current `visibility` property - this is the default case, when the action type is not `"SET_VISIBILITY_FILTER"`.
+
+### Exercises
+
+#### Shopping Cart
+
+Compelte the following boilerplate code to reproduce the shopping cart functionality.
+
+Boilerplate: [https://repl.it/@lizraeli/redux-html-js-cart](https://repl.it/@lizraeli/redux-html-js-cart)
+
+Working example (without redux): [https://codesandbox.io/s/zx6nqr4623](https://codesandbox.io/s/zx6nqr4623)
