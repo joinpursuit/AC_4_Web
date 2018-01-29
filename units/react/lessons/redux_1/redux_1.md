@@ -19,7 +19,7 @@ When we start building react applications that feature multiple components, we i
 
 The `App` component conditionally renders a nested component `AnimalSelector`. The animal selector will display either "giraffe" or "moose" - we click on the `change animal` button to switch between the two. `AnimalSelector` stores the selected animal in its own state as `selectedAnimal`, with "giraffe" being the default value.
 
-The `App` component renders a button that toggles the animal selector. This is done by changing the value `showAnimalSelector` in the state of the `App` component. The `AnimalSelector` component will only be rednered if the value of `showAnimalSelector` is `true`. When `App` stops rendering `AnimalSelector`, the latter will be unmounted - the instance of that component will be discarded, and its internal state will be forgotton. So, when `App` renders `AnimalSelector` again, it will display "giraffe", regardless of the value that was being displayed before.
+The `App` component renders a button that toggles the animal selector. This is done by changing the value `showAnimalSelector` in the state of the `App` component. The `AnimalSelector` component will only be rendered if the value of `showAnimalSelector` is `true`. When `App` stops rendering `AnimalSelector`, the latter will be unmounted - the instance of that component will be discarded, and its internal state will be forgotten. So, when `App` renders `AnimalSelector` again, it will display "giraffe", regardless of the value that was being displayed before.
 
 In this simple app, if we wanted to keep the value of the selected animal, we could do that by putting the `selectedAnimal` property inside the state of the `App` component, and make `AnimalSelector` a stateless component that receives a callback function from `App` to change the animal.
 
@@ -70,7 +70,7 @@ We start with the traditional counter app. This `src/` folder of the app has the
 - index.js
 ```
 
-`containers` and `reducers` are terms from the react/redux world. The files inside the `reducers` folder (except for `index.js`) represent different parts of our global state. Currently there is only one part called `count`. Looking inside `count.js`, we will see a single functional being exported:
+`containers` and `reducers` are terms from the react/redux world. The files inside the `reducers` folder (except for `index.js`) represent different parts of our global state. Currently, there is only one part called `count`. Looking inside `count.js`, we will see a single function being exported:
 
 ```js
 export default (state = 0, action) => {
