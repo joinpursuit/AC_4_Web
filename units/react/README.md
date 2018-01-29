@@ -20,6 +20,7 @@
 14. [React - Local Set Up](lessons/react_local_setup/react_local_setup.md)
 15. [React, Sequel, and Express](lessons/react_fullstack/react_fullstack.md)
 16. [Redux 1](lessons/redux_1/redux_1.md)
+17. [Redux 2](lessons/redux_2/redux_2.md)
 
 ## Exercises
 
