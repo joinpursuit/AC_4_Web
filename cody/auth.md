@@ -29,4 +29,4 @@ _/rememberer_ will also have a post route to accept the form
 submission and set a session cookie with the value of the form.
 
 Every time a user visits the page, the back-end of the app
-should log the name of that user.
+should log the name of that user to the console.
