@@ -21,6 +21,7 @@
 15. [React, Sequel, and Express](lessons/react_fullstack/react_fullstack.md)
 16. [Redux 1](lessons/redux_1/redux_1.md)
 17. [Redux 2](lessons/redux_2/redux_2.md)
+18. [Redux 3](lessons/redux_3/redux_3.md)
 
 ## Exercises
 
@@ -46,3 +47,4 @@
 6. [Deploying A Site](projects/deploy/deploy.md)
 7. [React, Sequel, and Express](projects/react_fullstack/react_fullstack.md)
 8. [React, Sequel, and Express 2](projects/react_fullstack/react_fullstack_2.md)
+9. [Redux 3](projects/redux_3/redux_3.md)
