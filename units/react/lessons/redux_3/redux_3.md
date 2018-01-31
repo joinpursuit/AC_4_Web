@@ -6,6 +6,7 @@ Go ahead and make a directory, `cd` into it, and type:
 
 ```bash
 git clone https://github.com/C4Q/react_redux_ex_lesson_3
+cd react_redux_ex_lesson_3
 npm install
 npm start
 ```

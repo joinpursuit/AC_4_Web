@@ -12,6 +12,12 @@ Today we will look at how to rewrite the [react router cats](https://codesandbox
 
 ### [React Redux Router Cats](https://codesandbox.io/s/w607v68qzl)
 
+This is the folder structure of the cats app with redux:
+
+```js
+
+```
+
 ### Exercises
 
 1. When a single cat is not found, display a corresponding message.
