@@ -13,7 +13,7 @@ Redux devtools are a great tool to visualize the redux store and to debug redux 
 
 To set up Redux Devtools:
 
-1. Install the extension from the [chrome web store].(https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+1. Install the extension from the [chrome web store](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 2. In your project, modify the `createStore` function to take a second argument (this is typically in `index.js`):
 
 ```js
