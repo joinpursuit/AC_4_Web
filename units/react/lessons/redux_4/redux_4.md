@@ -39,7 +39,7 @@ This is the folder structure of the redux cats app :
 
 This is one approach to structuring a Redux app, where each _container_ component has a relatively limited scope. The following is a diagram of the app's components:
 
-![cats diagram](assets/redux-cats-diagram.png)
+![cats diagram](assets/redux-cats-diagram.png?raw=true)
 
 Each Container component (i.e component whose name ends with `"Container"`) is connected to the Redux store. The `CatListContainer` component takes the `catList` property from the store, which is an array of cats, and dispatches the action `SET_CAT_LIST` to set the cat array once it fetched it from the api. The `FavCatsContainer` component fetches the `favorites` property from the store, which is an array of the favorite cats. The `CatContainer` component takes both `cat` and `favorites` properties from the store. It checks if the cat is in the `favorites` array, and passes a corresponding boolean `isFav` to `Cat`, along with the cat itself, and with methods to both add and remove the cat from favorites.
 
