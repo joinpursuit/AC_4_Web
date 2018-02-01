@@ -13,12 +13,12 @@ In the previous lesson we discussed the motivation behind having a library such 
 
 ### [Plain JS Counter](https://repl.it/@lizraeli/Redux-JS-Counter)
 
-We start with a basic counter, without any HTML representation. The code is split into section, each one denoted with a title (e.g. `/* reducers */`). The sections here are:
+We start with a basic counter, without any HTML representation. The code is split into sections, each one denoted with a title (e.g. `/* reducers */`). The sections here are:
 
 * **constants** - These are used to define the possible action types. Both strings `"INCREMENT"` and `"DECREMENT"` will be used at least twice in the code. Saving these strings as variables will eliminate the possibilty of making a spelling mistake. (An incorrectly spelled variable will produce an error).
-* **reducers** - A reducer is a functions that takes as input the current state and an actions, and returns a new state. An action is an object with at minimum a `type` property.
-* **action creators** - An action creator is a function the returns an _action_ object. In the case of the counter app these are called `increment` and `decrement`, and each returns an object with the corresponding action type. As we will see later, action creators will in some cases take arguments and return a more unique object every time they are called. (for example, an `addTodo` action creator will take as argument a string with the new _todo_'s description).
-* **store** - this is where we create the store. We call the `createStore` function, giving it the reducer(s) as an argument. In the case of this simple app, the store consists of single reducer, and the state of the store will be a number rather than an object.
+* **reducers** - A reducer is a function that takes as input the current state and an action, and returns a new state. An action is an object with at minimum a `type` property.
+* **action creators** - An action creator is a function that returns an _action_ object. In the case of the counter app these are called `increment` and `decrement`, and each returns an object with the corresponding action type. As we will see later, action creators will in some cases take arguments and return a more unique object every time they are called. (for example, an `addTodo` action creator will take as an argument a string with the new _todo_'s description).
+* **store** - this is where we create the store. We call the `createStore` function, giving it the reducer(s) as an argument. In the case of this simple app, the store consists of a single reducer, and the state of the store will be a number rather than an object.
 
 We can get the state of the store by calling `store.getState()`. When called initially, this will return `0`. When the store is created, each reducer is called once, like this: `[reducer name](undefined, {})`. Since the state value is _undefined_, it will be given the default value, which we defined as `0`. Since the _action_ object does not have a _type_ property, its value is _undefined_ too, so inside the _switch_ statement, the _default_ case will be reached, returning the value of _state_ (`0`).
 
@@ -43,7 +43,7 @@ The `index.js` file has the same initial sections as the previous counter exampl
 * _DOM events_: these are event listeners to clicks on the increment and decrement buttons. When either button is called, a corresponding action is dispatched to the store.
 * _render_: this consists of a _render_ function. Since we are _not_ using React, we need to manipulate some part of the HTML directly. Every time the render function is called, we get the current state of the store, and then display the state using `innerHTML` of a DOM element.
 
-We use `store.subcribe` method so that every time the state of the store changes, the function given as argument will be called. Now, whenever, the user clicks on either the _increment_ or _decrement_ buttons, and action will be dispatched to the store, causing the store's state to change, which will in turn cause the _render_ function to be called, which will display the new value of the state of our store. This can be summarized as follows:
+We use `store.subcribe` method so that every time the state of the store changes, the function given as an argument will be called. Now, whenever, the user clicks on either the _increment_ or _decrement_ buttons, and action will be dispatched to the store, causing the store's state to change, which will in turn cause the _render_ function to be called, which will display the new value of the state of our store. This can be summarized as follows:
 
 THE USER CLICKS ON A BUTTON -> AN ACTION IS DISPATCHED TO THE STORE -> THE STORE UPDATES -> THE RENDER FUNCTION IS CALLED
 
@@ -51,7 +51,7 @@ THE USER CLICKS ON A BUTTON -> AN ACTION IS DISPATCHED TO THE STORE -> THE STORE
 
 ### [HTML + JS Todos](https://repl.it/@lizraeli/redux-html-js-todos)
 
-The current more complex example has the following HTML:
+The current, more complex example has the following HTML:
 
 ```html
 <body>
@@ -71,7 +71,7 @@ The current more complex example has the following HTML:
 
 * constants
 * _helper_ functions: the new section. The function here will be discussed in the following sections.
-* reducers: we still have a single reducer. Now our initial state is the default value of an empty array of todos. The possible action types are `ADD_TODO` and `TOGGLE_COMPLETED`. Note that the reducer does _not_ change the state directly, but instead returns a new state. The `ADD_TODO` case creates a new todo array by copying all the existing todos (using the array spread operator), and adding the new one at the end. The `TOGGLE_COMPLETED` case create a new array in which all the todos but one will be the same. The todos with the relevant `id` will have a flipped `completed` field. This can be done by calling the spread operator on the `todo` object:
+* reducers: we still have a single reducer. Now our initial state is the default value of an empty array of todos. The possible action types are `ADD_TODO` and `TOGGLE_COMPLETED`. Note that the reducer does _not_ change the state directly, but instead returns a new state. The `ADD_TODO` case creates a new todo array by copying all the existing todos (using the array spread operator), and adding the new one at the end. The `TOGGLE_COMPLETED` case creates a new array in which all the todos but one will be the same. The todos with the relevant `id` will have a flipped `completed` field. This can be done by calling the spread operator on the `todo` object:
 
 ```js
 return { ...todo, completed: !todo.completed };
@@ -84,7 +84,7 @@ return { ...todo, completed: !todo.completed };
 
 * **DOM EVENTS** - the single DOM event is a listener to the user's click on the `submit` button. It takes the text from the `input` field and dispatches an action created by the `addTodo` action creator (given the text as an argument). Finally, the value of the input field is set to an empty string.
 
-* **render** - this is more complex then before. Every time the `render` function is called, to current `todos` array will be fetched from the store's state. The `ul` will be emptied, and then recreated from the array. If we were using React, it would have done a more efficient job of simply replacing the `li`s that changed, rather then replacing the entire list every time.
+* **render** - this is more complex than before. Every time the `render` function is called, the current `todos` array will be fetched from the store's state. The `ul` will be emptied, and then recreated from the array. If we were using React, it would have done a more efficient job of simply replacing the `li`s that changed, rather then replacing the entire list every time.
 
 > Ex. Add a `clear completed` button that will remove all elements from the todos array where the value of `completed` is `true`.
 
@@ -118,7 +118,7 @@ This example extends the previous todos app with a visibility filter. The HTML l
 Adding a visibility filter to the todo app requires extending the functionality of redux. We need to keep in our state both the todos array and the current visibility filter. This means that the state will be an object with two properties. The way we set up redux to handle this is by:
 
 * Creating a separate reducer for each property of the state. So now, in addition to the `todosReducer`, we have a `visibilityFilterReducer`.
-* Combining the reducers into a single reducer using a the redux [combineReducers](https://redux.js.org/docs/recipes/reducers/UsingCombineReducers.html) method.
+* Combining the reducers into a single reducer using the redux [combineReducers](https://redux.js.org/docs/recipes/reducers/UsingCombineReducers.html) method.
 
 Now our state will be an object with the properties `todos` and `visibilityFilter`. Every time an option is chosen from the visility select element, we will dispatch an action of type `SET_VISIBILITY_FILTER`. This will cause redux store to create a new state, by calling each of the reducers, one after the other. The `todos` reducer will return the exisiting array - this is the default case, when the action type is not `"ADD_TODO"` or `"TOGGLE_COMPLETED"`. The `visibilityFilter` reducer will set the new `visibilityFilter` based on the action `filter` property. Every time the render function is called, we will filter the `todos` array based on the visibility filter.
 
