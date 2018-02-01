@@ -6,10 +6,10 @@ Add a caption at the top of the [todos app](https://codesandbox.io/s/2pw303631n)
 
 ## Count Completed && Active
 
-Add two caption at the top of the [todos app](https://codesandbox.io/s/2pw303631n):
+Add two captions at the top of the [todos app](https://codesandbox.io/s/2pw303631n):
 
-1. Show the number of active `todos` (i.e. where `completd` is `false`)
-2. Show the number of completed `todos` (i.e. where `completd` is `true`)
+1. Show the number of active `todos` (i.e. where `completed` is `false`)
+2. Show the number of completed `todos` (i.e. where `completed` is `true`)
 
 ## Filter
 
