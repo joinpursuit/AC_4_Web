@@ -22,7 +22,8 @@
 16. [Redux 1](lessons/redux_1/redux_1.md)
 17. [Redux 2](lessons/redux_2/redux_2.md)
 18. [Redux 3](lessons/redux_3/redux_3.md)
-19. [Redux 4](lessons/redux_4/redux_4.md)
+19. [Redux Devtools](lessons/redux_devtools/redux_devtools.md)
+20. [Redux 4](lessons/redux_4/redux_4.md)
 
 ## Exercises
 
