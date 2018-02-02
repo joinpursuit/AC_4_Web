@@ -47,6 +47,36 @@ In this folder, we have three files:
 
 `helpers.js` is where we use bcrypt to create and verify users. `passport.js` is where we set up how passport will *serialize* and *deserialize* users. This sets up how passport will assign session cookies. Finally, we have `local.js`, which determines whether or not we will, in fact, assign a cookie to a user who is logging in - in other words, we check whether the user exists in the database.
 
+## A Deeper Dive into Auth
+
+### helpers.js
+
+```js
+function comparePass(userPassword, databasePassword) {
+  return bcrypt.compareSync(userPassword, databasePassword);
+}
+
+function createUser(req) {
+  const salt = bcrypt.genSaltSync();
+  const hash = bcrypt.hashSync(req.body.password, salt);
+  return db.none('INSERT INTO users (username, password_digest) VALUES (${username}, ${password})', {username: req.body.username, password: hash});
+}
+```
+
+You will notice, if you take a look at Michael Herman's `helpers.js` file, that this looks very similar - we simply replace the module he uses to interact with the database (called "knex") with our own (pg-promise).
+
+We define two functions here - `comparePass`, which (as the name implies) hashes its first (plain) argument and compares it to the second (hashed) argument. We have to hash instead of decrypt because **it is intentionally impossible** to decrypt hashes.
+
+The second function does what its name implies - it salts and hashed an inputted password and adds the user to the database.
+
+### local.js
+
+This file is to configure Passport to verify users in our database. If a user is verified, then we return it, and Passport is given the go-ahead to assign our browser a session token.
+
+### passport.js
+
+This file works in tandem with `local.js` to configure Passport. It adds the logic to `serialize` (login) the user, and `deserialize`, which verifies any user requests to the database.
+
 ## app.js - Ensuring that authentication occurs
 
 We add several bits to app.js to ensure that requests to the database are properly authenticated:
@@ -66,7 +96,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 ```
 
-The 'secret' part is a series of randomly generated characters, and it's generally not best-practice to shove it right in there - when we deploy to production, we want to hide it in a similar way that we'd hide our API keys.
+**Note:** Our session token is a hash, too, and hashing functions often require a seed to get started. The 'secret' part is that seed, and could be anything - here, we used a series of randomly generated characters. It's not generally best-practice to shove it right in there - when we deploy to production, we'll want to hide it in a similar way that we'd hide our API keys.
 
 ## queries.js - Where the Requests Happen
 
@@ -97,13 +127,21 @@ function registerUser(req, res, next) {
 }
 ```
 
+The order here is important:
+
+* First, we use our `authHelpers.createUser` method (from the `helpers` file in the `auth` folder) to process the user's password and add it to the database.
+* Then, should the `createUser` promise resolve, we authenticate their password using `passport.authenticate` and log them in.
+* Finally, `passport.authenticate` should return a user object if it resolves. We use that user object to send a response indicating that our registration was successful.
+
 ## React - Not Much Different
 
 In our React app, we create a couple of new components to register users and log them in, but not much is different here at all - we get info from our users and use that to make AJAX requests to our server. All of our auth stuff happens on the backend.
 
 ### Exercise
 
-You may have noticed that there isn't a function in queries to log in a user.
+First, using a combination of the Michael Herman tutorial and the example app as a reference, **recreate the example app** yourself to get a sense of what goes where.
+
+You may have noticed that there isn't a function in `queries` to log in a user. The frontend components include a login page, but the AJAX request it sends currently returns an error 500.
 
 Using the Michael Herman tutorial from the Resources section, create a loginUser function to complete this app's login functionalities.
 

@@ -24,6 +24,7 @@
 18. [Redux 3](lessons/redux_3/redux_3.md)
 19. [Redux Devtools](lessons/redux_devtools/redux_devtools.md)
 20. [Redux 4](lessons/redux_4/redux_4.md)
+21. [User Registration and Authentication](lessons/user_registration/user_registration.md)
 
 ## Exercises
 
