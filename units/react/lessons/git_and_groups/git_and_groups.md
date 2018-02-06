@@ -74,3 +74,5 @@ Once you've implemented your feature or fixed your bug in your working branch, m
 I'm working on a project with Susie. We both, accidentally, implement the same sorting algorithm. My version is implemented first. However, Susie makes a pull request with her algorithm. This creates what's known in Git as a **merge conflict**.
 
 Avoid merge conflicts like the plague! They represent redundant efforts, they are annoying to resolve, and if there are a lot of them, they can be downright terrible. For example, say my sorting algorithm sorted our data in alphabetical order, and Susie's sorted in reverse alphabetical order. This would affect **every part** of the app that depends on that algorithm.
+
+[Project](../../project/git_and_groups/git_and_groups.md)

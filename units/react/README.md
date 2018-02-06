@@ -26,6 +26,7 @@
 20. [Redux 4](lessons/redux_4/redux_4.md)
 21. [User Registration and Authentication](lessons/user_registration/user_registration.md)
 22. [User Registration and Authentication - 2](lessons/user_registration_2/user_registration_2.md)
+23. [Git and Working in Groups](lessons/git_and_groups/git_and_groups.md)
 
 ## Exercises
 
@@ -52,3 +53,4 @@
 7. [React, Sequel, and Express](projects/react_fullstack/react_fullstack.md)
 8. [React, Sequel, and Express 2](projects/react_fullstack/react_fullstack_2.md)
 9. [Redux 3](projects/redux_3/redux_3.md)
+10. [Git and Working in Groups](projects/git_and_groups/git_and_groups.md)
