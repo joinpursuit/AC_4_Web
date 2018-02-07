@@ -11,6 +11,7 @@
 * [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 * [Michael Herman's Tutorial](http://mherman.org/blog/2016/09/25/node-passport-and-postgres/)
 * [Registering Users - Lesson 1](../user_registration/user_registration.md)
+* [How Can bcrypt Have Built-in Salts? - Stack Overflow](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)
 
 In this lesson we will continue building up a fullstack app with express, postgres and react.
 
