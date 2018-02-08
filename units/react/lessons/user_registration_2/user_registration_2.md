@@ -147,4 +147,5 @@ If there request does not have a `user` attached to it, this is not a request fr
 ### Frontend
 
 > Ex. If the user has logged in, try to log them in automatically on page refresh. This can be done in the `Users` - `componentDidMount`.
+>
 > Ex. Add a logout button that will log out the user.
