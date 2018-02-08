@@ -67,7 +67,7 @@ You will notice, if you take a look at Michael Herman's `helpers.js` file, that 
 
 We define two functions here - `comparePass`, which (as the name implies) hashes its first (plain) argument and compares it to the second (hashed) argument. We have to hash instead of decrypt because **it is intentionally impossible** to decrypt hashes.
 
-The second function does what its name implies - it salts and hashed an inputted password and adds the user to the database.
+The second function does what its name implies - it salts and hashes an inputted password and adds the user to the database.
 
 ### local.js
 
