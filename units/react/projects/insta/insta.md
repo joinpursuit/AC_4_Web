@@ -49,4 +49,30 @@ Use the [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaa
 
 * Icons. If you are handy with Photoshop, this may not apply to you. If you aren't, there are many generators online that help you create serviceable icons. Here's an [example](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=square&effects=none&name=ic_launcher).
 
+## Schedule
 
+We will be keeping track of your progress throughout this process. Generally, your project should be broken out into three phases:
+
+* Day 1: Group role delegation, conceptualization, planning, and starting work.
+* Next few days: Work on the project. Every day, check in with your group to see where everyone is/what needs doing. The day before it is due, put your heads together and think of a good (short) way to present your work.
+* Final day: Present your work to the class. Receive adulation. Profit.
+
+## Bonuses
+
+There are a few bonus features that you are welcome to implement, if you are curious and motivated.
+
+### Image Hosting
+
+Use [Cloudinary](https://cloudinary.com/) to host images, let users upload images directly to your Cloudinary-based image database, and get image URLs for your backend.
+
+### Comments
+
+Let users add comments to images.
+
+### Captions, Tagging, and Search
+
+Let users add captions to their images, hashtag them, and search for images that correspond to particular hashtags.
+
+### Infinite Scroll
+
+Only render a certain number of images on the homepage. When the user reaches the bottom of the page, get more from your database and render them underneath.
