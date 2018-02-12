@@ -54,3 +54,4 @@
 8. [React, Sequel, and Express 2](projects/react_fullstack/react_fullstack_2.md)
 9. [Redux 3](projects/redux_3/redux_3.md)
 10. [Git and Working in Groups](projects/git_and_groups/git_and_groups.md)
+11. [Instagram Clone](projects/insta/insta.md)
