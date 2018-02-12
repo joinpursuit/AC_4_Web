@@ -19,9 +19,9 @@ This will be both similar to, and different from, your user authentication learn
 * User follows (in other words, the accounts the user is following).
 * User followers (the accounts following the user).
 
-Remember - this isn't like Facebook. A user can follow someone that isn't following them back. How will you manage this on the database side? This is not an insignificant task, and might require a little creative thinking (**Hint**: Rather than keeping track of follows in the `users` table, you might want a separate table called `follows`).
+Remember - this isn't like Facebook. A user can follow someone that **isn't following them back**. How will you manage this on the database side? This is not an insignificant task, and might require a little creative thinking (**Hint**: Rather than keeping track of follows in the `users` table, you might want a separate table called `follows`).
 
-Of course, please fully implement proper user registration and authentication, including session management, hashing and salting passwords, etc.
+Of course, please fully implement proper user **registration and authentication**, including session management, hashing and salting passwords, etc.
 
 ## Images
 
@@ -33,7 +33,7 @@ As we are not yet hosting images, don't add a full-on "Upload Image" functionali
 
 ## Likes
 
-You can see that we aren't implementing comments on this project - wait until the Bonus section for that. These likes are only connected to images. Each image should have many likes, and clicking an image's heart icon should add a like to that image from the logged-in user's account.
+You can see that we aren't implementing comments on this project - wait until the Bonus section for that. These likes are only connected to **images**. Each image should have many likes, and clicking an image's heart icon should add a like to that image from the logged-in user's account.
 
 ## Styling
 
@@ -43,19 +43,19 @@ Either look at the Instagram web app on your own account for reference, or look 
 
 Use the [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj?hl=en) Chrome extension to measure the height and width of different parts of the page, and proportion your interface accordingly. Here are a few other specifications:
 
-* While the app does not have to be mobile-friendly, it does have to support different laptop screen sizes and pixel densities. That means that whenever possible you should avoid using fixed pixel-precise widths for elements on the page that appear to adjust when you change the size of your window. Make use of whatever you need to accomplish this - I recommend using Flexbox and using percentages instead of pixel-based sizing whenever possible.
+* While the app does not have to be mobile-friendly, it does have to support **different laptop screen sizes and pixel densities**. That means that whenever possible you should avoid using fixed pixel-precise widths for elements on the page that appear to adjust when you change the size of your window. Make use of whatever you need to accomplish this - I recommend using **Flexbox** and using **percentages** instead of pixel-based sizing whenever possible.
 
-* Your color scheme can be whatever you want - you don't have to use the classic blue-black-white of Insta. Get creative!
+* Your **color scheme** can be whatever you want - you don't have to use the classic blue-black-white of Insta. Get creative!
 
-* Icons. If you are handy with Photoshop, this may not apply to you. If you aren't, there are many generators online that help you create serviceable icons. Here's an [example](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=square&effects=none&name=ic_launcher).
+* **Icons**. If you are handy with Photoshop, this may not apply to you. If you aren't, there are many generators online that help you create serviceable icons. Here's an [example](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=square&effects=none&name=ic_launcher).
 
 ## Schedule
 
-We will be keeping track of your progress throughout this process. Generally, your project should be broken out into three phases:
+We will be keeping track of your progress throughout this process. Generally, your project should be broken out into **three phases**:
 
-* Day 1: Group role delegation, conceptualization, planning, and starting work.
-* Next few days: Work on the project. Every day, check in with your group to see where everyone is/what needs doing. The day before it is due, put your heads together and think of a good (short) way to present your work.
-* Final day: Present your work to the class. Receive adulation. Profit.
+* **Day 1**: Group role delegation, conceptualization, planning, and starting work.
+* **Next few days**: Work on the project. Every day, check in with your group to see where everyone is/what needs doing. The day before it is due, put your heads together and think of a good (short) way to present your work.
+* **Final day**: Present your work to the class. Receive adulation. Profit.
 
 ## Bonuses
 
