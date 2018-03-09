@@ -2,17 +2,23 @@
 
 [Source: Images in HTML, by Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 
+## Readings
+
+[HTML Images Overview](http://htmldog.com/guides/html/beginner/images/)
+
+[In depth HTML Images](https://www.w3schools.com/html/html_images.asp)
+
 ## Instructions
 
 ### First Exercise
 
-Embed the following image in an HTML document:
+Create an HTML document image.html and embed the following image in an HTML document:
 
 ![dinosaur](assets/image.jpg)
 
 Also, do the following:
 
-* Add some alt text, and check that it works by misspelling the image URL.
+* Add some `alt` text, and check that it works by misspelling the image URL.
 * Set the image's correct `width` and `height` (hint; it is 200px wide and 171px high), then experiment with other values to see what the effect is.
 * Set a `title` on the image.
 
