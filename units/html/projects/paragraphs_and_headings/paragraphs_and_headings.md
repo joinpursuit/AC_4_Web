@@ -3,7 +3,7 @@
 [Source: Wikiversity](https://en.wikiversity.org/wiki/Web_Design/HTML_Challenges)
 
 ## Links
-
+Read through the links below to help you understand how HTML tags work.
 * [HTML Dog - Paragraphs](http://htmldog.com/guides/html/beginner/paragraphs)
 * [HTML Dog - Headings](http://htmldog.com/guides/html/beginner/headings)
 
