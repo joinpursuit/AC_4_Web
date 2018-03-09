@@ -5,6 +5,7 @@
 ## Reading
 
 [HTML Lists overview](http://htmldog.com/guides/html/beginner/lists/)
+
 [HTML Lists in depth](https://www.w3schools.com/html/html_lists.asp)
 
 ## Instructions
