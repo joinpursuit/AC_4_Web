@@ -9,21 +9,9 @@
 
 ## Instructions
 
-Copy and paste the following html and save your file with the name `html_challenge1.html`.
+Create a file named `html_challenge1.html`.
 
-Open your file in a web browser and compare it to the image displayed here 
-
-[![Html challenge1.png](https://upload.wikimedia.org/wikiversity/en/3/3d/Html_challenge1.png)](https://en.wikiversity.org/wiki/File:Html_challenge1.png#/media/File:Html_challenge1.png)
-*By Michael Nelson - screenshot on ubuntu linux, [CC BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5 "Creative Commons Attribution 2.5")*
-
-Your challenge is to add
-
-* headings (`<h1>`, `<h2>`, `<h3>` etc.)
-* paragraphs (`<p>`)
-* emphasis and strong (`<em>` and `<strong>`)
-
-so that your page looks like the one in the image.
-
+In the file you are going to copy and paste the Sundial text below into your html file. 
 ```html
 Sundial
 
@@ -51,6 +39,18 @@ Installation of standard sundials
 
 Many ornamental sundials are designed to be used at 45 degrees north. By tilting such a sundial, it may be installed so that it will keep time. However, some mass-produced garden sundials are inaccurate because of poor design and cannot be corrected.
 ```
+
+Now double click the file to open it in your browser and you'll see it doesn't look like the example image below. This is because you haven't added any HTML tags to your code, so the browser renders your text exactly as is. 
+
+[![Html challenge1.png](https://upload.wikimedia.org/wikiversity/en/3/3d/Html_challenge1.png)](https://en.wikiversity.org/wiki/File:Html_challenge1.png#/media/File:Html_challenge1.png)
+*By Michael Nelson - screenshot on ubuntu linux, [CC BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5 "Creative Commons Attribution 2.5")*
+
+Your challenge will be to add HTML tags to make your file look like the one in the image:
+
+* headings (`<h1>`, `<h2>`, `<h3>` etc.)
+* paragraphs (`<p>`)
+* emphasis and strong (`<em>` and `<strong>`)
+
 
 A web browser will display the `h1` heading very large, and the `h6` heading quite small, and all the other headings in between! But don't get into the habit of selecting an h4 heading because it displays with the size that you're after! You can always modify the size of your elements using your stylesheet (more on that later).
 
