@@ -6,7 +6,7 @@ Create a react component with two buttons - plus (`+`) and minus (`-`), and the 
 
 ## Counter 2
 
-Add a `reset` button that will set the count to `0`.
+Add a `reset` button that will set the count to `0`. 
 
 ## Counter 3
 
