@@ -7,3 +7,5 @@
 
 * Given an array of numbers, reset the array to put all the non-zero numbers in front of all the zeros in the array. Then return the new array and the count of non-zero numbers.
   - *If they ask: The new array and the count can be contained inside a larger array. They would be the 0th and 1st indices.*
+
+* Write a function that combines two arrays by alternating taking elements from each array in turn. E.g. [1, 2, 3], [a, b, c] becomes [1, a, 2, b, 3, c].
