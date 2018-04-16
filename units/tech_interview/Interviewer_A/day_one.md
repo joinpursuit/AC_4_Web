@@ -14,7 +14,7 @@ My partner is:
   * Feedback:
 
 * Given a string, take the last character and return a new string with the last character added at the front and back, so "cat" yields "tcatt".
-  * **If they ask**: The original string will be length 1 or more.*
+  * **If they ask**: The original string will be length 1 or more.
   * Feedback:
 
 * [Follow this link here to the final question](https://github.com/C4Q/AC-DSA/blob/master/ArrayProblems/DiagonalSum.md)
