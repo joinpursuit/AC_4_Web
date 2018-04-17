@@ -9,17 +9,24 @@
 **Answer**
 ```js
 function flexSymmetry(arg) {
+  let answer = true;
   let newArg;
 
   if (typeof(arg) === "string") {
     newArg = arg.split("");
-  } else if (typeof(arg) === "integer") {
+  } else if (typeof(arg) === "number") {
     newArg = arg.toString("").split("");
   } else {
     newArg = arg;
   };
 
-  return (newArg === newArg.reverse());
+  newArg.forEach((el, i) => {
+    if (el !== newArg[newArg.length - (i + 1)]) {
+      answer = false;
+    }
+  })
+
+  return answer;
 }
 ```
 
