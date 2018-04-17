@@ -89,7 +89,7 @@ Wait. What? Why do we need to convert something potentially meaningful into some
 
 Take a look at the diagram below:
 
-![hashin'](https://en.wikipedia.org/wiki/Hash_table#/media/File:Hash_table_3_1_1_0_1_0_0_SP.svg)
+![hashin'](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/315px-Hash_table_3_1_1_0_1_0_0_SP.svg.png)
 
 When we define keys and values in an object, we take for granted that JavaScript is going to relate them and store them, no problem. However, this isn't the whole story. As we learned with arrays, JavaScript has to store this stuff somewhere in memory. Unlike arrays, we don't have a clear, easy way to do that. We can't just index key-value pairs, because objects are not indexed.
 
