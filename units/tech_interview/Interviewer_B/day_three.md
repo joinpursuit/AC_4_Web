@@ -34,3 +34,32 @@ const rotate = (int, arr) => {
   return copyArr;
 }
 ```
+
+* Implement a method to perform basic string compression using the counts of repeated characters. For example, the string 'aaabbbbccccc' would become 'a3b4c5'. If the compressed string would not be shorter than the original string, simply return the original string.
+  * *If they ask: You can assume the string only has lowercase letters. Characters may return in new groups (for example, 'aabbbaaaa' would be 'a2b3a4'.)*
+
+**Answer**
+```js
+function compressStr(str) {
+  strArr = str.split('');
+  newArr = [];
+  count = 1;
+
+  strArr.forEach((el, i) => {
+    if (strArr[i + 1] && strArr[i + 1] === el) {
+      count += 1;
+    } else if (count > 1) {
+      newArr.push(el.concat(count.toString()))
+      count = 1;
+    } else {
+      newArr.push(el)
+    }
+  })
+
+  if (newArr.join('').length < str.length) {
+    return newArr.join('');
+  } else {
+    return str;
+  }
+}
+```
