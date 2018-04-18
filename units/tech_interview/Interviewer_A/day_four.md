@@ -101,7 +101,7 @@ Keeping track of our bottles, we'd be able to determine the heavy bottle based o
 ```js
 function filterBots(arr) {
   return arr.filter((obj) => {
-    descArray = obj.description.split(" ");
+    let descArray = obj.description.split(" ");
     if (descArray.includes('beep')) {
       return obj;
     }
