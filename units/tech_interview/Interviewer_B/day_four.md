@@ -54,7 +54,7 @@ function isRotation(s1, s2) {
 **Solution**
 ```js
 function atLeastThree(arr, str) {
-  counter = 0;
+  let counter = 0;
 
   arr.forEach((el) => {
     if (isAnagram(el, str)) {
