@@ -35,7 +35,7 @@ function factorial(int) {
 }
 ```
 
-* Write a function that two arguments: An array with three or more integers, and a constant integer `c`. Return a boolean depending on whether three of the elements in the array add up to `c`. For example, for the inputs [6, 2, 3, 4] and 9, our function would return `true`, as 2 + 3 + 4 = 9.
+* Write a function that takes two arguments: An array with three or more integers, and a constant integer `c`. Return a boolean depending on whether three of the elements in the array add up to `c`. For example, for the inputs [6, 2, 3, 4] and 9, our function would return `true`, as 2 + 3 + 4 = 9.
   * *Details, if they ask: The array can contain negative numbers. The array is not sorted. The elements do not have to be consecutive.*
   * Questions for after this problem: What if the elements had to be consecutive? Is there a way to optimize this problem from a Big O perspective?
 
