@@ -2,7 +2,9 @@
 
 ## Topic 7: Recursion
 
+
 ![cautionary tale](https://i.redd.it/0wap3cp4khm01.jpg)
+
 
 Now it's time to talk about recursion.
 
@@ -51,13 +53,15 @@ As you might have gathered from that Wikipedia article posted earlier, to get an
 
 Wait. What? Our Fibonacci function is calling itself as its return value. Won't this function go on forever? ... Wait, what's that if statement up at the top?
 
-Enter the **base case**. A base case is the rule to ensure that a recursive function doesn't go on to infinity. It's also the way for a recursive function to actually return a value. It's our way of saying "OK, so I know one case to be true, and I'm going to stop this madness when I get there."
+Enter the **base case**, or the exit condition. A base case is the rule to ensure that a recursive function doesn't go on to infinity. It's also the way for a recursive function to actually return a value. It's our way of saying "OK, so I know one case to be true, and I'm going to stop this madness when I get there."
 
 A recursive function has to have two things to work properly: It must have a base case, and it must have a recursive call that works towards that base case in a way that will produce the correct value.
 
-In the case of the Fibonacci sequence, for example, we know that the first two values are both 1. Therefore, we set up our base case to return one, and ensure that the last two arguments that our fibonacci function returns (i.e. fibonacci(1) + fibonacci(0)) are both 1. This can be a little tricky to visualize, so here's a visual aid:
+In the case of the Fibonacci sequence, for example, we know that the first two values are both 1. Therefore, we set up our base case to return 1, and ensure that the last two arguments that our fibonacci function returns (i.e. fibonacci(1) + fibonacci(0)) are both 1. This can be a little tricky to visualize, so here's a visual aid:
+
 
 ![fib stuff!](https://algorithmstuff.files.wordpress.com/2013/06/fib_5.png)
+
 
 In this example, we are calculating the fifth index of the Fibonacci sequence, which evaluates to 8. In order for our function to evaluate to 8, it calls itself until its calls reach the **base case** of either 0 or 1, both of which return 1. When everything returns an integer, we evaluate up the chain by adding everything together. Notice that there are **8 separate instances** of `Fib(0)` or `Fib(1)`. This shows that we've done our job.
 
