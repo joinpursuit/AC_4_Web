@@ -49,7 +49,7 @@ function isBST(node) {
   let answer = true;
 
   while (index < counterArr.length) {
-    if (counterArr[index] !== sorted(index)) {
+    if (counterArr[index] !== sorted[index]) {
       answer = false;
     }
     index += 1;
