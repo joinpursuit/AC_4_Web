@@ -37,7 +37,7 @@ const recSCheck = (arr) => {
 }
 ```
 
-* Write a function that accepts a string as an input. This string should be written in dot notation, e.g. `'dog.breed.husky'`. Return a nested object that stores each word as a key and stores `true` as the last value. In the above example, we'd return `{'dog': {'breed': {husky: true}}}`.
+* Write a function that accepts a string as an input. This string should be written in dot notation, e.g. `'dog.breed.husky'`. Return a nested object that stores each word as a key and stores `true` as the last value. In the above example, we'd return `{'dog': {'breed': {'husky': true}}}`.
 
 **Solution**
 ```js
