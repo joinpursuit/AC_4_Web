@@ -34,7 +34,7 @@ const recReverse = (str) => {
 
 **Solution**
 ```js
-function totalIntegers(array){
+function totalIntegers(array) {
   if (array.length === 0) {
     return 0;
   }
