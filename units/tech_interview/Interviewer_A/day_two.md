@@ -15,7 +15,7 @@ function flexSymmetry(arg) {
   if (typeof(arg) === "string") {
     newArg = arg.split("");
   } else if (typeof(arg) === "number") {
-    newArg = arg.toString("").split("");
+    newArg = arg.toString().split("");
   } else {
     newArg = arg;
   };
