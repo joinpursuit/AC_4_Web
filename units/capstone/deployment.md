@@ -81,7 +81,7 @@ Well, besides...
 In the terminal, in your project's root folder, type the following:
 
 ```
-heroku addons:create heroku-postgresql:hobby-dev
+heroku addons:create heroku-postgresql:hobby-dev -a <app-name-on-heroku>
 ```
 
 This does a couple of things. It:
