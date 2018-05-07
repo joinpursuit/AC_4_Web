@@ -23,7 +23,7 @@ Remember [this one](https://github.com/C4Q/AC_4_Web/blob/master/units/react/proj
 
 ## Strategy 2: HTML/CSS and S3/Firebase
 
-Who needs JavaScript, anyways? [I sure didn't.](https://reedgaines.com/index.html). Using Firebase or S3 might be a little more involved, but it gives you the opportunity to explore how these platforms work. That's some resume-building stuff, guys.
+Who needs JavaScript, anyways? [I sure didn't.](https://reedgaines.com/index.html) Using Firebase or S3 might be a little more involved, but it gives you the opportunity to explore how these platforms work. That's some resume-building stuff, guys.
 
 The step-by-step instructions found above both work well.
 
