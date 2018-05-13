@@ -67,6 +67,6 @@ There are tons of other methods that Jest provides, including less-than and grea
 
 You might be wondering: what do these tests actually show us when we run them? Fork the repl.it link [here](https://repl.it/@amasad/try-jest) and see what you get. Mess around with it - try different, more complex functions and see what happens! Don't forget to check out the Jest docs for more functions.
 
-Next, take one of your assignments from the last two weeks. Using Jest, write tests for each function. Make sure to take into account edge cases for each one!
+After that, take a look at my version [here](https://repl.it/@reedo/try-jest). You'll see that I took a different approach. I wrote a bunch of functions in `add.js` - many of which might be familiar to you from whiteboarding. My challenge to you is to write tests for each function. Make that output green!
 
 We will get into asynchronicity and React later this week.
