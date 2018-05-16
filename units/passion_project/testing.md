@@ -3,11 +3,11 @@
 ### (we have fun around here)
 
 ## Resources
-* [Introduction to Test Driven Development](http://agiledata.org/essays/tdd.html)
-* [Types of Testing](https://www.atlassian.com/continuous-delivery/different-types-of-software-testing)
-* [Jest](https://facebook.github.io/jest/en/)
+* [Jest](https://facebook.github.io/jest/en/): Start Here!
   - [Getting Started](https://facebook.github.io/jest/docs/en/getting-started.html)
   - [Testing React Apps](https://facebook.github.io/jest/docs/en/tutorial-react.html)
+* [Introduction to Test Driven Development](http://agiledata.org/essays/tdd.html)
+* [Types of Testing](https://www.atlassian.com/continuous-delivery/different-types-of-software-testing)
 
 *Testing*. We've heard that word so frequently. It's like *agile*. Or *algorithm*. *Testing*. But what does it mean?
 
@@ -70,3 +70,7 @@ You might be wondering: what do these tests actually show us when we run them? F
 After that, take a look at my version [here](https://repl.it/@reedo/try-jest). You'll see that I took a different approach. I wrote a bunch of functions in `add.js` - many of which might be familiar to you from whiteboarding. My challenge to you is to write tests for each function. Make that output green!
 
 We will get into asynchronicity and React later this week.
+
+## Further Reading + Practice
+
+[Here's](https://www.sitepoint.com/test-react-components-jest/) a link to a tutorial on how to include Jest testing in your React components. Please feel free to check it out and get started--I would definitely recommend reading up on Jest _before_, though!
