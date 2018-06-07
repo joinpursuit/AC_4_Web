@@ -51,6 +51,7 @@ class Array
   def my_transpose
 
   end
+  # BONUS: Make a my_reduce! 
 
 end
 
