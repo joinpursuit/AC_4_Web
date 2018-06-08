@@ -48,7 +48,7 @@ if __FILE__ == $PROGRAM_NAME
   p prime_factors(10) == [5]
   p
   p "five_letter_flip: "
-  p five_letter_flip("this sentence has backwards words") == "this ecnetnes has sdrawkcab sword"
+  p five_letter_flip("this sentence has backwards words") == "this ecnetnes has sdrawkcab sdrow"
   p
   p "odd_one_out:"
   p odd_one_out([1, 2, 3, 5, 7, 9]) == 2
