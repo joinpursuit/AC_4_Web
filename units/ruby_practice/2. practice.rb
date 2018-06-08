@@ -45,7 +45,7 @@ if __FILE__ == $PROGRAM_NAME
   p
   p "factors: "
   p factors(10) == [1, 2, 5, 10]
-  p prime_factors(10) == [5]
+  p prime_factors(10) == [2, 5]
   p
   p "five_letter_flip: "
   p five_letter_flip("this sentence has backwards words") == "this ecnetnes has sdrawkcab sdrow"
