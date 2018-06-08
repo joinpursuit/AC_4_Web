@@ -52,7 +52,7 @@ if __FILE__ == $PROGRAM_NAME
   p last_word("the large brown fox") == "fox"
   p
   p "Question 8:"
-  p no_lowercase("ThEy LoVe To CodE") == "TELVTC"
+  p no_lowercase("ThEy LoVe To CodE") == "TELVTE"
   p
   p "Question 9:"
   p vowel_count("hi everyone! ") == 5
