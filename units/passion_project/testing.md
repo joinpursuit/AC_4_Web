@@ -69,8 +69,36 @@ You might be wondering: what do these tests actually show us when we run them? F
 
 After that, take a look at my version [here](https://repl.it/@reedo/try-jest). You'll see that I took a different approach. I wrote a bunch of functions in `add.js` - many of which might be familiar to you from whiteboarding. My challenge to you is to write tests for each function. Make that output green!
 
-We will get into asynchronicity and React later this week.
+## Testing React Components
 
-## Further Reading + Practice
+[Here's](https://www.sitepoint.com/test-react-components-jest/) a link to a tutorial on how to include Jest testing in your React components. We've cloned the repo that he used, which is available [here](./testing-react-with-jest/).
 
-[Here's](https://www.sitepoint.com/test-react-components-jest/) a link to a tutorial on how to include Jest testing in your React components. Please feel free to check it out and get started--I would definitely recommend reading up on Jest _before_, though!
+It's a really interesting challenge to test React components - mostly, because they're supposed to *react* (see what I did there) to user input. They can look different at different times, can change on command or on a timer, and that can be difficult to account for.
+
+That being said, the React developer community has made several slick methods to help us (relatively) easily test our code.
+
+Let's go over them:
+
+* `mount` - We aren't just using Jest here. We're also using a library called Enzyme, which mocks full React components. `mount` (which we just give a JSX component as an argument) creates a version of a React component that is visible and manipulable by our other Jest functions.
+* `find` - You invoke this function on a `mount`-ed component. This accepts a CSS selector as an argument and lets you scrutinize an element with that selector. Should the component return an element with that selector, you should be able to use several sub-methods to figure out (for example) what text that element contains.
+
+These methods, utilized together, create something that looks like this:
+
+```js
+import Todo from '../app/todo';
+import React from 'react';
+import { mount } from 'enzyme';
+
+test('TodoComponent renders the text inside it', () => {
+  const todo = { id: 1, done: false, name: 'Buy Milk' };
+  const wrapper = mount(
+    <Todo todo={todo} />
+  );
+  const p = wrapper.find('.toggle-todo');
+  expect(p.text()).toBe('Buy Milk');
+});
+```
+
+There are other methods, methods that help you simulate functions and clicks, that the article contains. However, many of those methods depend on how you're structuring your components, state, and props.
+
+For our purposes, this is a good introduction to testing React components. Feel free to read more on this if you'd like a deeper understanding. However, know that most of this stuff can't really be grokked by reading - you've got to make a test suite for your app to be a real Jest master.
