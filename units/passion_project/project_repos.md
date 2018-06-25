@@ -31,6 +31,6 @@ Shih Aiden |
 Shin David |	https://github.com/davidyshin/intune/tree/master/docs
 Sudani Sami |	https://github.com/alaac4q/restaurants-inspector
 Toxqui Sergio |	https://github.com/SergioToxqui/RoosevetDirectory
-Valenti Carlo |	https://github.com/cval-c4q/fullstack-skel-lite
+Valenti Carlo |	https://github.com/cval-c4q/fullstack-skel-lite | http://fullstack-skel-lite-fsskelite.1d35.starter-us-east-1.openshiftapps.com/
 Washington Gloria |	https://github.com/gewashington/budget-app
 Zelaya Romie |	https://github.com/romie151/lets-talk
