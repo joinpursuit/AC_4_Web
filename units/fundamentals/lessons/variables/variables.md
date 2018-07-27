@@ -36,20 +36,6 @@ console.log("bat" + "man")
 
 We will go into greater detail about functions in subsequent lessons. For now it is sufficient to know that to use a function, we need to write its name, followed by parentheses. We may pass a value or an expression to the function by putting it inside the parentheses. An expression will get evaluated first. Some functions return values once they are done executing. However, in the case of `console.log`, nothing useful is returned. Instead the function causes an effect (or side-effect), which is logging the value to the screen.
 
-## Math functions: max and min
-
-Math.min is a function that takes as input any number of `number` values, and returns the smallest of them. To pass more than one value we use commas. Try and type the code below in a node REPL.
-
-```js
-> Math.max(2, 1, 4)
-4
-```
-
-A value that is returned by a function works like any other value. So, we can put the function call inside `console.log`:
-
-```js
-console.log(Math.max(2, 1, 4))
-```
 
 ## Creating a variable
 
