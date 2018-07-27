@@ -2,21 +2,53 @@
 
 ## Objectives
 
+To understand control flow and effectively write `if`/`else`/`else if` statements.
+
 ## Vocabulary
 
 * control flow -  the order in which the computer executes statements. Sources: [mdn](https://developer.mozilla.org/en-US/docs/Glossary/Control_flow)
 * `if`, `else`, `else if`
 * code block
+* truthy
+* falsy
 
 ## Lesson
 
 So far our programs have been running line-by-line, from top to bottom. Conditionals allow us to execute some lines of code in some cases, but not in others.
 
+
+### Truthy and Falsy Values
+
+We can provide the `if` statement with a non-boolean value, or an expression that returns a non-boolean value.
+
+```js
+// this will log 'hello'
+if (1){
+  console.log('hello')
+} else {
+  console.log('goodbye')
+}
+```
+
+Checking whether the number `1` is true or false doesn't seem to make much sense. Still, javascript tries to work with us and will convert **any** value to boolean. For numbers, `0` will be converted to `false`, and any other number will be converted to `true`.
+
+```js
+// this will log 'goodbye'
+if (0){
+  console.log('hello')
+} else {
+  console.log('goodbye')
+}
+```
+
+For strings, the empty string will be converted to `false`, and any other strings will be converted to `true`. Other values that will be converted to false are `null` and `undefined` and `NaN`. The values that get converted to `false` are called [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). The values that get converted to `true` are called [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+
+
 ### The `if` statement
 
 #### Only `if`
 
-Our first conditional is the `if` statement. It executes a block of code only when an expression (provided in parentheses) evaluates to the boolean value `true`. A block of code is any number of lines enclosed with curly brackets: `{...}`.
+Our first conditional is the `if` statement. It executes a block of code only when an expression (provided in parentheses) evaluates to a _truthy_ value. A block of code is any number of lines enclosed with curly brackets: `{...}`.
  The simplest `if` statement is the one where we simply provide the value true.
 
 ```js
@@ -33,7 +65,7 @@ if (false) {
 }
 ```
 
-The code block following the `if` statement will **never** be executed. Similarly to the previous example, `false` can be substituted with any expression that evaluates to `false`.
+The code block following the `if` statement will **never** be executed. Similarly to the previous example, `false` can be substituted with any expression that evaluates to _falsy_.
 
 > Ex. provide examples of expressions for the condition to an `if` statement, so that the code block following it will never be executed
 
@@ -62,13 +94,13 @@ if (num > 2) {
 }
 ```
 
-If the condition evaluates to `true`, the first block will be executed. If it evaluated to `false`, the second block will be executed. We can think of an `if` statement like choosing one of two detours:
+If the condition evaluates to  a truthy value, the first block will be executed. If it evaluated to a falsy value, the second block will be executed. We can think of an `if` statement like choosing one of two detours:
 
 ![if statement diagram](assets/if.svg)
 
 <sup> Image: [Eloquent Javascript, Chapter 2](http://eloquentjavascript.net/02_program_structure.html)</sup>
 
-> Ex. write three `if - else` statements in which the second block of code will always be executed.
+> Ex. write three `if - else` statements in which the **second** block of code will always be executed.
 
 #### if - else if - else
 
@@ -88,7 +120,7 @@ if (color === 'blue') {
 console.log('done checking')
 ```
 
-The above statement will be checked the conditions one at a time. First, the conditional statement following `if` will be checked. If it is false, the conditional statement following `else if` will be checked. If it is also false, the code block following `else` will be executed. We can have as many `else if` statements as we like. For example, we may want to check if a number is equal to `1`, `2` or `3`:
+The above statement will be checked the conditions one at a time. First, the conditional statement following `if` will be checked. If it is falsy, the conditional statement following `else if` will be checked. If it is also falsy, the code block following `else` will be executed. We can have as many `else if` statements as we like. For example, we may want to check if a number is equal to `1`, `2` or `3`:
 
 ```js
 var num = 2
@@ -150,29 +182,3 @@ if (userAge > 18 && userAge < 45){
 ```
 
 > How would you write a conditional statement that outputs the same message if a user's age is either smaller than 18 **OR** larger than 45?
-
-### Truthy and Falsy Values
-
-We can provide the `if` statement with a non-boolean value, or an expression that returns a non-boolean value.
-
-```js
-// this will log 'hello'
-if (1){
-  console.log('hello')
-} else {
-  console.log('goodbye')
-}
-```
-
-Checking whether the number `1` is true or false doesn't seem to make much sense. Still, javascript tries to work with us and will convert **any** value to boolean. For numbers, `0` will be converted to `false`, and any other number will be converted to `true`.
-
-```js
-// this will log 'goodbye'
-if (0){
-  console.log('hello')
-} else {
-  console.log('goodbye')
-}
-```
-
-For strings, the empty string will be converted to `false`, and any other strings will be converted to `true`. Other values that will be converted to false are `null` and `undefined` and `NaN`. The values that get converted to `false` are called [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). The values that get converted to `true` are called [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
