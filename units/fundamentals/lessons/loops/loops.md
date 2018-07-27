@@ -29,7 +29,7 @@ This program isn't much fun to write, and it isn't very practical either. What i
 Now you are hopefully convinced that loops can be a good idea. Our first loop is the **while** loop. It is similar to the **if** statement, in that we will check if some condition is true. Unlike the **if** statement, we will execute the code block following the while loop again and again, as long as the condition is true. Whenever we reach the bottom of the code block, we go right back up and check the condition again.
 
 ```js
-var num = 1
+let num = 1
 while (num <= 10) {
   console.log('the number is: ' + num)
 }
@@ -38,7 +38,7 @@ while (num <= 10) {
 If you try to run the code above, the number `1` will be logged repeatedly. Eventually, your computer will freeze or you will see an error message. This is because we are repeatedly checking if the value of `num` is smaller than 10. If it is smaller, we log the value of `num`, and check again. Since the value of `num` never changes, we just keep logging `1`, until the computer runs out of memory. To fix this, we need to change the value of `num` inside the code block. In this instance, we will increase the value by `1` every time.
 
 ```js
-var num = 1
+let num = 1
 while (num <= 10) {
   console.log('the number is: ' + num)
   num += 1
@@ -48,7 +48,7 @@ while (num <= 10) {
 It works! Run the program and you will see that the numbers from 1 to 10 are logged to the screen. But what if we want to log only the odd numbers (3, 5, 7, 9). In that case, we just need to increase number by `2` every time.
 
 ```js
-var num = 1
+let num = 1
 while (num < 10) {
   console.log('the number is: ' + num)
   num += 2
@@ -63,7 +63,7 @@ while (num < 10) {
 Another kind of loop, the `for` loop, is just a condensed version of the while loop. With the for loop we create a variable, check a condition, and change the variable's value, all in one line.
 
 ```js
-for (var num = 1; num < 10; num += 1) {
+for (let num = 1; num < 10; num += 1) {
   console.log(num)
 }
 ```
@@ -81,7 +81,7 @@ for ([initialization]; [condition]; [increment]){
 Loops can be used to solve pretty complex problems. Earlier, when we wanted to log only even or only odd values, we changed the increment from `1` to `2`. But what if we want to count both even and odd numbers, and do something different for each? Let's say we want to log for each number: `'even'` if it is even, and `'odd'` if it is odd. For this kind of problem we can use the remainder operator: `%`. We will make a loop that increments a variable by `1`, and inside the code block check if the variable is even or odd. To do this we check the remainder of division by `0`: if there is no remainder, the number is even. Otherwise the number is odd.
 
 ```js
-for (var i = 0; i <= 10; i += 1){
+for (let i = 0; i <= 10; i += 1){
   if (i % 2 === 0){
     console.log(i + ' is even')
   } else {
@@ -104,8 +104,8 @@ When you run this program, you will see the following:
 We can also use a loop to calculate the sum of all the number between 1 and 10:
 
 ```js
-var sum = 0
-for (var i = 1; i <= 10; i += 1){
+let sum = 0
+for (let i = 1; i <= 10; i += 1){
   sum += i
 }
 ```
@@ -133,7 +133,7 @@ So far we've been incrementing a variable by `1` on each iteration of the loop. 
 
 ```js
 // logging all multiples of 5 between 5 and 50
-for (var i = 5; i <= 50; i += 5) {
+for (let i = 5; i <= 50; i += 5) {
   console.log(i)
 }
 ```
@@ -142,7 +142,7 @@ We can also decrement instead of incrementing:
 
 ```js
 // logging all multiples of 5 between 50 and 5, descending
-for (var i = 50; i >= 5; i -= 5){
+for (let i = 50; i >= 5; i -= 5){
   console.log(i)
 }
 ```
