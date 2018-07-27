@@ -9,12 +9,12 @@
 
 ## Lesson
 
-The degree to which languages help you find mistakes varies. Some languages want to know the types of all your variables before even running a program, and will tell you right away when a type is used in a way that is not consistent. JavaScript considers types only when actually running the program, and even then, it allows you to do some things that don't make much sense, such as `var x = true * "giraffe"`.
+The degree to which languages help you find mistakes varies. Some languages want to know the types of all your variables before even running a program, and will tell you right away when a type is used in a way that is not consistent. JavaScript considers types only when actually running the program, and even then, it allows you to do some things that don't make much sense, such as `let x = true * "giraffe"`.
 
-There are some things that JavaScript does complain about. Writing a program that is not syntactically valid will immediately trigger an error. For example: `var x = ;` Other things will cause runtime errors, such as calling something that’s not a function:
+There are some things that JavaScript does complain about. Writing a program that is not syntactically valid will immediately trigger an error. For example: `let x = ;` Other things will cause runtime errors, such as calling something that’s not a function:
 
 ```js
-var x = 5;
+let x = 5;
 x();
 // TypeError: x is not a function
 ```
@@ -22,7 +22,7 @@ x();
 Or trying to access a property of an undefined value:
 
 ```js
-var students = [{ name: 'John' }, { name: 'Kelly'}]
+let students = [{ name: 'John' }, { name: 'Kelly'}]
 console.log(students[1].name)
 // => 'Kelly'
 console.log(students[4])
@@ -54,7 +54,7 @@ Normally, when you forget to put `var` in front of your variable, as with `greet
 ```js
 "use strict";
 
-var greeting;
+let greeting;
 
 function greet(name) {
   // this will work
@@ -72,7 +72,7 @@ function Person(name) {
     this.name = name;
 }
 
-var p = Person("Ferdinand")
+let p = Person("Ferdinand")
 console.log(p)
 // => undefined
 ```
@@ -86,7 +86,7 @@ function Person(name) {
     // TypeError: Cannot set property 'name' of undefined
 }
 
-var p = Person("Ferdinand")
+let p = Person("Ferdinand")
 console.log(p)
 // => undefined
 
@@ -126,19 +126,19 @@ We can write a function to test if the code above works correctly, using the nod
 It takes an actual value, an expected value, and an optional message. If the actual and expected value are not strictly equal (i.e. `actual === expected` is `false`), then an error of type `AssertionError` will be thrown.
 
 ```js
-var assert = require("assert");
+let assert = require("assert");
 
 function test1() {
-  var p1 = new Vector(1, 2);
+  let p1 = new Vector(1, 2);
 
   assert.strictEqual(p1.x, 1, "p1.x should be 1");
   assert.strictEqual(p1.y, 2, "p1.y should be 2");
 }
 
 function test2() {
-  var p1 = new Vector(1, 2);
-  var p2 = new Vector(2, 4);
-  var p3 = p1.plus(p2);
+  let p1 = new Vector(1, 2);
+  let p2 = new Vector(2, 4);
+  let p3 = p1.plus(p2);
 
   assert.strictEqual(p3.x, 3, "p3.x should be 3");
   assert.strictEqual(p3.y, 6, "p3.y should be 6");
@@ -160,7 +160,7 @@ Wrapping code in try-catch block lets us handle errors. When an error is caught,
 
 ```js
 function test1() {
-  var p1 = new Vector(1, 2);
+  let p1 = new Vector(1, 2);
 
   assert.strictEqual(p1.x, 1, "p1.x should be 1");
   assert.strictEqual(p1.y, 2, "p1.y should be 2");
@@ -188,7 +188,7 @@ We can do even better by changing the calls to `assert.strictEqual`:
 
 ```js
 function test1(){
-    var p1 = new Vector(1, 2);
+    let p1 = new Vector(1, 2);
 
     assert.strictEqual(p1.x, 1, "p1.x");
     assert.strictEqual(p1.y, 2, "p1.y");
@@ -208,22 +208,22 @@ We can make a series of test functions, put them in an array, and then run them 
 
 ```js
 function test1(){
-    var p1 = new Vector(1, 2);
+    let p1 = new Vector(1, 2);
 
     assert.strictEqual(p1.x, 1, "p1.x");
     assert.strictEqual(p1.y, 2, "p1.y");
 }
 
 function test2() {
-  var p1 = new Vector(1, 2);
-  var p2 = new Vector(2, 4);
-  var p3 = p1.plus(p2);
+  let p1 = new Vector(1, 2);
+  let p2 = new Vector(2, 4);
+  let p3 = p1.plus(p2);
 
   assert.strictEqual(p3.x, 3, 'p3.x');
   assert.strictEqual(p3.y, 6, 'p3.y');
 }
 
-var tests = [test1, test2];
+let tests = [test1, test2];
 
 tests.forEach(function(test){
     try {
@@ -241,25 +241,25 @@ We can also add counters to see how many tests passed and how many failed:
 
 ```js
 function test1(){
-    var p1 = new Vector(1, 2);
+    let p1 = new Vector(1, 2);
 
     assert.strictEqual(p1.x, 1, "p1.x");
     assert.strictEqual(p1.y, 2, "p1.y");
 }
 
 function test2() {
-  var p1 = new Vector(1, 2);
-  var p2 = new Vector(2, 4);
-  var p3 = p1.plus(p2);
+  let p1 = new Vector(1, 2);
+  let p2 = new Vector(2, 4);
+  let p3 = p1.plus(p2);
 
   assert.strictEqual(p3.x, 3, 'p3.x');
   assert.strictEqual(p3.y, 6, 'p3.y');
 }
 
-var tests = [test1, test2];
+let tests = [test1, test2];
 
-var passed = 0;
-var failed = 0;
+let passed = 0;
+let failed = 0;
 
 tests.forEach(function(test){
     try {
@@ -282,8 +282,8 @@ Finally, the automated part can be put inside a function that takes the array of
 
 ```js
 function runTests(tests){
-    var passed = 0;
-    var failed = 0;
+    let passed = 0;
+    let failed = 0;
 
     tests.forEach(function(test){
         try {
@@ -307,22 +307,22 @@ Following this, we would only have to write the test functions:
 
 ```js
 function test1(){
-    var p1 = new Vector(1, 2);
+    let p1 = new Vector(1, 2);
 
     assert.strictEqual(p1.x, 1, "p1.x");
     assert.strictEqual(p1.y, 2, "p1.y");
 }
 
 function test2() {
-  var p1 = new Vector(1, 2);
-  var p2 = new Vector(2, 4);
-  var p3 = p1.plus(p2);
+  let p1 = new Vector(1, 2);
+  let p2 = new Vector(2, 4);
+  let p3 = p1.plus(p2);
 
   assert.strictEqual(p3.x, 3, 'p3.x');
   assert.strictEqual(p3.y, 6, 'p3.y');
 }
 
-var tests = [test1, test2];
+let tests = [test1, test2];
 runTests(tests)
 ```
 
@@ -337,7 +337,7 @@ Going forward, we will talk about much better ways to tests our code. We will us
 This is what a jest `expect` statement looks like:
 
 ```js
-var p1 = new Vector(1, 2);
+let p1 = new Vector(1, 2);
 
 expect(p1).toHaveProperty('x', 1);
 expect(p1).toHaveProperty('y', 2);
