@@ -22,9 +22,9 @@ Programs can vary a lot in conciseness and readability. Ideally, we would want t
 
 ```js
 function sumOfRange(min, max){
-  var sum = 0;
+  let sum = 0;
 
-  for (var count = min; count <= max; count++){
+  for (let count = min; count <= max; count++){
     sum += count;
   }
 }
@@ -38,8 +38,8 @@ We can do this by breaking the problem into smaller steps. The first step would 
 
 ```js
 function range(min, max) {
-  var numbers = [];
-  for (var i = min; i <= max; i++){
+  let numbers = [];
+  for (let i = min; i <= max; i++){
     numbers.push(i);
   }
   return numbers;
@@ -52,8 +52,8 @@ The other step we need is a function that will take as an input an array of numb
 
 ```js
 function sum(numbers){
-  var total = 0;
-  for (var i = 0; i < numbers.length; i++) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
     total += numbers[i];
   }
   return total;
@@ -64,10 +64,10 @@ Now that we have these two functions, we can use them together. More precisely, 
 
 ```js
 // Get and store in a variable an array of all numbers between 10 and 100
-var numArr = range(10, 100);
+let numArr = range(10, 100);
 
 // Get the sum of all numbers in the array
-var sum = sum(numArr);
+let sum = sum(numArr);
 
 console.log(sum); // Log the sum
 ```
@@ -108,7 +108,7 @@ Oftentimes when designing an app you will receive data from an API that you'd th
 In these cases, it's helpful to write a helper function that formats the data. You could then take the return value (i.e. the formatted data) and pass it to the function.
 
 ```js
-var rawData = [
+let rawData = [
   {
     somethingUseless: 192845738,
     somethingElseUseless: '234988EFESFSDF',
@@ -122,10 +122,10 @@ var rawData = [
 ];
 
 function formatFruitData(rawFruitData){
-  var formattedData = [];
+  let formattedData = [];
 
-  for(var i=0; i<rawFruitData.length; i++){
-    var fruit = rawFruitData[i].somethingUseful;
+  for(let i=0; i<rawFruitData.length; i++){
+    let fruit = rawFruitData[i].somethingUseful;
     formattedData.push(fruit);
   }
 
