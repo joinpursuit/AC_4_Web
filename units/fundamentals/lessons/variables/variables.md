@@ -56,7 +56,7 @@ console.log(Math.max(2, 1, 4))
 To save values in the computer's memory, we use <b> variables </b>. To create a variable, we use the keyword `var`, followed by the name of the variable.
 
 ```js
-var myVariable
+let myVariable
 ```
 
 ### Assigning a value
@@ -64,14 +64,14 @@ var myVariable
 A variable is really a placeholder for a value that is stored somewhere in the computer's memory. We can assign a value to a variable by using the assignment operator, `=`.
 
 ```js
-var myCat = 'Tom'
-var myAge = 25
+let myCat = 'Tom'
+let myAge = 25
 ```
 
 To get back the value we assigned, we simply need to write the variable's name. The name can be used by itself, or as part of an expression.
 
 ```js
-var myCat = 'Tom'
+let myCat = 'Tom'
 console.log(myCat)
 console.log('My cat\'s name is ' + myCat)
 ```
@@ -79,8 +79,8 @@ console.log('My cat\'s name is ' + myCat)
 We can use variables as the left hand and right hand sides of any comparison operator:
 
 ```js
-var num1 = 2
-var num2 = 4
+let num1 = 2
+let num2 = 4
 console.log(num1 === num2)
 console.log(num2 >= num1 + 2)
 console.log(num1 + num2 === 6)
@@ -91,24 +91,24 @@ console.log(num1 + num2 === 6)
 Variable assignment is our first example of a <b>statement</b>. When we assign a value to a variable, nothing visible happens. Instead, the <b>state</b> of our program changes. <b>State</b> is everything that's stored in memory while a program runs. In general, an expression returns a value, while a statement changes the programs state. When using the assignment operator, the right hand side is actually an expression. This means that we are not limited to writing a single value.
 
 ```js
-var myNumber = 2 * 4 + 2
+let myNumber = 2 * 4 + 2
 console.log(myNumber)
 ```
 
 When running the code above, the expression to the right of the `=` operator will be evaluated to `10` and only then assigned to the variable `myNumber`. We can also use the value of existing variables to create new ones.
 
 ```js
-var num1 = 4
-var num2 = 8
-var sum = num1 + num2
+let num1 = 4
+let num2 = 8
+let sum = num1 + num2
 ```
 
 > Ex. In the following code, explain the evaluation process when assigning a value to the variable `sentence`. What would be logged to the screen?
 
 ```js
-var string = 'My favorite number is '
-var number = 42
-var sentence = string + number
+let string = 'My favorite number is '
+let number = 42
+let sentence = string + number
 console.log(sentence)
 ```
 
@@ -128,7 +128,7 @@ This means we can used `undefined` like we would use any other value. Why this i
 We can assign a new value to a variable at any time by using the assignment operator. This will overwrite the old value of that variable.
 
 ```js
-var day = 'Monday'
+let day = 'Monday'
 cosole.log('Today is ' + day)
 day = 'Tuesday'
 console.log('Tomorrow will be ' + day)
@@ -137,7 +137,7 @@ console.log('Tomorrow will be ' + day)
 We may want to use the current value when modifying a variable. For example,we may want to add some numeric value to an existing number. To do this, we can use the variable's name to the right hand side of the assignment operator:
 
 ```js
-var myNumber = 2
+let myNumber = 2
 myNumber = myNumber + 1
 console.log(myNumber)
 ```
@@ -147,8 +147,8 @@ Since the right hand side of `=` is an expression, it will first be evaluated to
 > Ex. write the step-by-step evaluation of the third line in the code below:
 
 ```js
-var sentence = 'My name is'
-var name = 'Mia'
+let sentence = 'My name is'
+let name = 'Mia'
 sentence = sentence + ' ' + name
 console.log(sentence)
 ```
@@ -158,7 +158,7 @@ console.log(sentence)
 There is a shorter syntax to updating variables using their existing value. When we wish to add something to the variable's value, we may use the `+=` operator, as in `num += 1`. This is a shorthand for `num = num + 1`. The same works with `-=`:
 
 ```js
-var num = 2
+let num = 2
 num += 6
 // Num is 8
 num -= 3
