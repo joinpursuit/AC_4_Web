@@ -55,7 +55,7 @@ As in the above apple examples, JavaScript objects are often represented using c
 This notation is one common way to declare an object (another way is `new Object()`, but don't worry about that for now). You can then store the result in a variable. For example:
 
 ```javascript
-var person = {
+let person = {
   firstName: 'Erika',
   lastName: 'Kim',
   age: 25
@@ -78,7 +78,7 @@ If you had an object stored in the variable `person` and wanted to get that pers
 
 ```javascript
   // Same object as before
-  var person = {
+  let person = {
     firstName: 'Erika',
     lastName: 'Kim',
     age: 25
@@ -98,7 +98,7 @@ console.log(person.propertyThatDoesntExist);
 You could also use a key stored in a variable, but you need to use brackets (`[]`) in this case. For example:
 
 ```javascript
-var someVariable = 'firstName';
+let someVariable = 'firstName';
 console.log(person[someVariable]);
 // 'Erika' will be logged
 ```
@@ -121,7 +121,7 @@ Once we have the `getFullName` function, we can call it at any time, with any ob
 
 ```javascript
   // Creates the object `anotherPerson`
-  var anotherPerson = {
+  let anotherPerson = {
     firstName: 'Joe',
     lastName: 'Stein',
     favoriteFood: 'pizza'
@@ -139,7 +139,7 @@ Now that we know how to *get* an object's properties -- how do we *set* them? In
 Let's revisit our basic person object:
 
 ```javascript
-  var person = {
+  let person = {
     firstName: 'Erika',
     lastName: 'Kim',
     age: 25
@@ -171,10 +171,10 @@ If it doesn't already exist, the same notation adds a property:
 Arrays and object are closely related to each other (a fact we will expand on in future lessons). An array is really a special kind of object, where the keys are numbers. Arrays also have special properties (such as length) and special methods.
 
 ```javascript
-  var myArray = ['firstValue', 'secondValue'];
+  let myArray = ['firstValue', 'secondValue'];
   console.log(myArray[0]); // Logs 'firstValue'
 
-  var myObject = {0: 'firstValue', 1: 'secondValue'}
+  let myObject = {0: 'firstValue', 1: 'secondValue'}
   console.log(myObject[0]); // Logs 'firstValue'
 ```
 
@@ -185,7 +185,7 @@ What if you were to want a collection of objects (e.g. a collection of films)? O
 For example, we may want to create an array of films, where each film is an object that contains a name, release year and director.
 
 ```javascript
-var films = [
+let films = [
   {
     name: 'Psycho',
     director: 'Alfred Hitchcock',
@@ -257,13 +257,13 @@ Many JavaScript constructs are types of objects (e.g. Arrays fall under the Obje
 For any variable of the object type, the quality operator (i.e. `===`) will only return `true` if both sides refer to the *exact same* object. It's not enough for them to just look the same.
 
 ```javascript
-  var firstPerson = {name: 'Bob', age: 47};
-  var secondPerson = {name: 'Bob', age: 47};
+  let firstPerson = {name: 'Bob', age: 47};
+  let secondPerson = {name: 'Bob', age: 47};
 
   console.log(firstPerson === secondPerson); // False
   console.log(firstPerson === firstPerson); // True
 
-  var pointer = firstPerson; // Create a variable pointing to firstPerson
+  let pointer = firstPerson; // Create a variable pointing to firstPerson
   console.log(pointer === firstPerson); // True
 ```
 
@@ -278,7 +278,7 @@ But with an object, you don't know what those keys are. They may not be numbers,
 For this, we use the `for...in` loop. Its syntax is:
 
 ```javascript
-  for(var key in object){
+  for(let key in object){
     // Code to execute on each each key
   };
 ```
@@ -286,12 +286,12 @@ For this, we use the `for...in` loop. Its syntax is:
 For example, to log all the key/value pairs of an object:
 
 ```javascript
-  var cat = {
+  let cat = {
     name: 'Tom',
     type: 'Domestic'
   }
 
-  for(var key in cat){
+  for(let key in cat){
     console.log(key);
   };
   // Logs: 'name' and then logs 'type'
@@ -301,7 +301,7 @@ For example, to log all the key/value pairs of an object:
 Okay so that's how we get the keys. How do we get the values? We can simply key into the object.
 
 ```javascript
-  for(var key in cat){
+  for(let key in cat){
     console.log(key + ": " + cat[key]);
   };
   // Logs 'name: Tom' and then 'type: Domestic'
@@ -313,13 +313,13 @@ Okay so that's how we get the keys. How do we get the values? We can simply key 
 Arrays have order; objects do not. There is a first item in an array, whereas there isn't a "first" item in an object.
 
 ```javascript
-  var person1 = {
+  let person1 = {
     firstName: 'Erika',
     lastName: 'Kim',
     age: 25
   }
 
-  var person2 = {
+  let person2 = {
     age: 25,
     firstName: 'Erika',
     lastName: 'Kim'
