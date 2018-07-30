@@ -1,5 +1,9 @@
 # Timers
 
+## Objectives 
+  - To understand how to use setTimeout and setInterval. 
+  - To gain a deeper understanding of asynchronicity. 
+
 ## Keywords
 
 - [.setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
