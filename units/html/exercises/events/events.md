@@ -2,7 +2,7 @@
 
 ## Reverser
 
-Using the files *reverser.html* and *reverser.js*, build a page with a form that includes one input field, a submit button, and a paragraph element with the text: "Please type something". When the user submits the form, the text of the paragraph element should change to be the reverse of the string. HINT: Use .split('').reverse().join('').
+Using the files *reverser.html* and *reverser.js*, build a page with a form that includes one input field, a submit button, and a paragraph element with the text: "Please type something". When the user submits the form, the text of the paragraph element should change to be the reverse of the string. HINT: built in methods (like _split_) can be helpful.
 
 You'll need to use .preventDefault() to prevent the page from refreshing when the user submits the form.
 
