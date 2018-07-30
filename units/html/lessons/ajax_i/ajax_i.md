@@ -7,7 +7,7 @@
 
 ## Lesson
 
-Web pages can fetch data from another server and load it into themselves without refreshing. This process is colloquially called AJAX, which was backronymed to mean Asynchronous JavaScript and XML.
+Web pages can fetch data from another server and load it into themselves without refreshing. This process is colloquially called AJAX, which means _**A**synchronous **Ja**vaScript and **X**ML_.
 
 A very, very, very common use of the AJAX technique is to interact with RESTful APIs through a web app.
 
