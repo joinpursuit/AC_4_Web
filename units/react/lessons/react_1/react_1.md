@@ -231,6 +231,8 @@ class App extends React.Component {
     )
   }
 }
+
+export default App;
 ```
 
 Note that a React component is also a JSX element. For this reason we can provide the `App` component as the first argument to `ReactDom.render`
@@ -278,6 +280,8 @@ class App extends React.Component {
     )
   }
 }
+
+export default App;
 ```
 
 Note that to access a JavaScript value from within JSX, we enclose that value with curly braces (`{...}`).
