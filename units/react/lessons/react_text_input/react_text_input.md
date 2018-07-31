@@ -31,7 +31,7 @@ Next, we define a render function that returns a name input field and a greeting
     return (
       <div>
         <p>
-          Your Name: <input onInput={this.handleInputChange}/>
+          Your Name: <input onChange={this.handleInputChange}/>
         </p>
         <p>
           Hello {this.state.name}!
