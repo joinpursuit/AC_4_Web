@@ -25,7 +25,7 @@ class App extends React.Component {
       { id: 0, name: "apples" },
       { id: 1, name: "oranges" },
       { id: 2, name: "peaches" }
-    ];
+    ]
     };
   }
   ...
