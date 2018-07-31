@@ -46,7 +46,7 @@ Note the `/>` closing tag for `input` - in JSX, elements that do not have a sepa
 
 When the component is initially rendered, the greeting will be `Hello !` - as the default value of `state.name` is an empty string.
 
-Note that we have defined an `onInput` function for the input field. When implementing it, remember to use the automatically-bound function syntax we used in the last lesson.
+Note that we have defined an `onChange` function for the input field. When implementing it, remember to use the automatically-bound function syntax we used in the last lesson.
 
 ```jsx
   ...
@@ -84,7 +84,7 @@ All we need to do is assign a `value` attribute to the JSX input element, settin
           Your Name: {" "}
           <input
             value={this.state.name}
-            onInput={this.handleInputChange}
+            onChange={this.handleInputChange}
           />
         </p>
         ....
@@ -138,7 +138,7 @@ render() {
           Your Name: {" "}
           <input
             value={this.state.name}
-            onInput={this.handleInputChange}
+            onChange={this.handleInputChange}
           />
           <button onClick={this.clearInput}>
            Clear
@@ -207,7 +207,7 @@ Finally, we `return` the input and the message:
           username: {" "}
           <input
             value={this.state.name}
-            onInput={this.handleInputChange}
+            onChange={this.handleInputChange}
           />
         </p>
         <p>
