@@ -129,6 +129,8 @@ render() {
 Note that the `Select` is a component and and not a `JSX` element. We will assign the name as an attribute inside the render function of the `Select` component:
 
 ```jsx
+import React from 'react';
+
 class Select extends React.Component {
   render() {
     const { name, values, selectedValue, handleSelect } = this.props;
@@ -145,6 +147,7 @@ class Select extends React.Component {
     );
   }
 }
+export default Select; 
 ```
 
 ### [Cat and Pizza](https://codesandbox.io/s/p3852k2k2m)
