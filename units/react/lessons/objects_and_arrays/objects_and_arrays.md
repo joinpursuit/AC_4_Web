@@ -18,14 +18,14 @@ Say that we want to create an item list and shopping cart for a simple fruit sho
 class App extends React.Component {
   constructor() {
     super();
-    this.items = [
+    
+    this.state = {
+      cart: [],
+      items: [
       { id: 0, name: "apples" },
       { id: 1, name: "oranges" },
       { id: 2, name: "peaches" }
     ];
-
-    this.state = {
-      cart: []
     };
   }
   ...
