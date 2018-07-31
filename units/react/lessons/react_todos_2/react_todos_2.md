@@ -13,17 +13,17 @@ First, let's modify the `newTodo` object that we are creating in the `addTodo` m
 ```js
   ...
   const { textInput, todos } = this.state;
-  const newTodo = { text: textInput, completed: false, id: generateId() };
+  const newTodo = { id: generateId(), text: textInput, completed: false };
   ...
 ```
 
-Now, whenever we create a new todo, it will have a completed property set to false. Next, we will create a `toggleCompleted` method for the `TodoApp` component. This method will take as input the `id` of the todo we wish to toggle. We will see how to pass that `id` later on.
+Now, whenever we create a new todo, it will have a completed property set to `false`. Next, we will create a `toggleCompleted` method for the `TodoApp` component. This method will take as input the `id` of the todo we wish to toggle. We will see how to pass that `id` later on.
 
 As before, we will avoid modifying the existing `todos` array. Instead, we will create a _new_ todos array by mapping over the existing one. For each `todo` we will check if its `id` is equal to the one passed as an argument:
 
-* If the `id`s are not equal, we will simply return the existing `todo`.
+* If the `id`s are _not_ equal, we will simply return the existing `todo`.
 * If the `id`s _are_ equal, we will pass back a new object:
-  * this object will contain all properties of the existing `todo`, except that the value of its `completed` property will be flipped.
+  * this object will contain all properties of the existing `todo`, except that the value of its `completed` property will be flipped (`true` becomes `false` and vice versa).
 
 ### The Object Spread Operator
 
@@ -37,13 +37,13 @@ And we wish to create a copy of it, we can do the following:
 
 ```js
 const person1 = { firstName: 'Nick' }
-const person2 =  {...person1}
+const person2 = { ...person1 }
 ```
 
 This will iterate over each property in `person1` and copy it into the new object (as it is enclosed with `{ }`). Note that the following:
 
 ```js
-{person1}
+{ person1 }
 ```
 
 Will result in a nested object. Also note that the assignment operator would not work as expected here. If we use it, we will simply create a reference to the existing object:
@@ -72,7 +72,7 @@ Note that if we define a property in javascript more than once, only the last de
 // => {firstName: 'Elon'}
 ```
 
-This is also the case when using the object spread operator. if `person1` already has a `lastName` property, it will be dropped because we are redefining it.
+This is also the case when using the object spread operator. If `person1` already has a `lastName` property, it will be dropped because we are redefining it.
 
 ### Todos And The Object Spread
 
@@ -89,7 +89,8 @@ toggleCompleted = id => {
   const { todos } = this.state;
 
   const newTodos = todos.map(todo =>
-    todo.id === id ? { ...todo, completed: !todo.completed } : todo );
+    todo.id === id ? { ...todo, completed: !todo.completed } : todo 
+  );
 
   this.setState({
     todos: newTodos
@@ -110,7 +111,7 @@ const Todo = ({ todo, toggleCompleted }) => {
 }
 ```
 
-Note the above: `() => toggleCompleted(id)` is an anonymous function, equivalent to: `() => { toggleCompleted(id) } ` and in turn to `function(){toggleCompleted(id)}`. For each of our `Todo`s, we create an anonymous function. When the `Todo` is clicked, the anonymous function will be invoked, in turn calling `toggleCompleted` with the `Todo`'s `id`. Note that we cannon simply write: `onClick={toggleCompleted(id)}`, as that will call the function immediatelly. What we need to pass is the function definition or function name, that will be invoked later on.
+Note the above: We cannont simply write: `onClick={toggleCompleted(id)}`, as that will call the function immediately when the component loads. We need to pass an annonymous function that will be invoked later on. `() => toggleCompleted(id)` is an anonymous function, equivalent to: `() => { toggleCompleted(id) } ` and `function(){toggleCompleted(id)}`. For each of our `Todo`s, we create an anonymous function. When the `Todo` is clicked, the anonymous function will be invoked, in turn calling `toggleCompleted` with the `Todo`'s `id`.
 
 Alternatively, we can redefine the `onClick` function inside the `TodoList` component:
 
