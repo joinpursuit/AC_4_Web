@@ -61,13 +61,13 @@ Now let's return to the `App` component and begin writing the `render` function:
 
 ```jsx
   render() {
-    const { cart } = this.state;
+    const { cart, items } = this.state;
 
     return (
       <div>
         <h2> Items: </h2>
         <ul style={ulStyle}>
-          {this.items.map(item => (
+          {items.map(item => (
             <li style={liStyle}>
               <Item
                 id={item.id}
