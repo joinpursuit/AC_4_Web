@@ -221,6 +221,8 @@ ReactDom.render(
 Naturally, we would want to render more than a single JSX tag into our HTML document. In react, we separate the HTML we wish to render into independent pieces called [components](https://reactjs.org/docs/react-component.html). One way to define a react component is to create a `class` that extends the `React.Component` class. In our newly created class, the least we need to do is define a function called `render` that will return the JSX elements that we wish to render.
 
 ```jsx
+import React from 'react';
+
 class App extends React.Component {
   render() {
     return (
@@ -268,6 +270,8 @@ ReactDom.render(
 The name of the argument passed above is `firstName` and its value is `Loona`. Now this argument will be available to our `App` component as a property of `this.props`:
 
 ```jsx
+import React from 'react';
+
 class App extends React.Component {
   render() {
     return (
