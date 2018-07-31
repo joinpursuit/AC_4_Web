@@ -1,4 +1,4 @@
-# React - `select`s
+# React - `select`
 
 ## Sources
 
