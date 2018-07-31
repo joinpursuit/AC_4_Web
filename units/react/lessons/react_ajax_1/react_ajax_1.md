@@ -17,9 +17,8 @@ In React components, AJAX calls can be made in event handlers (e.g. `handleInput
 In React terminiology, each component has [lifecycle methods](https://reactjs.org/docs/react-component.html#the-component-lifecycle) that are executed automatically at specific times. We say that a component is _mounting_ when it is being created and rendered to HTML. As a component mounts, the following methods are called:
 
 1. [constructor()](https://reactjs.org/docs/react-component.html#constructor)
-2. [componentWillMount()](https://reactjs.org/docs/react-component.html#componentwillmount)
-3. [render()](https://reactjs.org/docs/react-component.html#render)
-4. [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount)
+2. [render()](https://reactjs.org/docs/react-component.html#render)
+3. [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount)
 
 Out of these, the only method we must implement is `render()`. As we've seen, we only need to implement `constructor()` if we want to assign the component a `state` or other variables that we can access through `this`. The `componentWillMount()` method will rarely be useful to us- calling setState() while this method is being executed will _not_ trigger a re-rendering.
 
