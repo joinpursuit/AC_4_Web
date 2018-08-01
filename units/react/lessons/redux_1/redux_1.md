@@ -9,11 +9,11 @@
 
 ## Lesson
 
-Redux is a library for managing application state. When used with React, Redux provides a single state object that exists at the root of our app. This is especially useful when building large-scale react applications.
+Redux is a library for managing application state. When used with React, Redux provides a single state object (commonly referred to as _the store_) that exists at the root of our app. This is especially useful when building large-scale react applications.
 
 ### A Birds-Eye View
 
-When we start building react applications that feature multiple components, we inevitably run into issues regarding state. We often want the state of a component to be preserved throught our app. However, this will not always be the case. Consider, for example, the following app:
+When we start building react applications that feature multiple components, we inevitably run into issues regarding state and prop threading. We often want the state of a component to be preserved throught our app. However, this will not always be the case. Consider, for example, the following app:
 
 ### [Show / Hide Animal Selector](https://codesandbox.io/s/py858r28j0)
 
