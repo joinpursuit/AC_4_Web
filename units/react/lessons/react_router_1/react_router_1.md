@@ -12,7 +12,7 @@
 
 ## Lesson
 
-Today we will learn about client-side routing in React. Client-side routing works in a similar fashion to server-side routing (as we've seen in Express), except that it works within the browser. In React, client-side routing is most frequently implemented using a library called [React Router](https://reacttraining.com/react-router/).
+Today we will learn about _client-side routing_ in React. Client-side routing in React is a way to make a single-page application function more like a multi-page application. Client-side routing changes the URL in the address bar and then loads specific content/components based on that URL. Really, the application is only **one page**--the routing allows us to specify what information we want displayed. In React, client-side routing is most frequently implemented using a library called [React Router](https://reacttraining.com/react-router/).
 
 ### [Personal Website](https://codesandbox.io/s/1r165o97o7)
 
@@ -150,7 +150,8 @@ const App = () => (
 
 #### `Link`
 
-The `Link` component works in a similar fashion to an `<a>` element, except that it does not result in a page reload. Note that when you click on any of the rendered links, the route changes. This may be easier to see on the [separate-page live-code](https://1r165o97o7.codesandbox.io/).
+The `Link` component works in a similar fashion to an `<a>` element, except that it **does not** result in a page reload. Instead, with React Router, the link simply changes the URL in the address bar which then tells Browser Router which component to display. The page **does not** do a full reload.
+Note that when you click on any of the rendered links, the route changes. This may be easier to see on the [separate-page live-code](https://1r165o97o7.codesandbox.io/).
 
 Every click still results in a re-render, and as a result our components will be able to access the new `url`. The `Route` components are the ones that determine what will get rendered.
 
@@ -164,7 +165,9 @@ The following lines in the `App` component determine what will get rendered, bas
   <Route path="/skills" component={Skills} />
 ```
 
-Note that each route gets as props a string for `path` and a React component for `component`. If the current `url` matches the string defined in path, the provided component will be rendered.
+Note that each route receives a string for `path` as props and a React component for `component`. If the current `url` matches the string defined in path, the provided component will be rendered.
+
+_What do you think would happen if we removed `exact` from the first path?_
 
 ### Matching a path and `exact`
 
