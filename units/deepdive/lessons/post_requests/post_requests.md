@@ -6,7 +6,7 @@ source: [Sending and Receiving Form Data by Mozilla Contirbutors](https://develo
 
 The [HTTP protocol](/en-US/docs/HTTP "/en-US/docs/HTTP") provides several ways to perform a request. The most common of these are the `GET` method and the `POST` method.
 
-To understand the difference between those two methods, let's step back and examine how HTTP works. Each time you want to reach a resource on the Web, the browser sends an HTTP request to some server. An HTTP request consists of two parts: a header that contains a the url and information about the browser, and a body that can contain additional information.
+To understand the difference between those two methods, let's step back and examine how HTTP works. Each time you want to reach a resource on the Web, the browser sends an HTTP request to some server. An HTTP request consists of two parts: a _header_ that contains the url and information about the browser, and a _body_ that can contain additional information.
 
 ### The GET method
 
