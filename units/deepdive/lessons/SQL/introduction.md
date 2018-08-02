@@ -1,7 +1,5 @@
 # Introduction to SQL
 
-![Pronunciation is hard](https://i.imgur.com/AF73EN7.jpg)
-
 **Resources**
 
 * [How to install Postgres on Linux](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
@@ -10,7 +8,7 @@
 * [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [Wikipedia Entry for NULL](https://en.wikipedia.org/wiki/Null_%28SQL%29)
 
-## Pulling It All Together
+## Putting It All Together
 
 Okay, so we've been learning how to make SQL queries and get information from
 databases using SQLZoo. That's nice, but it's not the full picture. If we're
@@ -24,34 +22,22 @@ we're going to use a service called **PostgreSQL** (AKA Postgres).
 ## Postgres
 
 You should be familiar with the **client-server model** from our work with HTTP.
-SQL is simply another structured way of querying a server to get, update, or delete
-information. You can think of Postgres like Node's HTTP module, if you'd like,
+SQL is simply another language used for querying a server to get, update, or delete
+information. You can think of Postgres like Node's HTTP module
 in that it acts as a middleman between these requests and responses.
 
-Not all user inputs will require queries to our servers—remember, we can also
-store data on the frontend in the user's browsers. However, when you're working
-with lots and lots of data, it doesn't make sense to ask the user to download
-and manage all of your information locally—it's a *web* app, remember?
+Previously, if we wanted to store data to be displayed we needed to keep it in our state. If you refreshed the page, the state was reset and the data was lost. Also the saved information in state could only be viewed on one computer. With a database, we can save our information forever and it can be viewed by anyone. What's different now is we need to _request_ the data from the database by sending a request to our server. Similar to how we would get data from an API except the data is coming from a database _we_ create and manage.
 
-So, let's say that we're making Yelp, and a test user is searching in an area
-they've never searched before. Because we don't have restaurants in this area
-saved on the frontend, we'll have to query our database. So, under the hood,
-the interaction might go like this:
+With an API:
+**User** -> _HTTP Request_ -> **Outside API Server** -> _Database SQL Query_ -> **Outside API Database**
 
-**User** -> *HTTP Request* -> **Our Server** -> *Database Query* -> **Our Database**
+With our Database:
+**User** -> *HTTP Request* -> **Our Node Server** -> *Database SQL Query* -> **Our Database**
 
-This flow is also important if, say, our user wants to leave a review. In order
-for other users to see that review, we will have to save the review to our database.
-That review, of course, will have the proper associations to the restaurant,
-so when other users bring up the restaurant our database will send that user's
-review.
 
-More on Postgres (for example, how to incorporate it into our previously-stateless
-Express apps) later!
+## Advanced SQL - Joins
 
-## Advanced SQL- Joins
-
-A quick refresher—databases, at their core, are made up of tables. Those tables
+A quick refresher: databases, at their core, are made up of tables. Those tables
 can point to one another by way of *foreign keys*. For example, in a database of
 teachers in a school district, each teacher might have a column indicating their
 `school_id`. These integers would point to IDs in a `schools` table. That way,
@@ -73,9 +59,9 @@ prove useful.
 Take a look at the article in the Resources section, [A Visual Understanding of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/).
 Here, you'll find the different types of joins, which I'll list below:
 
-* `INNER JOIN`
-* `FULL OUTER JOIN`
-* `LEFT OUTER JOIN`
+* `INNER JOIN` -OR- `JOIN`
+* `FULL OUTER JOIN` -OR- `FULL JOIN`
+* `LEFT OUTER JOIN` -OR- `LEFT JOIN`
 * `CROSS JOIN`
 
 There's a `RIGHT OUTER JOIN`, too, which works the same way as `LEFT OUTER JOIN`.
@@ -87,7 +73,7 @@ columns. To use our earlier example, let's say you wanted to get the school's na
 next to the teacher. You could do something like this:
 
 ```sql
-SELECT fname, lname
+SELECT first_name, last_name
 FROM teachers
 INNER JOIN schools
 ON teachers.school_id = schools.id
@@ -97,14 +83,14 @@ This would produce a list of teachers with their corresponding schools next to t
 names. It would only include teachers that have `school_id`s that correspond to
 entries in the `schools` table-that's what our `INNER JOIN` is doing.
 
-## NULL- When Nothing is Important
+## `NULL`
 
 So, what's the real difference between "outer" and "inner" joins?
 
-The answer has something to do with NULL. NULL is SQL's way of saying that
-a piece of data does not exist in the database. INNER JOINs hate NULL values.
+The answer has something to do with `NULL`. `NULL` is SQL's way of saying that
+a piece of data does not exist in the database. INNER JOINs hate `NULL` values.
 In our above example, if a teacher didn't have a `school_id` (i.e. if it was
-NULL), it wouldn't show up in our response.
+`NULL`), it wouldn't show up in our response.
 
 However, if we did a FULL OUTER JOIN, teachers without a `school_id` would
 show up. We might get something like this:
@@ -119,7 +105,7 @@ show up. We might get something like this:
 |6|Patricia|Clark|12|12|Lapham Elementary|
 
 Without an OUTER JOIN, we'd never see Steve Leavitt. That's because his `school_id`
-is NULL. Keep this in mind!
+is `NULL`. Keep this in mind!
 
 [**Exercises**](../../exercises/SQL/introduction.md)
 
