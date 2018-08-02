@@ -20,7 +20,7 @@ This is where databases come in. More specifically, this is where **relational d
 
 ## Relational databases
 
-Relational databases are sometimes referred to as RDBMS, or Relational Database Management Systems. RDBMS store data in **tables**, which are exactly like they sound—not too different from Excel spreadsheets or any other way you've seen to store data in rows and columns.
+Relational databases are sometimes referred to as RDBMS, or Relational Database Management Systems. RDBMS store data in **tables**, which are exactly like they sound—not too different from Excel spreadsheets or any other way you've seen data stored in rows and columns.
 
 For example:
 
