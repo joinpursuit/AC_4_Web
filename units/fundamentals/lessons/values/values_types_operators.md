@@ -413,7 +413,7 @@ This higher precedence operator is evaluated first:
 * `1 !== 1`
 * `true || false`
 * `true && false`
-* `'%'`
+* `20 % 6`
 * `'a' + 'b'`
 
 
