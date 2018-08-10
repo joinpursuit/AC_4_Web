@@ -21,13 +21,13 @@ lingo is helpful too. If you sound like a developer, you probably are a  develop
 * `mv [filename] [foldername]` - move a file to a different folder
 * `mv [filename] [new filename]` - rename a file
 * `atom [filename]` - open the atom editor
-* `atom . - Opens atom editor at place of path
-* `ctrl + a - go to the beginning of Line
-* `ctrl + e - go to the end of Line
-* `ctrl + k - delete to end of line
-* `ctrl + u - delete to front of line
-* `ctrl + w - cut to previous word
-* `ctrl + y - paste terminal buffer
+* `atom .` - Opens atom editor at place of path
+* `ctrl` + `a` - go to the beginning of Line
+* `ctrl` + `e` - go to the end of Line
+* `ctrl` + `k` - delete to end of line
+* `ctrl` + `u` - delete to front of line
+* `ctrl` + `w` - cut to previous word
+* `ctrl` + `y` - paste terminal buffer
 
 
 ## Atom Shortcuts 
