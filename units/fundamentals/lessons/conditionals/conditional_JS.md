@@ -95,7 +95,7 @@ if (num > 2) {
 If the condition evaluates to  a truthy value, the first block will be executed. If it evaluated to a falsy value, the second block will be executed.
 We can think of an `if` statement like choosing one of two detours:
 
-![if statement diagram](assets/if.svg)
+![if statement diagram](../assets/if.svg)
 
 <sup> Image: [Eloquent Javascript, Chapter 2](http://eloquentjavascript.net/02_program_structure.html)</sup>
 
