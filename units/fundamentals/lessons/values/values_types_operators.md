@@ -363,6 +363,7 @@ a truthy or falsey value.
  
  > "hello" && "goodbye"
  true 
+ ```
 
 When the `||` operator interacts with truthy and falsey values, itbehaves in an unusual way: if the left-hand side is truthy, the left-hand value will be returned (instead of `true`). If the left-hand side is falsey, the right-hand value will be returned (regardless of whether it evaluates as truthy or falsey).
 
