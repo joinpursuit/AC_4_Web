@@ -1,8 +1,11 @@
 # Conditionals
 
-## Objectives
+## Goals
 
-To understand control flow and effectively write `if`/`else`/`else if` statements.
+ * Understand control flow 
+ * Effectively write `if`/`else`/`else if` statements
+ * Understand Ternary Operators
+ * Be able to write a Switch statement
 
 ## Vocabulary
 
@@ -11,6 +14,8 @@ To understand control flow and effectively write `if`/`else`/`else if` statement
 * code block
 * truthy
 * falsy
+* ternary
+* switch statement
 
 ## Lesson
 
