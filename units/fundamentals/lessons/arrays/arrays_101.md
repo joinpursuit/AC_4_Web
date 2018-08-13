@@ -8,6 +8,7 @@
 * Know how to add and remove elements in an array. 
 ** push, pop, unshift, and shift 
 * Know basic built-in array methods.
+* Know what a multidimensional array is and how to index / key into it.
 
 
 ## Lesson
@@ -219,3 +220,25 @@ console.log(arr1 === arr2)
 
 For now, if you'd like to compare arrays convert them to strings and then compare them. **Note** this will not always be 100% effective. 
 For more information on the best way to compare [arrays](https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript)
+
+### Multidimensional Array
+Multidimensional arrays are arrays that contain arrays as their elements. 
+If an array is filled with arrays it is considered to be 2 dimensional (also often referred to as a matrix). 
+If those arrays that are filling the array are also filled with arrays it becomes a 3 dimensional array or mulidimensional. 
+Typically it is **BAD** practice to go further than 2 dimensional arrays. 
+
+#### Indexing into Multidimensional Arrays
+The indexing pattern of using brackets `[]` with the desired index remains the same. However, if you want to access elements in an array within an array, we must then index again into that. 
+
+```js
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+
+console.log(matrix[0]) // => [1, 2, 3]
+console.log(matrix[0][0]) // => 1 
+console.log(matrix[0][1]) // => 2 
+console.log(matrix[2][2]) // => 9 
+```
