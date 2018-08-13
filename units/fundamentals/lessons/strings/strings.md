@@ -65,7 +65,7 @@ console.log(spring.length)
 
 Here is an illustration of what a string looks like:
 
-![string elements](assets/string_elements.jpg)
+![string elements](../assets/string_elements.jpg)
 
 ## Modifying Strings
 
