@@ -2,7 +2,9 @@
 
 ## Goals
 
-ADD YA GOALS!
+* Understand what a string is
+* Explore properties of strings
+* Utilize built in methods and properties to manipulate strings
 
 ## Vocabulary
 
@@ -11,7 +13,7 @@ ADD YA GOALS!
 * character
 * index number
 * methods
-  * toUpperCase, toLowerCase, slice
+  * toUpperCase, toLowerCase, slice, split
 * immutability
 
 ## Sources
