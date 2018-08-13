@@ -1,6 +1,8 @@
 # Loops
 
-## Objectives
+## Goals
+* Know and understand how to write a `while` loop.
+* Know and understand how to write a `for` loop.
 
 ## Vocabulary
 
@@ -22,11 +24,11 @@ console.log(3)
 ...
 ```
 
-This program isn't much fun to write, and it isn't very practical either. What if we wanted to log the numbers between 1 and 1000? There is a better solution than writing this by hand: **loops**. Loops are really a solution for many repetitive tasks.
+This program isn't much fun to write, and it isn't very practical either. What if we wanted to log the numbers between 1 and 1000? There is a better solution than writing this by hand: **loops**. Loops are a solution for repetitive tasks.
 
 ## The `while` loop
 
-Now you are hopefully convinced that loops can be a good idea. Our first loop is the **while** loop. It is similar to the **if** statement, in that we will check if some condition is true. Unlike the **if** statement, we will execute the code block following the while loop again and again, as long as the condition is true. Whenever we reach the bottom of the code block, we go right back up and check the condition again.
+Now that you are hopefully convinced that loops can be a good idea, let's write our first **while** loop. A **while** loop is similar to the **if** statement, in that we will check if some condition is true. Unlike the **if** statement, we will execute the code block following the while loop again and again, as long as the condition is true. Whenever we reach the bottom of the code block, we go right back up and check the condition again.
 
 ```js
 let num = 1
@@ -78,10 +80,10 @@ for ([initialization]; [condition]; [increment]){
 
 ### More complex problems
 
-Loops can be used to solve pretty complex problems. Earlier, when we wanted to log only even or only odd values, we changed the increment from `1` to `2`. But what if we want to count both even and odd numbers, and do something different for each? Let's say we want to log for each number: `'even'` if it is even, and `'odd'` if it is odd. For this kind of problem we can use the remainder operator: `%`. We will make a loop that increments a variable by `1`, and inside the code block check if the variable is even or odd. To do this we check the remainder of division by `0`: if there is no remainder, the number is even. Otherwise the number is odd.
+Loops can be used to solve pretty complex problems. Earlier, when we wanted to log only even or only odd values, we changed the increment from `1` to `2`. But what if we want to count both even and odd numbers, and do something different for each? Let's say we want to log for each number: `'even'` if it is even, and `'odd'` if it is odd. For this kind of problem we can use the modulo (remainder) operator: `%`. We will make a loop that increments a variable by `1`, and inside the code block check if the variable is even or odd. To do this we check to see if remainder of the number divided by 2 is equal to 0. If there is no remainder (the remainder is 0), the number is even. Otherwise the number is odd.
 
 ```js
-for (let i = 0; i <= 10; i += 1){
+for (let i = 0; i <= 10; i++){
   if (i % 2 === 0){
     console.log(i + ' is even')
   } else {
@@ -105,7 +107,7 @@ We can also use a loop to calculate the sum of all the number between 1 and 10:
 
 ```js
 let sum = 0
-for (let i = 1; i <= 10; i += 1){
+for (let i = 1; i <= 10; i++){
   sum += i
 }
 ```
@@ -152,13 +154,12 @@ for (let i = 50; i >= 5; i -= 5){
 
 ## Loop exercises
 
-* Write a function that takes a number as an argument and logs all the numbers, descending, between the number and 1.
-* Write a a function that takes a number `num` as an argument, and iterates over all numbers from 0 to `num`. For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
-* Write a function that takes a number `num` as an argument and iterates over all numbers from 0 to `num`. For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18")
-* Use the `assignGrade` function from unit 4 (functions). Create a loop that will iterate over the numbers from `60` to `100`. For each number, it will call `assignGrade` with that number as an argument.
+* Write a loop that takes the variable "num" and logs all the numbers, descending, between "num" and 1.
+* Write a loop that takes the variable "num", and iterates over all numbers from 0 to "num". For each iteration, it will check if the current number is even or odd, and log that to the screen (e.g. "2 is even")
+* Write a loop that takes the variable "num" and iterates over all numbers from 0 to "num". For each iteration of the loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18")
 
 ### Bonus
 
-* Write a function that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+* Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
 
-When you have that working, modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still log "Fizz" or "Buzz" for numbers divisible by only one of those).
+When you have that working, modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
