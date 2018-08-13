@@ -43,12 +43,33 @@ So instead of writing a bunch of loops each time, we can write one function that
 whenever we are given a new array that we want to log it elements to the console, we can just call our function 
 instead of re-writing the same loop. 
 
+![functions](../assets/function_composition.png)
+
+ * The above syntax is called **function expression**. 
+The word `function` tells JS that we are **declaring** a function. Just like const lets JS know we are about to declare a variable.
+
+ * squareNumber is the **name** of the function. Not all functions need a name. Some functions are annonymous and don't have a name. But for now, we will be dealing with functions that do have name. 
+
+* Inside the parenthesis are **parameters** which are used to define a function. When we call a function we replace parameters with **arguments**. Arguments are the real values that are passed into a function. Often the words parameters, and arguments are used interchangably. Also, some functions don't require any arguments. For example: 
+
+```js 
+  function sayHello() {
+    return "Hello"
+  }
+
+```
+
+* The opening curly brace, { , indicates the start of the function. The closing curly brace, } , indicates the end of the function. 
+
+* Between the braces, is the code that makes up the function. **return** is the result (what we get back) after we've called the function. If there is no __return__ statement, the function will return `undefined`. 
+
+
 There are a couple different ways to __declare__ a function. The first way is to simple write `function` like this:
 
 ```js
 function printArray(arr) {
   for(let i = 0; i < arr.length; i++) {
-    console.log(arr[i]
+    console.log(arr[i]);
   }
 }
 ```
@@ -56,16 +77,16 @@ This is a function called printArray written in ES5 syntax. It takes in one __ar
 Now if we wanted to print our arrays as before we could call the function and pass it the array like this: 
 
 ``` js
-  let array1 = [1, 2, 3, 4, 5]
-  let array2 = [11, 12, 13, 14, 15]
+  let array1 = [1, 2, 3, 4, 5];
+  let array2 = [11, 12, 13, 14, 15];
   
-  printArray(array1) 
-  printArray(array2)
+  printArray(array1);
+  printArray(array2);
 ```
 See how much prettier that is? 
 
-To write that same function in ES6 is just a little bit different. First we declare the function like a variable that won't change
-using the const declaration. We then state the name of our function and assign it to our arguments, a fat-arrow, and then curly brackets. Like this:
+To write that same function in ES6 is just a little bit different. First we declare the function like a variable that won't change using the const declaration. 
+We then state the name of our function and assign it to our arguments, a fat-arrow, and then curly braces. Like this:
 
 ```js 
   const printArray = (arr) => {
@@ -77,6 +98,23 @@ using the const declaration. We then state the name of our function and assign i
 ```
 
 Both printArray functions will be treated the same. 
+
+## Invoking a Function
+We invoke a function by saying the function's name and passing in any necessary arguments. If we wanted to call our sayHello funtion we would do it as so: `sayHello()`. Because sayHello takes in zero arguments we wrote nothing in between the parenthesis. If we wanted to call printArray we would do it as so: `printArray([1, 2, 3])`. 
+
+If we changed our sayHello to accept an argument it would look like this: 
+
+```js
+   function sayHello(name) {
+    return "Hello " + name
+  }
+
+  sayHello()
+```
+
+What do you think would happen if we didn't pass in any arguments into sayHello? 
+
+
 
 Let's write a function that doubles a number.
 
@@ -90,11 +128,7 @@ const doubleNumber2 = (num) => {
 }
 ```
 
-The above syntax is called **function expression**. The function defines `num` as a name for something it would expect
-as *input*. The input is always written between parentheses, and these are always followed by the function *function body*.
-The function body consists of an opening curly bracket, any number of lines of code, and a closing curly bracket.
-The `return` keyword states that the code to follow it will be the *output* of the function.
-We can think of a function as a solid box that contains some machinery. The box has an opening on one side, where something can come in, and an opening at the other side, where something may come out. The names of the things that go in are called *parameters*. The function above, for example, defines one parameter called `num`. We call it `num`, and not `cat` or `giraffe`, in order to communicate that we are expecting a number as input.
+
 
 ### Functions as Values
 
