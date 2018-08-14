@@ -1,4 +1,4 @@
-# Strings I
+# Strings
 
 ## Goals
 
