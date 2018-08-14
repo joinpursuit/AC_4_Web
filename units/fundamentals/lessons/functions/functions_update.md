@@ -56,12 +56,15 @@ The word `function` tells JS that we are **declaring** a function. Just like con
   function sayHello() {
     return "Hello"
   }
+  
+  console.log(sayHello())
 
 ```
 
 * The opening curly brace, { , indicates the start of the function. The closing curly brace, } , indicates the end of the function. 
 
-* Between the braces, is the code that makes up the function. **return** is the result (what we get back) after we've called the function. If there is no __return__ statement, the function will return `undefined`. 
+* Between the braces, is the code that makes up the function. **return** is the result (what we get back) after we've called the function. If there is no __return__ statement, the function will return `undefined`. Once something is __returned__ from a function, the function has ended. This means, that even if there is code after the return statment, it will not be reached. 
+The code `sayHello()` will then be replaced by the value that was returned by the function. As far as `console.log` is concerned, what is being passed to it is the value `"Hello"`. It knows nothing about `sayHello`.
 
 
 There are a couple different ways to __declare__ a function. The first way is to simple write `function` like this:
@@ -111,8 +114,12 @@ If we changed our sayHello to accept an argument it would look like this:
 
   sayHello()
 ```
-
+<details>
+  <summary>
 What do you think would happen if we didn't pass in any arguments into sayHello? 
+  </summary>
+  `"Hello undefined"`
+</details>
 
 
 
@@ -123,79 +130,48 @@ function doubleNumber(num) {
   return num + num;
 }
 
-const doubleNumber2 = (num) => {
+doubleNumber(5) // => 10
+
+const doubleNumberTwo = (num) => {
   return num + num;
 }
+
+doubleNumberTwo(12) // => 24 
 ```
 
 
 
 ### Functions as Values
 
-Before we can begin using the above function, we need to store it somewhere. In JavaScript, a function is a value, just like numbers and string, and like other values, it can be assigned to a variable:
+You may have noticed above that we're using const to define some of the functions. This is because in JS a function is a value, just like numbers and strings, and like other values, it can be assigned to a variable and invoked in the same way we've seen previously:
 
 ```js
-var double = function (num) { return num + num }
-```
+const double = function(num) { return num + num }
 
-Now that we have store the function into a variable called `double`, we can pass some input into the function and observe the output. We do this by writing the name of the variable to which the function is assigned (`double` in this case), followed by parentheses, in which we write the input for the function.
-
-```js
 double(5)
+// => 10
 ```
 
-The input values we provide to a function are also called **arguments**. When you open a node REPL, write the function definition and call the function as we did above, you will see the output right away.
 
-```js
-> var double = function (num) {
-... return num + num
-... }
-> double(5)
-10
-```
+As you may have realized, `console.log`, is also a function - one that is provided for us. The dot in it's name is meaningful, and will be discussed at a later point. `console.log` differs from our `double` function in two other ways:
 
-When we write programs, however, we will want to use the output in some way. For example, we may want to log the output.
+1. It does not produce an output (ie it returns undefined). 
+2. It leads to something else happening - the value passed to it gets logged to the screen.
 
-```js
-var double = function (num) {
-  return num + num
-}
 
-console.log(double(3))
-```
 
-Once the `return` statement is reaches inside a function, the function is execution is over, and we return to the point at which we called the function. The code `double(3)` will then be replaced by the value that was returned by the function. As far as `console.log`, what is being passed to it is the value `9`. It knows nothing about `double`.
+Again, in JavaScript, a function that does not have a return statement will return the value `undefined`.
 
-As you may have realized, `console.log`, is also a function - one that is provided for us. The dot in it's name is meaningful, and will be discussed at a later point. `console.log` differs from out `double` function in two other ways:
-
-1. It does not produce an output.
-2. It leads to something else happening - the value passed to it being logged to the screen.
-
-The first part is easy to replicate. All we need to do is write a function without a `return` keyword:
-
-```js
-var noReturn = function (num){
-  num + num
-}
-```
-
-The function above takes a number as argument, doubles it, and does nothing with the result. We can test this:
-
-```js
-> var result = noReturn(2)
-> console.log(result)
-undefined
-```
-
-In JavaScript, a function that does not have a return statement will return the value `undefined`.
+### Single Responsiblity Principle
+It is BEST practice to write your functions to only do ONE thing. With our double function, the only thing it did was double a number. All of our functions have one job to do. If you find yourself needing your function to do multiple things, you should consider breaking it up into multiple functions. For now, you may not notice the importance because we're still writing very simple functions, but if we were making something a bit more complex like a game you would quickly see the benefit. There could be a takeTurn, isValidMove, isGameOver, switchPlayers, declareWinner, displayGame, movePlayer, etc... We'd want to break everything up to keep the logic and moving parts clear and simple. 
 
 ### Side-effects
 
-The second aspect of `console.log` - a value being logged to the screen, is not something we can replicate. However, this is part of a larger aspect of functions called a *side effect*. A *side effect* is anything that happens inside a function which result in changes to the outside world. One side effect that we *can* create is changing the value of a variable that was defined outside the function.
+The second aspect of `console.log` - a value being logged to the screen, is not something we can replicate. However, this is part of a larger aspect of functions called a *side effect*. A *side effect* is anything that happens inside a function which results in a change to the outside world. One side effect that we *can* create is changing the value of a variable that was defined outside the function.
 
 ```js
-var myNumber = 2
-var sideEffect = function(){
+let myNumber = 2
+const sideEffect = function(){
   myNumber += 1
 }
 
@@ -209,23 +185,11 @@ The function `sideEffect` above takes no arguments, and has a single side-effect
 > Ex. Put a call to the `sideEffects` function as an argument to `console.log`: ```js console.log(sideEffects())```. What is logged? Why?
 > Ex. Writing a function that produces side effects *and* has a return value.
 
-### Function shorthand syntax
-
-There is a shorter way to write `var dobule = function…`: start with the `function` keyword, followed by the function name.
-
-```js
-function double(num){
-  return num + 1
-}
-```
-
-
-The above syntax is called **function declaration**. `double` is a still a variable in both cases, one whose value is a function.
 
 
 ### Function Hoisting
 
-The only substantial difference is that function declarations are hoisted. This means that you can call a function before it is defined:
+The only substantial difference is that function declarations are __hoisted__ or lifted to the top of the program. This means that you can call a function before it is defined:
 
 ```js
 console.log(sayHelloDec) // logs: [Function: sayHelloDec]
@@ -236,13 +200,19 @@ function sayHelloDec() {
 }
 ```
 
-A function defined with the expression syntax will be assigned to a variable, and any variable used before it is defined will have the value `undefined`
+A function defined with  expression syntax or ES6 arrow function will be assigned to a variable, and any variable used before it is defined will have the value `undefined`
 
 ```js
 console.log(sayHelloExp) // logs: undefined
+console.log(sayHelloExpTwo) // logs: undefined
 sayHelloExp(); // TypeError: sayHelloExp is not a function
+sayHelloExpTwo(); // TypeError: sayHelloExpTwo is not a function
 
-var sayHelloExp = function() {
+const sayHelloExp = function() {
+  console.log('hello');
+}
+
+const sayHelloExpTwo = () => {
   console.log('hello');
 }
 ```
@@ -254,14 +224,17 @@ A function is like a mini-program inside our main program. Whenever the code ins
 ```js
 // This function will print 'cat' and then print 'dog'
 function logPets(){
-  var pet = 'cat'
+  let pet = 'cat'
   console.log(pet)
   pet = 'dog'
   console.log(pet)
 }
-// logNumbers will do the same thing every time we call it
-logPets()
-logPets()
+// logPets will do the same thing every time we call it
+logPets() // => 'cat' 
+         //     'dog'
+logPets() // => 'cat' 
+         //     'dog'
+
 ```
 
 ### Variable Scope
@@ -270,7 +243,7 @@ The variables defined inside a function simply do not exist outside of it.
 
 ```js
 function hello(){
-  var greeting = 'hello'
+  let greeting = 'hello'
   console.log(greeting)
 }
 
@@ -280,7 +253,7 @@ console.log(greeting) // ReferenceError: greeting is not defined
 Variables declared outside a function are called `global` and they can be accessed and modified from any function.
 
 ```js
-var greeting = 'hi'
+let greeting = 'hi'
 
 // This function changes the global variable `greeting`
 function hello(){
@@ -292,13 +265,13 @@ hello()
 console.log(greeting) // logs: 'hello'
 ```
 
-A commonly used term for this is **scope**: a variable inside a function has local scope, and a variables not inside any function has global scope. If we create a variable inside a function with the same name as a global variable - the function will only be aware of the local one. This, however, will not change the value of the global variable.
+A commonly used term for this is **scope**: a variable inside a function has _local scope_, and a variable not inside any function has _global scope_. So a variable with local scope is only available inside that function. A variable with global scope is avaialbe inside or outside the function. If we create a variable inside a function with the same name as a global variable - the function will only be aware of the local one. This, however, will not change the value of the global variable.
 
 ```js
-var greeting = 'hello'
+let greeting = 'hello'
 
 function hello(){
-  var greeting = 'what\'s up?'
+  let greeting = 'what\'s up?'
   console.log(greeting) // logs: 'what's up?'
 }
 
@@ -306,67 +279,27 @@ function hello(){
 console.log(greeting) // logs: 'hello'
 ```
 
-### Functions in English
-
-One way we often discuss functions is by stating what they do. For example: function `add` adds two numbers and returns the result. When talking of functions this way, it is usually assumed that the variables (in this case the two numbers), will be provided as arguments to the function.
-
-```js
-function add(num1, num2){
-  return num1 + num2
+Luckily with ES6 we don't have to worry too much about hoisting. const and let are both block scoped. This means that if we declared the same named variable inside the block and outside the block, they will be treated as two seperate varaibles.
+```js 
+let i = 0;
+if (true) {
+  let i = 1;
 }
-
-var num1 = 2
-var num2 = 3
-// adding num1 and num2
-var sum = add(num1, num2)
-
-console.log(sum) // logs: 5
+console.log(i); // 0
 ```
 
-Note that we are not changing the values of `num1` and `num2`.
-
-> Ex 1. Write a function that takes a number as argument and returns the number to the power of 2
-
-### Calling functions from other functions
-
-We can call functions from other functions, in the same way we would call them from our main code.
-
+**History Note:** Before ES6 we only used _var_ to declare variables. Unlike let and const, var is only function scoped. So a redeclaration inside a block could result in undesirable side-effects.
 ```js
-// Returns the square of a number
-function square(num){
-  return num * num
+var i = 0
+if (true) {
+  var i = 1;
 }
+console.log(i); // 1
 
-// Returns the sum of the squares of two numbers
-function addSquares(num1, num2){
-  return square(num1) + square(num2)
-}
-
-// Adding the squares of 2 and 3
-var sum = addSquares(2, 3)
-
-console.log(sum)
 ```
 
-Be careful when two function call each other. The following code will never stop running:
 
-```js
-
-
-function chicken(){
-    // call egg
-    egg()
-}
-
-function egg(){
-    // call chicken
-    chicken()
-}
-
-egg()
-```
-
-One way to imagine the code above is as a stack of functions calls - each time we call a new function, it gets put on the stack. The function is put out of the stack only when it is done running. In the code above, we keep piling `chicken` and `egg` functions, and never takes them off - until the computer runs out of memory.
+To read MORE about hoisting and differences between var, let and const, read [this](https://hackernoon.com/js-var-let-or-const-67e51dbb716f)
 
 ## Resources
 
