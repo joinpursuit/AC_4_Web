@@ -126,19 +126,35 @@ arr.sayHello()
 ```
 A more realistic example: 
 
-Array.pro
+```js
+Array.prototype.doubler = function() {
+  let output = [];
+  this.forEach(num => {
+    output.push(num * 2)
+  })
+  return output
+}
+
+
+let arr = [1,2 ,3]
+arr.doubler() 
+// => [2, 4, 6
+
+```
 
 The above is **not**  something we would usually want to do. Extending the basic functionalities of a JavaScript type can lead to unexpected bugs and errors in our code. Even more so when we are working with other programmers, who may not know what functionalities we have added. In this lesson, we will be re-implementing methods that already exist in javascript arrays.
 
+The **this** in the above function refers to the array that the method will be called upon. 
+
 ### Implementing the `map` function
 
-To make transformations easier, let's implement a `map` method. `Map` takes a transformation function as argument, applies it to each element in the source array, and returns the transformed array.
+To make transformations easier, let's implement a `map` method. `Map` takes a transformation function (callback) as an argument, applies it to each element in the source array, and returns the transformed array.
 
 ```js
-Array.prototype.map = function(func) {
+Array.prototype.map = function(callback) {
     let results = [];
     for (let i = 0; i < this.length; i++){
-        results.push(func(this[i]));
+        results.push(callback(this[i]));
     }
 
     return results;
@@ -150,7 +166,7 @@ Array.prototype.map = function(func) {
 We can now repeat the exercise of collecting {id, title} pairs for each film in the `films` array, but this time we will use the `map` function.
 
 ```js
-let idAndTitlePairs = films.map(function(film) {
+let idAndTitlePairs = films.map(film => {
     return { id: film.id, title: film.title };
 };
 ```
