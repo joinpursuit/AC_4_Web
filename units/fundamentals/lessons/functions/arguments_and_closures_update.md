@@ -82,3 +82,114 @@ sayHello()
 sayHello("Matt")
 // => "Hello, Matt!"
 ```
+
+## Closures
+
+A closure, at it's simpliest form is any function that refers to varaibles that currently exist within the scope of the function. 
+Simple Example:
+
+```js
+let variable = 0
+
+function counter() {
+  variable++
+}
+
+counter()
+counter()
+
+console.log(variable) // => 2
+
+```
+
+The reason this is a closure is because the variable being referred to __within__ the function was declared __outside__ of the function. 
+
+This is something you've probably seen or done before. However, closures can become very useful as your programs get more complex. Let's take a look at another closure. 
+
+```js
+function createCounter() {
+ let counter = 0
+  return function increment() {
+    counter++
+    return counter
+   }
+ }
+ const counterOne = createCounter()
+ console.log(counterOne()) //=> 1
+ console.log(counterOne()) // => 2
+ console.log(counterOne()) // => 3
+
+const counterTwo = createCounter()
+console.log(counterTwo())  // => 1 
+
+
+```
+In the function above we see `createCounter`, a function that initializes a `counter` variable at 0, and returns another function `increment`. The function `increment` increases the `counter` variable (which is _outside_ of the `increment` function) by 1 and then returns the current value of `counter`. 
+
+Because `createCounter` returns a function (`increment`), we can assign a new variable `counterOne` to have that returned function as it's value. When we invoke `counterOne`, and therefore invoke `increment`, the `counter` is returned. 
+
+Why is `counterTwo`'s value different than `counterOne` if they both have a `counter`variable? 
+
+Let's look at another closure. 
+
+```js
+function greeting(str1) {
+  return function (str2) {
+    return `${str1} ${str2}`
+  }
+}
+
+
+```
+Like we've seen before, this is a function `greeting` that returns another function. I could give the returned function a name, but have decided to leave it annonymous because I don't _need_ to name it. 
+
+So, if invoke the function `greeting('hello')` the output will be `[Function]` which is the inner function returned.  If I want to invoke _this_ inner function I could do so by invoking greeting twice at the same time. Like this: `greeting('hello')('Corey')`. This will return the output 'hello Corey'. 
+
+Using this concept to our advantage, we can save the initial returned inner function as differnt variables with different greetings, like so: 
+``` js
+const whatUp = greeting("What up?")
+
+const goodDay = greeting("Good day,")
+
+```
+From these lines we now have 2 new functions that work like so... 
+
+```js 
+whatUp("Matt") // => 'What up? Matt'
+goodDay("Corey") // => 'Good day, Corey'
+
+```
+
+The ES6 equivalent to our greeting function looks like this: 
+
+```js
+const greeting = (str1) => {
+  return (str2) => {
+   return  `${str1} ${str2}`
+  }
+}
+
+//which is equivalent to...
+const greeting = (str1) => {
+  return (str2) => (`${str1} ${str2}`)
+}
+
+//which is equivalent to...
+const greeting = (str1) => ((str2) => (`${str1} ${str2}`))
+
+//which is equivalent to...
+const greeting = str1 => str2 => `${str1} ${str2}`
+
+```
+As we can see, greeting is being declared. It's taking in str1 as an argument. It's implicitly returning a function that takes in str2 as an argument and implicitly returns the final result. 
+
+
+
+
+
+
+
+
+
+
+
