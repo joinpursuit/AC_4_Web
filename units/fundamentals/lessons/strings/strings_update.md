@@ -250,6 +250,39 @@ console.log(sentence)
 console.log(typeof(sentence))
 ```
 
+### String Interpolation
+
+As you've seen, when we want to add a variable to a sentence, we have to add it in using the `+` sign like so:
+
+```js
+let name = "Matt"
+let sentence = "Hello, my name is "
+console.log(sentence + name + ".")
+// => Hello, my name is Matt.
+```
+
+This can become a lot of work quickly. Luckily, JavaScript has some functionality built into it that allows us to use _interpolation_, or insertion, to add variables into a string. To do this, we use backticks, &#96; , (located beneath your escape key) instead of quotation marks. Then, wherever you'd like to insert your variable, you add a dollar sign (`$`) and enclose the variable name inside curly braces `{}` like so:
+
+```js
+let name = "Matt"
+let sentence = `Hello, my name is ${name}.`
+console.log(sentence)
+// => Hello, my name is Matt.
+```
+
+This is much easier! Especially if you want to interpolate multiple values or change values:
+
+```js
+for(let i = 1; i <= 5; i++){
+ console.log(`I'm number ${i}!`)
+}
+// => I'm number 1!
+// => I'm number 2!
+// => I'm number 3!
+// => I'm number 4!
+// => I'm number 5!
+```
+
 
 ## Exercises
 
