@@ -310,6 +310,33 @@ Okay so that's how we get the keys. How do we get the values? We can simply key 
 
 ```
 
+### Get objects keys and values 
+ 
+If I wanted to get all the keys of an object and store them as an array. I can call `Object.keys(obj)` and pass in `obj` that I want the keys from. 
+
+```javascript
+  let cat = {
+    name: 'Tom',
+    type: 'Domestic'
+  }
+  
+  let catKeys = Object.keys(cat)
+  console.log(catKeys) // => ['name', 'type']
+  ```
+  
+  I can follow a similar format if I want the values in an array. 
+  
+  ```js
+   let cat = {
+    name: 'Tom',
+    type: 'Domestic'
+  }
+  
+  let catValues = Object.values(cat)
+  console.log(catValues) // => ['Tom', 'Domestic']
+  
+  ```
+
 ### Order in Objects
 
 Arrays have order; objects do not. There is a first item in an array, whereas there isn't a "first" item in an object.
