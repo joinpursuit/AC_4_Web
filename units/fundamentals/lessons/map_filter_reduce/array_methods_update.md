@@ -9,7 +9,8 @@
   * every
 
 ## Lesson
-# Map, Filter, Reduce
+
+# ForEach, Map, Filter, Every, Reduce
 
 ### Working with Arrays
 
@@ -106,10 +107,9 @@ films.forEach(film => {
 
 Most array tranformations share two operations in common:
 
-1. Traverse the source array.
+1. The traverse the source array.
 2. Add each item's transformed value to a new array.
 
-We will see how to abstract away these operations.
 
 ### Adding methods to the Array type
 
@@ -138,28 +138,52 @@ Array.prototype.doubler = function() {
 
 let arr = [1,2 ,3]
 arr.doubler() 
-// => [2, 4, 6
+// => [2, 4, 6]
 
 ```
 
-The above is **not**  something we would usually want to do. Extending the basic functionalities of a JavaScript type can lead to unexpected bugs and errors in our code. Even more so when we are working with other programmers, who may not know what functionalities we have added. In this lesson, we will be re-implementing methods that already exist in javascript arrays.
+The above is **not**  something we would usually want to do. Extending the basic functionalities of a JavaScript type can lead to unexpected bugs and errors in our code. Even more so when we are working with other programmers, who may not know what functionalities we have added. In todays exercises, we will be re-implementing methods that already exist in javascript arrays.
 
-The **this** in the above function refers to the array that the method will be called upon. 
-
-### Implementing the `map` function
-
-To make transformations easier, let's implement a `map` method. `Map` takes a transformation function (callback) as an argument, applies it to each element in the source array, and returns the transformed array.
+The **this** in the above function refers to the array that the method will be called upon. That means we can index into  **this** if desired. Let pretend we wanted an array method that returned only the odd values. We could add this method to the Array.protoype like this: 
 
 ```js
-Array.prototype.map = function(callback) {
-    let results = [];
-    for (let i = 0; i < this.length; i++){
-        results.push(callback(this[i]));
-    }
+Array.prototype.odds = function() {
+  let output = [];
+  this.forEach(num => {
+   if(num % 2 !== 0) {  
+    output.push(num)
+   }
+  })
+  return output
+}
 
-    return results;
-};
+
+let arr = [1,2 ,3]
+arr.odds() 
+// => [1, 3]
+
+// OR
+
+Array.prototype.odds = function() {
+  let output = [];
+  for(let i = 0; i < this.length; i++) {
+    if(this[i] % 2 !== 0) {
+      output.push(this[i]);
+    }
+  }
+  return output;
+}
+
+
+let arr = [1,2 ,3];
+arr.odds();
+
 ```
+
+## Map
+
+`Map` takes a transformation function (callback) as an argument, applies it to each element in the source array, and returns the new transformed array.
+
 
 ### Using `map()`
 
@@ -171,9 +195,20 @@ let idAndTitlePairs = films.map(film => {
 };
 ```
 
+Let's look at another example. Let's say I want to double the values of my array. 
+
+```js
+let arr = [1, 2, 3];
+arr.map(el => {
+ return el * 2;
+});
+
+
+```
+
 ### Filtering Arrays
 
-Like transformation, Filtering an array is a very common operation. To filter an array we apply a test to each item in the array, and collect the items that pass the test into a new array.
+Like transformation, filtering an array is a very common operation. To filter an array we apply a test to each item in the array, and collect the items that _pass_ (comes up as truthy) the test into a new array.
 
 #### Filtering using `forEach`
 
@@ -182,7 +217,7 @@ Let's start by using `forEach()` to loop through the films in the `films` array 
 ```js
 let bestFilms = [];
 
-films.forEach(function(film) {
+films.forEach(film => {
     if (film.rating === 5.0) {
         bestFilms.push(film);
     }
@@ -191,25 +226,23 @@ films.forEach(function(film) {
 
 Like `map`, every `filter` operation shares some things in common:
 
-1. Traverse the array.
-2. Add elements that pass the test to a new array.
+1. Traverses the array.
+2. Returns a new array.
 
-#### Implementing array `filter` method
+#### Filtering using the`filter` method
 
-To make filtering easier, let's implement a `filter()` method in the Array prototype. The filter() method accepts a test function. The test function takes as argument an element in the array, and returns a boolean indicating whether the item should be retained in the new array.
+Like `map`, `filter` also takes in a callback function. Each item in the array will be passed into the callback and tested against a condition. It will then return a new array of the elements that passed the conditional. Let's use filter to get an array of only the odd numbers. 
 
 ```js
-Array.prototype.filter = function(testFunc) {
-    let results = [];
-    for (let i = 0; i < this.length; i++){
-        if (testFunc(this[i])) {
-            results.push(this[i]);
-        }
-    })
+ let arr = [1, 2, 3, 4, 5]
+ arr.filter(el => {
+  return el % 2 !== 1
+ })
+ 
+ // => [1, 3, 5]
 
-    return results;
-}
 ```
+
 
 ### Chaining Method Calls
 
@@ -217,19 +250,39 @@ Since both `filter` and `map` return an array, we can chain these two methods. W
 
 ```js
 let bestFilmIds = films
-    .filter(function(film) {
+    .filter(film => {
         return film.rating === 5.0;
     })
-    .map(function(film) {
+    .map(film => {
         return film.id;
     });
+```
+
+Let's look at another example. We want only the odds in an array and then we want those values double. 
+
+```js
+let arr = [1, 2, 3, 4, 5];
+arr.filter(el => el % 2).map(el => el * 2);
+// => [ 2, 6, 10 ];
+```
+
+## Every
+
+`every`is another JS array method that checks to see if every single element in the array meets a certain condition. Like `forEach`, `map`, and `filter` it also takes in a callback function. Let's check to see if all the values in an array or odd.
+
+```js
+let arr = [1, 3, 5];
+arr.every( el => {
+   return el % 2 !== 0
+})
+// => true 
 ```
 
 ### Reducing Arrays
 
 Let's say we need to find the largest integer in an array. We can't use `filter`, because it only examines one element item at a time. To find the largest integer we need to compare elements in the array to each other.
 
-One approach could be to select an item in the array as the assumed largest number (perhaps the first item), and then compare that value to every other item in the array. Each time we come across a number that was larger than our assumed largest number, we'd replace it with the larger value, and continue the process until the entire array was traversed.
+One approach is to select an item in the array as the assumed largest number (perhaps the first item), and then compare that value to every other item in the array. Each time we come across a number that is larger than our assumed largest number, we can replace it with the larger value, and continue the process until the entire array is traversed.
 
 #### Using `forEach` to find the largest box art
 
@@ -247,7 +300,7 @@ let currentSize;
 let maxSize = -1;
 let largestBoxart;
 
-boxarts.forEach(function(boxart) {
+boxarts.forEach(boxart => {
     currentSize = boxart.width * boxart.height;
     if (currentSize > maxSize) {
         largestBoxart = boxart;
@@ -258,42 +311,17 @@ boxarts.forEach(function(boxart) {
 return largestBoxart;
 ```
 
-### Implementing `reduce`
-
-Let's add a `reduce()` method to the Array.
-
-```js
-Array.prototype.reduce = function(func, initialValue) {
-    let counter;
-    let accumulator;
-
-    // If the user didn't pass an initial value, use the first element.
-    if (initialValue === undefined) {
-        accumulator = this[0];
-    } else {
-        accumulator = initialValue;
-    }
-
-    // Iterate through the array, feeding the current value and the result of
-    // the previous computation back into the function
-    for (let i = 0; i < this.length; i++) {
-        accumulator = func(accumulator, this[i])
-    }
-
-    return accumulator;
-}
-```
 
 Let's use the reduce function to find the largest value in an array of numbers.
 
 ```js
 let ratings = [2,3,1,4,5];
 
-let largest = ratings.reduce(function(acc, curr) {
-    if (acc > curr) {
+let largest = ratings.reduce((acc, currentEl) => {
+    if (acc > currentEl) {
         return acc;
     } else {
-        return curr;
+        return currentEl;
     }
 });
 ```
@@ -308,7 +336,7 @@ let boxarts = [
         { width: 425, height: 150, url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg" }
     ];
 
-let largestBoxart = boxarts.reduce(function(acc,curr) {
+let largestBoxart = boxarts.reduce((acc,curr) => {
         if (acc.width * acc.height > curr.width * curr.height) {
             return acc;
         } else {
@@ -316,22 +344,45 @@ let largestBoxart = boxarts.reduce(function(acc,curr) {
         })
 ```
 
-It is also possible to use reduce to combine the elements of an array. For example, we may want to find the sum of all the numbers:
+Let's use `reduce` to find the sum of all the numbers in an array. 
 
 ```js
-let numbers = [1, 2, 3, 4];
-let sum = numbers.reduce(function(acc, num){
-    return acc + num;
+ let arr = [1, 2, 3, 4]
+ let sum = arr.reduce((acc, el) => {
+  return acc + el
 })
+
+// => 10
+
 ```
 
-At `acc` will have to the value of the first element in the array, and `curr` will have the value of the second element in the array. Following this, `acc` will have the value returned by the previous invocation of the callback, and `curr` will have the value of the next element in the array.
+If we wanted to find the sum of all the number in an array and have 5 added to that number, we could do this by passing in a second argument to the reduce function. 
 
 ```js
-// acc = 2    curr = 3    return 2 + 3 -> 5
-// acc = 5    curr = 1    return 5 + 1 -> 6
+ let arr = [1, 2, 3, 4]
+ let sum = arr.reduce((acc, el) => {
+  return acc + el
+}, 5)
+
+// => 15
+
+```
+
+### Reduce Broken Down
+Reduce takes in two arguments, a callback function, and an initial value. The callback function will then iterate through the array and will have two variables available to it. The accumulator and the current element. As the array is iterated, the accumutor will continously be reassigned to the value that is produced from the callback being called with the arguments accumulator and current element. After the entire array has been iterated the accumulator is what will be returned. 
+
+If reduce is given an initial value as it's second argument, it's accumulator will be assigned to that initial value and it will begin it's iteration with the first element of the array. 
+
+If reduce is NOT given an initial value, it's accumulator will default to the first element of the array and it's iteration will begin on the second element of the array. 
+
+
+In our summing of all the elements the `acc` will have the value of the first element in the array because we are not passing in an intial value, and our`curr` will have the value of the second element in the array. Following this, `acc` will have the value returned by the previous invocation of the callback, and `curr` will have the value of the next element in the array.
+
+```js
+// acc = 1    curr = 2    return 1 + 2 -> 3
+// acc = 3    curr = 3    return 3 + 3 -> 6
 // acc = 6    curr = 4    return 6 + 4 -> 10
-// acc = 10   curr = 5    return 10 + 5 -> 15
+
 ```
 
 ### Map -> Reduce
@@ -340,314 +391,15 @@ We can also combine map and reduce. In this case map will be first (returning an
 
 ```js
 let sumOfSquares = numbers
-    .map(function(number) {
+    .map(number => {
         return number * number;
     })
-    .reduce(function(total, number) {
+    .reduce((total, number) => {
         return total + number;
     }, 0);
 ```
-### Working with Arrays
 
-The Array is Javascript's only collection type. Arrays are everywhere. Arrays in javascript already have built-in `map`, `filter`, and `reduce` methods. In this lesson we are going to reimplement these functions.
 
-In this lesson we will be transforming array into new arrays. We will first do so using loops and statements. Then we will implement one of the functions, and then use it to solve the same problem without loops. We will also see how to combine `filter`, `map` and `reduce` to solve more complex problems.
-
-### Logging elements using a loop
-
-Given an array of names, we can easily print all of its elements using a loop:
-
-```js
-var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
-
-for(var i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
-```
-
-We can also log the elements using the built-in `forEach` array method.  `forEach` takes a function as an argument, and call it for each element in the array.
-
-```js
-var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
-
-names.forEach(function(name){
-    console.log(name)
-})
-```
-
-The `forEach` method lets us specify what we want to happen to each item in the array, but hides how the array is traversed.
-
-### Array transformation
-
-To transform one array into another, we apply a function to each item in the array and collect the results into a new array.
-
-Given an array of film objects below, we can transform it into an array of {id,title} pairs using `forEach`:
-
-```js
-var films = [
-    {
-        "id": 70111470,
-        "title": "Die Hard",
-        "boxart": "http://cdn-0.nflximg.com/images/2891/DieHard.jpg",
-        "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
-        "rating": 4.0,
-    },
-    {
-        "id": 654356453,
-        "title": "Bad Boys",
-        "boxart": "http://cdn-0.nflximg.com/images/2891/BadBoys.jpg",
-        "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
-        "rating": 5.0
-    },
-    {
-        "id": 65432445,
-        "title": "The Chamber",
-        "boxart": "http://cdn-0.nflximg.com/images/2891/TheChamber.jpg",
-        "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
-        "rating": 4.0,
-        "bookmark": []
-    },
-    {
-        "id": 675465,
-        "title": "Fracture",
-        "boxart": "http://cdn-0.nflximg.com/images/2891/Fracture.jpg",
-        "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
-        "rating": 5.0,
-        "bookmark": [{ id: 432534, time: 65876586 }]
-    }
-],
-
-idAndTitlePairs = [];
-
-films.forEach(function(film) {
-    idAndTitlePairs.push({ id: film.id, title: film.title });
-});
-```
-
-Most array tranformations share two operations in common:
-
-1. Traverse the source array.
-2. Add each item's transformed value to a new array.
-
-We will see how to abstract away these operations.
-
-### Adding methods to the Array type
-
-When we add a property or method to `Array.prototype`, we can then call this method with any array.
-
-```js
-Array.prototype.sayHello = function(){
-    return "hello";
-}
-
-var arr = [1, 2, 3]
-arr.sayHello()
-// => "hello"
-```
-
-The above is **not** be something we would usually want to do. Extending the basic functionalities of javascript types can lead to unexpected bugs and errors in our code. Even more so when we are working with other programmers, who may not know what functionalities we have added. In this lesson, we be re-implementing methods that already exist in javascript arrays.
-
-### Implementing the `map` function
-
-To make transformations easier, let's implement a `map` method. `Map` takes a transformation function as argument, applies it to each element in the source array, and returns the transformed array.
-
-```js
-Array.prototype.map = function(func) {
-    var results = [];
-    for (var i = 0; i < this.length; i++){
-        results.push(func(this[i]));
-    }
-
-    return results;
-};
-```
-
-### Using `map()`
-
-We can now repeat the exercise of collecting {id, title} pairs for each film in the `films` array, but this time we will use the `map` function.
-
-```js
-var idAndTitlePairs = films.map(function(film) {
-    return { id: film.id, title: film.title };
-};
-```
-
-### Filtering Arrays
-
-Like transformation, Filtering an array is a very common operation. To filter an array we apply a test to each item in the array, and collect the items that pass the test into a new array.
-
-#### Filtering using `forEach`
-
-Let's start by using `forEach()` to loop through the films in the `films` array and, if a `film` has a rating of `5.0`, add it to the `bestFilms` array.
-
-```js
-var bestFilms = [];
-
-films.forEach(function(film) {
-    if (film.rating === 5.0) {
-        bestFilms.push(film);
-    }
-})
-```
-
-Like `map`, every `filter` operation shares some things in common:
-
-1. Traverse the array.
-2. Add elements that pass the test to a new array.
-
-#### Implementing array `filter` method
-
-To make filtering easier, let's implement a `filter()` method in the Array prototype. The filter() method accepts a test function. The test function takes as argument an element in the array, and returns a boolean indicating whether the item should be retained in the new array.
-
-```js
-Array.prototype.filter = function(testFunc) {
-    var results = [];
-    for (var i = 0; i < this.length; i++){
-        if (testFunc(this[i])) {
-            results.push(this[i]);
-        }
-    })
-
-    return results;
-}
-```
-
-### Chaining Method Calls
-
-Since both `filter` and `map` return an array, we can chain these two methods. We can do this to collect the ids of videos that have a rating of 5.0.
-
-```js
-var bestFilmIds = films
-    .filter(function(film) {
-        return film.rating === 5.0;
-    })
-    .map(function(film) {
-        return film.id;
-    });
-```
-
-### Reducing Arrays
-
-Let's say we need to find the largest integer in an array. We can't use `filter`, because it only examines one element item at a time. To find the largest integer we need to compare elements in the array to each other.
-
-One approach could be to select an item in the array as the assumed largest number (perhaps the first item), and then compare that value to every other item in the array. Each time we come across a number that was larger than our assumed largest number, we'd replace it with the larger value, and continue the process until the entire array was traversed.
-
-#### Using `forEach` to find the largest box art
-
-In this example we use `forEach` to find the largest box art. Each time we compare the current box art with the maximum we've found so far. If the boxart is smaller than the maximum size, we discard it. If it's larger, we save it and set its size as our new maximum. Finally we're left with the largest boxart.
-
-```js
-var boxarts = [
-        { width: 200, height: 200, url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg" },
-        { width: 150, height: 200, url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg" },
-        { width: 300, height: 200, url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg" },
-        { width: 425, height: 150, url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg" }
-    ];
-
-var currentSize;
-var maxSize = -1;
-var largestBoxart;
-
-boxarts.forEach(function(boxart) {
-    currentSize = boxart.width * boxart.height;
-    if (currentSize > maxSize) {
-        largestBoxart = boxart;
-        maxSize = currentSize;
-    }
-});
-
-return largestBoxart;
-```
-
-### Implementing `reduce`
-
-Let's add a `reduce()` method to the Array.
-
-```js
-Array.prototype.reduce = function(func, initialValue) {
-    var counter;
-    var accumulator;
-
-    // If the user didn't pass an initial value, use the first element.
-    if (initialValue === undefined) {
-        accumulator = this[0];
-    } else {
-        accumulator = initialValue;
-    }
-
-    // Iterate through the array, feeding the current value and the result of
-    // the previous computation back into the function
-    for (var i = 0; i < this.length; i++) {
-        accumulator = func(accumulator, this[i])
-    }
-
-    return accumulator;
-}
-```
-
-Let's use the reduce function to find the largest value in an array of numbers.
-
-```js
-var ratings = [2,3,1,4,5];
-
-var largest = ratings.reduce(function(acc, curr) {
-    if (acc > curr) {
-        return acc;
-    } else {
-        return curr;
-    }
-});
-```
-
-Now let's try using `reduce()` to find the largest box art in the array.
-
-```js
-var boxarts = [
-        { width: 200, height: 200, url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg" },
-        { width: 150, height: 200, url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg" },
-        { width: 300, height: 200, url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg" },
-        { width: 425, height: 150, url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg" }
-    ];
-
-var largestBoxart = boxarts.reduce(function(acc,curr) {
-        if (acc.width * acc.height > curr.width * curr.height) {
-            return acc;
-        } else {
-            return curr;
-        })
-```
-
-It is also possible to use reduce to combine the elements of an array. For example, we may want to find the sum of all the numbers:
-
-```js
-var numbers = [1, 2, 3, 4];
-var sum = numbers.reduce(function(acc, num){
-    return acc + num;
-})
-```
-
-At `acc` will have to the value of the first element in the array, and `curr` will have the value of the second element in the array. Following this, `acc` will have the value returned by the previous invocation of the callback, and `curr` will have the value of the next element in the array.
-
-```js
-// acc = 2    curr = 3    return 2 + 3 -> 5
-// acc = 5    curr = 1    return 5 + 1 -> 6
-// acc = 6    curr = 4    return 6 + 4 -> 10
-// acc = 10   curr = 5    return 10 + 5 -> 15
-```
-
-### Map -> Reduce
-
-We can also combine map and reduce. In this case map will be first (returning an array), and reduce will be second (returning a single value). For example, we may want to sum the values of the all numbers squared.
-
-```js
-var sumOfSquares = numbers
-    .map(function(number) {
-        return number * number;
-    })
-    .reduce(function(total, number) {
-        return total + number;
-    }, 0);
-```
 
 ## Resources
 
