@@ -14,7 +14,7 @@
 
 ### Working with Arrays
 
-The Array is JavaScript's only collection type. Arrays are everywhere and we use them often. Lucikly for us, JS already has some built-in array methods like, `map`, `filter`, and `reduce`. In this lesson we are going to reimplement some of these functions.
+The Array is JavaScript's only collection type. Arrays are everywhere and we use them often. Lucikly for us, JS already has some built-in array methods like, `map`, `filter`, `every` and `reduce`. In this lesson we are going to learn how to use these methods.
 
 In this lesson we will be transforming array into new arrays. We will first do so using loops and statements. Then we will implement one of the functions, and then use it to solve the same problem without loops. We will also see how to combine `filter`, `map` and `reduce` to solve more complex problems.
 
@@ -23,7 +23,7 @@ In this lesson we will be transforming array into new arrays. We will first do s
 Given an array of names, we can easily print all of its elements using a loop:
 
 ```js
-let names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
+let names = ["Ben", "Elle", "Matt", "Corey", "Joanne"];
 
 for(let i = 0; i < names.length; i++) {
     console.log(names[i]);
@@ -41,7 +41,7 @@ names.forEach(function(name){
 })
 
 ES6 
-names.forEach((name) => {
+names.forEach(name => {
   console.log(name)
 })
 ```
@@ -367,22 +367,37 @@ If we wanted to find the sum of all the number in an array and have 5 added to t
 // => 15
 
 ```
+Let's take a look at what's going on in the examples above. 
+We've started off by declaring a variable called `arr`. We will call `reduce` on this array. Reduce takes in two arguments: a callback function and an optional initial value. In our first and second example our callback function is the annonymous adding function. That function is taking in two arguments (`acc`, `el`). This is the same as if we'd declared it with a name like: 
+```js 
+const adder = (num1, num2) => {
+ return num1 + num2
+}
+```
+This is essentially the function that we're passing as the first argument into  `reduce`. 
 
-### Reduce Broken Down
-Reduce takes in two arguments, a callback function, and an initial value. The callback function will then iterate through the array and will have two variables available to it. The accumulator and the current element. As the array is iterated, the accumutor will continously be reassigned to the value that is produced from the callback being called with the arguments accumulator and current element. After the entire array has been iterated the accumulator is what will be returned. 
+The second argument that we're passing into `reduce` is optional. This argument will become the staring point for the accumulator. In the first example we've decided NOT to pass in a second argument. Because of this, the accumulator is defaulted to the first element in our array (1). 
 
-If reduce is given an initial value as it's second argument, it's accumulator will be assigned to that initial value and it will begin it's iteration with the first element of the array. 
+Reduce will then iterate through the array and continously reassign the value of the accumulator to the result of our callback being called with the accumulator and the current element as arguments. 
 
-If reduce is NOT given an initial value, it's accumulator will default to the first element of the array and it's iteration will begin on the second element of the array. 
+In our first example the iteration will begin on the second element (2) of the array because the first element has already been used as the accumulator. 
+`acc = adder(1, 2)` 
+The accumulator will now have the value of 3. 
+We then called the callback function (`adder`) with the next element (3) in the array and reassign the accumlator's value to that output. 
+`acc = adder(3, 3)`
+The accumulator will now have the value of 6. 
+We then called the callback function (`adder`) with the next element (4) in the array and reassign the accumlator's value to that output. 
+`acc = adder(6, 4)`
 
+Because we have finished iterating over our array, the accumulator (10) is returned.
 
-In our summing of all the elements the `acc` will have the value of the first element in the array because we are not passing in an intial value, and our`curr` will have the value of the second element in the array. Following this, `acc` will have the value returned by the previous invocation of the callback, and `curr` will have the value of the next element in the array.
+Our second example works in the same way as our first but instead we are passing in a 5 as the second argument in `reduce`. This will result in the accumulator starting off with a value of 5. Because we've passed in a starting accumulator value, we will also iterate the array starting with first element. 
 
 ```js
-// acc = 1    curr = 2    return 1 + 2 -> 3
-// acc = 3    curr = 3    return 3 + 3 -> 6
-// acc = 6    curr = 4    return 6 + 4 -> 10
-
+// acc = 5    currEl = 1    return 5 + 1 -> 6
+// acc = 6    currEl = 2    return 6 + 2 -> 8
+// acc = 8    currEl = 3    return 8 + 3 -> 11
+// acc = 11   currEl = 4    return 11 + 4 -> 15
 ```
 
 ### Map -> Reduce
