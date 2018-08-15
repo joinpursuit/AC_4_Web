@@ -177,6 +177,130 @@ obj["name"] = "Matt"
 obj["name"] // => "Matt"
 ```
 
+### The Three Main Ways to invoke a function
+1. **Function-style**: fun(arg1) 
+    * While _unbound_, function-style will set `this` to the _global_ context (`global` or `window`).
+2. **Method-style**: obj.method(arg1) 
+    * Will set `this` to the obj 
+3. **Constructor-style**: new ClassName(arg1) 
+    * The ClassName function is called with `this` set to the blank object. 
+    
+Please note: callback functions are almost always called function style. 
+Consider this example:
+```js
+function times(num, callback) {
+  for (let i = 0; i < num; i++) {
+    callback(); // callback is invoked "function-style"
+  }
+}
+const dog = {
+  age: 5,
+  ageOneYear: function () {
+    this.age += 1;
+  }
+};
+dog.ageOneYear(); // works
+times(5, dog.ageOneYear); // ReferenceError; this.age is not defined. 
+```
+ 
+The reason this ReferenceError is occuring is because times calls dog.ageOneYear _function-style_. This is then changing the `this` to a _global_ context. 
+There are two ways around this problem. The first is to introduce an **anonymous closure** to capture `dog`:
+```js
+// Function argument is different:
+times(10, function () {
+  dog.ageOneYear();
+});
+```
+`times` will still call the passed function function-style, so `this` will still be set to `window`. But the closure doesn't care, **because inside, it explicitly calls `ageOneYear` method style on `dog`**.
+The other way around this problem is to use `bind` like this:
+```js
+times(10, cat.ageOneYear.bind(cat));
+```
+`bind` works just like the closure we made, in which `dog#ageOneYear` is called method style on the `dog`
+object. `dog.ageOneYear.bind(dog)` returns a closure that will still be called function-style, but which calls `dog.ageOneYear` method-style inside of it.
+### Common Problem With `this`  
+```js
+function SumCalculator() {
+  // scope 0
+  this.sum = 0;
+}
+SumCalculator.prototype.addNumbers = function (numbers) {
+  // scope 1
+  numbers.forEach(function (number) {
+    // scope 2
+    this.sum += number; // noooo!
+  });
+  return this.sum;
+};
+```
+The use of `this` in scope 2 will not work because the annonymous function will not be called method style. The anonymous function is not even a method of `SumCalculator`.
+This problem can be hard to spot, because even though we are using
+`this` in a method of `SumCalculator`, we're also inside an anonymous,
+nested function which will be called function style. In particular, the correct use of `this` in scope 1 will mean something different than the incorrect use in scope 2.
+This sort of runs counter to our basic understanding of closures: that they can access variables defined in the enclosing scope. However, `this` is special because **`this` doesn't get captured; it gets reset everytime a function is called**.
+If we do want to close over `this`, we need to store it in a normal, capturable local variable:
+```javascript
+function SumCalculator() {
+  // scope 0
+  this.sum = 0;
+}
+SumCalculator.prototype.addNumbers = function (numbers) {
+  const sumCalculator = this;
+  numbers.forEach(function (number) {
+    sumCalculator.sum += number; // will work as intended
+  });
+  return this.sum;
+};
+```
+Because `sumCalculator` is a normal local variable (as opposed to the
+special `this` variable), it can be captured and used by the closure
+in the usual way. Later, when the closure is called function style, it
+won't matter, because instead of using `this` (which would have been
+reset to `window`), we instead use `sumCalculator`, which holds the
+old reference to the `SumCalculator` object that `addNumbers` was
+called on.
+Instead of `sumCalculator`, you may often see people name a variable
+like this `that`. `that` is just a conventional name, there is no
+magic to it. A somewhat less common name is `self`. I prefer a less
+abstract name like `sumCalculator`, but it is a matter of personal
+code style.
+To repeat: the reason this solution works is because `sumCalculator`
+is a normal variable captured according to typical rules, while `this`
+is a special variable **which is never captured and is reset on every
+function call**.
+ES6 gives us a solution to this problem with Fat Arrow Functions. 
+Arrow functions, unlike normal functions, do not create a new scope. In other words, `this` means the same thing inside an arrow function that it does outside of it. Consider the following scenario with a normal function:
+```javascript
+function Cat(name) {
+  this.name = name;
+  this.toys = ['string', 'ball', 'balloon'];
+};
+Cat.prototype.play = function meow() {
+  this.toys.forEach(function(toy) {
+    console.log(`${this.name} plays with ${toy}`);
+  });
+};
+const garfield = new Cat('garfield');
+garfield.play();
+// output
+undefined plays with string
+undefined plays with ball
+undefined plays with balloon
+```
+`play` breaks because `this` in `this.name` refers to the scope of the `forEach` method. But if we rewrite `play` using a fat arrow function, it works:
+```javascript
+Cat.prototype.play = function meow() {
+  this.toys.forEach(toy => console.log(`${this.name} plays with ${toy}`));
+};
+garfield.play();
+//output
+garfield plays with string
+garfield plays with ball
+garfield plays with balloon
+```
+**Bonus** 
+There are two more final ways of calling a function.They incude `apply` and `call`. `apply` takes two arguments: an object to bind `this` to, and an array of argumetns to be passed the method apply is being called on. `call` is very similar to `apply` but instead of taking in an arry of parameters, it takes them individually. Please feel free to read more about them [here](https://www.undefinednull.com/2014/06/26/explaining-call-and-apply-in-javascript-through-mr-dot-dave/)
+
 ### The `prototype` property
 
 Every function also has a proprety called `prototype`. By default, the value of the `prototype` property is an object.
