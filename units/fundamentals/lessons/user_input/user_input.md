@@ -90,7 +90,7 @@ function clear () {
 }
 ```
 
-### Boilerplate
+### Boilerplate 
 
 These are all the excerpts of code we have used in this lesson to create a node app with readline. Use them as a boilerplate when writing your own node app.
 
