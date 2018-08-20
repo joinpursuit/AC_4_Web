@@ -65,4 +65,17 @@ An _unordered list_ works in the same way that an ordered list does except now i
 <ul>
 ```
 
-Now our list's numbers have been replaced by bullet points and thus an unordered list is born.
+Now our list's numbers have been replaced by bullet points and thus an unordered list is born. You'll notice that the _entire_ list of items is wrapped in either an ordered or unordered list tag. This means that you **cannot** mix bullets and numbers in one list. You can, however, make a sub-list that is different from the main list. In the example below, the ordered sub-list will be indented further than the unordered main list.
+
+```html
+<ul>
+  <li>First item!</li>
+  <li>Second item!</li>
+  <ol>
+    <li>This is ordered</li>
+    <li>So is this!</li>
+  </ol>
+  <li>Third item!</li>
+<ul>
+```
+
