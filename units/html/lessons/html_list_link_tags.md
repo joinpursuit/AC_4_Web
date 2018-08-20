@@ -1,8 +1,7 @@
-# HTML Tags - Lists
+# HTML Tags - Lists + Links
 
 ## Goals
 * Understand how list tags work in HTML
-* Create an HTML document
 * Use ordered and unordered list tags appropriately in an HTML document
 
 ## Keywords
