@@ -1,9 +1,10 @@
 # User Input in NodeJS
 
 ## Goals
-* Understand how to use `readline` to get user input
+* Understand what user input means in a command line interface (CLI) application
 * How to implement `require` and use modules
-* Understand what modules are
+* Use `readline` module to get user input + utilize that input
+* Create a CLI application
 
 ## Keywords
 * Modules
