@@ -52,7 +52,6 @@ To do this ourselves, we will implement switch statements, which are good for wh
 
 
 
-
 ### Boilerplate
 
 These are all the excerpts of code we have used in this lesson to create a node app with readline. Use them as a boilerplate when writing your own node app.
@@ -76,9 +75,15 @@ rl.prompt()
 // Listening to end of line event
 // Checks input (here called line) against case statements
 rl.on('line', function(line) {
-
-  // .... switch statements for user input ....
-
+  switch (line.trim()) {
+      case 'menu':
+        console.log(<GIVE USER MENU CHOICES>);
+        break;
+      default:
+        console.log(`Say what? I might have heard '${line.trim()}'`);
+        break;
+    }
+    rl.prompt();
 }).on('close', () => {
   // this is the function that exits the application and closes readline
   console.log('>>Have a great day!');
