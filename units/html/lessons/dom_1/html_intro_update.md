@@ -45,3 +45,13 @@ HTML is a very simple language that is easy to understand and essential to being
   </body>
 </html>
 ```
+
+### Playing With HTML
+
+We're going to mess around with HTML that currently exists on the web. Go to the [New York Times](nytimes.com) and right-click on a headline. Then click "Inspect Element" and you should see the Inspector open up with a bunch of HTML, Styles and other information.
+
+Find the text that matches your headline and click on it. Then change the text to "Breaking: <YOUR NAME> is an awesome web developer!" and press enter. What happens??
+
+You just edited The New York Times!!! How??
+
+The browser is fed information from an HTML document that is provided by a server and displays what it is fed. Browsers, however, allow you to see _and_ edit the HTML and CSS documents for any given page! While you are unable to permanently change the actual HTML or CSS document (hitting refresh will erase all your changes), you can see what would happen if you changed some of the HTML on the page. You'll see how useful this can be later on when you're building your own HTML pages!
