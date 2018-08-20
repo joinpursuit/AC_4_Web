@@ -1,18 +1,21 @@
-# HTML Tags - Lists + Links
+# HTML Tags - Lists, Links + Images
 
 ## Goals
 * Understand how list tags work in HTML
 * Use ordered and unordered list tags appropriately in an HTML document
 * Use link tags appropriately in an HTML document
+* User image tags in an HTML document
 
 ## Keywords
 * Lists
 * Links
+* Images
 * Tags
   * Ordered List (`<ol>`)
   * Unordered List (`<ul>`)
   * List Items (`<li>`)
   * Link (`<a>`)
+  * Image (`<img>`)
 
 ## Resources
 
@@ -20,6 +23,8 @@
 * [HTML Lists - W3Schools](https://www.w3schools.com/html/html_lists.asp)
 * [HTML Links - HTML Dog](http://htmldog.com/guides/html/beginner/links/)
 * [HTML Links - W3Schools](https://www.w3schools.com/html/html_links.asp)
+* [HTML Images - HTML Dog](http://htmldog.com/guides/html/beginner/images/)
+* [HTML Images - W3Schools](https://www.w3schools.com/html/html_images.asp)
 
 ## Lesson
 
@@ -97,3 +102,29 @@ If we wanted to also add text to our link, we would put that _in between_ the op
 
 Let's add this to our test.html document under our lists. You'll see it looks just like any old link you've seen before but this one is special because **you made it**! It is important to note that if we made our link `www.google.com` or `google.com` it _WOULD NOT_ work! It would try to go to a location on your computer. You need to include the `https://` because that tells the browser you are looking for an **outside** page on the Web--not on your computer. We normally don't have to type all that into the browser because the browser has been designed to assume you meant to include the `https://`.
 
+## Image Tags
+
+Image tags are used for embedding an image into our HTML page. Any page that has an image on it is using an **image tag**. An image tag is represented by `<img>` and similar to our `a` tags above, image tags accept attributes. With image tags, they need to be given a URL that points to the location of the image. This can be a URL from the internet or a location on your computer. The `src` (like _source_) attribute is what points to the image URL and the `alt` (like _alternate_) attribute is text that appears if the link is broken or the image cannot load. You should include _both_ for every `img` tag you use just to be safe. The `img` tag is also unique because the opening tag can close itself like so: `<img />`. While you can use the standard format (`<img></img>`), you'll find it is much easier to just type `<img/>`.
+
+Let's add a cute puppy picture to our test.html file! Copy the code below under your Links section:
+
+```html
+<h2>Images</h2>
+<img src="http://www.readersdigest.ca/wp-content/uploads/2013/03/6-facts-to-know-before-owning-a-puppy.jpg" alt="Puppy!"/>
+```
+
+Aw cute! But wow that picture is _huge_! Luckily the `img` tag also accepts `width` and `height` attributes. In later lessons, we'll learn how to use CSS to format our images in a much better way, but for now using the `width` and `height` attributes will do the job! By setting our `width` and `height` to `300`, we are actually setting them both equal to 300 pixels in height and width.
+
+```html
+<h2>Images</h2>
+<img src="http://www.readersdigest.ca/wp-content/uploads/2013/03/6-facts-to-know-before-owning-a-puppy.jpg" alt="Puppy!" width="300" height="300"/>
+```
+
+Yay! But it looks a little... _off_. This is because we specified a height and width **without** respect to the ratio of the photo. To solve this problem, just modify either the height _or_ the width--not both. If we just set the width to 300, it's height will fill automatically.
+
+```html
+<h2>Images</h2>
+<img src="http://www.readersdigest.ca/wp-content/uploads/2013/03/6-facts-to-know-before-owning-a-puppy.jpg" alt="Puppy!" width="300"/>
+```
+
+Much better! :dog:
