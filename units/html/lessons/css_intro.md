@@ -48,7 +48,7 @@ Just like other programming languages, CSS has its own syntax and rules. You'll 
 
 In addition to _selectors_, _properties_ and _values_ are responsible for editing how a page looks. Selectors choose the element or elements to edit while properties and values can form **declarations**. It is these declarations, called _declaration blocks_ that actually dictate how the element looks which in turn dictates the overall page's appearance. Below is an example of a declaration block.
 
-!(declaration_block.gif)[declaration_block.gif]
+<img src="https://www.w3schools.com/css/selector.gif">
 
 This declaration block is written on one line for readability but you will typically see each property/value pair on its own line.<br>
 **Selector**: The selector for this declaration block is `h1`. This means whatever we type _inside_ the curly braces will apply to ALL `h1` elements on the page.
