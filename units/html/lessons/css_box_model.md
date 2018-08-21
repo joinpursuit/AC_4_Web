@@ -119,6 +119,7 @@ Save your file and reload the page. What happened to our page?
 
 We now have borders and margins around each section with padding around the content. But we specified the `width` to be `350px`, why did we say that each `div` is 400 pixels wide? That's because the _content_ is 350px wide (so the text and the images are all 350px wide) **plus** the margin, which is 10px wide on each side (so that adds another _20px_ to the width) **plus** the border, which is 5px wide on each side (so that adds _10px_ to the width) **plus** the padding, which is 10px on each side (so that adds _20px_ to the width):
 
-<div align="center">350px content width + 20px margin width + 10px border width + 20px padding width = <strong>400px</strong></div>
+350px content width + 20px margin width + 10px border width + 20px padding width = **400px**
+
 
 Play around with these properties to explore how changing each property's value alters the appearance of your page.
