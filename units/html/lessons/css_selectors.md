@@ -254,3 +254,9 @@ p::first-letter​ {
     font-size:​ 3em;
 }
 ```
+
+```css
+[href^=http]::after {
+  content: '⤴';
+}
+```
