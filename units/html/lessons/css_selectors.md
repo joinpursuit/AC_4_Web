@@ -3,9 +3,11 @@
 ## Goals
 * Understand how HTML elements are selected in CSS
 * Select various elements based on type, class and id
+* Use advanced selectors and combinators for more precise styling
 
 ## Keywords
 * Selectors
+* Combinators
 * Type
 * Class
 * ID
@@ -15,6 +17,8 @@
 * [CSS Selectors - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors)
 * [CSS Selectors Reference Sheet - W3Schools](https://www.w3schools.com/cssref/css_selectors.asp)
 * [CSS Selector Tester - W3Schools](https://www.w3schools.com/cssref/trysel.asp)
+* [CSS Combinators - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors)
+* [CSS Combinators - W3Schools](https://www.w3schools.com/css/css_combinators.asp)
 
 ## Lesson
 
@@ -143,6 +147,49 @@ Now in our CSS file, we have the ability to target each `li` element individuall
 ```
 
 Save and reload the page _after_ styling **each** element. Now each un-ordered list item should have unique styling to match its unique ID :sunglasses: Using the ID selector is somewhat controversial--read about the [pros](https://2002-2012.mattwilcox.net/archive/entry/id/1054/) and [cons](http://oli.jp/2011/ids/) of using IDs with CSS. Either way, it is a tool that you must know and the decision to use IDs in projects will ultimately be yours to make (or your employer's!).
+
+### Combinators + Groups
+
+The selectors we've seen so far have been great! But what if we need to get more granular and make very precise changes to elements that are nested within other elements? This can get tricky when using just simple selectors. _Combinators_ can be used to connect and group different elements together and style them based on those properties. Let's say, for example, you _only_ want to style elements with a class name `item` that are also a child of an unordered list? This would be a good situation to use combinators.
+
+#### Group of Selectors
+
+If you want to style elements that have properties A and/or B, you could use a group of selectors. This is _technically_ not a combinator but instead a group where it's just applying specific styling rules to multiple elements. An example of this would be styling _all_ your header tags in the same font. We would do this by putting a comma `,` between each element we want grouped together like so:
+
+```css
+h1, h2, h3, h4, h5 {
+    font-family: cursive;
+}
+```
+
+With the code above, all of our heading text would be styled to have a cursive font. Any types of elements can be grouped together and any rules can be applied to those groups. This is an easy and common way to apply a specific style to your entire page.
+
+#### Descendent Selector
+
+Many times when styling your page, you will want to apply styles based on their _parent_, that is the element they live inside of. Thinking of our test.html file, you might want the items inside each element to have a unique style. This would be a good case for the descendent selector. The descendent selector works by listing **without commas** the elements you want styled, starting with the parent-most element to the child-most element. If we wanted to style our ordred `li` elements in the test.html file to be underlined, we can use the descendent selector like so:
+
+```css
+ul ol li {
+    text-decoration: underline;
+}
+```
+
+This code will look for any `li` elements that are children of or enclosed in `ol` elements that are children of or enclosed in `ul` elements. 
+
+Let's remove the `ol` from our selector in our test.css file, then save and reload. Now _all_ `li` elements are underlined becuase _all_ `li` elements are children of or enclosed by the `ul` element. 
+
+#### Child Selector
+
+Similar to descendent selector in that it focuses on _children_ of _parent elements_, the **child selector** is a bit more specific. In the last example, we ended with _all_ `li` elements being underlined because they are all children of the `ul` element. If we make our descendent selector a child selector, it will make only the `li` elements that are **direct** children of `ul` underlined. To change our descendent selector to a child selector, we just need to add a `>` between `ul` and `ol` like so: `ul > li`. Now save and reload your page and you should see that the ordered list items are no longer underlined. Why?
+
+Because the ordered list items are a child of the `ol` element, they are technically grandchildren of the `ul` element and thus uneffected by the child selector. To put it another way: you are a **direct** child of your parents but not of your grandparents--they did not birth you. You are, however, a **descendent** of your grandparents.
+
+#### Adjacent Sibling Selector
+
+The adjacent sibling selector is a little peculiar and would definitely have very specific uses but we will go over it anyway. This this looks for an element that is the next child of the same parent and is represented with a `+` sign. If we changed our CSS file to be `ol + li` from `ul > li` and save/reload, we will see that now only the _last_ `li` element is underlined.
+
+This is because `ol` and `li` elements are _siblings_, meaning they have the same parent and the last `li` is the **next** sibling of `ol`. A little confusing but if we added a fourth `li` element, still only the third item would be underlined because that is the only element that is the _NEXT_ sibling of `ol`.
+
 
 ### Advanced Selectors
 
