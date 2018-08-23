@@ -27,37 +27,39 @@
 A web page is a document. The Document Object Model (DOM) is a programming
 interface for HTML and XML documents. 
 It represents the page so that programs can change the document structure, style, and content.
-The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+The DOM represents the document as nodes and objects. That way, programming languages can connect to the page to make things happen.
 
-If you're having a hard time imaginging the an html page as _nodes_ try to think of them in terms of this picture:
+If you're having a hard time imagining an HTML page as _nodes_ try to think of them in terms of this picture:
 
-![alt text][./dom_tree.jpg]
+![](./dom_tree.jpg)
 
+The document has a root element (node). Each proceeding element is a _child_ of that node. We continue to build out a webpage in this way. 
 
 ### Using JavaScript in an HTML Page
 
 There are two primary ways to utilize JavaScript in an HTML page:
 
-​1.​ ​Enclose​ ​it​ ​in
-`<script></script>`​​ ​tags​ ​in​ ​the​ `​<head>`​ ​section​ ​of​ ​a​ ​document.​
-​2.​ ​Link​ ​an​ ​external
-JavaScript​ ​file​ ​with​ ​code​ ​like​ `​<script​ ​src="main.js"></script>`​.
+1. Enclose it in a 
+`<script> //JS code goes in here </script>`tag in the `<head>` section of a document.
 
-### The​ ​Window​ ​Object
+2. Link an external JavaScript file path with code like `<script src="./main.js"></script>`.
 
-`window`​​ ​is​ ​the​ ​top​ ​level​ ​object​ ​in​ ​browser-side​ ​JavaScript.​ ​It​ ​represents​ ​a​ ​browser​ ​window​ ​and
-contains​ ​the​ ​DOM​ ​document.​ ​It​ ​is​ ​also​ ​has​ ​many​ ​of​ ​its​ ​own​ ​properties,​ ​such​ ​as​ `.innerWidth`​, `.innerHeight`​,​ ​and​ `​.localStorage`​.​ ​Today​ ​we'll​ ​use​ ​two​ ​window​ ​methods:
-`window.alert()`​​ ​and​ `​window.prompt()​`.
+### The Window Object
+
+`window` is the top level object in browser-side JavaScript. It represents a browser window and
+contains the DOM document. It also has many of its own properties, such as `.innerWidth`, `.innerHeight`, and `.localStorage`. Today we'll use two window methods:
+`window.alert()` and `\ window.prompt()`.
 
 ### `window.alert()`
 
-`window.alert([message])`​​ ​will​ ​display​ ​message​​ ​in​ ​a​ ​popup​ ​window,​ ​or​ ​alert​.​ ​In​ ​general,​ ​it should​ ​only​ ​be​ ​used​ ​as​ ​a​ ​quick​ ​and​ ​dirty​ ​debugging​ ​tool,​ ​or​ ​before​ ​you've​ ​learned​ ​alternative ways​ ​to​ ​create​ ​output.
+`window.alert([message])` will display a message in a popup window, or alert. In general, it should only be used as a quick and dirty debugging tool, or before you've learned alternative ways to create output. You've probably only seen these as really annoying pop ups on sketchy websites. Let's write out first alert together. 
+Inside your 
 
 ### `window.prompt()`
 
-`window.prompt([message])`​​ ​will​ ​display​ ​message​​ ​in​ ​a​ ​popup​ ​window,​ ​along with ​a​ ​text​ ​input field.​ ​`window.prompt()`​​ ​will​ ​return​ ​the​ ​value​ ​in​ ​the​ ​input​ ​field​ ​(as​ ​a​ ​string)​ ​when​ ​the​ ​form​ ​is submitted.
+`window.prompt([message])` will display message in a popup window, along with a text input field. `window.prompt()` will return the value in the input field (as a string) when the form is submitted.
 
-> Example:​ ​upperCase​ ​It! In​ ​a​ ​bare​ ​web​ ​page,​ ​use​ ​`window.prompt()`​​ ​to​ ​ask​ ​the​ ​user​ ​to​ ​"type​ ​a​ ​string".​ ​Then,​ ​use `window.alert()​`​ ​to​ ​display​ ​a​ ​fully​ ​capitalized​ ​version​ ​of​ ​the​ ​string.
+> Example: upperCase It! In a bare web page, use `window.prompt()` to ask the user to "type a string". Then, use `window.alert()` to display a fully capitalized version of the string.
 
 ---
 
