@@ -48,7 +48,7 @@ HTML is a very simple language that is easy to understand and essential to being
 
 ### Playing With HTML
 
-We're going to mess around with HTML that currently exists on the web. Go to the [New York Times](nytimes.com) and right-click on a headline. Then click "Inspect Element" and you should see the Inspector open up with a bunch of HTML, Styles and other information.
+We're going to mess around with HTML that currently exists on the web. Go to the [New York Times](https://www.nytimes.com) and right-click on a headline. Then click "Inspect Element" and you should see the Inspector open up with a bunch of HTML, Styles and other information.
 
 Find the text that matches your headline and click on it. Then change the text to "Breaking: [YOUR NAME] is an awesome web developer!" and press enter. What happens??
 
