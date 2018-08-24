@@ -5,11 +5,11 @@
 * Utilize flexbox to style a page
 
 ## Keywords
-* Selectors
-* Combinators
-* Type
-* Class
-* ID
+* Flexbox
+* Flex container
+* Display
+* `align-content`
+* `justify-content`
 
 ## Resources
 
