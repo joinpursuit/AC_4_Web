@@ -97,6 +97,37 @@ Right now, we can see our content is automattically attached to the top and left
 
 Let's first explore `justify-content`. You can think of `justify-content` as how your items are aligned along the **main axis**, or the horizontal axis, of your page. The different ways you can justify your items horizontally are as follows:
 
-![justify-content](justify-content-2.svg)
+<img src="justify-content-2.svg" width="300">
+
+For our page, `center`, `space-around` or `space-evenly` seem like they will do just fine! Let's start with `center` and then you can try the others to see how the page changes:
+
+```css
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+```
+
+Great! Now our page is centered and looking fresh :100:
+
+Our page is looking great, let's see what happens when we mess with `align-items`. While `justify-content` moves items in relation to the horizontal axis, `align-items` works vertically. There are several options for aligning your items:
 
 ![align-items.svg](align-items.svg)
+
+The default value for this is `stretch` but let's try `center` because that looks like it could be good. Add the following code, save and reload:
+
+```css
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+Yikes! That doesn't look better! Now each section is not the same height, which does _not_ look better, so we probably want to leave it as the default `stretch`. Play around with the other options and see what happens.
+
+#### Flexbox Items
+
+You can modify how items act inside your flex container with several properties. This can be useful if you'd like to specify the order of items or width of one particular item. You can explore how to to modify specific elements in more detail on the incredible [CSS-Tricks page](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) on flexbox.
