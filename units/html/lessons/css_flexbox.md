@@ -2,9 +2,10 @@
 
 ## Goals
 * Understand what flexbox is and how it can be used for responsive styling
-* Utilize flexbox to style a page
+* Utilize flexbox and media queries to style a responsive page
 
 ## Keywords
+* Responsive
 * Flexbox
 * Flex container
 * Display
@@ -16,6 +17,7 @@
 * [CSS Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 * [CSS Flexbox - W3Schools](https://www.w3schools.com/css/css3_flexbox.asp)
 * [CSS Flexbox Guide - CSS Tricks (**BEST!!!!**)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Media Queries - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 ## Lesson
 
@@ -131,3 +133,34 @@ Yikes! That doesn't look better! Now each section is not the same height, which 
 #### Flexbox Items
 
 You can modify how items act inside your flex container with several properties. This can be useful if you'd like to specify the order of items or width of one particular item. You can explore how to to modify specific elements in more detail on the incredible [CSS-Tricks page](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) on flexbox.
+
+### Media Queries
+
+Our site is looking pretty good! We can make our window very small and our `div`s stack on top of one another into a neat column. This is great--if it works well with my browser window being small, then it will look great on a mobile device! Let's have a look.
+
+Open the dev tools and click on the "Toggle Device Toolbar":
+
+<img src="device-viewer.png">
+
+Then click on the "Responsive" dropdown menu and select a mobile device. What happened?! No more columns or responsiveness!
+
+This is because we need to make _media queries_ to determine what the users viewport is. A media query is basically asking the user's device, "What are you?" and then responding accordingly. Right now, it doesn't know exactly what to do on a phone screen, so we need to let our HTML communicate better with the device. To do this, we're going to add some code into the `head` of our test.html file:
+
+```html
+<head>
+    <title>My first web page</title>
+    <link rel="stylesheet" href="test.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+The `meta` tag stores data for the browser, search engines or other web services to read but is not visible to users. Here we put a `"viewport"` `meta` tag, which allows the browser to determine what kind of device is using the browser. Save your HTML file and reload the page. Looks much better!
+
+But if we go to responsive now and make our window as narrow as possible, it looks terrible!! Our information just keeps getting smaller and smaller, which is not ideal. We definitely want to limit how small the window can get, like we saw before. To specify these rules, we can add a media query into our CSS file. Media queries are added to the **bottom** of your CSS file and work like so:
+
+```css
+@media screen and (max-width: 800px) {
+  /** DECLARATION BLOCKS **/
+ }
+```
+
+`@media` is telling the CSS reader that 
