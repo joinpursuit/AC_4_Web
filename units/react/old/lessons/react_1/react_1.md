@@ -376,4 +376,3 @@ Note that React is quite efficient at rendering and re-rendering. Even though th
 > Ex. Inspect the html of the rendered elements. As you click on the button, note which parts of the page get re-rendered (they will momentarily flash in blue).
 
 ![counter screenshot](assets/counter.png?raw=true)
-

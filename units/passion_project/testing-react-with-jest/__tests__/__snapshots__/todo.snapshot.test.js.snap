@@ -1,0 +1,16 @@
+exports[`test Todo component renders the todo correctly 1`] = `
+<div
+  className="todo  todo-1">
+  <p
+    className="toggle-todo"
+    onClick={[Function]}>
+    Buy Milk
+  </p>
+  <a
+    className="delete-todo"
+    href="#"
+    onClick={[Function]}>
+    Delete
+  </a>
+</div>
+`;
