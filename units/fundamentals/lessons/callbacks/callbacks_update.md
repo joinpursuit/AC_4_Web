@@ -175,15 +175,6 @@ forEachElem(arr, function(num) {
 
 The code above works the same as the earlier code. The function definition looks the same as when we define a function using the `const` keyword. The only difference is instead of storing the function into a variable, we are immediately passing it as an argument. **Remember, a function in JavaScript is a value, just like a string or an integer.**
 
-### Asynchronous Programming
-
-We traditionally think of code as being executed from top to bottom such that lower code waits for code higher up to complete before being executed.
-
-Many programming languages operate this way but this is not always useful. For example, when you log into Facebook there is a lot of information being loaded to the page. As the different information loads on the page, it gets displayed. This might mean your buttons and side bar appear but the timeline takes longer to load. Imagine if you had to wait for _everything_ to be loaded before it was displayed on the page--this would not be a good user experience because you could be staring at a blank screen waiting for it to load for a while! 
-
-**Asynchronous programming** solves this problem by starting a process and then moving on to the next process and starting that, regardless of whether or not the first process has completed. This is good because, like with our Facebook example, you can get multiple parts of the page loading without having to wait for any one part to finish first. Another way to think of asynchronous programming would be ordering at the deli. You place your sandwich order with one employee, another starts making your sandwich, and the next person in line can place their order. If I order a bacon egg and cheese on a toasted everything bagel (yum) but the person after me orders a plain roll (less yum), it is likely the person behind me in line will get their order _first_ because it takes much less time than my order. That's exactly what happens with asynchronous programming--functions are called **in order** but do not need to wait for the previous function to finish to be executed.
-
-For this reason, JavaScript -- a language designed for the web -- heavily relies on **asynchronous** processes. From StackOverflow: "When you execute something *synchronously*, you wait for it to finish before moving on to another task. When you execute something *asynchronously*, you can move on to another task before it finishes."
 
 ### setInterval
 
