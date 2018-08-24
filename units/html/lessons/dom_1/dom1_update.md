@@ -98,7 +98,8 @@ Let's give this a try.
 
 
 
-> Challenge: Use `window.prompt()` to ask the user to "type a string". Then, use `window.alert()` to display a fully capitalized version of the string.
+Challenge: Use `window.prompt()` to ask the user to "type a string". Then, use `window.alert()` to display a fully capitalized version of the string.
+
 <details>
      <summary>
         Hint
@@ -120,7 +121,7 @@ window.alert(string.toUpperCase());
 
 ---
 
-> Challenge: Use `window.prompt()` to ask the user to "enter a number". Then, use
+ Challenge: Use `window.prompt()` to ask the user to "enter a number". Then, use
 `window.alert()` to display that number times two. 
  
  If the input cannot be converted to a real number, use
@@ -130,8 +131,8 @@ window.alert(string.toUpperCase());
 
   <summary>
       Hint
-  <summary>
-  Remember: NaN !== NaN returns true.
+  </summary>
+  Remember, NaN !== NaN returns true.
 </details>
     
     
