@@ -3,19 +3,19 @@
 ## Creating a Universe
 
 * Create ES6 classes for the following items. **Each class should inherit from the class preceding it** using the `extends` keyword.
- - Universe
- - Galaxy
- - Star
- - Planet
- - Continent
- - Land
- - Village
- - Family
- - Person
- - Organ
- - Cell
- - Molecule
- - Atom
+  - Universe
+  - Galaxy
+  - Star
+  - Planet
+  - Continent
+  - Land
+  - Village
+  - Family
+  - Person
+  - Organ
+  - Cell
+  - Molecule
+  - Atom
 * For each of these classes, create an attribute or two. For example, your Universe class might look like this:
 
 ```js
