@@ -140,7 +140,7 @@ Our site is looking pretty good! We can make our window very small and our `div`
 
 Open the dev tools and click on the "Toggle Device Toolbar":
 
-<img src="device-viewer.png">
+![device-viewer.png](device-viewer.png)
 
 Then click on the "Responsive" dropdown menu and select a mobile device. What happened?! No more columns or responsiveness!
 
@@ -152,15 +152,39 @@ This is because we need to make _media queries_ to determine what the users view
     <link rel="stylesheet" href="test.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+```
 
 The `meta` tag stores data for the browser, search engines or other web services to read but is not visible to users. Here we put a `"viewport"` `meta` tag, which allows the browser to determine what kind of device is using the browser. Save your HTML file and reload the page. Looks much better!
 
-But if we go to responsive now and make our window as narrow as possible, it looks terrible!! Our information just keeps getting smaller and smaller, which is not ideal. We definitely want to limit how small the window can get, like we saw before. To specify these rules, we can add a media query into our CSS file. Media queries are added to the **bottom** of your CSS file and work like so:
+But if we go to responsive now and select "Mobile S - 320px" or "iPhone 5/SE", it looks okay but the font would be _huge_ on that screen. The first heading takes up 30% of the screen! Also our puppy image is larger than all the other boxes. This isn't ideal, so let's add some rules to make sure that our fonts and images match the size of the screen. 
+
+To specify these rules, we can add a media query into our CSS file. Media queries are added to the **bottom** of your CSS file and work like so:
 
 ```css
 @media screen and (max-width: 800px) {
   /** DECLARATION BLOCKS **/
- }
+}
 ```
 
-`@media` is telling the CSS reader that 
+In the example above, `@media screen` is telling the CSS reader that the following declaration blocks **only** apply to screens (ie laptop, mobile, etc). `and` allows us to add additional parameters that the media query will check for, but those parameters must be inside parentheses. Here we've given the parameter `max-width`, so the media query will apply the declaration blocks for screens that are up to a certain width, here `800px`. If a user is looking at the page on a device with a screen size of less than 800px, the rules inside the declaration blocks here will be applied. If the device is 801px or larger, these rules will not apply.
+
+Let's apply some rules that will make our fonts and images look better and act more responsively:
+
+```css
+@media screen and (max-width: 800px) {
+  .flex-item {
+    font-size: 75%;
+  }
+
+  img {
+    width: 100%;
+    min-width: 250px;
+  }
+ }
+ ```
+ 
+ Again, we are _only_ applying the rules above to devices with a screen that is **less than** 800px. `.flex-item` now has the font size set to `75%` of original. This way, the fonts are smaller on a smaller screen. Using percentages is useful because the percent is based on the width of the parent element, which means as the screen gets smaller, so does the parent element and thus the font. When creating a responsive style, it's best to use percentages rather than specific pixels. Specific pixels are good to use when you have a specific cut-off (like max- or min-width).
+ 
+We've also set the `width` of our image to `100%`, so it will always be the entire width of the parent element. Then we set the `min-width` of the image to 250px so it won't get any smaller than that, no matter what size the screen is. This means, if the screen is 200px, the puppy image will remain 250px wide.
+
+Add some other media rules to your CSS file to get a sense of how media queries work. You can even add in a _second_ media query for screens that are less than 350px in width if you'd like.
