@@ -58,9 +58,7 @@ code until complete is called _blocking code_.
 ### **DOMContentLoaded**
 
 If you recall from our previous lessons, we included our `script` tag before the closing `</body>` tag but mentioned that it's
-generally placed inside the `<head>`. We had put it before the closing `</body>` because we were referring to elements that had not yet
-been parsed by the browser. Now we can move our `<script>` tag back to the header, but add an Event Listener to our JS file 
-that waits until all our content has loaded. 
+generally placed inside the `<head>`. We had put it before the closing `</body>` because we were referring to elements that had not yetbeen parsed by the browser. Now we can move our `<script>` tag back to the header, and add an Event Listener to our JS file that waits until all our content has loaded. 
 
 *DOMContentLoaded* is the event fired every time the HTML document has been completely loaded and parsed. 
 Much of our code will always be sandwiched in a callback to this function because we can't manipulate the DOM until 
@@ -68,61 +66,152 @@ the *document* object has been fully built.
 
 ### **.addEventListener(event, callback)** 
 
-Let's see this event in action! 
-
-
-
 Every Element has the method `.addEventListener()` to hear event triggers. When the event is fired, the element will execute the callback function.
 
 The callback function automatically receives an argument that is typically given the parameter name *event*. This references the event object. The event objects contains many properties that are both general to all events and specific to the triggering event.
 
+Let's try it out! 
+
+1. If you haven't already, move your `script` tag inside of the `head`. 
+
+2. In your test.js file add an event listener to `document`
+
+<details>
+  <summary>
+   Hint
+ </summary>
+  document.addEventListener()
+ </details>
+
+3. Let's pass in our two arguments to our addEventListern. The first argument will be the event that we will listen for, "DOMContentLoaded". The second argument will be an anonymous callback function that will use querySelectorAll to grab all the elements will the class 'heading'. 
+
+4. Add a deebugger after you've grabbed all your 'heading's and make sure that your event is working correctly and being triggered after all our content has loaded. 
+
+<details>
+  <summary>
+   Solution
+ </summary> 
+ 
+ ```
+  document.addEventListener('DOMContentLoaded', () => {
+  
+    let headings = document.querySelectorAll('.heading');
+    
+    debugger
+    
+  });
+  ```
+
+ </details>
+
+5. Remove your debugger and pat yourself on the back for writing your first event! 
+
 ### click
 
-The *clicked* event is fired when an element is clicked. We can
+The *click* event is fired when an element is clicked. Let's see this in action. 
 
-```html
-<input type="button" value="Click me" id="btn">
-
-<script>
-  var btn = document.querySelector('#btn')
-  btn.addEventListener('click', function(event) {
-    // show event type, element and coordinates of the click
-    alert(event.type + " at " + event.currentTarget);
-    alert("Coordinates: " + event.clientX + ":" + event.clientY);
+1. At the bottom of your test.html file add a button inside a div that says "Click Me!". Give the button an id of "button".  
+  <details>
+  <summary>
+   Hint
+ </summary>
+ 
+ ```
+ <div>
+   <button id="button"> 
+      Click Me! 
+    </button> 
+  </div>
+ 
+ ```
+ </details>
+ 
+ 2. Inside your test.js file grab your button element. 
+ 
+ <details>
+  <summary>
+   Hint
+ </summary> 
+ 
+ ```
+  document.addEventListener('DOMContentLoaded', () => {  
+    let button = document.getElementById('button');       
   });
-</script>
+  ```
+ </details>
+ 
+ 3. Now add an event listener to button. The event should be 'click', the callback shoud be a function that logs "clicked!" to the console. 
+ 
+  <details>
+  <summary>
+   Solution
+ </summary> 
+ 
+ ```
+  document.addEventListener('DOMContentLoaded', () => {  
+    let button = document.getElementById('button');   
+     button.addEventListener('click', () => {
+       console.log('clicked!');
+     });
+  });
+  ```
+ </details>
+ 
+ 4. When an event is fired, that _event_ can be passed into the callback function by adding a parameter to your callback function like so. 
+ 
+  
+ ```
+  document.addEventListener('DOMContentLoaded', () => {  
+    let button = document.getElementById('button');   
+     button.addEventListener('click', (event) => {
+       console.log('clicked!');
+     });
+  });  
 ```
+
+5. Add a debugger inside of your callback and play around with different event properties. These properties are on every event that get's fired. Try taking a look at `event.type`, `event.currentTarget`, `event.target`, `event.clientX`, `event.clientY`.
+
+Notice that you can change method like `event.currentTarget.textContent`. 
+ 
 
 ### **submit**
 
-The *submit* event is fired when a form is submitted.
+The *submit* event is fired when a form is submitted. Inside your test.js, change your code so that you now grab your form element. Add an event listener that listens for a submit. When the form has been submitted, log "form submitted" to the console. 
 
-```html
-<form id="myForm">
-    name: <input type="text"><br>
-    <input type="submit" value="Submit">
-</form>
-<script>
-    let form = document.querySelector('form');
-    form.addEventListener('submit', function(event){
-        alert('form submitted');
-    })
-</script>
-```
+  <details>
+  <summary>
+   Solution
+ </summary> 
+ 
+ ```
+document.addEventListener('DOMContentLoaded', () => {
+  let form = document.querySelector('form');
+  form.addEventListener('submit', (event) => {
+    console.log('form submited!!');
+  });
+});
+  ```
+ </details>
+
+
+WHAT HAPPEND? It didn't log anything to the console even though I submitted my form correctly! 
+
+The reason for this is because 'submit' in forms has some built in actions to try and send your form somewhere. That's why the url also changes. This default behaivor is almost never something we want. Instead, we developers prefer to have more control of what happens when our forms are submitted. For this reason we have **.preventDefault()**. 
+
 
 ### **.preventDefault()**
 
 `.preventDefault()` is a method available to every event object to prevent the event from doing any action it would normally do. It is often paired with a *submit* event to prevent the form submission from reloading the page.
 
-### Example: .preventDefault() on Submit
+Inside of our previous form event listener, add the line `event.preventDefault()` above our `console.log`. Try submitting your form again and see if you get your console.log message. Don't forget to always invoke your preventDefault() call. 
 
-Build a page with a form element that contains a text input field and a submit button. Use `.addEventListener('submit' …)`, and then `.preventDefault()` with the event, to prevent the page from refreshing when the user submits the form.
+### keypress, mousemove, change
 
-### keypress, mousemove
+Are all different types of events in JS. Look at all of the [here](https://www.w3schools.com/jsref/dom_obj_event.asp)!
 
-### Example: Mouse Coordinate Tracker
+### Bonus: Mouse Coordinate Tracker
 
-Build a blank page containing a single div with id="coords". Using `document.addEventListener('mousemove', …)`, update the text of the div with the x and y coordinates of the mouse cursor.
+Build a blank page containing a single div with the id="coords". Using `document.addEventListener('mousemove', …)`, update the text of the div with the x and y coordinates of the mouse cursor.
 
 You will need to nest your code in a callback to a `DOMContentLoaded` event listener.
 
