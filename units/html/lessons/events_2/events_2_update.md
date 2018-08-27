@@ -26,12 +26,20 @@ every *listener* that is a parent of its *target*, all the way to the
 top of the DOM. An event's `.target` property points to the element on which the event occured.
 
 So what does mean? Let's remember that our DOM is a tree of nodes. Think of this picture. 
-[]("./dom_tree_events.jpg")
+![dom](dom_tree_events.jpg)
 
-With the files *exYAPE.html* and *exYAPE.js*, build a page with a list
-of Pokemon. Using `document.addEventListener()`, the *click* event, and
-`console.log()`, log `event.target` whenever a list item (`li`) is clicked.
-Use Dev Tools to read the output of `console.log()`.
+When an event gets fired it bubbles up the dom / is delegated to the Nodes parent. Events occur whether or not we are specifically listening for them. This means that if we click on one of the li's in the picture, the click would be _experienced_ by the ul, then the body, and finally the html. It's bubbling up. This can be helpful with our pages performace. Let's pretend we had a ul with thousands and thousands of li's. If we put a listener on every li we would have a TON of listeners. This could dramatically slow down our program. Instead of doing that, we could use just one listener on the ul. Because of event delegation, whenever any li's were clicked, our ul would know and be able to fire the specific event. 
+
+If we click on the `p` tag who experiences that event? 
+
+<details>
+  <summary>
+    Solution
+  </summary>
+  The `p` tag, then the `body`, and finally the `html`. 
+</details>
+
+Let's try this out.
 
 ### **document.createElement()**
 
