@@ -211,9 +211,31 @@ Are all different types of events in JS. Look at all of the [here](https://www.w
 
 ### Bonus: Mouse Coordinate Tracker
 
-Build a blank page containing a single div with the id="coords". Using `document.addEventListener('mousemove', …)`, update the text of the div with the x and y coordinates of the mouse cursor.
+Add a div with the id="coords". Using `document.addEventListener('mousemove', …)`, update the text of the div with the x and y coordinates of the mouse cursor.
 
 You will need to nest your code in a callback to a `DOMContentLoaded` event listener.
+
+
+  <details>
+  <summary>
+   Solution
+ </summary> 
+ 
+ ```
+document.addEventListener('DOMContentLoaded', () => {
+
+  let coords = document.getElementById('coords');
+  
+  document.addEventListener('mousemove', (e) => {
+    coords.innerHTML = `x: ${e.clientX}, y: ${e.clientY}`;
+  });
+  
+});
+  ```
+ </details>
+
+
+
 
 ##  Resources
 
