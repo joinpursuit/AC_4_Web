@@ -50,6 +50,8 @@ We are going to work with the Dog API because it is free and open. Some APIs cos
 
 The List All Breeds endpoint is shown on the main documentation page and you can see it is accessed by the URL https://dog.ceo/api/breeds/list/all. This URL was defined by the software developer who designed this API by making their database store a list of all breeds at this URL. Now we as users can go to that URL and see a list of all breeds that exist in the Dog API database.
 
+#### JSON
+
 Below the URL is the JSON that is returned from the URL. JavaScript Object Notation (JSON) is a file format that uses human readable text to transmit data objects. We will always work with JSON data and nearly all APIs return their information in this format because it is easily read and parsed. If you look at the JSON on the page, you can easily understand what is happening.
 
 The first line `status: success` tells the recipient (browser or application) that the request was a success. If the request was sent incorrectly or if you tried to access an endpoint you do not have access to, you have received a `failed` status.
