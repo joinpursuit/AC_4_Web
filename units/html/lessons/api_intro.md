@@ -2,12 +2,12 @@
 
 ## Goals
 * Understand what an API is and how we interact with them
-* Explain the purpose of a RESTful API
+* Retrieve data from an API
+* Read data in JSON format
 
 ## Keywords
 * Application Programming Interface (API)
-* Representational State Transfer (REST)
-* RESTful API
+* JavaScript Object Notation (JSON)
 
 ## Resources
 
