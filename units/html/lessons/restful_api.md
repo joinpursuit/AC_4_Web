@@ -170,7 +170,7 @@ Lastly, _delete_, which is also straightforward. This means the user can _delete
 
 Every application you use and create should be a CRUD app. If you cannot update information in your app, it is not a great user experience. Imagine if when you posted something to Instagram, it was there ***FOREVER*** or you were unable to edit your caption and remove a typo. This would not be ideal! Here's a list of which CRUD actions align with which RESTful API HTTP requests:
 
-HTTP METHOD	| CRUD | Route (e.g. [/users]()
+HTTP METHOD	| CRUD | Route (e.g. [/users]())
 -------- | ------ | -----
 POST | Create | [/users/{id}]() containing new ID.
 GET | Read | [/users/{id}]() to get info for user with ID={id}
