@@ -70,7 +70,7 @@ so that the code block following it will never be executed
 Note that an an `if` statement is not the end of a program. The code following it will run as usual.
 
 ```js
-var num = 4
+let num = 4
 if (num > 2) {
   console.log('It\'s larger than 2')
 }
@@ -84,7 +84,7 @@ In the code above,  `'Its larger than 2'` may or may not be printed (depending o
 We can extend the `if` statement to make it an `if - else` statement. This statement will execute one of two code blocks:
 
 ```js
-var num = 3
+let num = 3
 if (num > 2) {
   console.log('it\'s larger than 2')
 } else {
@@ -125,7 +125,7 @@ If it is falsy, the conditional statement following `else if` will be checked. I
 We can have as many `else if` statements as we like. For example, we may want to check if a number is equal to `1`, `2` or `3`:
 
 ```js
-var num = 2
+let num = 2
 if (num === 1) {
   console.log('Jackpot!')
 } else if (num === 2) {
@@ -145,7 +145,7 @@ One way we can utilize `if - else if - else` statements is to check for differen
 For example, we may want to perform a different action depending on the user's age group.
 
 ```js
-var userAge = 19
+let userAge = 19
 
 if (userAge < 18) {
   console.log('Parental supervision is required')
@@ -164,7 +164,7 @@ So far in our `if ... ` statements we have been checking for a single condition.
  For example, we may want to perform the same action when the day is Saturday or Sunday.
 
 ```js
-var day = 'Monday'
+let day = 'Monday'
 
 if (day === 'Saturday' || day === 'Sunday'){
   console.log('Have a nice weekend!')
@@ -181,7 +181,7 @@ then {...}. In javascript, the opening curly bracket stands in place of the word
 at the end of the sentence.
 
 ```js
-var userAge = 27
+let userAge = 27
 
 if (userAge > 18 && userAge < 45){
   console.log('would you like to take a survey?')
