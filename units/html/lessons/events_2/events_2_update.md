@@ -28,7 +28,7 @@ top of the DOM. An event's `.target` property points to the element on which the
 So what does mean? Let's remember that our DOM is a tree of nodes. Think of this picture. 
 ![dom](dom_tree_events.jpg)
 
-When an event gets fired it bubbles up the dom / is delegated to the Nodes parent. Events occur whether or not we are specifically listening for them. This means that if we click on one of the li's in the picture, the click would be _experienced_ by the ul, then the body, and finally the html. It's bubbling up. 
+When an event gets fired it bubbles up the dom / is delegated to the Nodes parent. Events occur whether or not we are specifically listening for them. This means that if we click on one of the li's in the picture, the click would be _experienced_ by the li, then the ul, then the body, and finally the html. It's bubbling up. 
 
 This can be helpful with our pages performace. Let's pretend we had a ul with thousands and thousands of li's. If we put a listener on every li we would have a TON of listeners. This could dramatically slow down our program. Instead of doing that, we could use just one listener on the ul. Because of event delegation, whenever any li's were clicked, our ul would know and be able to fire the specific event. 
 
@@ -41,7 +41,7 @@ If we click on the `p` tag who experiences that event?
   The `p` tag, then the `body`, and finally the `html`. 
 </details>
 
-Let's see event delegation in action! Inside your test.html file add the id "unordered-list" to your ul. Add the id "ordered-list" to your ol, and ad the id's "ordered-first" and "ordered-second" It should look something like: 
+Let's see event delegation in action! Inside your test.html file add the id "unordered-list" to your ul. Add the id "ordered-list" to your ol, and add the id's "ordered-first" and "ordered-second" It should look something like: 
 
 ```html
 
@@ -55,6 +55,44 @@ Let's see event delegation in action! Inside your test.html file add the id "uno
     <li id="third">Third item!</li>
   </ul>
 ```
+
+In your test.js file add a click listener to the 'ordered-first' element, the 'ordered-list', the 'unordeered-list', and the 'body'. Put a debugger inside each of your listeners. Your code should look something like this: 
+
+```js 
+document.addEventListener('DOMContentLoaded', () => {
+
+  let ul = document.getElementById('unordered-list');
+
+  ul.addEventListener('click', (event) => {
+    debugger
+  });
+
+  let ol = document.getElementById('ordered-list');
+
+  ol.addEventListener('click', (event) => {
+    debugger
+  })
+
+  let orderedFirst = document.getElementById('ordered-first');
+
+  orderedFirst.addEventListener('click', (event) => {
+    debugger
+  })
+
+  let body = document.querySelector('body');
+  body.addEventListener('click', (event) => {
+    debugger
+  })
+
+});
+
+```
+
+Now that we have set up our listeners, lets reload our page (make sure the developer window is open). Click on the first item in our ordered list. What happend? We've hit a debugger. In the console take a look at event.target, and event.currentTarget. 
+
+Now, in debugger hit contiue. Again check your event.target, and your event.currentTarget. Do you see what's happening? Hit continue and check again. One more time. This is how an event bubbles up and how we can find where the event occurred and where it is now. 
+
+When you're done exploring the events, remove the debuggers from you code. 
 
 ### **document.createElement()**
 
@@ -72,20 +110,56 @@ The `.appendChild(node)` method of the *Node* object (and so inherited by
 *Element*) will add a new element into the DOM as a child of the calling
 element. This is best demonstrated by example.
 
-### **Example: YAPE Duplicator**
+1. In your test.js create a variable called ul and assign it's value to the node 'unordered-list'. 
 
-Duplicate the files *exYAPE.html* and *exYAPE.js* as *exYAPE-d.html* and
-*exYAPE-d.js*. With the new files, every time a list item is clicked,
-duplicate that list item with `document.createElement()` and add it to the bottom of the list with `.appendChild()` on the *ul* element.
+<details>
+  <summary>
+    Solution
+  </summary>
+  let ul = document.getElementById('unordered-list');
+</details>
+
+
+2. Create a new element called newLi. 
+
+<details>
+  <summary>
+    Solution
+  </summary>
+  let newLi = document.createElement('li');
+</details>
+
+3. Using the innerText property give  your newLi some text. 
+
+<details>
+  <summary>
+    Solution
+  </summary>
+  newLi.innerText = 'NEW LI';
+</details>
+
+
+
+4. Finally use append to add your newLi into your ul. 
+
+<details>
+  <summary>
+    Solution
+  </summary>
+  ul.append(newLi);
+</details>
+
 
 ### **ChildNode.remove()**
 
-You may call the .remove() method on any Node to remove it from the DOM.
+You may call the .remove() method on any Node to remove it from the DOM. Note, this will also remove all of a nodes children. 
+
+In your test.js add a debugger after your ul.append(newLi). Try writing newLi.remove() in the console. Then try ul.remove(). 
 
 ### **Other DOM Manipulation Methods**
 
-We won't use these today, but the many other DOM manipulation methods
-include:
+We won't use these today, but be aware that their are many other DOM manipulation methods
+including:
 
 - `.replaceChild()`
 - `.removeChild()`
