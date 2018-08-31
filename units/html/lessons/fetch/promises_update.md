@@ -110,6 +110,28 @@ new Promise(function(resolve, reject) {
 
 ```
 
+Now try running this code that intentionally throws an error. See how catch works?
+
+```js
+new Promise(function(resolve, reject) {
+  setTimeout(() => resolve(1), 2000);
+
+}).then((result) => {
+  alert(result);
+  return result + 2;
+}).then((result) => {
+  throw new Error('FAILED HERE');
+  alert(result);
+  return result + 2;
+}).then((result) => {
+  alert(result);
+  return result + 2;
+}).catch((e) => {
+  alert('error: ' + e)
+});
+
+```
+
 
 ## Resources 
 * [JavaScript: Learn Promises](https://codeburst.io/javascript-learn-promises-f1eaa00c5461)
