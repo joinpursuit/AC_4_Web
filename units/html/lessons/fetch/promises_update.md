@@ -132,6 +132,10 @@ new Promise(function(resolve, reject) {
 
 ```
 
+## Advanced Topics
+* [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all): Accepts an array of promises, and creates a single promise that only gets fulfilled if every promise in the array is fullfilled. 
+
+* A [polyfill](https://github.com/stefanpenner/es6-promise) is required for consistent functionality across older browsers.
 
 ## Resources 
 * [JavaScript: Learn Promises](https://codeburst.io/javascript-learn-promises-f1eaa00c5461)
