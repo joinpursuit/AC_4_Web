@@ -9,11 +9,6 @@
 * Application Programming Interface (API)
 * JavaScript Object Notation (JSON)
 
-## Resources
-
-* [Web APIs - MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-* [AJAX - W3Schools](https://www.w3schools.com/xml/ajax_intro.asp)
-
 ## Lesson
 
 ## APIs
@@ -38,7 +33,7 @@ In a nutshell, that’s an API: _an interface that software uses to access whate
 
 In our example, the ATM makes a connection with the bank **through** the bank API. The API is the gatekeeper between the ATM (the user) and the bank vault. As developers, we use and create APIs all the time. When you are creating an API, you are _defining how you will allow developers to access your information_, typically the information you are storing in your database. These are called **endpoints**. In the case of the bank API, you are allowed to only do a few things from the ATM: check your balance, deposit money, withdraw money. You can't take out a loan, set up a 401(k), or print last year's tax return because the bank set up their API to **only allow** users to access certain information from the ATM.
 
-The same is true of most databases. Think about social media apps, like Twitter. As a user, you can interact with Twitter's database in specific ways: you can post tweets, delete tweets, add/remove photos, etc. You _cannot_ remove other people's tweets (unfortunately!) because Twitter's API makes sure that user's can only modify **their own** property. Imagine if you were able to delete other people's tweets and accounts? I can think of one accound _a lot_ of people would want to delete!
+The same is true of most databases. Think about social media apps, like Twitter. As a user, you can interact with Twitter's database in specific ways: you can post tweets, delete tweets, add/remove photos, etc. You _cannot_ remove other people's tweets (unfortunately!) because Twitter's API makes sure that user's can only modify **their own** property. Imagine if you were able to delete other people's tweets and accounts? That would lead to _chaos_! 
 
 Let's look at a _simple_ API and start playing around with it. First, download this [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US) Chrome extension. This will make viewing the data that you receive from APIs much more readable.
 
@@ -61,3 +56,8 @@ The next line `message` includes all of the information we wanted to receive (li
 Let's do our own request: copy the link and paste it into your browser or click the link above. You just sent a request to the Dog API and received the results! Woo! You're interacting with the Dog API database through their API!
 
 Now if you navigate to https://dog.ceo/api/breeds/image/random you wil see that you get a result but it's just a link to an image. Hm.. not exactly ideal. This is because APIs return information as it exists in the database: it's up to _you_ to do something with the information to make it display in a way that is user-friendly. The Dog API's job is to give you the information you request and it is **your** job to do something with that information.
+
+## Resources
+
+* [Web APIs - MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+* [AJAX - W3Schools](https://www.w3schools.com/xml/ajax_intro.asp)
