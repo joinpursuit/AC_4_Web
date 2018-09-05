@@ -8,7 +8,7 @@
 
 ## Keywords
 
-* arugments
+* arguments
 * rest or spread operator
 * default value
 * closure
@@ -85,7 +85,7 @@ sayHello("Matt")
 
 ## Closures
 
-A closure, at it's simpliest form is any function that refers to varaibles that currently exist within the scope of the function. 
+A closure, at it's simplest form is any function that refers to variables that currently exist within the scope of the function. 
 Simple Example:
 
 ```js
@@ -128,7 +128,7 @@ In the function above we see `createCounter`, a function that initializes a `cou
 
 Because `createCounter` returns a function (`increment`), we can assign a new variable `counterOne` to have that returned function as it's value. When we invoke `counterOne`, and therefore invoke `increment`, the `counter` is returned. 
 
-Why is `counterTwo`'s value different than `counterOne` if they both have a `counter`variable? 
+Why is `counterTwo`'s value different than `counterOne` if they both have a `counter` variable? 
 
 Let's look at another closure. 
 
@@ -141,11 +141,11 @@ function greeting(str1) {
 
 
 ```
-Like we've seen before, this is a function `greeting` that returns another function. I could give the returned function a name, but have decided to leave it annonymous because I don't _need_ to name it. 
+Like we've seen before, this is a function `greeting` that returns another function. I could give the returned function a name, but have decided to leave it anonymous because I don't _need_ to name it. 
 
 So, if invoke the function `greeting('hello')` the output will be `[Function]` which is the inner function returned.  If I want to invoke _this_ inner function I could do so by invoking greeting twice at the same time. Like this: `greeting('hello')('Corey')`. This will return the output 'hello Corey'. 
 
-Using this concept to our advantage, we can save the initial returned inner function as differnt variables with different greetings, like so: 
+Using this concept to our advantage, we can save the initial returned inner function as different variables with different greetings, like so: 
 ``` js
 const whatUp = greeting("What up?")
 
@@ -182,13 +182,6 @@ const greeting = str1 => str2 => `${str1} ${str2}`
 
 ```
 As we can see, greeting is being declared. It's taking in str1 as an argument. It's implicitly returning a function that takes in str2 as an argument and implicitly returns the final result. 
-
-
-
-
-
-
-
 
 
 
