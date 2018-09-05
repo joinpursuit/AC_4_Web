@@ -19,7 +19,7 @@ Axios is a JavaScript library that can be used for the following:
 * Supports the Promise API
 * Intercept request and response data
 * Cancel requests
-* Automatic transforamtion of data to JSON. 
+* Automatic transformation of data to JSON. 
 * Client side support for protecting agains XSRF. 
 
 ### Getting Started
