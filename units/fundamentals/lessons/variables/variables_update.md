@@ -31,7 +31,7 @@ Each of the expressions will be evaluated, return a value, and then get discarde
 
 ## console.log
 
-The first kind of effect we need is logging text to the screen. We have been using the node REPL, where the value returned by an expression was logged for us. To write programs, however, we will be creating files in which we put our javascript code. When running a file with the code above, nothing will get logged. In order to log something in javascript file, we will need to use the `console.log` function. This will print (**log**) whatever we type inside the parentheses to your terminal window (the **console**). It is important to note that `console.log` prints information to the screen but _does not_ return anything. The return value of `console.log` is `undefined`. If you wanted to do `console.log(2 + 2)` it would simply print `4` to the screen--you could not then use the `4` to do something else.
+The first kind of effect we need is logging text to the screen. We have been using the node REPL, where the value returned by an expression was logged for us. To write programs, however, we will be creating files in which we put our javascript code. When running a file with the code above, nothing will get logged. In order to log something in a javascript file, we will need to use the `console.log` function. This will print (**log**) whatever we type inside the parentheses to your terminal window (the **console**). It is important to note that `console.log` prints information to the screen but _does not_ return anything. The return value of `console.log` is `undefined`. If you wanted to do `console.log(2 + 2)` it would simply print `4` to the screen--you could not then use the `4` to do something else.
 
 ```js
 // running a file:
@@ -44,14 +44,26 @@ console.log("bat" + "man")
 // => undefined
 ```
 
+1. Create a folder called variables 
+<details>
+  <summary>
+  Hint   
+ </summary>
+ mkdir variabls
+</details>
+
+2. cd into the directory and then create a file called test.js. 
+3. Copy the previous code into the file. 
+4. Now run your file by entering `node test.js` in your terminal. 
+
 ## Creating a variable
 
 To save values in the computer's memory, we use **variables**. A variable is basically a container in which we can store values to be later retrieved. To create a variable, we use the keyword `var`, `let` or `const`, followed by the name of the variable. In JavaScript, we name variables using camelCase, which means that there are no spaces or underscores in the name and that every first letter of each word is capitalized except for the first word: thisIsUsingCamelCase. Other languages, like Ruby, use snake_case to name variables: this_is_using_snake_case. If you're writing in JavaScript (which you are :wink:), make sure you're _always_ using the standard camelCase style convention.
 
 ```js
-var myVarVariable
-let myLetVariable
-const myConstVariable = "I used const!"
+var myVarVariable;
+let myLetVariable;
+const myConstVariable = "I used const!";
 ```
 
 What do you think would be logged if we ran `console.log(myVarVariable)`?
@@ -131,7 +143,7 @@ let sum = num1 + num2
 <summary>What do you think `sum` will be equal to?</summary>
 `sum` will equal 12 because 4 + 8 is equal to 12.
 <summary>What do you think `sum` will equal if we changed the value of `num1` to 10?</summary>
-`sum` will still equal 10! When we delared `sum`, `num1` was equal to 4 so no matter how many times we change `num1` or `num2`, `sum` will not change.
+`sum` will still equal 10! When we declared `sum`, `num1` was equal to 4 so no matter how many times we change `num1` or `num2`, `sum` will not change.
 </details>
 
 > In the following code, what would be logged to the screen?
@@ -178,7 +190,7 @@ myCat = 'Thomas'
 //=> Uncaught TypeError: Assignment to constant variable.
 ```
 
-We may want to use the current value when modifying a variable. For example,we may want to add some numeric value to an existing number. To do this, we can use the variable's name to the right hand side of the assignment operator:
+We may want to use the current value when modifying a variable. For example, we may want to add some numeric value to an existing number. To do this, we can use the variable's name to the right hand side of the assignment operator:
 
 ```js
 let myNumber = 2
