@@ -337,3 +337,11 @@ ea24eb6 - lizraeli, 4 hours ago : Add a # tag
 092beb2 - lizraeli, 4 hours ago : add content to readme
 38aeeb2 - lizraeli, 5 hours ago : initialize
 ```
+
+### Git Branch 
+
+When building a larger application (especially when you're working with others), it is important to create different branches to do work on. This way, you won't mess with the main branch (master) while you're building something out like a new feature. It's important to always have a working application, and to not change things that other people on your team could be working on. 
+
+To create a new branch type the command: `git checkout -b <new-branch>`. You can change to a different branch by writing: `git checkout <branch-name>`. 
+
+Once your feature is fully implemented and everything works, you can then `merge` your branch with `master`. First, go to the master branch; then enter `git merge <branch-you-made-your-feature>`. 
