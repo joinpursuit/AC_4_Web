@@ -57,8 +57,41 @@ while (num < 10) {
 }
 ```
 
-> Ex 1. Write a `while` loop that logs all the even numbers between 2 and 100.
-> Ex 2. Write a `while` loop that logs all the odd numbers starting from 99, and going down to 1.
+* Ex 1. Write a `while` loop that logs all the even numbers between 0 and 100.
+
+<details>
+ <summary>
+  Solution
+ </summary>
+ 
+ 
+ ```js 
+let num = 0;
+while(num <= 100) {
+  if(num % 2 === 0) {
+    console.log(num)
+  }
+  num++
+}
+ ```
+</details>
+* Ex 2. Write a `while` loop that logs all the odd numbers starting from 99, and going down to 1.
+<details>
+ <summary>
+  Solution
+ </summary>
+ 
+ 
+ ```js 
+let num = 100;
+while(num > 0) {
+  if(num % 2) {
+    console.log(num)
+  }
+  num--
+}
+ ```
+</details>
 
 ### The `for` loop
 
@@ -149,8 +182,34 @@ for (let i = 50; i >= 5; i -= 5){
 }
 ```
 
-> Ex. Log all multiples of 10 between 10 and 100
-> Ex. Log all multiples of 10 between 100 and 0, descending
+* Ex. Log all multiples of 10 between 10 and 100
+
+<details>
+ <summary>
+  Solution
+ </summary>
+ 
+ 
+ ```js 
+for(let i = 10; i <= 100; i += 10) {
+  console.log(i)
+}
+ ```
+</details>
+* Ex. Log all multiples of 10 between 100 and 0, descending
+
+<details>
+ <summary>
+  Solution
+ </summary>
+ 
+ 
+ ```js 
+for(let i = 100; i >= 0; i -= 10) {
+  console.log(i)
+}
+ ```
+</details>
 
 ## Loop exercises
 
