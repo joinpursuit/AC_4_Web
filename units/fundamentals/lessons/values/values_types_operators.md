@@ -143,7 +143,7 @@ Comparison operators include `===`, `>`, `<`. These do not make a statement abou
 * `>` - Greater than. 3 > 2 : Is 3 greater than 2 ? 
 * `<` - Less than.  3 < 2 : Is 3 less than 2 ? 
 * `>=` - Greater than or equal too. 
-* `<=` -Less than or eqaul too.
+* `<=` -Less than or equal too.
 
 ```js
 > 2 === 2
@@ -258,7 +258,7 @@ that are either true or false. We write in each row a unique combination of the 
 #### The OR  (||) Operator
 
 We use the `||` operator to check if one of two statements is true.
-This will be `false` only if both left-hand side and right hand side are false:
+This will be `false` only if both left-hand side and right-hand side are false:
 
 ```js
 > false || true
@@ -271,7 +271,7 @@ true
 true
 
 > false || false
-fasle
+false
 
 > 2 === 3 || 4 === 5
 false
@@ -365,7 +365,7 @@ a truthy or falsey value.
  true 
  ```
 
-When the `||` operator interacts with truthy and falsey values, itbehaves in an unusual way: if the left-hand side is truthy, the left-hand value will be returned (instead of `true`). If the left-hand side is falsey, the right-hand value will be returned (regardless of whether it evaluates as truthy or falsey).
+When the `||` operator interacts with truthy and falsey values, it behaves in an unusual way: if the left-hand side is truthy, the left-hand value will be returned (instead of `true`). If the left-hand side is falsey, the right-hand value will be returned (regardless of whether it evaluates as truthy or falsey).
 
 
 ```js
