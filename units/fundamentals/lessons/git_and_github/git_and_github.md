@@ -179,7 +179,7 @@ $ git remote add origin <url>
 $ git push -u origin master
 ```
 
-`git remote add` is doing the same thing as `git add` was doing before but this time we are adding to a _remote repository_, which just means one that is **not** stored locally on our computer. `origin` is a name we give our own computer--you can call this anything you'd (like your name) but the standard name people use is `origin`. Lastly `<url>` is the GitHub url where your repository is located--this is where our _local_ repo will be pushed into. 
+`git remote add` is doing the same thing as `git add` was doing before but this time we are adding to a _remote repository_, which just means one that is **not** stored locally on our computer. `origin` is a name we give our own computer--you can call this anything you'd like (your name) but the standard name people use is `origin`. Lastly `<url>` is the GitHub url where your repository is located--this is where our _local_ repo will be pushed into. 
 
 After establishing our remote repo with `git remote add origin <url>` we `push` our changes to the remote repository on GitHub. This is done by running the command `git push -u origin master`. `git push` takes everything we have locally on our computer and sends it to our remote repo on GitHub. The `-u` adds a tracking reference to the remote repo so we can `pull` or download information from this repo later. And lastly `origin master` is saying we are using the information on our computer ("origin") and pushing it to the remote repo on `master`.
 
