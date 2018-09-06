@@ -2,7 +2,7 @@
 
 ## Goals
 
-* Understand the various ways arguments can be passed to functions and utilized in block
+* Understand the various ways arguments can be passed to functions and utilized
 * Understand what closures are in JavaScript
 * Create and utilize closures
 
@@ -143,7 +143,7 @@ function greeting(str1) {
 ```
 Like we've seen before, this is a function `greeting` that returns another function. I could give the returned function a name, but have decided to leave it anonymous because I don't _need_ to name it. 
 
-So, if invoke the function `greeting('hello')` the output will be `[Function]` which is the inner function returned.  If I want to invoke _this_ inner function I could do so by invoking greeting twice at the same time. Like this: `greeting('hello')('Corey')`. This will return the output 'hello Corey'. 
+So, if we invoke the function `greeting('hello')` the output will be `[Function]` which is the inner function returned.  If I want to invoke _this_ inner function I could do so by invoking greeting twice at the same time. Like this: `greeting('hello')('Corey')`. This will return the output 'hello Corey'. 
 
 Using this concept to our advantage, we can save the initial returned inner function as different variables with different greetings, like so: 
 ``` js
