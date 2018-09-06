@@ -359,6 +359,24 @@ Arrays have order; objects do not. There is a first item in an array, whereas th
 
 This is a crucial distinction you will learn about more later. It is generally bad practice to depend in any way on the order of attributes within an object.
 
+### Bonus
+If you'd like to see an object (or array) printed as a table, simply pass the object as the argument to console.table(obj).
+
+```js
+let varObj = {
+        corey: "corey",
+        matt: "matt"
+};
+
+console.table(varObj);
+
+// OR
+
+console.table(["mango", "strawberry", "banana"]);
+```
+
+_NOTE:_ This doesn't currently work in repl but it will in your computer console, or when you run a file with node through your terminal. More on [console](https://developer.mozilla.org/en-US/docs/Web/API/console)
+
 ### Exercises
 
 #### Watch List
