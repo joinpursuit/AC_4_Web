@@ -149,6 +149,13 @@ arr.splice(1, 2, 'fish')
 
 `splice` **returns** an array containing the elements that were removed. The modification happens on the array that the method was called from.
 
+### Concat 
+Concat is a method that joins two arrays. 
+```js
+let a = [1, 2, 3];
+let b = [4, 5, 6];
+console.log(a.concat(b))
+```
 
 ### Join: Array --> String
 
