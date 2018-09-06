@@ -12,6 +12,7 @@
   * shift 
 * Know basic built-in array methods.
 * Know what a multidimensional array is and how to index / key into it.
+* Know what destructuring assignment is and how to use it.
 
 
 ## Lesson
@@ -245,3 +246,31 @@ console.log(matrix[0][0]) // => 1
 console.log(matrix[0][1]) // => 2 
 console.log(matrix[2][2]) // => 9 
 ```
+
+### Destructuring assignment
+The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays into distinct variables. 
+
+```js
+let a; 
+let b; 
+
+[a, b] = ['Hello', 'Dolly']
+
+console.log(a) // => Hello
+console.log(b) // => Dolly
+
+```
+
+This often comes in handy when swapping the position of values in an array.
+
+```js
+let a = 1;
+let b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+```
+
+### Resources 
+(MDN - destructuring assignment)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment]
