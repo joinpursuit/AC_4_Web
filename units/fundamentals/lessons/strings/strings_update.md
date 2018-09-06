@@ -97,7 +97,7 @@ Once we know the length, we simply subtract `1` from it and get the last element
 
 ```js
 let str = 'dog'
-// substracting 1 from the length to get last character
+// subtracting 1 from the length to get last character
 console.log(str[str.length - 1])
 
 let str2 = 'animal'
@@ -220,7 +220,7 @@ console.log(name, capitalized)
 
 ### Split
 
-Another useful built in method for strings is `split` which turns a string into an array. As you saw in loops, it is nice to be able to iterate through arrays so sometimes we may want to convert a string into an array. You _can_ interate through a string using a loop but that would go one character at a time, which may not be what you need. `split` accepts a character as an argument and will split the string into an array based on that character. Most often you split on `""`, which splits the string into individual characters, or `" "`, which splits the string into words.
+Another useful built in method for strings is `split` which turns a string into an array. As you saw in loops, it is nice to be able to iterate through arrays so sometimes we may want to convert a string into an array. You _can_ iterate through a string using a loop but that would go one character at a time, which may not be what you need. `split` accepts a character as an argument and will split the string into an array based on that character. Most often you split on `""`, which splits the string into individual characters, or `" "`, which splits the string into words.
 
 ```js
 let str = "Hello there! How are you?"
@@ -318,7 +318,7 @@ verbing('go')
 4. Create a function called `withoutLast` that takes a single argument, a string, and returns a copy of the string without the  last letter. For example:
 
 ```js
-capitalLast('jimmy')
+withoutLast('jimmy')
 // => 'jimm'
 ```
 
