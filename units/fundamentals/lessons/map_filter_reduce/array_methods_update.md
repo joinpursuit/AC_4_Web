@@ -14,7 +14,7 @@
 
 ### Working with Arrays
 
-The Array is JavaScript's only collection type. Arrays are everywhere and we use them often. Lucikly for us, JS already has some built-in array methods like, `map`, `filter`, `every` and `reduce`. In this lesson we are going to learn how to use these methods.
+The Array is JavaScript's only collection type. Arrays are everywhere and we use them often. Luckily for us, JS already has some built-in array methods like, `map`, `filter`, `every` and `reduce`. In this lesson we are going to learn how to use these methods.
 
 In this lesson we will be transforming array into new arrays. We will first do so using loops and statements. Then we will implement one of the functions, and then use it to solve the same problem without loops. We will also see how to combine `filter`, `map` and `reduce` to solve more complex problems.
 
@@ -62,7 +62,7 @@ names.forEach((name, i) => {
 
 To transform one array into another, we apply a function to each item in the array and collect the results into a new array.
 
-Given an array of film objects below, we can transform it into an array of {id,title} pairs using `forEach`:
+Given an array of film objects below, we can transform it into an array of {id, title} pairs using `forEach`:
 
 ```js
 let films = [
@@ -105,7 +105,7 @@ films.forEach(film => {
 });
 ```
 
-Most array tranformations share two operations in common:
+Most array transformations share two operations in common:
 
 1. The traverse the source array.
 2. Add each item's transformed value to a new array.
@@ -144,7 +144,7 @@ arr.doubler()
 
 The above is **not**  something we would usually want to do. Extending the basic functionalities of a JavaScript type can lead to unexpected bugs and errors in our code. Even more so when we are working with other programmers, who may not know what functionalities we have added. In todays exercises, we will be re-implementing methods that already exist in javascript arrays.
 
-The **this** in the above function refers to the array that the method will be called upon. That means we can index into  **this** if desired. Let pretend we wanted an array method that returned only the odd values. We could add this method to the Array.protoype like this: 
+The **this** in the above function refers to the array that the method will be called upon. That means we can index into  **this** if desired. Let pretend we wanted an array method that returned only the odd values. We could add this method to the Array.prototype like this: 
 
 ```js
 Array.prototype.odds = function() {
@@ -229,7 +229,7 @@ Like `map`, every `filter` operation shares some things in common:
 1. Traverses the array.
 2. Returns a new array.
 
-#### Filtering using the`filter` method
+#### Filtering using the `filter` method
 
 Like `map`, `filter` also takes in a callback function. Each item in the array will be passed into the callback and tested against a condition. It will then return a new array of the elements that passed the conditional. Let's use filter to get an array of only the odd numbers. 
 
@@ -268,7 +268,7 @@ arr.filter(el => el % 2).map(el => el * 2);
 
 ## Every
 
-`every`is another JS array method that checks to see if every single element in the array meets a certain condition. Like `forEach`, `map`, and `filter` it also takes in a callback function. Let's check to see if all the values in an array or odd.
+`every` is another JS array method that checks to see if every single element in the array meets a certain condition. Like `forEach`, `map`, and `filter` it also takes in a callback function. Let's check to see if all the values in an array or odd.
 
 ```js
 let arr = [1, 3, 5];
@@ -368,7 +368,7 @@ If we wanted to find the sum of all the number in an array and have 5 added to t
 
 ```
 Let's take a look at what's going on in the examples above. 
-We've started off by declaring a variable called `arr`. We will call `reduce` on this array. Reduce takes in two arguments: a callback function and an optional initial value. In our first and second example our callback function is the annonymous adding function. That function is taking in two arguments (`acc`, `el`). This is the same as if we'd declared it with a name like: 
+We've started off by declaring a variable called `arr`. We will call `reduce` on this array. Reduce takes in two arguments: a callback function and an optional initial value. In our first and second example our callback function is the anonymous adding function. That function is taking in two arguments (`acc`, `el`). This is the same as if we'd declared it with a name like: 
 ```js 
 const adder = (num1, num2) => {
  return num1 + num2
@@ -378,7 +378,7 @@ This is essentially the function that we're passing as the first argument into  
 
 The second argument that we're passing into `reduce` is optional. This argument will become the staring point for the accumulator. In the first example we've decided NOT to pass in a second argument. Because of this, the accumulator is defaulted to the first element in our array (1). 
 
-Reduce will then iterate through the array and continously reassign the value of the accumulator to the result of our callback being called with the accumulator and the current element as arguments. 
+Reduce will then iterate through the array and continuously reassign the value of the accumulator to the result of our callback being called with the accumulator and the current element as arguments. 
 
 In our first example the iteration will begin on the second element (2) of the array because the first element has already been used as the accumulator. 
 `acc = adder(1, 2)` 
