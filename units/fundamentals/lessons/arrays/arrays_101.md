@@ -2,11 +2,14 @@
 
 ## Goals 
 * Understand how to create an array, and why you'd want to. 
-* Know basic array propery length.
+* Know basic array property length.
 * Know how to index / key into an array.
 * Know how to change the value of an element in an array if given the index. 
 * Know how to add and remove elements in an array. 
-** push, pop, unshift, and shift 
+  * push
+  * pop 
+  * unshift
+  * shift 
 * Know basic built-in array methods.
 * Know what a multidimensional array is and how to index / key into it.
 
@@ -43,7 +46,7 @@ However it is **BEST** practice to use the same data type across all elements in
 We access the first element of the array by using index `0`, and the last by using index `array.length - 1`
 
 ```js
-let animals = ['cat', 'dog', 'racoon', 'giraffe']
+let animals = ['cat', 'dog', 'raccoon', 'giraffe']
 
 // this will print 'cat'
 console.log(animals[0])
@@ -57,11 +60,11 @@ console.log(animals[animals.length -1])
 Unlike with strings, we can modify array elements:
 
 ```js
-let animals = ['cat', 'dog', 'racoon', 'giraffe']
+let animals = ['cat', 'dog', 'raccoon', 'giraffe']
 // changing the second element to 'zebra'
 animals[1] = 'zebra'
 console.log(animals)
-// => [ 'cat', 'zebra', 'racoon', 'giraffe' ]
+// => [ 'cat', 'zebra', 'raccoon', 'giraffe' ]
 ```
 
 ### Push
@@ -73,7 +76,7 @@ let numbers = [2, 4, 6]
 // adding the number 8
 numbers.push(8)
 // now numbers will be: [2, 4, 6, 8]
-// you can also add mulitipe elements by adding more elements to push. 
+// you can also add multiple elements by adding more elements to push. 
 numbers.push(10, 12, 14)
 // now numbers will be: [2, 4, 6, 8, 10, 12, 14]
 ```
@@ -106,7 +109,7 @@ numbers.shift()
 // numbers is now: [5]
 ```
 **Helpful trick**
-Sometimes it can be hard to remember which methods do what. Here's a helpful trick. Push and pop are fairly easy. Pushing into the array, and poppiing off. Now with shift and unshift try and remember that unshift is like push but at the beginning. You can __tell__ they are similar because they both have the letter 'u' in them. The ones with the 'u' add to the array, the other two are removing. 
+Sometimes it can be hard to remember which methods do what. Here's a helpful trick. Push and pop are fairly easy. Pushing into the array, and popping off. Now with shift and unshift try and remember that unshift is like push but at the beginning. You can __tell__ they are similar because they both have the letter 'u' in them. The ones with the 'u' add to the array, the other two are removing. 
 
 ## Built-In Methods
 
@@ -224,7 +227,7 @@ For more information on the best way to compare [arrays](https://stackoverflow.c
 ### Multidimensional Array
 Multidimensional arrays are arrays that contain arrays as their elements. 
 If an array is filled with arrays it is considered to be 2 dimensional (also often referred to as a matrix). 
-If those arrays that are filling the array are also filled with arrays it becomes a 3 dimensional array or mulidimensional. 
+If those arrays that are filling the array are also filled with arrays it becomes a 3 dimensional array or multidimensional. 
 Typically it is **BAD** practice to go further than 2 dimensional arrays. 
 
 #### Indexing into Multidimensional Arrays
