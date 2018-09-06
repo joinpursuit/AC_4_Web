@@ -36,7 +36,7 @@ if (true) {
 ```
 
 The value `true` above can be substituted with any expression that evaluates to `true`, such as `'cat' === 'cat'` and `2 > 1`.
-A code block will also run if the conditional can evauate to a truthy value such as: 
+A code block will also run if the conditional can evaluate to a truthy value such as: 
 
 
 ```js
@@ -194,7 +194,7 @@ if (userAge > 18 && userAge < 45){
 
 conditional ? true : false 
 
-The ternary operator is made up of three parts. The first part to the left of the question mark is a conditional. The second part rigth after the 
+The ternary operator is made up of three parts. The first part to the left of the question mark is a conditional. The second part right after the 
 questions mark is the value returned if the conditional is truthy. The final part is value returned if the condition is falsey. 
 
 ```js
@@ -205,7 +205,7 @@ questions mark is the value returned if the conditional is truthy. The final par
 
 ```
 
-> Try it yourself! Experiment with differnet conditionals and outcomes. 
+> Try it yourself! Experiment with different conditionals and outcomes. 
 
 ## Switch Statements
 Switch statemes evaluate similarly to `if - else if - else` statements. They take in an expression and depending on the value of
