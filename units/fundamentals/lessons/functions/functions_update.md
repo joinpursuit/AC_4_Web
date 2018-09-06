@@ -48,9 +48,9 @@ instead of re-writing the same loop.
  * The above syntax is called **function expression**. 
 The word `function` tells JS that we are **declaring** a function. Just like const lets JS know we are about to declare a variable.
 
- * squareNumber is the **name** of the function. Not all functions need a name. Some functions are annonymous and don't have a name. But for now, we will be dealing with functions that do have name. 
+ * squareNumber is the **name** of the function. Not all functions need a name. Some functions are anonymous and don't have a name. But for now, we will be dealing with functions that do have name. 
 
-* Inside the parenthesis are **parameters** which are used to define a function. When we call a function we replace parameters with **arguments**. Arguments are the real values that are passed into a function. Often the words parameters, and arguments are used interchangably. Also, some functions don't require any arguments. For example: 
+* Inside the parenthesis are **parameters** which are used to define a function. When we call a function we replace parameters with **arguments**. Arguments are the real values that are passed into a function. Often the words parameters, and arguments are used interchangeably. Also, some functions don't require any arguments. For example: 
 
 ```js 
   function sayHello() {
@@ -63,7 +63,7 @@ The word `function` tells JS that we are **declaring** a function. Just like con
 
 * The opening curly brace, { , indicates the start of the function. The closing curly brace, } , indicates the end of the function. 
 
-* Between the braces, is the code that makes up the function. **return** is the result (what we get back) after we've called the function. If there is no __return__ statement, the function will return `undefined`. Once something is __returned__ from a function, the function has ended. This means, that even if there is code after the return statment, it will not be reached. 
+* Between the braces, is the code that makes up the function. **return** is the result (what we get back) after we've called the function. If there is no __return__ statement, the function will return `undefined`. Once something is __returned__ from a function, the function has ended. This means, that even if there is code after the return statement, it will not be reached. 
 The code `sayHello()` will then be replaced by the value that was returned by the function. As far as `console.log` is concerned, what is being passed to it is the value `"Hello"`. It knows nothing about `sayHello`.
 
 
@@ -97,13 +97,25 @@ We then state the name of our function and assign it to our arguments, a fat-arr
       console.log(arr[i]);
     } 
   }
+  
+  // HEY HEY HEY it's Fat Arrow! 
 
 ```
+_NOTE:_ If you wanted to return everything inside of your function, you could do this by using parenthesis instead of curly brackets. This works only with fat arrow functions and is called an implicit return. You probably won't use this much for awhile, but it is worth remembering. An example of this would be this function. 
+
+```js
+const double = (num) => (
+    num + num
+)
+
+double(6) // => 12
+```
+See that I don't have to use `return`? If I had written any other code above what I wanted returned, the code would have errored out. For now, write your functions with curly brackets and explicit returns. 
 
 Both printArray functions will be treated the same. 
 
 ## Invoking a Function
-We invoke a function by saying the function's name and passing in any necessary arguments. If we wanted to call our sayHello funtion we would do it as so: `sayHello()`. Because sayHello takes in zero arguments we wrote nothing in between the parenthesis. If we wanted to call printArray we would do it as so: `printArray([1, 2, 3])`. 
+We invoke a function by saying the function's name and passing in any necessary arguments. If we wanted to call our sayHello function we would do it as so: `sayHello()`. Because sayHello takes in zero arguments we wrote nothing in between the parenthesis. If we wanted to call printArray we would do it as so: `printArray([1, 2, 3])`. 
 
 If we changed our sayHello to accept an argument it would look like this: 
 
@@ -162,7 +174,7 @@ As you may have realized, `console.log`, is also a function - one that is provid
 
 Again, in JavaScript, a function that does not have a return statement will return the value `undefined`.
 
-### Single Responsiblity Principle
+### Single Responsibility Principle
 It is BEST practice to write your functions to only do ONE thing. With our double function, the only thing it did was double a number. All of our functions have one job to do. If you find yourself needing your function to do multiple things, you should consider breaking it up into multiple functions. For now, you may not notice the importance because we're still writing very simple functions, but if we were making something a bit more complex like a game you would quickly see the benefit. There could be a takeTurn, isValidMove, isGameOver, switchPlayers, declareWinner, displayGame, movePlayer, etc... We'd want to break everything up to keep the logic and moving parts clear and simple. 
 
 ### Side-effects
@@ -265,7 +277,7 @@ hello()
 console.log(greeting) // logs: 'hello'
 ```
 
-A commonly used term for this is **scope**: a variable inside a function has _local scope_, and a variable not inside any function has _global scope_. So a variable with local scope is only available inside that function. A variable with global scope is avaialbe inside or outside the function. If we create a variable inside a function with the same name as a global variable - the function will only be aware of the local one. This, however, will not change the value of the global variable.
+A commonly used term for this is **scope**: a variable inside a function has _local scope_, and a variable not inside any function has _global scope_. So a variable with local scope is only available inside that function. A variable with global scope is available inside or outside the function. If we create a variable inside a function with the same name as a global variable - the function will only be aware of the local one. This, however, will not change the value of the global variable.
 
 ```js
 let greeting = 'hello'
@@ -279,7 +291,7 @@ function hello(){
 console.log(greeting) // logs: 'hello'
 ```
 
-Luckily with ES6 we don't have to worry too much about hoisting. const and let are both block scoped. This means that if we declared the same named variable inside the block and outside the block, they will be treated as two seperate varaibles.
+Luckily with ES6 we don't have to worry too much about hoisting. const and let are both block scoped. This means that if we declared the same named variable inside the block and outside the block, they will be treated as two separate variables.
 ```js 
 let i = 0;
 if (true) {
