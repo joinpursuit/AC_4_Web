@@ -86,6 +86,7 @@ function Dog(name, breed, weight) {
 }
 ```
 
+
 Let's break down what that did. `this.name = name;` tells the `Dog` object that `this.name` (this `Dog` object's name) is **equal** to the `name` argument passed. `this.breed = breed;` tells the `Dog` object that `this.breed` (this `Dog` object's breed) is **equal** to the `breed` argument passed. `this.weight = weight;` tells the `Dog` object that `this.weight` (this `Dog` object's weight) is **equal** to the `weight` argument passed. 
 
 While a constructor function looks like a regular function, note the following:
@@ -99,6 +100,19 @@ Also, note the following conventions:
 1. Constructor functions start with a **capital first letter**.
 2. Parameter/argument names match the **keys** (property names) of the object we will create.
 
+The ES6 equivalent looks like this:
+
+```js
+class Dog {
+  constructor(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+  }
+}
+
+```
+
 ### Using Constructor Functions
 
 Now if we wanted to create a _new_ `Dog` object, we would do it as follows:
@@ -109,7 +123,7 @@ let mojo = new Dog("Mojo", "Brittany Spaniel", 45)
 mojo // => Dog {name: "Mojo", breed: "Brittany Spaniel", weight: 45}
 mojo.breed // => "Brittany Spaniel"
 ```
-This makes creating many `Dog` objects much easier! Now we just need to pass three arguments to each new `Dog` instance and our constructor function will asign our values appropriately. We also assign the new `Dog` object to a variable so we can reference it later. If you do not assign the new object to a variable, it will be created but you cannot access it or use it later.
+This makes creating many `Dog` objects much easier! Now we just need to pass three arguments to each new `Dog` instance and our constructor function will assign our values appropriately. We also assign the new `Dog` object to a variable so we can reference it later. If you do not assign the new object to a variable, it will be created but you cannot access it or use it later.
 
 
 ```js
@@ -161,22 +175,6 @@ function add1(num) {
 console.log(add1.name) // => "add1"
 ```
 
-Unlike functions, regular objects cannot be invoked - trying to call an object will result in an error:
-
-```js
-let obj = { name: "Corey" }
-obj() // => TypeError: obj is not a function
-```
-
-We've been accessing properties of objects through dot notation (`add1.name`) but we can also use **bracket notation** which works in a similar way to dot notation but with brackets. To access the `name` property in `add1` using bracket notation, we would instead write `name` in quotes inside square brackets: `add1["name"]`. If we tried to access `name` without quotes around it, we will get an error. Bracket notation is not as easy as dot notation but it does have benefits. For example, if the property you want to access has dashes (`-`) in it, dot notation will not work. In those cases, bracket notation would be better: `add1["another-property"]`.
-
-```js
-let obj = { name: "Corey" }
-obj["name"] // => "Corey"
-obj["name"] = "Matt"
-obj["name"] // => "Matt"
-```
-
 ### The Three Main Ways to invoke a function
 1. **Function-style**: fun(arg1) 
     * While _unbound_, function-style will set `this` to the _global_ context (`global` or `window`).
@@ -203,7 +201,7 @@ dog.ageOneYear(); // works
 times(5, dog.ageOneYear); // ReferenceError; this.age is not defined. 
 ```
  
-The reason this ReferenceError is occuring is because times calls dog.ageOneYear _function-style_. This is then changing the `this` to a _global_ context. 
+The reason this ReferenceError is occurring is because times calls dog.ageOneYear _function-style_. This is then changing the `this` to a _global_ context. 
 There are two ways around this problem. The first is to introduce an **anonymous closure** to capture `dog`:
 ```js
 // Function argument is different:
@@ -214,10 +212,11 @@ times(10, function () {
 `times` will still call the passed function function-style, so `this` will still be set to `window`. But the closure doesn't care, **because inside, it explicitly calls `ageOneYear` method style on `dog`**.
 The other way around this problem is to use `bind` like this:
 ```js
-times(10, cat.ageOneYear.bind(cat));
+times(10, dog.ageOneYear.bind(dog));
 ```
 `bind` works just like the closure we made, in which `dog#ageOneYear` is called method style on the `dog`
 object. `dog.ageOneYear.bind(dog)` returns a closure that will still be called function-style, but which calls `dog.ageOneYear` method-style inside of it.
+
 ### Common Problem With `this`  
 ```js
 function SumCalculator() {
@@ -233,11 +232,11 @@ SumCalculator.prototype.addNumbers = function (numbers) {
   return this.sum;
 };
 ```
-The use of `this` in scope 2 will not work because the annonymous function will not be called method style. The anonymous function is not even a method of `SumCalculator`.
+The use of `this` in scope 2 will not work because the anonymous function will not be called method style. The anonymous function is not even a method of `SumCalculator`.
 This problem can be hard to spot, because even though we are using
 `this` in a method of `SumCalculator`, we're also inside an anonymous,
 nested function which will be called function style. In particular, the correct use of `this` in scope 1 will mean something different than the incorrect use in scope 2.
-This sort of runs counter to our basic understanding of closures: that they can access variables defined in the enclosing scope. However, `this` is special because **`this` doesn't get captured; it gets reset everytime a function is called**.
+This sort of runs counter to our basic understanding of closures: that they can access variables defined in the enclosing scope. However, `this` is special because **`this` doesn't get captured; it gets reset every time a function is called**.
 If we do want to close over `this`, we need to store it in a normal, capturable local variable:
 ```javascript
 function SumCalculator() {
@@ -299,11 +298,11 @@ garfield plays with ball
 garfield plays with balloon
 ```
 **Bonus** 
-There are two more final ways of calling a function.They incude `apply` and `call`. `apply` takes two arguments: an object to bind `this` to, and an array of argumetns to be passed the method apply is being called on. `call` is very similar to `apply` but instead of taking in an arry of parameters, it takes them individually. Please feel free to read more about them [here](https://www.undefinednull.com/2014/06/26/explaining-call-and-apply-in-javascript-through-mr-dot-dave/)
+There are two more final ways of calling a function.They incude `apply` and `call`. `apply` takes two arguments: an object to bind `this` to, and an array of argumetns to be passed the method apply is being called on. `call` is very similar to `apply` but instead of taking in an array of parameters, it takes them individually. Please feel free to read more about them [here](https://www.undefinednull.com/2014/06/26/explaining-call-and-apply-in-javascript-through-mr-dot-dave/)
 
 ### The `prototype` property
 
-Every function also has a proprety called `prototype`. By default, the value of the `prototype` property is an object.
+Every function also has a property called `prototype`. By default, the value of the `prototype` property is an object.
 
 ```js
 function add1(num){
@@ -313,7 +312,7 @@ console.log(add1.prototype)
 // add1 {}
 ```
 
-The result of logging `add1.prototype` looks a litte different then if we logged a regular empty object.
+The result of logging `add1.prototype` looks a little different then if we logged a regular empty object.
 
 ```js
 let obj = {};
@@ -323,7 +322,7 @@ console.log(obj)
 
 Logging `add1.prototype` displays not only the (empty) object, but also the function that the object is linked to. In this case, that function is `add1`.
 
-### The ConstructorPrototype link
+### The Constructor Prototype link
 
 Each `prototype` object is initially empty, except for a hidden property called `constructor`. This `constructor` holds the function that the object is linked to. Let's look at a `Rabbit` constructor (similar to our `Dog` example):
 
@@ -382,7 +381,7 @@ The diagram would now look like this:
 
 ### Getting an object's prototype
 
-While The `__proto` property can be used to access an objects prototype, it is a non-standard feature. The recommended way of getting and object's prototype is the `Object.getPrototypeOf()` method:
+While The `__proto__` property can be used to access an objects prototype, it is a non-standard feature. The recommended way of getting and object's prototype is the `Object.getPrototypeOf()` method:
 
 ```js
 Object.getPrototypeOf(killerRabbit)
@@ -404,7 +403,7 @@ When the `new` keyword is omitted, you may or may not see an error -  one way to
 
 ### The instanceof operator
 
-If we try to use the `typeof` operator with any of the above created objects, we will always get back the string `"object"`. As far as types are concerned, javascript dconsiders all objects to be the same. We *can*, however, check if an object was created using a specific constructor function. This is done using the `instanceof` operator:
+If we try to use the `typeof` operator with any of the above created objects, we will always get back the string `"object"`. As far as types are concerned, JavaScript considers all objects to be the same. We *can*, however, check if an object was created using a specific constructor function. This is done using the `instanceof` operator:
 
 ```js
 console.log(killerRabbit instanceof Rabbit) // => true
