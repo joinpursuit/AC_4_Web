@@ -250,6 +250,21 @@ console.log(sentence)
 console.log(typeof(sentence))
 ```
 
+We can also turn a number into a string by using the `.toString()` method. 
+
+```js
+let numberToString = 5 
+typeof numberToString.toString() // => 'string'
+```
+
+*Bonus:* To turn a string into a number you can use `Number(string)` or `parseInt(string)`. 
+```js
+let stringToNumber = '5'
+typeof parseInt(stringToNumber) //=> 'number'
+
+typeof Number(stringToNumber) //=> 'number'
+```
+
 ### String Interpolation
 
 As you've seen, when we want to add a variable to a sentence, we have to add it in using the `+` sign like so:
