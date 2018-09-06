@@ -106,12 +106,12 @@ If you try to get a property that doesn't exist, `undefined` will be returned.
 console.log(person.propertyThatDoesntExist);
 // 'undefined' will be logged
 ```
+We've been accessing properties of objects through dot notation, but we can also use **bracket notation** which works in a similar way to dot notation but with brackets.  If we tried to access `firstName` without quotes around it, we will get an error. Bracket notation is not as easy as dot notation but it does have benefits. For example, if the property you want to access has dashes (`-`) in it, dot notation will not work. In those cases, bracket notation would be better: `add1["another-property"]`.
 
-You could also use one of the objects keys to access that keys value. You will need to use brackets (`[]`) in this case. For example:
+```js
+let obj = { firstName: "Corey" }
+obj["firstName"] // => "Corey"
 
-```javascript
-console.log(person['firstName']);
-// 'Erika' will be logged
 ```
 
 We could also log the person's full name like this:
