@@ -65,7 +65,7 @@ __NOTE:__ function declarations are hoisted, class declarations are not.
 The next difference we see is the `constructor` method. The constructor method is a special method for creating and
 initializing an object created with a class. There can only be one special method with the name "constructor" in a class.
 
-The next difference we see a syntacic difference on how we write methods in that class. 
+The next difference we see a syntactic difference on how we write methods in that class. 
 
 Lastly, if you wish to add methods to the prototype and aren't able to add them directly inside of the class object, you must
 still use the className.prototype syntax. 
@@ -106,7 +106,7 @@ matt.fetch() //=> TypeError: matt.fetch is not a function
 
 So... what's new? 
 
-The first new thing we see is the `extends` keyword. This means that we will be inheriting the qualites of that other class. 
+The first new thing we see is the `extends` keyword. This means that we will be inheriting the qualities of that other class. 
 It's like saying I want the Animal class, but I'm going to extend it to include Dog. 
 
 The next thing we see is the keyword `super`. `super` can _only_ be placed inside of the `constructor` method. It's essentially 
