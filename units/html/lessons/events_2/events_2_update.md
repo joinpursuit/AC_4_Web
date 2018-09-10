@@ -23,14 +23,14 @@
 
 *Bubbling* or *Event Delegation* is the name for the way an event moves up the DOM, triggering
 every *listener* that is a parent of its *target*, all the way to the
-top of the DOM. An event's `.target` property points to the element on which the event occured.
+top of the DOM. An event's `.target` property points to the element on which the event occurred.
 
 So what does mean? Let's remember that our DOM is a tree of nodes. Think of this picture. 
 ![dom](dom_tree_events.jpg)
 
 When an event gets fired it bubbles up the dom / is delegated to the Nodes parent. Events occur whether or not we are specifically listening for them. This means that if we click on one of the li's in the picture, the click would be _experienced_ by the li, then the ul, then the body, and finally the html. It's bubbling up. 
 
-This can be helpful with our pages performace. Let's pretend we had a ul with thousands and thousands of li's. If we put a listener on every li we would have a TON of listeners. This could dramatically slow down our program. Instead of doing that, we could use just one listener on the ul. Because of event delegation, whenever any li's were clicked, our ul would know and be able to fire the specific event. 
+This can be helpful with our pages performance. Let's pretend we had a ul with thousands and thousands of li's. If we put a listener on every li we would have a TON of listeners. This could dramatically slow down our program. Instead of doing that, we could use just one listener on the ul. Because of event delegation, whenever any li's were clicked, our ul would know and be able to fire the specific event. 
 
 If we click on the `p` tag who experiences that event? 
 
@@ -50,13 +50,13 @@ Let's see event delegation in action! Inside your test.html file add the id "uno
     <li id="second">Second item!</li>
     <ol id="ordered-list">
       <li id="ordered-first">This is ordered</li>
-      <li id="ordered-seconed">So is this!</li>
+      <li id="ordered-second">So is this!</li>
     </ol>
     <li id="third">Third item!</li>
   </ul>
 ```
 
-In your test.js file add a click listener to the 'ordered-first' element, the 'ordered-list', the 'unordeered-list', and the 'body'. Put a debugger inside each of your listeners. Your code should look something like this: 
+In your test.js file add a click listener to the 'ordered-first' element, the 'ordered-list', the 'unordered-list', and the 'body'. Put a debugger inside each of your listeners. Your code should look something like this: 
 
 ```js 
 document.addEventListener('DOMContentLoaded', () => {
@@ -88,9 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ```
 
-Now that we have set up our listeners, lets reload our page (make sure the developer window is open). Click on the first item in our ordered list. What happend? We've hit a debugger. In the console take a look at event.target, and event.currentTarget. 
+Now that we have set up our listeners, lets reload our page (make sure the developer window is open). Click on the first item in our ordered list. What happened? We've hit a debugger. In the console take a look at event.target, and event.currentTarget. 
 
-Now, in debugger hit contiue. Again check your event.target, and your event.currentTarget. Do you see what's happening? Hit continue and check again. One more time. This is how an event bubbles up and how we can find where the event occurred and where it is now. 
+Now, in debugger hit continue. Again check your event.target, and your event.currentTarget. Do you see what's happening? Hit continue and check again. One more time. This is how an event bubbles up and how we can find where the event occurred and where it is now. 
 
 When you're done exploring the events, remove the debuggers from you code. 
 
