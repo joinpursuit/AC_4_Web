@@ -43,7 +43,7 @@ There are two primary ways to utilize JavaScript in an HTML page:
 
 2. Link an external JavaScript file path with code like `<script src="./main.js"></script>`.
 
-Typically, `script` tags are placed inside of the `head` tag of an HTML file. However, when a web browser that is parsing an HTML document meets a `script` tag, it will immedidately run the JS. This can be a problem if your JS is referring to an HTML element that has not yet been parsed by the broswer. There are a couple of different ways to get around this problem such as moving the script tag to the line before the closing `</body>` tag, adding an _event listener_ that waits for the whole file to load before starting the JS file, or adding the word _async_ to the `script` tag. These will be discussed in more detail later, but for now you should just be aware of this problem. If you'd like to read more about `script` placement please read this StackOverflow [answer](https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)
+Typically, `script` tags are placed inside of the `head` tag of an HTML file. However, when a web browser that is parsing an HTML document meets a `script` tag, it will immediately run the JS. This can be a problem if your JS is referring to an HTML element that has not yet been parsed by the browser. There are a couple of different ways to get around this problem such as moving the script tag to the line before the closing `</body>` tag, adding an _event listener_ that waits for the whole file to load before starting the JS file, or adding the word _async_ to the `script` tag. These will be discussed in more detail later, but for now you should just be aware of this problem. If you'd like to read more about `script` placement please read this StackOverflow [answer](https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)
 
 ### The Window Object
 
@@ -53,7 +53,7 @@ contains the DOM document. It also has many of its own properties, such as `.inn
 
 ### `window.alert()`
 
-`window.alert("I'm an alert message")` will display a message in a popup window, or alert. In general, it should only be used as a quick and dirty debugging tool, or before you've learned alternative ways to create output. You've probably only seen these as really annoying pop ups on sketchy websites. Let's write out first alert together. 
+`window.alert("I'm an alert message")` will display a message in a popup window, or alert. In general, it should only be used as a quick and dirty debugging tool, or before you've learned alternative ways to create output. You've probably only seen these as really annoying pop ups on sketchy websites. Let's write our first alert together. 
 Inside your test.html add a `script` tag inside your head tag. Inside of your `script` tag add an alert that welcomes the user to your test site. 
 
 ``` html
@@ -77,7 +77,7 @@ Let's give this a try.
 
 2. Create a file called `test.js `. This is the file that we will be writing our JavaScript in. 
 
-3. Create a new `script` tag. Add the path to test.js via the `src` attriblue. 
+3. Create a new `script` tag. Add the path to test.js via the `src` attribute. 
   <details>
     <summary>
         Hint if Needed:
@@ -175,11 +175,11 @@ Now let's make our test.js file say:
    debugger
 ```
 
-Debugger is an extremely powerful tool that we will use **ALOT** throughout this course. Start using it now so you can get comfortable with it. In order for debugger to work it must be placed on it's own line anywhere inside your JS, and you must have your browsers console open. The code will _stop_ at the debugger and allow you further investigate your code at that exact point in time. 
+Debugger is an extremely powerful tool that we will use **A LOT** throughout this course. Start using it now so you can get comfortable with it. In order for debugger to work it must be placed on it's own line anywhere inside your JS, and you must have your browsers console open. The code will _stop_ at the debugger and allow you further investigate your code at that exact point in time. 
 
 Refresh your _test_ page with the console open. 
 
-Inside the console you can take a look at your declared vairable `first`. If you'd like to see the available methods that you can call on `first`, type in a `.` directly after first. The console will show you the auto complete options. Try out `first.innerText`. 
+Inside the console you can take a look at your declared variable `first`. If you'd like to see the available methods that you can call on `first`, type in a `.` directly after first. The console will show you the auto complete options. Try out `first.innerText`. 
 
 
 ### The Element Object
@@ -205,7 +205,7 @@ Try it yourself and you can see the change. If you want do double confirm the ch
 
 
 
-When you're done playing around and finsished with the debugger, click on the blue play arrow on the screen. The code will continue to run either until it finishs parsing everything or until it hits another debugger. 
+When you're done playing around and finished with the debugger, click on the blue play arrow on the screen. The code will continue to run either until it finishes parsing everything or until it hits another debugger. 
 
 Now remove your debugger so that it doesn't continue to stop each time we load the page. 
 
