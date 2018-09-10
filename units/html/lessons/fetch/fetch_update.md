@@ -161,7 +161,7 @@ Let's take a closer look at this. Copy and paste the following code into your te
 
 ```
 
-Notice that when you run the code you end up in the `.then` debugger. This is not desirable behaivor. Try checking response.status. Your status should be a 404 error because there is no post 900. Also try checking response.ok. In this situation, our intuition tells that we should be in the `catch` section. Here's the workaround:
+Notice that when you run the code you end up in the `.then` debugger. This is not desirable behavior. Try checking response.status. Your status should be a 404 error because there is no post 900. Also try checking response.ok. In this situation, our intuition tells that we should be in the `catch` section. Here's the workaround:
 
 ```js
 
