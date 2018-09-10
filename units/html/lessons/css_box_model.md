@@ -104,7 +104,7 @@ Let's see how the box model looks on the pages we've made. In your test.html fil
 </div>
 ```
 
-Great! Now each `div` in our file contains all associated elements for that section. Open your css.test file and delete the `h1` declaration block. We want the `h1` elements to be un-styled. What we are going to do is make each `div` 400 pixels wide by specifying the width, padding, border and margins using the code below:
+Great! Now each `div` in our file contains all associated elements for that section. Open your test.css file and delete the `h1` declaration block. We want the `h1` elements to be un-styled. What we are going to do is make each `div` 400 pixels wide by specifying the width, padding, border and margins using the code below:
 
 ```css
 div {
