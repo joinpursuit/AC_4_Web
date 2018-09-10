@@ -6,7 +6,7 @@
 
 ## Keywords
 
-* .addeventListener()
+* .addEventListener()
 * DOMContentLoaded
 * asynchronous
 * submit
@@ -58,7 +58,7 @@ code until complete is called _blocking code_.
 ### **DOMContentLoaded**
 
 If you recall from our previous lessons, we included our `script` tag before the closing `</body>` tag but mentioned that it's
-generally placed inside the `<head>`. We had put it before the closing `</body>` because we were referring to elements that had not yetbeen parsed by the browser. Now we can move our `<script>` tag back to the header, and add an Event Listener to our JS file that waits until all our content has loaded. 
+generally placed inside the `<head>`. We had put it before the closing `</body>` because we were referring to elements that had not yet been parsed by the browser. Now we can move our `<script>` tag back to the header, and add an Event Listener to our JS file that waits until all our content has loaded. 
 
 *DOMContentLoaded* is the event fired every time the HTML document has been completely loaded and parsed. 
 Much of our code will always be sandwiched in a callback to this function because we can't manipulate the DOM until 
@@ -83,9 +83,9 @@ Let's try it out!
   document.addEventListener()
  </details>
 
-3. Let's pass in our two arguments to our addEventListern. The first argument will be the event that we will listen for, "DOMContentLoaded". The second argument will be an anonymous callback function that will use querySelectorAll to grab all the elements will the class 'heading'. 
+3. Let's pass in our two arguments to our addEventListener. The first argument will be the event that we will listen for, "DOMContentLoaded". The second argument will be an anonymous callback function that will use querySelectorAll to grab all the elements will the class 'heading'. 
 
-4. Add a deebugger after you've grabbed all your 'heading's and make sure that your event is working correctly and being triggered after all our content has loaded. 
+4. Add a debugger after you've grabbed all your 'heading's and make sure that your event is working correctly and being triggered after all our content has loaded. 
 
 <details>
   <summary>
@@ -140,7 +140,7 @@ The *click* event is fired when an element is clicked. Let's see this in action.
   ```
  </details>
  
- 3. Now add an event listener to button. The event should be 'click', the callback shoud be a function that logs "clicked!" to the console. 
+ 3. Now add an event listener to button. The event should be 'click', the callback should be a function that logs "clicked!" to the console. 
  
   <details>
   <summary>
@@ -187,16 +187,16 @@ The *submit* event is fired when a form is submitted. Inside your test.js, chang
 document.addEventListener('DOMContentLoaded', () => {
   let form = document.querySelector('form');
   form.addEventListener('submit', (event) => {
-    console.log('form submited!!');
+    console.log('form submitted!!');
   });
 });
   ```
  </details>
 
 
-WHAT HAPPEND? It didn't log anything to the console even though I submitted my form correctly! 
+WHAT HAPPENED? It didn't log anything to the console even though I submitted my form correctly! 
 
-The reason for this is because 'submit' in forms has some built in actions to try and send your form somewhere. That's why the url also changes. This default behaivor is almost never something we want. Instead, we developers prefer to have more control of what happens when our forms are submitted. For this reason we have **.preventDefault()**. 
+The reason for this is because 'submit' in forms has some built in actions to try and send your form somewhere. That's why the url also changes. This default behavior is almost never something we want. Instead, we developers prefer to have more control of what happens when our forms are submitted. For this reason we have **.preventDefault()**. 
 
 
 ### **.preventDefault()**
