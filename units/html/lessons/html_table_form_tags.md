@@ -82,7 +82,7 @@ This would render a blank text box on the page, which isn't terribly helpful. Th
 </form>
 ```
 
-In the example above, the Form would have "First name" placed above the first text box with "First name" typed into the first text box. This is because "`Frist name:<br>`" above the text input field writes the words "First name:" on the page and then adds a line break with `<br>` so the text and text field are not on the same line. "First name" would be _typed_ into the text field because the `value` attribute represents what is typed into the text box. As a user types into the text box, the _value_ is updated.
+In the example above, the Form would have "First name" placed above the first text box with "First name" typed into the first text box. This is because "`First name:<br>`" above the text input field writes the words "First name:" on the page and then adds a line break with `<br>` so the text and text field are not on the same line. "First name" would be _typed_ into the text field because the `value` attribute represents what is typed into the text box. As a user types into the text box, the _value_ is updated.
 
 The second text box would also have "`Last name:`" written above it for the same reasons that "First name" appears above the first text box. The second text box, however, is utilizing the `placeholder` attribute. This will put greyed-out text inside the text box that disappears when the user clicks on the text box. This is different from `value` because the user has to delete `value` but not `placeholder`. It is generally good practice to _not_ have a default value in any text box, unless it is information that user has previously provided (like when a form auto-fills your billing address based on the mailing address you already gave). This is because forcing the user to delete information typed into a form is annoying.
 
@@ -98,7 +98,7 @@ To create radio buttons, you would do the following:
   <input type="radio" name="gender" value="other"> Other
 </form>
 ```
-Here we can see the `type` is `radio`. The `name` attribute is how we can tell which button a user clicked on. Since all three of these radio buttons relate to the choice of gender, they are all named `gender`. A `value` must also be filled in because this is what is sent on the form submit, just like in a text form. If `value` is left blank nothing will be sent for that selection when a user clicks submit and the radio button will also be blank. You need to include text before or after the radio button to let the user know what the button represents. The last attribute called `checked` represents the value that the user has selected--this is an _optional_ attribute as radio buttons default to not being selected however you can make one of your selections be the default selection.
+Here we can see the `type` is `radio`. A radio group is defined by giving each of radio buttons in the group the same `name`. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. Since all three of these radio buttons relate to the choice of gender, they are all named `gender`. A `value` must also be filled in because this is what is sent on the form submit, just like in a text form. If `value` is left blank nothing will be sent for that selection when a user clicks submit and the radio button will also be blank. You need to include text before or after the radio button to let the user know what the button represents. The last attribute called `checked` represents the value that the user has selected--this is an _optional_ attribute as radio buttons default to not being selected however you can make one of your selections be the default selection.
 
 ### Input Selections: Checkboxes
 
@@ -113,7 +113,7 @@ Checkboxes work in a very similar way to radio buttons except their `type` is `c
 
 ### Input Submission
 
-The most important part of a form is being able to _submit_ the information. This information is usually sent to a server where it is saved, compiled or used for some other purpose. For today, we won't actually send our user information anywhere. The input type for submitting a form is, appropriately, `submit`. With `submit` input, it will appear as a button and the text that appears on the button is equal to the `value` attribute: `<input type="submit" value="Submit">`. This would apprear as a button with the word "Submit" on it.
+The most important part of a form is being able to _submit_ the information. This information is usually sent to a server where it is saved, compiled or used for some other purpose. For today, we won't actually send our user information anywhere. The input type for submitting a form is, appropriately, `submit`. With `submit` input, it will appear as a button and the text that appears on the button is equal to the `value` attribute: `<input type="submit" value="Submit">`. This would appear as a button with the word "Submit" on it.
 
 Submit buttons can also have an `onClick` attribute which can be used to process the information. Forms can have an `onSubmit` attribute that can also be used for processing the information in a form. Again, don't worry about those for now--you'll have plenty of time to practice that soon!
 
