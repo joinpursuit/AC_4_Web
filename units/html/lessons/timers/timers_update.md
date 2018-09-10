@@ -93,3 +93,8 @@ about the _Event Loop_ and what's going on under the hood.
 
 setTimeout and setInterval are both examples of asynchronous behavior in JS. We will cover this more later, but for now just make
 a mental note that they are asynchronous and non-blocking. 
+
+## Resources
+* [w3 schools](https://www.w3schools.com/js/js_timing.asp)
+* [MND](https://developer.mozilla.org/en-US/docs/Talk:DOM/window.setTimeout)
+* [Bonus requestAnimationFram](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
