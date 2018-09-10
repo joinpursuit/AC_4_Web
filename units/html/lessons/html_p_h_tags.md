@@ -21,7 +21,7 @@
 
 ## HTML Tags
 
-_Tags_ in HTML how the browser knows what to render and how each rendered item will look like. Tags have an opening`<TAG>` and a closing `</TAG>` and wrap content like this: `<p>This text is wrapped by paragraph tags!</p>`. When the browser reads an HTML document and hits a `<p>` tag, it knows that what it is reading is a _paragraph_ and will render it according to the default or specified paragraph properties.
+_Tags_ in HTML are how the browser knows what to render and what each rendered item will look like. Tags have an opening`<TAG>` and a closing `</TAG>` and wrap content like this: `<p>This text is wrapped by paragraph tags!</p>`. When the browser reads an HTML document and hits a `<p>` tag, it knows that what it is reading is a _paragraph_ and will render it according to the default or specified paragraph properties.
 
 Let's start by creating a new blank document titled `test.html`. Below is the skeleton of all basic HTML pages, which you can copy into your test.html document:
 
@@ -46,7 +46,7 @@ Inside the `<html>` tags is all of our HTML code.
 
 ### Paragraph Tags
 
-If you double click on your test.html document, it will load in the browser but it won't look how you might have expected. Even though we put our two sentences on different lines, the appear on the same line on the page. This is because we did not enclose them in any HTML tags, so the browser just renders them as one block of plain text.
+Right click on your test.html file and select the option copy full path, then open a new tab in your browser and paste in the path. Your HTML will load in the browser but it may not look how you might have expected. Even though we put our two sentences on different lines, they appear on the same line on the page. This is because we did not enclose them in any HTML tags, so the browser just renders them as one block of plain text.
 
 Let's wrap our sentences in a paragraph tag (`<p>`) and see how that changes things:
 
@@ -63,6 +63,8 @@ After saving and reloading your HTML page in the browser, we can see that it did
 
 Now when you save and reload your HTML page in the browser, we can see that each sentence is on its own line _and_ they've even got some space between. Nice! :sunglasses: This is because the paragraph tags have default styling that includes spacing between each paragraph tag as well as putting each tag on its own line.
 
+_PRO TIP:_ When writing your html tag, type in the tag without opening and closing angle brackets and hit tab.  
+
 ### Heading Tags
 
 Our page is neat but it should probably have a title or _heading_ to make it clear what's happening. In HTML there are **five** different types of headings, `h1` to `h5`, with `h1` having the largest default font size/line spacing and `h5` having the smallest default font size/line spacing. Typically heading tags are used for titles and subtitles on a page, with large bold fonts.
@@ -78,7 +80,7 @@ Save and reload. How has our first sentence changed in appearance? What happens 
 
 ### Styling Tags
 
-Other tags that can be useful for style and emphasis are the `<strong>` and `<em>` tags. `<strong>` tags, by default, make a text **bold** while `<em>` tags, by default, make text _italic_. If we wanted text to be bold or italic, we would just wrap that text in a `strong` or `em` tag _inside_ our `p` or `h` tags. Let's add some to our HTML and see what happens:
+Other tags that can be useful for style and emphasis are the `<strong>` and `<em>` tags. `<strong>` tags, by default, make a text **bold**; `<em>` tags, by default, make text _italic_. If we wanted text to be bold or italic, we would just wrap that text in a `strong` or `em` tag _inside_ our `p` or `h` tags. Let's add some to our HTML and see what happens:
 ?
 ```html
 <h1>This is my first web page.</h1>
