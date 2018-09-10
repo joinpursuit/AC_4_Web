@@ -4,7 +4,7 @@
 * Understand how list tags work in HTML
 * Use ordered and unordered list tags appropriately in an HTML document
 * Use link tags appropriately in an HTML document
-* User image tags in an HTML document
+* Use image tags in an HTML document
 
 ## Keywords
 * Lists
@@ -64,7 +64,7 @@ If we save and reload, we can see that the list looks much nicer! The content is
 
 ### Unordered List Tags
 
-An _unordered list_ works in the same way that an ordered list does except now it uses standard bullets in place of numbers. To make our list unodered, we just need to change our `<ol>` tags to `<ul>` tags.
+An _unordered list_ works in the same way that an ordered list does except now it uses standard bullets in place of numbers. To make our list unordered, we just need to change our `<ol>` tags to `<ul>` tags.
 
 
 ```html
