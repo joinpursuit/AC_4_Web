@@ -17,7 +17,7 @@ You may have heard the acronym _API_ in your time at C4Q, but what exactly does 
 
 * **Manipulating documents in the browser**: The DOM API (that's an API!!? 🤯), as you know, allows you to manipulate HTML and CSS thus styling the page.
 * **Drawing and manipulating graphics**: Allow you to programmatically update the pixel data contained in an HTML `<canvas>` element to create 2D and 3D scenes. Canvas and WebGL are two common tools you may use. Such APIs are often combined with APIs for creating animation loops (such as `window.requestAnimationFrame()`) and others to make constantly updating scenes like cartoons and games.
-* **Fetch data from the server**: This is the **MOST COMMON** use you will find for APIs and is typically what people mean when they say _API_. These APIs can also be used to update small sections of a webpage on their own. This seemingly small detail has had a huge impact on the performance and behaviour of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". APIs that make this possible include XMLHttpRequest and the Fetch API. You will learn the term Ajax in coming lessons, which describes this technique.
+* **Fetch data from the server**: This is the **MOST COMMON** use you will find for APIs and is typically what people mean when they say _API_. These APIs can also be used to update small sections of a webpage on their own. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". APIs that make this possible include XMLHttpRequest and the Fetch API. You will learn the term Ajax in coming lessons, which describes this technique.
 
 ### How do APIs work?
 
@@ -55,7 +55,7 @@ The next line `message` includes all of the information we wanted to receive (li
 
 Let's do our own request: copy the link and paste it into your browser or click the link above. You just sent a request to the Dog API and received the results! Woo! You're interacting with the Dog API database through their API!
 
-Now if you navigate to https://dog.ceo/api/breeds/image/random you wil see that you get a result but it's just a link to an image. Hm.. not exactly ideal. This is because APIs return information as it exists in the database: it's up to _you_ to do something with the information to make it display in a way that is user-friendly. The Dog API's job is to give you the information you request and it is **your** job to do something with that information.
+Now if you navigate to https://dog.ceo/api/breeds/image/random you will see that you get a result but it's just a link to an image. Hm.. not exactly ideal. This is because APIs return information as it exists in the database: it's up to _you_ to do something with the information to make it display in a way that is user-friendly. The Dog API's job is to give you the information you request and it is **your** job to do something with that information.
 
 ## Resources
 
