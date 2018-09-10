@@ -16,11 +16,7 @@ To create a new Date object simply call `new Date()`. When no arguments are prov
 
 ```js
 var now = new Date();# Date and Time in JavaScript
-
-## References
-
-* [mdn - Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-* [Date and Time - javascript.info](https://javascript.info/date)
+```
 
 ## Lesson
 
