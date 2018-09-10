@@ -2,6 +2,7 @@
 
 ## Goals
 * Explain the purpose of a RESTful API
+* Know what CRUD is
 
 ## Keywords
 * API
@@ -13,7 +14,7 @@
   * PUT
   * PATCH
   * DELETE
-
+* CRUD
 ## Resources
 
 * [What is a RESTful API?](https://restfulapi.net/)
@@ -102,7 +103,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   .then(json => console.log(json))
 ```
 
-Since we are using Postman, we don't have to worry about a lot of what's happening in that POST request. Don't worry though--you **will** have to worry about that very soon! For now, we just need to focus on what's in the `body` of the POST request. This is the information you are _sending to the database_. Whoever wrote this API has defined **specific information** that can be received at this endpoint. That information is: `title`, `body` and `userId`. If you send any additional information like `date`, the API will not accept it because it has not been told to accept any `date` information. While APIs are powerful tools, they are also very dumb. Like all applications, they **only** do as they are told and can't understnd anything else.
+Since we are using Postman, we don't have to worry about a lot of what's happening in that POST request. Don't worry though--you **will** have to worry about that very soon! For now, we just need to focus on what's in the `body` of the POST request. This is the information you are _sending to the database_. Whoever wrote this API has defined **specific information** that can be received at this endpoint. That information is: `title`, `body` and `userId`. If you send any additional information like `date`, the API will not accept it because it has not been told to accept any `date` information. While APIs are powerful tools, they are also very dumb. Like all applications, they **only** do as they are told and can't understand anything else.
 
 In Postman, click on GET next to the URL box and change it to POST. You can see _all_ the various requests you can make from Postman to APIs in that dropdown--most of which you will not need to ever use. We do not need to change the URL because the URL https://jsonplaceholder.typicode.com/posts accepts GET and POST requests. It is common for one endpoint to accept multiple types of requests.
 
@@ -151,7 +152,7 @@ Like with PUT and PATCH, a DELETE request can only be sent to a _singleton resou
 <details>
   <summary>How might a DELETE request look? Would it require a body?</summary>
   <strong>No.</strong> It would not need a body. Since it removes one entity from the database completely, the API will be set up in such a way that the endpoint tells the database to remove the item with that ID: <code>https://jsonplaceholder.typicode.com/posts/1</code>
- This endpoint tells us, the user, that blog post one lives at this route. If we send a GET request to this endpoint, we would expect to recieve that blog post. If we sent a PUT/PATCH request, we would expect to be able to update that post. And, now, if we send a DELETE request we would expect to remove that post.
+ This endpoint tells us, the user, that blog post one lives at this route. If we send a GET request to this endpoint, we would expect to receive that blog post. If we sent a PUT/PATCH request, we would expect to be able to update that post. And, now, if we send a DELETE request we would expect to remove that post.
   </details>
 
 Send a DELETE request to the URL. What is the return value? Why might this be?
