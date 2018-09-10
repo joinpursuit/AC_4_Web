@@ -54,7 +54,7 @@ This declaration block is written on one line for readability but you will typic
 **Selector**: The selector for this declaration block is `h1`. This means whatever we type _inside_ the curly braces will apply to ALL `h1` elements on the page.<br>
 **Properties**: The properties of all `h1` elements that are to be altered are `color` and `font-size`. `color` refers to the _font color_ and `font-size` refers to the _size of the font_.<br>
 **Values**: The value `blue` means that the `h1` text will now be the color blue. Not the background or highlight color--the actual text will be in blue instead of black. The value `12px` means that all `h1` text on the page will have a `font-size` of 12 pixels (which is quite a bit smaller than the 32px standard font size for `h1` elements).<br>
-**Format**: Each declaration starts with the _property_ that you want to style followed by a _colon_ (`:`) and the _value_ you'd like the property set to. The declaration ends with a semicolon (`;`) which is typcially something people forget (we've all been there!), so make sure you are including semicolons after each declaration.<br>
+**Format**: Each declaration starts with the _property_ that you want to style followed by a _colon_ (`:`) and the _value_ you'd like the property set to. The declaration ends with a semicolon (`;`) which is typically something people forget (we've all been there!), so make sure you are including semicolons after each declaration.<br>
 
 More often, you'll see CSS declaration blocks like below:
 
