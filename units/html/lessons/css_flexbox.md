@@ -61,7 +61,7 @@ Now we have a `div` that holds **all** of our html elements and we can now make 
 
 #### Flexbox Display
 
-To make this `div` a flex container, we need to add a `display` property in our CSS file with the value of `flex`. We have now turned our flex-container `div` into an actual flex container. You will also _change_ the `div` declaration block to `.flex-item`. In your test.css file, add the following code, save and reload your page:
+To make this `div` a flex container, we need to add a `display` property in our CSS file with the value of `flex`. We have now turned our flex-container `div` into an actual flex container. You will also _change_ the `div` declaration block to `.flex-item`. In your test.css file, remove your current styling on div, and add the following code:
 
 ```css
 /* change div to .flex-item */
@@ -95,7 +95,7 @@ Woo! Now _that_ looks better! Resize the page and watch the items align themselv
 
 #### Flexbox Items Placement
 
-Right now, we can see our content is automattically attached to the top and left side of the page if the content doesn't fill the screen. This is fine--but typically a user would expect to see content aligned with the _center_ of the page. Thankfully flexbox allows you to align the child items and also justify the content. There are **two** properties that define how the items appear on the page: `justify-content` and `align-items`.
+Right now, we can see our content is automatically attached to the top and left side of the page if the content doesn't fill the screen. This is fine--but typically a user would expect to see content aligned with the _center_ of the page. Thankfully flexbox allows you to align the child items and also justify the content. There are **two** properties that define how the items appear on the page: `justify-content` and `align-items`.
 
 Let's first explore `justify-content`. You can think of `justify-content` as how your items are aligned along the **main axis**, or the horizontal axis, of your page. The different ways you can justify your items horizontally are as follows:
 
@@ -188,3 +188,7 @@ Let's apply some rules that will make our fonts and images look better and act m
 We've also set the `width` of our image to `100%`, so it will always be the entire width of the parent element. Then we set the `min-width` of the image to 250px so it won't get any smaller than that, no matter what size the screen is. This means, if the screen is 200px, the puppy image will remain 250px wide.
 
 Add some other media rules to your CSS file to get a sense of how media queries work. You can even add in a _second_ media query for screens that are less than 350px in width if you'd like.
+
+__NOTE:__ The best approach to responsive design is _Mobile First_. This means that it's best practice to design for small mobile screens and then to design for larger computer screens. 
+
+_Breakpoints_ are the points at which your sites content will respond to provide the user with the best possible layout to consume the information. 
