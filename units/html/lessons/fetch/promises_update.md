@@ -27,7 +27,7 @@ a function.
 
 ### The Why?
 Using promises allows us to wait for certain code to finish execution prior to running the next bit of code. But why do we need that? 
-Pretend that you had a website that loads data from an API call, and then process that data to display for the user. If we tried to process the data before actually getting any data back we'd end up with a blank website or an error. With with promises we can ensure synchronosity. 
+Pretend that you had a website that loads data from an API call, and then process that data to display for the user. If we tried to process the data before actually getting any data back we'd end up with a blank website or an error. With with promises we can ensure synchronicity. 
 
 ### The States Of a Promise
 Promises have three states:
@@ -68,12 +68,12 @@ doSomething().then(result => {
 
 ```
 
-The `.then` takes in two optional arguments. The first arguement is a function that will be fired upon the promise succeeding, the second arguement is the function that will be fired upon the promise failing. 
+The `.then` takes in two optional arguments. The first argument is a function that will be fired upon the promise succeeding, the second argument is the function that will be fired upon the promise failing. 
 
 The arguments to `then` are option and  `catch(failureCallback)` is short for `then(null, failureCallback)`. `catch` is the way we typically deal with error handling. You'll most often see a promise chain with multiple success calls and then just the one `catch` at the end. 
 
 ### Constructor Function
-Although you will most likely already be dealing with asynchrounous calls that return promises, it is possible to create your own promise with it's constructor function. To do this you write new Promise and then pass in a callback function. That callback function will take in two arguments (each of which will be a function), one for resolve, and one for reject. Here's an exmaple of what that might look like: 
+Although you will most likely already be dealing with asynchronous calls that return promises, it is possible to create your own promise with it's constructor function. To do this you write new Promise and then pass in a callback function. That callback function will take in two arguments (each of which will be a function), one for resolve, and one for reject. Here's an example of what that might look like: 
 
 ```js
 let promise = new Promise(function(resolve, reject) {
@@ -133,7 +133,7 @@ new Promise(function(resolve, reject) {
 ```
 
 ## Advanced Topics
-* [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all): Accepts an array of promises, and creates a single promise that only gets fulfilled if every promise in the array is fullfilled. 
+* [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all): Accepts an array of promises, and creates a single promise that only gets fulfilled if every promise in the array is fulfilled. 
 
 * A [polyfill](https://github.com/stefanpenner/es6-promise) is required for consistent functionality across older browsers.
 
