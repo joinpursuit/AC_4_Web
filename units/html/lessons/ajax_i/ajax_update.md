@@ -20,7 +20,7 @@ AJAX is extremely helpful because it allows you to:
 * Send data to a server - in the background. 
 
 
-AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page. When AJAX came to the modern web, it changed the definintion of how the web works. 
+AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page. When AJAX came to the modern web, it changed the definition of how the web works. 
 
 A very, very common use of the AJAX technique is to interact with RESTful APIs through a web app.
 
@@ -52,7 +52,7 @@ xml.send(null);
 
 
 ```
-Throw in some debugers so that you can see what everything is. 
+Throw in some debuggers so that you can see what everything is. 
 
 Let's try to use it in a more practical sense. 
 
