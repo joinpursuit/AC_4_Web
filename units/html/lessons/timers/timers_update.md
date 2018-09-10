@@ -97,4 +97,4 @@ a mental note that they are asynchronous and non-blocking.
 ## Resources
 * [w3 schools](https://www.w3schools.com/js/js_timing.asp)
 * [MND](https://developer.mozilla.org/en-US/docs/Talk:DOM/window.setTimeout)
-* [Bonus requestAnimationFram](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
+* [Bonus: requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
