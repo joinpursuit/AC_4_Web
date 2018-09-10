@@ -39,7 +39,7 @@
   In our `test.js` file let's change querySelector to querySelectorAll and try passing in the argument ".heading". As you can see
   we get a NodeList back with six nodes. You can call `.length` on the list, index into it, and even iterate through the list with forEach. 
   
-  Inside of the debugger copy and paste thsi code:
+  Inside of the debugger copy and paste this code:
   
   ```js 
  first.forEach((el) => {
@@ -62,7 +62,7 @@ What happens if you pass in 'div'?
   still index into the collection and check it's length but methods like forEach will throw an error.
   
   You'll often see getElementsByTagName and getElementsByClassName in​ 
-  ​sample​ ​code​ ​because​ ​querySelector​​ ​and​ ​queryselectorAll have​ ​only​ ​recently​ ​been​ ​implemented​
+  ​sample​ ​code​ ​because​ ​querySelector​​ ​and​ ​querySelectorAll have​ ​only​ ​recently​ ​been​ ​implemented​
   ​in​ ​all​ ​major​ ​browsers.
 
   ### HTMLElement.style
@@ -72,7 +72,7 @@ What happens if you pass in 'div'?
   ​ ​Use​ ​dot​ ​notation​ ​and​ ​camel​ ​case​ ​to​ ​assign​ ​a​ ​value​ ​to​ ​a​ ​style property.
 
   Let's try this out. Using one of the selectors grab the first li on your page. Inside your debugger try altering the some of it's CSS style 
-  properities.
+  properties.
   
   Exp:
   ```js
@@ -98,7 +98,7 @@ What happens if you pass in 'div'?
 
   </details>
 
-  Challenge: Make you li's colors altername between blue and red.
+  Challenge: Make you li's colors alternate between blue and red.
   Challenge: Try and change the background color of the body to your favorite color.
 
   ---
