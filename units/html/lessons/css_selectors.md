@@ -125,7 +125,7 @@ Now in our CSS file, we have the ability to target each `li` element individuall
 
 ```css
 #list {
-  text-decoration:overline;
+  text-decoration: overline;
   font-weight: lighter;
   color: purple;
 }
@@ -166,7 +166,7 @@ With the code above, all of our heading text would be styled to have a cursive f
 
 #### Descendent Selector
 
-Many times when styling your page, you will want to apply styles based on their _parent_, that is the element they live inside of. Thinking of our test.html file, you might want the items inside each element to have a unique style. This would be a good case for the descendent selector. The descendent selector works by listing **without commas** the elements you want styled, starting with the parent-most element to the child-most element. If we wanted to style our ordred `li` elements in the test.html file to be underlined, we can use the descendent selector like so:
+Many times when styling your page, you will want to apply styles based on their _parent_, that is the element they live inside of. Thinking of our test.html file, you might want the items inside each element to have a unique style. This would be a good case for the descendent selector. The descendent selector works by listing **without commas** the elements you want styled, starting with the parent-most element to the child-most element. If we wanted to style our ordered `li` elements in the test.html file to be underlined, we can use the descendent selector like so:
 
 ```css
 ul ol li {
@@ -176,17 +176,17 @@ ul ol li {
 
 This code will look for any `li` elements that are children of or enclosed in `ol` elements that are children of or enclosed in `ul` elements. 
 
-Let's remove the `ol` from our selector in our test.css file, then save and reload. Now _all_ `li` elements are underlined becuase _all_ `li` elements are children of or enclosed by the `ul` element. 
+Let's remove the `ol` from our selector in our test.css file, then save and reload. Now _all_ `li` elements are underlined because _all_ `li` elements are children of or enclosed by the `ul` element. 
 
 #### Child Selector
 
 Similar to descendent selector in that it focuses on _children_ of _parent elements_, the **child selector** is a bit more specific. In the last example, we ended with _all_ `li` elements being underlined because they are all children of the `ul` element. If we make our descendent selector a child selector, it will make only the `li` elements that are **direct** children of `ul` underlined. To change our descendent selector to a child selector, we just need to add a `>` between `ul` and `ol` like so: `ul > li`. Now save and reload your page and you should see that the ordered list items are no longer underlined. Why?
 
-Because the ordered list items are a child of the `ol` element, they are technically grandchildren of the `ul` element and thus uneffected by the child selector. To put it another way: you are a **direct** child of your parents but not of your grandparents--they did not birth you. You are, however, a **descendent** of your grandparents.
+Because the ordered list items are a child of the `ol` element, they are technically grandchildren of the `ul` element and thus unaffected by the child selector. To put it another way: you are a **direct** child of your parents but not of your grandparents--they did not birth you. You are, however, a **descendent** of your grandparents.
 
 #### Adjacent Sibling Selector
 
-The adjacent sibling selector is a little peculiar and would definitely have very specific uses but we will go over it anyway. This this looks for an element that is the next child of the same parent and is represented with a `+` sign. If we changed our CSS file to be `ol + li` from `ul > li` and save/reload, we will see that now only the _last_ `li` element is underlined.
+The adjacent sibling selector is a little peculiar and would definitely have very specific uses but we will go over it anyway. This looks for an element that is the next child of the same parent and is represented with a `+` sign. If we changed our CSS file to be `ol + li` from `ul > li` and save/reload, we will see that now only the _last_ `li` element is underlined.
 
 This is because `ol` and `li` elements are _siblings_, meaning they have the same parent and the last `li` is the **next** sibling of `ol`. A little confusing but if we added a fourth `li` element, still only the third item would be underlined because that is the only element that is the _NEXT_ sibling of `ol`.
 
@@ -221,7 +221,7 @@ p::first-line​ ​{
 
 #### Attribute​ ​Selectors
 
-You​ ​can ​select​ ​elements​ ​based​ ​on​ ​a​ ​given​ ​attribute​ ​with​ ​an​ _attribute​ ​selector​_.​ ​There​ ​is​ ​the standard​  attribute​ ​selector​ ​as​ ​well​ ​as​ ​RegEx-style​ ​attribute​ ​selectors. The example below would look for any `a` (link) tags that have a `title` attribute and style the font of that link to be purple. Instead of using dots (`.`) or colons (`:`), these selectors use square brakets to find the `[attribute]`.
+You​ ​can ​select​ ​elements​ ​based​ ​on​ ​a​ ​given​ ​attribute​ ​with​ ​an​ _attribute​ ​selector​_.​ ​There​ ​is​ ​the standard​  attribute​ ​selector​ ​as​ ​well​ ​as​ ​RegEx-style​ ​attribute​ ​selectors. The example below would look for any `a` (link) tags that have a `title` attribute and style the font of that link to be purple. Instead of using dots (`.`) or colons (`:`), these selectors use square brackets to find the `[attribute]`.
 
 ```css
 a[title]​ ​{
