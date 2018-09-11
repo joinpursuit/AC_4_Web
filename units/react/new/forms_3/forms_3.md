@@ -9,6 +9,7 @@
 * Semantic HTML
 * HTML Form Events
 * `e.preventDefault`
+* `onSubmit`
 
 ## Introduction
 
@@ -44,6 +45,8 @@ Folks who have difficulty seeing use screen readers on the Internet. Screen read
 Screen readers use context clues to inform users about important stuff on a website. You provide these context clues using (you got it) semantic HTML. If a form isn't labeled as such with a `form` tag, for example, it can be difficult for screen readers to tell that there even is a form for a user to fill out.
 
 This is important not only because it's a good, important thing to do to make sure that your website is accessible. It's important because [businesses get sued](https://www.adatitleiii.com/2018/01/2017-website-accessibility-lawsuit-recap-a-tough-year-for-businesses/) for not making their sites accessible. This is avoidable, and a way that you can position your skills as essential and uniquely valuable.
+
+Remember: While semantic HTML is particularly good for tricky things like forms, it's important to do for any and all HTML code you write. Getting into the habit now will save you a lot of headaches later.
 
 ## [Example](https://codesandbox.io/s/klm79pw6o)
 
