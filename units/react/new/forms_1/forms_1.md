@@ -55,7 +55,7 @@ render() {
     return (
       <div>
         <p>
-          Your Name: <input onInput={this.handleInputChange} />
+          Your Name: <input onChange={this.handleInputChange} />
         </p>
         <p>Hello {name}!</p>
       </div>
@@ -64,7 +64,7 @@ render() {
     return (
       <div>
         <p>
-          Your Name: <input onInput={this.handleInputChange} />
+          Your Name: <input onChange={this.handleInputChange} />
         </p>
       </div>
     );

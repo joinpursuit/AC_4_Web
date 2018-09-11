@@ -4,7 +4,8 @@
 
 * State
 * `this.setState`
-* `onClick`
+* Event listener
+* Event handler
 * `className`
 
 ## Introduction
@@ -81,9 +82,9 @@ render() {
 
 Alright, let's look at this line-by-line. First, we're using object destructuring to assign the `count` part of our state to a variable of the same name. This is just for convenience's sake, so we don't have to write `this.state.count` all over the place.
 
-Then, we return our JSX. We've got a containing `div`, because our component can only render one element at a time. Inside that `div`, we have a `button` element with a new attribute: `onClick`.
+Then, we return our JSX. We've got a containing `div`, because our component can only render one element at a time. Inside that `div`, we have a `button` element with an **event listener**: `onClick`.
 
-`onClick` is a new type of tag, unique to JSX. For the most part, it does what it says - it triggers when the element is clicked. However, take a look at those curly braces (`onClick={this.handleClick}`)! These braces, unique to JSX, allow us to insert JavaScript code into our HTML. We can do this for a few different purposes. In this case, we're doing it to specify what should happen when we click the button.
+`onClick` is one example of how JSX listens for certain events. For the most part, it does what it says - it triggers when the element is clicked. However, take a look at those curly braces (`onClick={this.handleClick}`)! These braces, unique to JSX, allow us to insert JavaScript code into our HTML. We can do this for a few different purposes. In this case, we're doing it to specify what should happen when we click the button. `onClick` **listens** for an event, whereas `handleClick` **handles** what happens afterwards - our `handleClick` function is therefore known as an **event handler**.
 
 Please note that we **are not invoking the handleClick function** in those curly braces! There's no parentheses after our function, and there shouldn't be. The function will invoke when clicked, but if we do it ourselves, it will invoke as soon as the component renders. Then, `setState` will be called, the component will re-render, `handleClick` will run again, the component will re-render... Do you see where I'm going here? It'll be an infinite loop! As a rule, we never want to invoke a function that calls `setState` in our `render` function.
 
