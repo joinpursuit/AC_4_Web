@@ -14,7 +14,7 @@ Radio buttons pretty much fulfill the same function as select boxes, but have th
 
 Their syntax, however, is quite different, and has to be pretty precisely put together - especially if you're handling them in conjunction with React state management. Let's take a look:
 
-## (Preferred Animal App)[https://codesandbox.io/s/j7rjj8ym09]
+## [Preferred Animal App](https://codesandbox.io/s/j7rjj8ym09)
 
 This app allows the user to select their preferred animal out of a short list: Cats, dogs, or giraffes. It then displays that selection to the user, saying "You selected <whatever>" underneath the form.
 
@@ -94,7 +94,7 @@ Checkboxes are like radio buttons' more flexible siblings. Whereas radio buttons
 
 Because checkboxes are fairly similar syntactically to radio buttons, we won't go too deep here. However, we've made a simple app that shows off how a checkbox form might work.
 
-## Not A Robot App
+## [Not A Robot App](https://codesandbox.io/s/m9z7rmjlkj)
 
 This app, very simply, asks the user to check a box to confirm they are not a robot. When they check the box, they see a button that would allow them to "Proceed", if this was a bigger app. As it stands, it isn't, so the button doesn't really do anything. The important thing is the checkbox.
 

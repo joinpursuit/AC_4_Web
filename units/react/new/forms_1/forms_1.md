@@ -16,7 +16,7 @@ Each of these sections is going to start with a quick review of what the specifi
 
 You know this just by using the Internet: Text input is one of the most common input types. Luckily, React has a great way to handle text input in the state. Let's see it in action:
 
-## (Greeter App)[https://codesandbox.io/s/jpzkqkm1oy]
+## [Greeter App](https://codesandbox.io/s/jpzkqkm1oy)
 
 This is an app where a user can input their name. When they input text, the component greets them with the name they entered.
 
@@ -123,7 +123,7 @@ On the face of it, select inputs work similarly to text inputs. Instead of accep
 
 Let's look at an example of this in action:
 
-## (Ice Cream App)[https://codesandbox.io/s/0omxoj1pll]
+## [Ice Cream App](https://codesandbox.io/s/0omxoj1pll)
 
 This app is, again, pretty simple: It asks the user if they like ice cream. If they answer "yes", it writes the message "Great!", and if they answer "no", it tells the user to "Go home" - because how can you not like ice cream??
 
