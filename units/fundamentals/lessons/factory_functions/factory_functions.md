@@ -10,7 +10,7 @@
 
 ## Lesson
 
-Objects are often useful when combined with arrays. This is typically seen as an array holding a collection of object, withc each of the objects having the same keys. Here is an example:
+Objects are often useful when combined with arrays. This is typically seen as an array holding a collection of object, with each of the objects having the same keys. Here is an example:
 ```js
 let films = [
   {
