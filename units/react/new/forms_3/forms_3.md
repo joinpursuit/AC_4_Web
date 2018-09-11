@@ -1,4 +1,4 @@
-# React Forms 3: The <form> Tag, Accessibility, and Putting It All Together
+# React Forms 3: The `form` Tag, Accessibility, and Putting It All Together
 
 ## Links
 * [Semantic HTML](https://html.com/semantic-markup/)
