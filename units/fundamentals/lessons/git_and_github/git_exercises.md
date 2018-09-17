@@ -31,6 +31,16 @@
 4. Open your README.md and and add the line `# hello there` at the top of `README.md` and save.
 5. Check the status, then add, check the status, and then commit the new line with a commit message of your choice. Verify using `git status` that the change was committed as expected.
 6. Push your changes: `git push origin master`. Refresh your github and click on the commit to verify the changes.
+7. Create a new branch `git checkout -b 'second_branch'`.
+8. Check which branch your on `git branch`.
+9. Now check your status, add, check your status, commit, and check your status. 
+10. Look at all the files in your branch with `ls`. 
+11. Switch back to your master branch. `git checkout master`. 
+12. Check which branch your on. 
+13. Look at all the files. 
+14. Now merge in your second_branch `git merge second_branch`. 
+15. Look at all your files. 
+
 
 ### Fourth Set
 
@@ -45,3 +55,6 @@
 2. Commit your change with an appropriate message. Why not?
 
 3. Push your change to GitHub. By refreshing your browser, confirm that the new line has been added to the rendered README. Click on the “official Git documentation” link to verify that it works.
+
+### Bonus 
+Checkut the code academy git [tutorial](https://www.codecademy.com/learn/learn-git)
