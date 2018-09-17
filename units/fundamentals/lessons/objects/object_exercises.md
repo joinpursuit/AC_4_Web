@@ -45,7 +45,7 @@ console.log(p1 === p2)
 
 #### Recipe
 
-* Create an object to hold information on your favorite recipe. It should have the following properties: `title`, `numberOfServings`, and `ingredients` (an array).
+* Create an object to hold information on your favorite recipe. It should have the following properties: `name`, `servings`, and `ingredients` (an array).
 * Create a loop that logs the recipe information, so it looks like:
 
 ```javascript
