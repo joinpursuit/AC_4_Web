@@ -42,11 +42,6 @@ console.log(p1 === p2)
 
 ```
 
-#### Watch List
-
-1. Create an array of films, where each film has the following properties: `title`, `director`, and `watched` (a boolean indicating if you started watching it).
-2. Create a loop that iterates over the array and logs the title and director for each film. (e.g. 'Wonder Woman, directed by Patty Jenkins').
-3. Now change the output depending on whether the film was watched. If it was watched, log a string like 'You watched "Wonder Woman" directed by Patty Jenkins', and if not, log 'You still need to watch "Wonder Woman" by director Patty Jenkins.'
 
 #### Recipe
 
