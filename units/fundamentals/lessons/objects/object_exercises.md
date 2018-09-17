@@ -55,11 +55,11 @@ ingredients: cinnamon, cumin, cocoa
 ```
 
 #### getProps 
-Write a code block that takes an object variable and logs all the keys. 
+Write a code block that takes an object variable and logs all the keys as an array. 
 
 
 #### getValues
-Write a code block that takes an object variable and logs all the values. 
+Write a code block that takes an object variable and logs all the values as an array. 
 
 #### getObjLength 
 Write a code block the logs the number of properties an object has. 
