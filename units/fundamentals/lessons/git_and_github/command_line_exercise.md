@@ -18,7 +18,7 @@ From the command line:
 
 ## Exercise 2 
 
-1. Navitgate to the inside of your Documents folder
+1. Navigate to the inside of your Documents folder
 2. Create a file called foo.js
 3. Open the file with Vim (a text editor, Atom)
 4. Add the following text to the file: console.log('hello')
