@@ -50,7 +50,7 @@ console.log(str)
 7. 
 ```js
 
-let string =  'My favorite number is My favorite number is ';
+let string =  'My favorite number is ';
 let number = 42
 let sentence = string + number
 console.log(typeof(sentence))
