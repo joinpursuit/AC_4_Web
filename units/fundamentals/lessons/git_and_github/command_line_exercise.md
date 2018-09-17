@@ -5,7 +5,7 @@ From the command line:
 
 1. Navigate to your Desktop directory.
 2. Create a directory called my_first_direc.
-3. Enter the test directory.
+3. Enter the my_first_direc directory.
 4. Create a file called first.js.
 5. Create a folder called assignments.
 6. Move first.js into assignments.
