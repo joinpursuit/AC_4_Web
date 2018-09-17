@@ -31,6 +31,21 @@ $ which git
 
 If the result is empty or if it says the command is not found, it means you have to install Git.
 
+### Set Your Identity
+
+GitHub uses the email you set in your Git configuration to associate commits to
+your GitHub account. (This is how you get green squares!)
+
+Test if you have your email set by running `git config --global user.email` in
+your terminal. If it's blank, type `git config --global user.email
+"example@email.com"` to set it. You will only ever need to run this once. Git
+will always use this information for anything you do on your computer.
+
+To set your email for a single repository, simply leave off the `--global` flag.
+Run `git config user.email "example@email.com"` inside your repository. Check
+that this was set up correctly by typing `git config user.email`. Also check
+that the global user was not changed by typing `git config --global user.email`.
+
 ### Initializing a Repo
 
 We’ll begin by making a directory with the name `git-test`. To make a directory, or folder, we use the command `mkdir` which is short for _**m**a**k**e **dir**ectory_. Then you will run the command `cd git-test` which **c**hanges **d**irectory or folder into the git-test folder we just created.
