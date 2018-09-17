@@ -13,7 +13,9 @@ _Bonus_ think of another way to solve it.
     </summary>
     Find the final number and increment the loop by 9.
   </details>
+  
 4. Write a loop that uses console.log to log all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, log "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), log "Buzz" instead.
+
 
 5. Modify your program to log "FizzBuzz", for numbers that are divisible by both 3 and 5 (still log "Fizz" or "Buzz" for numbers divisible by only one of those).
 
