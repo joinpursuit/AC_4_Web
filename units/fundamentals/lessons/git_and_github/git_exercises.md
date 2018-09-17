@@ -27,7 +27,7 @@
 
 1. The `git log` command shows only the commit messages, which makes for a compact display but isn’t particularly detailed. Verify by running `git log -p` that the `-p` option shows the full diffs represented by each commit. Press `q` to escape.
 2. Create a file `README.md`, add and commit it.
-3. Got to github and create a new repository. Connect your local repo to the remote one.
+3. Go to github and create a new repository. Connect your local repo to the remote one.
 4. Open your README.md and and add the line `# hello there` at the top of `README.md` and save.
 5. Check the status, then add, check the status, and then commit the new line with a commit message of your choice. Verify using `git status` that the change was committed as expected.
 6. Push your changes: `git push origin master`. Refresh your github and click on the commit to verify the changes.
