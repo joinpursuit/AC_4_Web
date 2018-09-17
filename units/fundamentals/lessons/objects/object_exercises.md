@@ -51,17 +51,6 @@ console.log(p1 === p2)
 ```javascript
 name: Mole
 servings: 2
-ingredients:
-cinnamon
-cumin
-cocoa
-```
-
-* **Bonus**: change the loop to log ingredients on the same line:
-
-```javascript
-name: Mole
-servings: 2
 ingredients: cinnamon, cumin, cocoa
 ```
 
