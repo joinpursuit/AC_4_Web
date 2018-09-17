@@ -45,14 +45,14 @@ sumArray([1, 2, 3, 4, 5, 6])
 sumArray([1, 2, 3, 4, 5, -6]) 
 //  9
 ```
-11. Write a `range` code block that takes two number variables: min and max. 
+12. Write a `range` code block that takes two number variables: min and max. 
 The block will log an array with all the numbers, inclusive, between min and max.
 ```js
 range(2, 6)
 // => [2, 3, 4, 5, 6]
 ```
 
-12. Write a `rangeWithStep` code block that takes three number variables: min, max and step. 
+13. Write a `rangeWithStep` code block that takes three number variables: min, max and step. 
 The block will log an array with all the numbers, inclusive, between min and max, , going up in increments equal to step. 
 If no step value is provided, the increment will be 1.
 ```js
@@ -62,7 +62,7 @@ rangeWithStep(4, 10)
 // => [4, 5, 6, 7, 8, 9, 10]
 ```
 
-13. Write a `doubleTrouble` code block that takes in a varialbe array of numbers. 
+14. Write a `doubleTrouble` code block that takes in a varialbe array of numbers. 
 The block should log a new array that doubles every number from the original array. 
 ```js
 doubleTrouble([1, 2, 3]); 
