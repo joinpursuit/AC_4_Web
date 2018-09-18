@@ -16,7 +16,7 @@ and returns a string with a greeting using the two.
 Write a `removeDupes` function that takes an array as an argument and returns a copy without any duplicate elements. 
 Then, write a function `concatAndRemoveDupes`  that combines two arrays and removes any duplicates.
 
-Hint: Use the array method `includes` or use an object. 
+  _Hint:_ Use the array method `includes`, an object, or a Set. Or the spread operator instead of concat.  
 
 4. Given a list of grades, we can get the median grade by sorting the list and taking the middle element, or the average of the two middle elements. 
 Create the functions `sort` and `middleElement`, and then use them to create the functions `median`.
