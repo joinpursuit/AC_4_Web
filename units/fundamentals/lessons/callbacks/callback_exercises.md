@@ -47,4 +47,3 @@ console.log(shouldIBuyThis(101, conservativeSpender))
 // logs: "Sure! I've got the money!"
 
 ```
-7. 
