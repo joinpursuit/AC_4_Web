@@ -18,9 +18,9 @@ console.log(greeting)
  
  3. Write a function named getDogAge that takes one argument: a dog's age in human years. The function returns the dog's age in dog years. The conversion rate is 1 human year to 7 dog years.
 
-Call the function and log the result.
+    * Call the function and log the result.
 
-4. Create two functions that calculate properties of a circle, using the definitions here (Links to an external site.)Links to an external site..
+4. Create two functions that calculate properties of a circle, using the definitions [here](http://math2.org/math/geometry/circles.htm)
 
   * Create a function called calcCircumfrence that takes the radius as an argument and return the circumference. Call the function and log the circumference:
   * Create a function called calcArea that takes the radius as an argument and returns the area.
