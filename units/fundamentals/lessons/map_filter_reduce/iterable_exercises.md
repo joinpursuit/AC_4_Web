@@ -29,7 +29,7 @@ mtx.myTranspose();
 ```
 
 7. Use `myMap` to build a new array where every element is incremented by 10.
-8. Use `myMay` to build a new array where every non-string element is converted to an empty string. 
+8. Use `myMap` to build a new array where every non-string element is converted to an empty string. 
 9. Use `myFilter` to get only the even elements in an array.
 10. Use `myEvery` to check if all elements in the array are the same. 
 11. Use `myReduce` to return the sum of every element in an array. 
