@@ -72,3 +72,6 @@ Create a code block that iterates over the array and logs whether the film was w
 and if not, log
 
 `You still need to watch "Wonder Woman" by director Patty Jenkins. `
+
+#### characterCount 
+Write a block of code that takes a string varaible and counts the occurance of each character in the string. Use an object to keep track of the counts. 
