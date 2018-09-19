@@ -70,3 +70,5 @@ doubleTrouble([1, 2, 3]);
 doubleTrouble([10, 8, 5]);
 // returns [20, 16, 10]
 ```
+
+15. Write a code block that takes in two varaibles. A target, and an array. Console log the indicies (as an array) of the elements that add up to the target. Exactly two indicies must be logged. 
