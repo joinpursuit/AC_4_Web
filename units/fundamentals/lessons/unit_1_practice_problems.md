@@ -96,7 +96,6 @@ myRotate([1, 2, 3], -1) // => [3, 1, 2]
 
 42. `String.prototype.mySlice` - your own slice.
 
-43. `String.prototype.mySplit` - your own split.
 
 
 
