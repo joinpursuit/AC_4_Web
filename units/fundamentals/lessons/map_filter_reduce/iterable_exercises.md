@@ -43,7 +43,7 @@ Use `myFilter` to return a new array of every element of arr that can be evenly 
 Use reduce.
 17. Write a `numberTimesIdx` that uses `map` and multiples each number in the array by it's index. 
 
-Bonus: Write a `myFlatten`. This should take a multi-dementional array and return it as one array. 
+Bonus: Write a `myFlatten`. This should take a multi-dimensional array and return it as one array. 
 ```js
 let arr = [1, 2, [3, 4, 5, [6, 7, 8]]]
   arr.myFlatten();
