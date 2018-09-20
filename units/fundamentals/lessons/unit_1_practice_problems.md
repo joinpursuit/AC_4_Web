@@ -54,7 +54,7 @@ inputs are identical.
 
 24. `getProps` - a function that takes in an object and returns the keys .
 
-25. `getValues` - a function that takes in an object and returns the keys.
+25. `getValues` - a function that takes in an object and returns the values.
 
 26. `getAverageAge` - a function that takes in an array of people objects. It should return the average age of all the objects.
 
